@@ -10,7 +10,7 @@
     "skipLibCheck": true,
     "declaration": true,
     "emitDeclarationOnly": true,
-    "outDir": "awc-ui/types",
+    "outDir": "dist/types",
 
     /* Bundler mode */
     "moduleResolution": "bundler",

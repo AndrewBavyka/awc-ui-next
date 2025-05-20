@@ -29,7 +29,7 @@ export default defineConfig({
       },
     },
     cssMinify: 'esbuild',
-    outDir: 'awc-ui',
+    outDir: 'dist',
   },
   plugins: [
     viteStaticCopy({
