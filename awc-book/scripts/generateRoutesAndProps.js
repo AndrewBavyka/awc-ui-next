@@ -1,9 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 
-const manifestPath = './awc-ui/src/docs/custom-elements.json';
-const outputPath = './awc-book/src/generated/routes.ts';
-const pagesDir = './awc-book/src/pages/components';
+const manifestPath = '../awc-ui/src/docs/custom-elements.json';
+const outputPath = './src/generated/routes.ts';
+const pagesDir = './src/pages/components';
 
 // Список компонентов, которые нужно исключить из автоматической генерации
 const excludedComponents = ['AwcSelect'];
