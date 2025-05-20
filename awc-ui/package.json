@@ -1,0 +1,65 @@
+{
+  "name": "awc-ui",
+  "private": false,
+  "version": "0.0.0",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && tsc",
+    "preview": "vite preview",
+    "check": "npm run lint && npm run analyze",
+    "lint": "npm run lint:eslint && npm run lint:prettier",
+    "lint:eslint": "eslint \"src/**/*.{js,ts,html}\"",
+    "lint:prettier": "prettier \"src/**/*.{js,ts,html}\" --check --ignore-path .gitignore",
+    "format": "npm run format:eslint && npm run format:prettier",
+    "format:eslint": "eslint \"src/**/*.{js,ts,html}\"",
+    "format:prettier": "prettier \"src/**/*.{js,ts,html}\" --write --ignore-path .gitignore",
+    "analyze": "npm run analyze:json && npm run analyze:markdown && npm run analyze:vscode && npm run analyze:webtypes",
+    "analyze:json": "npx wca analyze \"src/components/**/!(*.test|*.style).ts\" --format json2 --outFile src/docs/custom-elements.json",
+    "analyze:markdown": "npx wca analyze  \"src/components/**/!(*.test|*.style).ts\" --format markdown --outFiles {dir}/docs/{filename}.md",
+    "analyze:vscode": "npx wca analyze \"src/components/**/!(*.test|*.style).ts\" --format vscode --outFile src/docs/manifests/vscode-html-custom-data.json",
+    "analyze:webtypes": "npx wca-webtypes wca analyze  \"src/components/**/!(*.test|*.style).ts\" --outFile src/docs/manifests/web-types.json --format webtypes",
+    "generate:tokens": "npx figma-token-engine && node src/helpers/typographyVariablesCreator.js",
+    "generate:sprite": "npm run generate:sprite-icons && npm run generate:sprite-module",
+    "generate:sprite-icons": "node src/helpers/svgSpriteCreator.js",
+    "generate:sprite-module": "node src/helpers/svgSpriteCreator.js --module",
+    "fix:imports": "eslint --fix \"src/**/*.{js,ts,html}\""
+  },
+  "dependencies": {
+    "@floating-ui/dom": "^1.7.0",
+    "dotenv": "^16.5.0",
+    "lit": "^3.3.0",
+    "svg-sprite": "^2.0.4",
+    "vite": "^6.3.5"
+  },
+  "devDependencies": {
+    "@open-wc/eslint-config": "^12.0.3",
+    "@open-wc/form-control": "^1.0.0",
+    "@open-wc/form-helpers": "^1.0.0",
+    "@popperjs/core": "^2.11.8",
+    "@typescript-eslint/eslint-plugin": "^8.32.1",
+    "@typescript-eslint/parser": "^8.32.1",
+    "eslint": "^9.27.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-lit": "^2.1.1",
+    "eslint-plugin-prettier": "^5.4.0",
+    "eslint-plugin-unused-imports": "^4.1.4",
+    "figma-token-engine": "^0.3.0",
+    "jsdoc": "^4.0.4",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.3",
+    "vite-plugin-static-copy": "^3.0.0",
+    "web-component-analyzer": "^2.0.0",
+    "web-component-analyzer-webtypes": "^2.0.12"
+  },
+  "wca": {
+    "webtypesConfig": {
+      "name": "awc-ui",
+      "framework": "lit"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "awc-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": ["awc-book", "awc-ui"],
+ "scripts": {
+    "install:all": "cd awc-ui && npm install && cd ../awc-book && npm install",
+    "dev:book": "cd awc-book && npm run dev",
+    "dev:ui": "cd awc-ui && npm run dev",
+    "build:book": "cd awc-book && npm run build",
+    "build:ui": "cd awc-ui && npm run build"
+  },
+  "author": "Andrew Bavyka",
+  "license": "MIT"
+}

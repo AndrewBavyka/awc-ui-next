@@ -1,0 +1,1598 @@
+{
+    "$schema": "http://json.schemastore.org/web-types",
+    "name": "awc-ui",
+    "version": "0.0.0",
+    "framework": "lit",
+    "contributions": {
+        "html": {
+            "elements": [
+                {
+                    "name": "awc-accordion-item",
+                    "source": {
+                        "module": "./../../components/awc-accordion/awc-accordion-item/awc-accordion-item.ts",
+                        "symbol": "AwcAccordionItem"
+                    },
+                    "attributes": [
+                        {
+                            "name": "title",
+                            "required": false,
+                            "priority": "normal",
+                            "value": {
+                                "type": "string",
+                                "required": true,
+                                "default": "\"\""
+                            },
+                            "description": "Заголовок элемента аккордеона",
+                            "source": {
+                                "module": "./../../components/awc-accordion/awc-accordion-item/awc-accordion-item.ts",
+                                "symbol": "AwcAccordionItem.title"
+                            }
+                        },
+                        {
+                            "name": "active",
+                            "required": false,
+                            "priority": "normal",
+                            "value": {
+                                "type": "boolean",
+                                "required": false,
+                                "default": "\"false\""
+                            },
+                            "description": "Активность элемента аккордеона",
+                            "source": {
+                                "module": "./../../components/awc-accordion/awc-accordion-item/awc-accordion-item.ts",
+                                "symbol": "AwcAccordionItem.active"
+                            }
+                        },
+                        {
+                            "name": "disabled",
+                            "required": false,
+                            "priority": "normal",
+                            "value": {
+                                "type": "boolean",
+                                "required": false,
+                                "default": "\"false\""
+                            },
+                            "description": "Отключение элемента аккордеона",
+                            "source": {
+                                "module": "./../../components/awc-accordion/awc-accordion-item/awc-accordion-item.ts",
+                                "symbol": "AwcAccordionItem.disabled"
+                            }
+                        }
+                    ],
+                    "js": {
+                        "properties": [
+                            {
+                                "name": "title",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": "string",
+                                    "required": true,
+                                    "default": "\"\""
+                                },
+                                "description": "Заголовок элемента аккордеона",
+                                "source": {
+                                    "module": "./../../components/awc-accordion/awc-accordion-item/awc-accordion-item.ts",
+                                    "symbol": "AwcAccordionItem.title"
+                                }
+                            },
+                            {
+                                "name": "active",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": "boolean",
+                                    "required": false,
+                                    "default": "\"false\""
+                                },
+                                "description": "Активность элемента аккордеона",
+                                "source": {
+                                    "module": "./../../components/awc-accordion/awc-accordion-item/awc-accordion-item.ts",
+                                    "symbol": "AwcAccordionItem.active"
+                                }
+                            },
+                            {
+                                "name": "disabled",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": "boolean",
+                                    "required": false,
+                                    "default": "\"false\""
+                                },
+                                "description": "Отключение элемента аккордеона",
+                                "source": {
+                                    "module": "./../../components/awc-accordion/awc-accordion-item/awc-accordion-item.ts",
+                                    "symbol": "AwcAccordionItem.disabled"
+                                }
+                            },
+                            {
+                                "name": "_onActive",
+                                "required": false,
+                                "priority": "lowest",
+                                "value": {
+                                    "type": "EventDispatcher<boolean>",
+                                    "required": false
+                                },
+                                "source": {
+                                    "module": "./../../components/awc-accordion/awc-accordion-item/awc-accordion-item.ts",
+                                    "symbol": "AwcAccordionItem._onActive"
+                                }
+                            },
+                            {
+                                "name": "_arrowDownSvg",
+                                "required": false,
+                                "priority": "lowest",
+                                "value": {
+                                    "type": "SVGTemplateResult",
+                                    "required": true,
+                                    "default": "\"svg`\\n    <svg class=\\\"awc-accordion-item__arrow\\\" width=\\\"24\\\" height=\\\"24\\\" viewBox=\\\"0 0 24 24\\\" fill=\\\"none\\\" xmlns=\\\"http://www.w3.org/2000/svg\\\">\\n      <path fill-rule=\\\"evenodd\\\" clip-rule=\\\"evenodd\\\" d=\\\"M6.29289 8.29289C6.68342 7.90237 7.31658 7.90237 7.70711 8.29289L12 12.5858L16.2929 8.29289C16.6834 7.90237 17.3166 7.90237 17.7071 8.29289C18.0976 8.68342 18.0976 9.31658 17.7071 9.70711L12.7071 14.7071C12.3166 15.0976 11.6834 15.0976 11.2929 14.7071L6.29289 9.70711C5.90237 9.31658 5.90237 8.68342 6.29289 8.29289Z\\\" fill=\\\"#919BB6\\\"/>\\n    </svg>\\n  `\""
+                                },
+                                "source": {
+                                    "module": "./../../components/awc-accordion/awc-accordion-item/awc-accordion-item.ts",
+                                    "symbol": "AwcAccordionItem._arrowDownSvg"
+                                }
+                            },
+                            {
+                                "name": "styles",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": "CSSResult",
+                                    "required": true,
+                                    "default": "\"accordionItemStyle\""
+                                },
+                                "source": {
+                                    "module": "./../../components/awc-accordion/awc-accordion-item/awc-accordion-item.ts",
+                                    "symbol": "AwcAccordionItem.styles"
+                                }
+                            }
+                        ],
+                        "events": [
+                            {
+                                "name": "awc-accordion-toggle",
+                                "description": "Событие активности элемента. Срабатывает при переключении активности."
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "awc-accordion",
+                    "source": {
+                        "module": "./../../components/awc-accordion/awc-accordion.ts",
+                        "symbol": "AwcAccordion"
+                    },
+                    "attributes": [
+                        {
+                            "name": "disabled",
+                            "required": false,
+                            "priority": "normal",
+                            "value": {
+                                "type": "boolean",
+                                "required": false,
+                                "default": "\"false\""
+                            },
+                            "description": "Отключение группы",
+                            "source": {
+                                "module": "./../../components/awc-accordion/awc-accordion.ts",
+                                "symbol": "AwcAccordion.disabled"
+                            }
+                        },
+                        {
+                            "name": "autoclose",
+                            "required": false,
+                            "priority": "normal",
+                            "value": {
+                                "type": "boolean",
+                                "required": false,
+                                "default": "\"false\""
+                            },
+                            "description": "Отключение автозакрытия элементов",
+                            "source": {
+                                "module": "./../../components/awc-accordion/awc-accordion.ts",
+                                "symbol": "AwcAccordion.autoclose"
+                            }
+                        }
+                    ],
+                    "js": {
+                        "properties": [
+                            {
+                                "name": "disabled",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": "boolean",
+                                    "required": false,
+                                    "default": "\"false\""
+                                },
+                                "description": "Отключение группы",
+                                "source": {
+                                    "module": "./../../components/awc-accordion/awc-accordion.ts",
+                                    "symbol": "AwcAccordion.disabled"
+                                }
+                            },
+                            {
+                                "name": "autoclose",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": "boolean",
+                                    "required": false,
+                                    "default": "\"false\""
+                                },
+                                "description": "Отключение автозакрытия элементов",
+                                "source": {
+                                    "module": "./../../components/awc-accordion/awc-accordion.ts",
+                                    "symbol": "AwcAccordion.autoclose"
+                                }
+                            },
+                            {
+                                "name": "accordionItems",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": "AwcAccordionItem[]",
+                                    "required": true
+                                },
+                                "source": {
+                                    "module": "./../../components/awc-accordion/awc-accordion.ts",
+                                    "symbol": "AwcAccordion.accordionItems"
+                                }
+                            },
+                            {
+                                "name": "styles",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": "CSSResult",
+                                    "required": true,
+                                    "default": "\"accordionStyle\""
+                                },
+                                "source": {
+                                    "module": "./../../components/awc-accordion/awc-accordion.ts",
+                                    "symbol": "AwcAccordion.styles"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "awc-alert",
+                    "source": {
+                        "module": "./../../components/awc-alert/awc-alert.ts",
+                        "symbol": "AwcAlert"
+                    },
+                    "attributes": [
+                        {
+                            "name": "color",
+                            "required": false,
+                            "priority": "normal",
+                            "value": {
+                                "type": "AwcAlertColor",
+                                "required": true,
+                                "default": "\"primary\""
+                            },
+                            "description": "Цвет уведомления.",
+                            "source": {
+                                "module": "./../../components/awc-alert/awc-alert.ts",
+                                "symbol": "AwcAlert.color"
+                            }
+                        },
+                        {
+                            "name": "variant",
+                            "required": false,
+                            "priority": "normal",
+                            "value": {
+                                "kind": "plain",
+                                "type": "'block' | 'message'",
+                                "required": true,
+                                "default": "\"block\""
+                            },
+                            "description": "Вариант отображения уведомления.",
+                            "source": {
+                                "module": "./../../components/awc-alert/awc-alert.ts",
+                                "symbol": "AwcAlert.variant"
+                            }
+                        }
+                    ],
+                    "js": {
+                        "properties": [
+                            {
+                                "name": "color",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": "AwcAlertColor",
+                                    "required": true,
+                                    "default": "\"primary\""
+                                },
+                                "description": "Цвет уведомления.",
+                                "source": {
+                                    "module": "./../../components/awc-alert/awc-alert.ts",
+                                    "symbol": "AwcAlert.color"
+                                }
+                            },
+                            {
+                                "name": "variant",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "kind": "plain",
+                                    "type": "'block' | 'message'",
+                                    "required": true,
+                                    "default": "\"block\""
+                                },
+                                "description": "Вариант отображения уведомления.",
+                                "source": {
+                                    "module": "./../../components/awc-alert/awc-alert.ts",
+                                    "symbol": "AwcAlert.variant"
+                                }
+                            },
+                            {
+                                "name": "styles",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": [
+                                        "CSSResult",
+                                        "undefined"
+                                    ],
+                                    "required": true,
+                                    "default": "\"awcAlertStyles\""
+                                },
+                                "source": {
+                                    "module": "./../../components/awc-alert/awc-alert.ts",
+                                    "symbol": "AwcAlert.styles"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "awc-button",
+                    "description": "Кнопка (`awc-button`).\nИспользуется для выполнения действий пользователя при взаимодействии с элементом интерфейса.\nЭтот компонент поддерживает кастомные стили, различные состояния и варианты отображения.",
+                    "source": {
+                        "module": "./../../components/awc-button/awc-button.ts",
+                        "symbol": "AwcButton"
+                    },
+                    "attributes": [
+                        {
+                            "name": "name",
+                            "required": false,
+                            "priority": "normal",
+                            "value": {
+                                "type": "string",
+                                "required": true,
+                                "default": "\"\""
+                            },
+                            "description": "Имя кнопки",
+                            "source": {
+                                "module": "./../../components/awc-button/awc-button.ts",
+                                "symbol": "AwcButton.name"
+                            }
+                        },
+                        {
+                            "name": "value",
+                            "required": false,
+                            "priority": "normal",
+                            "value": {
+                                "type": "string",
+                                "required": true,
+                                "default": "\"\""
+                            },
+                            "description": "Значение кнопки",
+                            "source": {
+                                "module": "./../../components/awc-button/awc-button.ts",
+                                "symbol": "AwcButton.value"
+                            }
+                        },
+                        {
+                            "name": "background",
+                            "required": false,
+                            "priority": "normal",
+                            "value": {
+                                "kind": "plain",
+                                "type": "\"blue\" | \"red\" | \"green\" | \"gray\"",
+                                "required": true,
+                                "default": "\"blue\""
+                            },
+                            "description": "Цвет фона кнопки",
+                            "source": {
+                                "module": "./../../components/awc-button/awc-button.ts",
+                                "symbol": "AwcButton.background"
+                            }
+                        },
+                        {
+                            "name": "size",
+                            "required": false,
+                            "priority": "normal",
+                            "value": {
+                                "kind": "plain",
+                                "type": "\"large\" | \"regular\" | \"small\" | \"extrasmall\"",
+                                "required": true,
+                                "default": "\"regular\""
+                            },
+                            "description": "Размер кнопки",
+                            "source": {
+                                "module": "./../../components/awc-button/awc-button.ts",
+                                "symbol": "AwcButton.size"
+                            }
+                        },
+                        {
+                            "name": "variant",
+                            "required": false,
+                            "priority": "normal",
+                            "value": {
+                                "kind": "plain",
+                                "type": "\"primary\" | \"secondary\" | \"transparent\" | \"link\"",
+                                "required": true,
+                                "default": "\"primary\""
+                            },
+                            "description": "Вариант стиля кнопки",
+                            "source": {
+                                "module": "./../../components/awc-button/awc-button.ts",
+                                "symbol": "AwcButton.variant"
+                            }
+                        },
+                        {
+                            "name": "type",
+                            "required": false,
+                            "priority": "normal",
+                            "value": {
+                                "kind": "plain",
+                                "type": "\"button\" | \"submit\" | \"reset\"",
+                                "required": true,
+                                "default": "\"submit\""
+                            },
+                            "description": "Тип кнопки",
+                            "source": {
+                                "module": "./../../components/awc-button/awc-button.ts",
+                                "symbol": "AwcButton.type"
+                            }
+                        },
+                        {
+                            "name": "target",
+                            "required": false,
+                            "priority": "normal",
+                            "value": {
+                                "kind": "plain",
+                                "type": "\"_blank\" | \"_self\" | \"_parent\" | \"_top\"",
+                                "required": true,
+                                "default": "\"_self\""
+                            },
+                            "description": "Тип перехода по ссылке",
+                            "source": {
+                                "module": "./../../components/awc-button/awc-button.ts",
+                                "symbol": "AwcButton.target"
+                            }
+                        },
+                        {
+                            "name": "href",
+                            "required": false,
+                            "priority": "normal",
+                            "value": {
+                                "type": "string",
+                                "required": true,
+                                "default": "\"\""
+                            },
+                            "description": "Задает адрес документа, на который следует перейти.",
+                            "source": {
+                                "module": "./../../components/awc-button/awc-button.ts",
+                                "symbol": "AwcButton.href"
+                            }
+                        },
+                        {
+                            "name": "disabled",
+                            "required": false,
+                            "priority": "normal",
+                            "value": {
+                                "type": "boolean",
+                                "required": false,
+                                "default": "\"false\""
+                            },
+                            "description": "Флаг активации/деактивации кнопки",
+                            "source": {
+                                "module": "./../../components/awc-button/awc-button.ts",
+                                "symbol": "AwcButton.disabled"
+                            }
+                        },
+                        {
+                            "name": "filling",
+                            "required": false,
+                            "priority": "normal",
+                            "value": {
+                                "type": "boolean",
+                                "required": false,
+                                "default": "\"false\""
+                            },
+                            "description": "Флаг активации/деактивации окрашивания иконки в цвет текста.",
+                            "source": {
+                                "module": "./../../components/awc-button/awc-button.ts",
+                                "symbol": "AwcButton.filling"
+                            }
+                        },
+                        {
+                            "name": "loading",
+                            "required": false,
+                            "priority": "normal",
+                            "value": {
+                                "type": "boolean",
+                                "required": false,
+                                "default": "\"false\""
+                            },
+                            "description": "Флаг отображения спинера загрузки",
+                            "source": {
+                                "module": "./../../components/awc-button/awc-button.ts",
+                                "symbol": "AwcButton.loading"
+                            }
+                        },
+                        {
+                            "name": "autofocus",
+                            "required": false,
+                            "priority": "normal",
+                            "value": {
+                                "type": "boolean",
+                                "required": false,
+                                "default": "false"
+                            },
+                            "source": {
+                                "module": "./../../components/awc-button/awc-button.ts",
+                                "symbol": "AwcButton.autofocus"
+                            }
+                        }
+                    ],
+                    "js": {
+                        "properties": [
+                            {
+                                "name": "name",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": "string",
+                                    "required": true,
+                                    "default": "\"\""
+                                },
+                                "description": "Имя кнопки",
+                                "source": {
+                                    "module": "./../../components/awc-button/awc-button.ts",
+                                    "symbol": "AwcButton.name"
+                                }
+                            },
+                            {
+                                "name": "value",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": "string",
+                                    "required": true,
+                                    "default": "\"\""
+                                },
+                                "description": "Значение кнопки",
+                                "source": {
+                                    "module": "./../../components/awc-button/awc-button.ts",
+                                    "symbol": "AwcButton.value"
+                                }
+                            },
+                            {
+                                "name": "background",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "kind": "plain",
+                                    "type": "\"blue\" | \"red\" | \"green\" | \"gray\"",
+                                    "required": true,
+                                    "default": "\"blue\""
+                                },
+                                "description": "Цвет фона кнопки",
+                                "source": {
+                                    "module": "./../../components/awc-button/awc-button.ts",
+                                    "symbol": "AwcButton.background"
+                                }
+                            },
+                            {
+                                "name": "size",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "kind": "plain",
+                                    "type": "\"large\" | \"regular\" | \"small\" | \"extrasmall\"",
+                                    "required": true,
+                                    "default": "\"regular\""
+                                },
+                                "description": "Размер кнопки",
+                                "source": {
+                                    "module": "./../../components/awc-button/awc-button.ts",
+                                    "symbol": "AwcButton.size"
+                                }
+                            },
+                            {
+                                "name": "variant",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "kind": "plain",
+                                    "type": "\"primary\" | \"secondary\" | \"transparent\" | \"link\"",
+                                    "required": true,
+                                    "default": "\"primary\""
+                                },
+                                "description": "Вариант стиля кнопки",
+                                "source": {
+                                    "module": "./../../components/awc-button/awc-button.ts",
+                                    "symbol": "AwcButton.variant"
+                                }
+                            },
+                            {
+                                "name": "type",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "kind": "plain",
+                                    "type": "\"button\" | \"submit\" | \"reset\"",
+                                    "required": true,
+                                    "default": "\"submit\""
+                                },
+                                "description": "Тип кнопки",
+                                "source": {
+                                    "module": "./../../components/awc-button/awc-button.ts",
+                                    "symbol": "AwcButton.type"
+                                }
+                            },
+                            {
+                                "name": "target",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "kind": "plain",
+                                    "type": "\"_blank\" | \"_self\" | \"_parent\" | \"_top\"",
+                                    "required": true,
+                                    "default": "\"_self\""
+                                },
+                                "description": "Тип перехода по ссылке",
+                                "source": {
+                                    "module": "./../../components/awc-button/awc-button.ts",
+                                    "symbol": "AwcButton.target"
+                                }
+                            },
+                            {
+                                "name": "href",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": "string",
+                                    "required": true,
+                                    "default": "\"\""
+                                },
+                                "description": "Задает адрес документа, на который следует перейти.",
+                                "source": {
+                                    "module": "./../../components/awc-button/awc-button.ts",
+                                    "symbol": "AwcButton.href"
+                                }
+                            },
+                            {
+                                "name": "disabled",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": "boolean",
+                                    "required": false,
+                                    "default": "\"false\""
+                                },
+                                "description": "Флаг активации/деактивации кнопки",
+                                "source": {
+                                    "module": "./../../components/awc-button/awc-button.ts",
+                                    "symbol": "AwcButton.disabled"
+                                }
+                            },
+                            {
+                                "name": "filling",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": "boolean",
+                                    "required": false,
+                                    "default": "\"false\""
+                                },
+                                "description": "Флаг активации/деактивации окрашивания иконки в цвет текста.",
+                                "source": {
+                                    "module": "./../../components/awc-button/awc-button.ts",
+                                    "symbol": "AwcButton.filling"
+                                }
+                            },
+                            {
+                                "name": "loading",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": "boolean",
+                                    "required": false,
+                                    "default": "\"false\""
+                                },
+                                "description": "Флаг отображения спинера загрузки",
+                                "source": {
+                                    "module": "./../../components/awc-button/awc-button.ts",
+                                    "symbol": "AwcButton.loading"
+                                }
+                            },
+                            {
+                                "name": "autofocus",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": "boolean",
+                                    "required": false,
+                                    "default": "false"
+                                },
+                                "source": {
+                                    "module": "./../../components/awc-button/awc-button.ts",
+                                    "symbol": "AwcButton.autofocus"
+                                }
+                            },
+                            {
+                                "name": "button",
+                                "required": false,
+                                "priority": "lowest",
+                                "value": {
+                                    "type": [
+                                        "HTMLButtonElement",
+                                        "HTMLLinkElement"
+                                    ],
+                                    "required": true
+                                },
+                                "source": {
+                                    "module": "./../../components/awc-button/awc-button.ts",
+                                    "symbol": "AwcButton.button"
+                                }
+                            },
+                            {
+                                "name": "spinner",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": "AwcSpinner",
+                                    "required": true
+                                },
+                                "source": {
+                                    "module": "./../../components/awc-button/awc-button.ts",
+                                    "symbol": "AwcButton.spinner"
+                                }
+                            }
+                        ]
+                    },
+                    "slots": [
+                        {
+                            "name": "",
+                            "description": "Основное содержимое кнопки.",
+                            "priority": "low"
+                        }
+                    ]
+                },
+                {
+                    "name": "awc-icon-loader",
+                    "source": {
+                        "module": "./../../components/awc-icon-loader/awc-icon-loader.ts",
+                        "symbol": "AwcIconLoader"
+                    },
+                    "attributes": [
+                        {
+                            "name": "type",
+                            "required": false,
+                            "priority": "normal",
+                            "value": {
+                                "type": "string",
+                                "required": true,
+                                "default": "\"icon\""
+                            },
+                            "source": {
+                                "module": "./../../components/awc-icon-loader/awc-icon-loader.ts",
+                                "symbol": "AwcIconLoader.type"
+                            }
+                        },
+                        {
+                            "name": "size",
+                            "required": false,
+                            "priority": "normal",
+                            "value": {
+                                "type": "string",
+                                "required": true,
+                                "default": "\"\""
+                            },
+                            "source": {
+                                "module": "./../../components/awc-icon-loader/awc-icon-loader.ts",
+                                "symbol": "AwcIconLoader.size"
+                            }
+                        },
+                        {
+                            "name": "src",
+                            "required": false,
+                            "priority": "normal",
+                            "value": {
+                                "type": "string",
+                                "required": true,
+                                "default": "\"\""
+                            },
+                            "source": {
+                                "module": "./../../components/awc-icon-loader/awc-icon-loader.ts",
+                                "symbol": "AwcIconLoader.src"
+                            }
+                        }
+                    ],
+                    "js": {
+                        "properties": [
+                            {
+                                "name": "type",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": "string",
+                                    "required": true,
+                                    "default": "\"icon\""
+                                },
+                                "source": {
+                                    "module": "./../../components/awc-icon-loader/awc-icon-loader.ts",
+                                    "symbol": "AwcIconLoader.type"
+                                }
+                            },
+                            {
+                                "name": "size",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": "string",
+                                    "required": true,
+                                    "default": "\"\""
+                                },
+                                "source": {
+                                    "module": "./../../components/awc-icon-loader/awc-icon-loader.ts",
+                                    "symbol": "AwcIconLoader.size"
+                                }
+                            },
+                            {
+                                "name": "src",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": "string",
+                                    "required": true,
+                                    "default": "\"\""
+                                },
+                                "source": {
+                                    "module": "./../../components/awc-icon-loader/awc-icon-loader.ts",
+                                    "symbol": "AwcIconLoader.src"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "awc-icon",
+                    "description": "Элемент для отображения иконок.",
+                    "source": {
+                        "module": "./../../components/awc-icon/awc-icon.ts",
+                        "symbol": "AwcIcon"
+                    },
+                    "attributes": [
+                        {
+                            "name": "type",
+                            "required": false,
+                            "priority": "normal",
+                            "value": {
+                                "type": "string",
+                                "required": true,
+                                "default": "\"icon\""
+                            },
+                            "description": "Элемент для отображения иконок.",
+                            "source": {
+                                "module": "./../../components/awc-icon/awc-icon.ts",
+                                "symbol": "AwcIcon.type"
+                            }
+                        },
+                        {
+                            "name": "size",
+                            "required": false,
+                            "priority": "normal",
+                            "value": {
+                                "type": "string",
+                                "required": true,
+                                "default": "\"16\""
+                            },
+                            "description": "Указываеся размер иконки",
+                            "source": {
+                                "module": "./../../components/awc-icon/awc-icon.ts",
+                                "symbol": "AwcIcon.size"
+                            }
+                        },
+                        {
+                            "name": "name",
+                            "required": false,
+                            "priority": "normal",
+                            "value": {
+                                "type": "string",
+                                "required": true,
+                                "default": "\"\""
+                            },
+                            "description": "Имя или идентификатор конкретной иконки.",
+                            "source": {
+                                "module": "./../../components/awc-icon/awc-icon.ts",
+                                "symbol": "AwcIcon.name"
+                            }
+                        },
+                        {
+                            "name": "icon-scale",
+                            "required": false,
+                            "priority": "normal",
+                            "value": {
+                                "type": "string",
+                                "required": true,
+                                "default": "\"\""
+                            },
+                            "description": "Изменение размеров иконки",
+                            "source": {
+                                "module": "./../../components/awc-icon/awc-icon.ts",
+                                "symbol": "AwcIcon.iconScale"
+                            }
+                        }
+                    ],
+                    "js": {
+                        "properties": [
+                            {
+                                "name": "type",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": "string",
+                                    "required": true,
+                                    "default": "\"icon\""
+                                },
+                                "description": "Элемент для отображения иконок.",
+                                "source": {
+                                    "module": "./../../components/awc-icon/awc-icon.ts",
+                                    "symbol": "AwcIcon.type"
+                                }
+                            },
+                            {
+                                "name": "size",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": "string",
+                                    "required": true,
+                                    "default": "\"16\""
+                                },
+                                "description": "Указываеся размер иконки",
+                                "source": {
+                                    "module": "./../../components/awc-icon/awc-icon.ts",
+                                    "symbol": "AwcIcon.size"
+                                }
+                            },
+                            {
+                                "name": "name",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": "string",
+                                    "required": true,
+                                    "default": "\"\""
+                                },
+                                "description": "Имя или идентификатор конкретной иконки.",
+                                "source": {
+                                    "module": "./../../components/awc-icon/awc-icon.ts",
+                                    "symbol": "AwcIcon.name"
+                                }
+                            },
+                            {
+                                "name": "iconScale",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": "string",
+                                    "required": true,
+                                    "default": "\"\""
+                                },
+                                "description": "Изменение размеров иконки",
+                                "source": {
+                                    "module": "./../../components/awc-icon/awc-icon.ts",
+                                    "symbol": "AwcIcon.iconScale"
+                                }
+                            },
+                            {
+                                "name": "styles",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": "CSSResult[]",
+                                    "required": true,
+                                    "default": "[\"iconStyle\"]"
+                                },
+                                "source": {
+                                    "module": "./../../components/awc-icon/awc-icon.ts",
+                                    "symbol": "AwcIcon.styles"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "awc-spinner",
+                    "source": {
+                        "module": "./../../components/awc-spinner/awc-spinner.ts",
+                        "symbol": "AwcSpinner"
+                    },
+                    "attributes": [
+                        {
+                            "name": "size",
+                            "required": false,
+                            "priority": "normal",
+                            "value": {
+                                "type": "string",
+                                "required": true,
+                                "default": "\"\\\"m\\\"\""
+                            },
+                            "description": "Размер спинера",
+                            "source": {
+                                "module": "./../../components/awc-spinner/awc-spinner.ts",
+                                "symbol": "AwcSpinner.size"
+                            }
+                        },
+                        {
+                            "name": "variant",
+                            "required": false,
+                            "priority": "normal",
+                            "value": {
+                                "type": "string",
+                                "required": true,
+                                "default": "\"\\\"primary\\\"\""
+                            },
+                            "description": "Цвет спинера",
+                            "source": {
+                                "module": "./../../components/awc-spinner/awc-spinner.ts",
+                                "symbol": "AwcSpinner.variant"
+                            }
+                        }
+                    ],
+                    "js": {
+                        "properties": [
+                            {
+                                "name": "size",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": "string",
+                                    "required": true,
+                                    "default": "\"\\\"m\\\"\""
+                                },
+                                "description": "Размер спинера",
+                                "source": {
+                                    "module": "./../../components/awc-spinner/awc-spinner.ts",
+                                    "symbol": "AwcSpinner.size"
+                                }
+                            },
+                            {
+                                "name": "variant",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": "string",
+                                    "required": true,
+                                    "default": "\"\\\"primary\\\"\""
+                                },
+                                "description": "Цвет спинера",
+                                "source": {
+                                    "module": "./../../components/awc-spinner/awc-spinner.ts",
+                                    "symbol": "AwcSpinner.variant"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "awc-tooltip",
+                    "source": {
+                        "module": "./../../components/awc-tooltip/awc-tooltip.ts",
+                        "symbol": "AwcTooltip"
+                    },
+                    "attributes": [
+                        {
+                            "name": "message",
+                            "required": false,
+                            "priority": "normal",
+                            "value": {
+                                "type": "string",
+                                "required": true,
+                                "default": "\"Tooltip\""
+                            },
+                            "description": "Текст сообщения, отображаемого в тултипе.",
+                            "source": {
+                                "module": "./../../components/awc-tooltip/awc-tooltip.ts",
+                                "symbol": "AwcTooltip.message"
+                            }
+                        },
+                        {
+                            "name": "position",
+                            "required": false,
+                            "priority": "normal",
+                            "value": {
+                                "type": "AwcTooltipPosition",
+                                "required": true,
+                                "default": "\"top\""
+                            },
+                            "description": "Позиция тултипа относительно элемента.",
+                            "source": {
+                                "module": "./../../components/awc-tooltip/awc-tooltip.ts",
+                                "symbol": "AwcTooltip.position"
+                            }
+                        },
+                        {
+                            "name": "spacing",
+                            "required": false,
+                            "priority": "normal",
+                            "value": {
+                                "type": "AwcTooltipSpacing",
+                                "required": true,
+                                "default": "\"8\""
+                            },
+                            "description": "Расстояние в пикселях между тултипом и элементом.",
+                            "source": {
+                                "module": "./../../components/awc-tooltip/awc-tooltip.ts",
+                                "symbol": "AwcTooltip.spacing"
+                            }
+                        },
+                        {
+                            "name": "strategy",
+                            "required": false,
+                            "priority": "normal",
+                            "value": {
+                                "type": "AwcTooltipStrategy",
+                                "required": true,
+                                "default": "\"absolute\""
+                            },
+                            "description": "Стратегия позиционирования тултипа (absolute или fixed).",
+                            "source": {
+                                "module": "./../../components/awc-tooltip/awc-tooltip.ts",
+                                "symbol": "AwcTooltip.strategy"
+                            }
+                        },
+                        {
+                            "name": "marker",
+                            "required": false,
+                            "priority": "normal",
+                            "value": {
+                                "type": "boolean",
+                                "required": false,
+                                "default": "\"true\""
+                            },
+                            "description": "Показывать ли стрелку, указывающую на элемент.",
+                            "source": {
+                                "module": "./../../components/awc-tooltip/awc-tooltip.ts",
+                                "symbol": "AwcTooltip.marker"
+                            }
+                        },
+                        {
+                            "name": "active",
+                            "required": false,
+                            "priority": "normal",
+                            "value": {
+                                "type": "boolean",
+                                "required": false,
+                                "default": "\"false\""
+                            },
+                            "description": "Определяет, виден ли тултип в данный момент.",
+                            "source": {
+                                "module": "./../../components/awc-tooltip/awc-tooltip.ts",
+                                "symbol": "AwcTooltip.active"
+                            }
+                        },
+                        {
+                            "name": "disabled",
+                            "required": false,
+                            "priority": "normal",
+                            "value": {
+                                "type": "boolean",
+                                "required": false,
+                                "default": "\"false\""
+                            },
+                            "description": "Отключает взаимодействие с тултипом (например, при наведении или клике).",
+                            "source": {
+                                "module": "./../../components/awc-tooltip/awc-tooltip.ts",
+                                "symbol": "AwcTooltip.disabled"
+                            }
+                        },
+                        {
+                            "name": "match-width",
+                            "required": false,
+                            "priority": "normal",
+                            "value": {
+                                "type": "boolean",
+                                "required": false,
+                                "default": "\"false\""
+                            },
+                            "description": "Растягивает ширину тултипа до ширины дочернего элемента.",
+                            "source": {
+                                "module": "./../../components/awc-tooltip/awc-tooltip.ts",
+                                "symbol": "AwcTooltip.matchWidth"
+                            }
+                        }
+                    ],
+                    "js": {
+                        "properties": [
+                            {
+                                "name": "message",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": "string",
+                                    "required": true,
+                                    "default": "\"Tooltip\""
+                                },
+                                "description": "Текст сообщения, отображаемого в тултипе.",
+                                "source": {
+                                    "module": "./../../components/awc-tooltip/awc-tooltip.ts",
+                                    "symbol": "AwcTooltip.message"
+                                }
+                            },
+                            {
+                                "name": "position",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": "AwcTooltipPosition",
+                                    "required": true,
+                                    "default": "\"top\""
+                                },
+                                "description": "Позиция тултипа относительно элемента.",
+                                "source": {
+                                    "module": "./../../components/awc-tooltip/awc-tooltip.ts",
+                                    "symbol": "AwcTooltip.position"
+                                }
+                            },
+                            {
+                                "name": "spacing",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": "AwcTooltipSpacing",
+                                    "required": true,
+                                    "default": "\"8\""
+                                },
+                                "description": "Расстояние в пикселях между тултипом и элементом.",
+                                "source": {
+                                    "module": "./../../components/awc-tooltip/awc-tooltip.ts",
+                                    "symbol": "AwcTooltip.spacing"
+                                }
+                            },
+                            {
+                                "name": "strategy",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": "AwcTooltipStrategy",
+                                    "required": true,
+                                    "default": "\"absolute\""
+                                },
+                                "description": "Стратегия позиционирования тултипа (absolute или fixed).",
+                                "source": {
+                                    "module": "./../../components/awc-tooltip/awc-tooltip.ts",
+                                    "symbol": "AwcTooltip.strategy"
+                                }
+                            },
+                            {
+                                "name": "marker",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": "boolean",
+                                    "required": false,
+                                    "default": "\"true\""
+                                },
+                                "description": "Показывать ли стрелку, указывающую на элемент.",
+                                "source": {
+                                    "module": "./../../components/awc-tooltip/awc-tooltip.ts",
+                                    "symbol": "AwcTooltip.marker"
+                                }
+                            },
+                            {
+                                "name": "active",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": "boolean",
+                                    "required": false,
+                                    "default": "\"false\""
+                                },
+                                "description": "Определяет, виден ли тултип в данный момент.",
+                                "source": {
+                                    "module": "./../../components/awc-tooltip/awc-tooltip.ts",
+                                    "symbol": "AwcTooltip.active"
+                                }
+                            },
+                            {
+                                "name": "disabled",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": "boolean",
+                                    "required": false,
+                                    "default": "\"false\""
+                                },
+                                "description": "Отключает взаимодействие с тултипом (например, при наведении или клике).",
+                                "source": {
+                                    "module": "./../../components/awc-tooltip/awc-tooltip.ts",
+                                    "symbol": "AwcTooltip.disabled"
+                                }
+                            },
+                            {
+                                "name": "matchWidth",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": "boolean",
+                                    "required": false,
+                                    "default": "\"false\""
+                                },
+                                "description": "Растягивает ширину тултипа до ширины дочернего элемента.",
+                                "source": {
+                                    "module": "./../../components/awc-tooltip/awc-tooltip.ts",
+                                    "symbol": "AwcTooltip.matchWidth"
+                                }
+                            },
+                            {
+                                "name": "tooltipEl",
+                                "required": false,
+                                "priority": "lowest",
+                                "value": {
+                                    "type": "HTMLElement",
+                                    "required": true
+                                },
+                                "source": {
+                                    "module": "./../../components/awc-tooltip/awc-tooltip.ts",
+                                    "symbol": "AwcTooltip.tooltipEl"
+                                }
+                            },
+                            {
+                                "name": "arrowEl",
+                                "required": false,
+                                "priority": "lowest",
+                                "value": {
+                                    "type": "HTMLElement",
+                                    "required": true
+                                },
+                                "source": {
+                                    "module": "./../../components/awc-tooltip/awc-tooltip.ts",
+                                    "symbol": "AwcTooltip.arrowEl"
+                                }
+                            },
+                            {
+                                "name": "slotEl",
+                                "required": false,
+                                "priority": "lowest",
+                                "value": {
+                                    "type": "HTMLSlotElement",
+                                    "required": true
+                                },
+                                "source": {
+                                    "module": "./../../components/awc-tooltip/awc-tooltip.ts",
+                                    "symbol": "AwcTooltip.slotEl"
+                                }
+                            },
+                            {
+                                "name": "_onShowEvent",
+                                "required": false,
+                                "priority": "lowest",
+                                "value": {
+                                    "type": "EventDispatcher<boolean>",
+                                    "required": false
+                                },
+                                "description": "Событие, генерируемое при показе тултипа.",
+                                "source": {
+                                    "module": "./../../components/awc-tooltip/awc-tooltip.ts",
+                                    "symbol": "AwcTooltip._onShowEvent"
+                                }
+                            },
+                            {
+                                "name": "_onHideEvent",
+                                "required": false,
+                                "priority": "lowest",
+                                "value": {
+                                    "type": "EventDispatcher<boolean>",
+                                    "required": false
+                                },
+                                "description": "Событие, генерируемое при скрытии тултипа.",
+                                "source": {
+                                    "module": "./../../components/awc-tooltip/awc-tooltip.ts",
+                                    "symbol": "AwcTooltip._onHideEvent"
+                                }
+                            },
+                            {
+                                "name": "shadowRootOptions",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": [
+                                        "{ delegatesFocus: boolean; mode: ShadowRootMode; slotAssignment?: SlotAssignmentMode",
+                                        "undefined; }"
+                                    ],
+                                    "required": false,
+                                    "default": "{\"delegatesFocus\":true}"
+                                },
+                                "source": {
+                                    "module": "./../../components/awc-tooltip/awc-tooltip.ts",
+                                    "symbol": "AwcTooltip.shadowRootOptions"
+                                }
+                            },
+                            {
+                                "name": "cleanupFloating",
+                                "required": false,
+                                "priority": "lowest",
+                                "value": {
+                                    "type": [
+                                        "(() => void)",
+                                        "null"
+                                    ],
+                                    "required": true,
+                                    "default": "null"
+                                },
+                                "source": {
+                                    "module": "./../../components/awc-tooltip/awc-tooltip.ts",
+                                    "symbol": "AwcTooltip.cleanupFloating"
+                                }
+                            },
+                            {
+                                "name": "showTimeout",
+                                "required": false,
+                                "priority": "lowest",
+                                "value": {
+                                    "type": [
+                                        "number",
+                                        "null"
+                                    ],
+                                    "required": true,
+                                    "default": "null"
+                                },
+                                "source": {
+                                    "module": "./../../components/awc-tooltip/awc-tooltip.ts",
+                                    "symbol": "AwcTooltip.showTimeout"
+                                }
+                            },
+                            {
+                                "name": "referenceEl",
+                                "required": false,
+                                "priority": "lowest",
+                                "value": {
+                                    "type": [
+                                        "HTMLElement",
+                                        "null"
+                                    ],
+                                    "required": true,
+                                    "default": "null"
+                                },
+                                "source": {
+                                    "module": "./../../components/awc-tooltip/awc-tooltip.ts",
+                                    "symbol": "AwcTooltip.referenceEl"
+                                }
+                            },
+                            {
+                                "name": "wasHiddenByVisibility",
+                                "required": false,
+                                "priority": "lowest",
+                                "value": {
+                                    "type": "boolean",
+                                    "required": false,
+                                    "default": "false"
+                                },
+                                "source": {
+                                    "module": "./../../components/awc-tooltip/awc-tooltip.ts",
+                                    "symbol": "AwcTooltip.wasHiddenByVisibility"
+                                }
+                            },
+                            {
+                                "name": "handleSlotChange",
+                                "required": false,
+                                "priority": "lowest",
+                                "value": {
+                                    "type": "() => void",
+                                    "required": true,
+                                    "default": "\"() => {\\r\\n        const assignedElements = this.slotEl.assignedElements({ flatten: true }) as HTMLElement[];\\r\\n        this.referenceEl = assignedElements[0] || null;\\r\\n\\r\\n        if (this.active) this.updatePosition();\\r\\n    }\""
+                                },
+                                "source": {
+                                    "module": "./../../components/awc-tooltip/awc-tooltip.ts",
+                                    "symbol": "AwcTooltip.handleSlotChange"
+                                }
+                            },
+                            {
+                                "name": "showTooltip",
+                                "required": false,
+                                "priority": "lowest",
+                                "value": {
+                                    "type": "(immediate?: boolean) => void",
+                                    "required": false,
+                                    "default": "\"(immediate = false) => {\\r\\n        if (!this.disabled) {\\r\\n            if (this.showTimeout !== null) {\\r\\n                clearTimeout(this.showTimeout);\\r\\n            }\\r\\n\\r\\n            const show = async () => {\\r\\n                await this.updatePosition();\\r\\n                this.active = true;\\r\\n                this.showTimeout = null;\\r\\n                this.wasHiddenByVisibility = false;\\r\\n                this._onShowEvent(true);\\r\\n            };\\r\\n\\r\\n            if (immediate) {\\r\\n                show();\\r\\n            } else {\\r\\n                this.showTimeout = window.setTimeout(show, 300);\\r\\n            }\\r\\n        }\\r\\n    }\""
+                                },
+                                "source": {
+                                    "module": "./../../components/awc-tooltip/awc-tooltip.ts",
+                                    "symbol": "AwcTooltip.showTooltip"
+                                }
+                            },
+                            {
+                                "name": "hideTooltip",
+                                "required": false,
+                                "priority": "lowest",
+                                "value": {
+                                    "type": "() => void",
+                                    "required": true,
+                                    "default": "\"() => {\\r\\n        if (!this.disabled) {\\r\\n            if (this.showTimeout !== null) {\\r\\n                clearTimeout(this.showTimeout);\\r\\n                this.showTimeout = null;\\r\\n            }\\r\\n            this.active = false;\\r\\n            this.cleanupFloating?.();\\r\\n            this._onHideEvent(true);\\r\\n        }\\r\\n    }\""
+                                },
+                                "source": {
+                                    "module": "./../../components/awc-tooltip/awc-tooltip.ts",
+                                    "symbol": "AwcTooltip.hideTooltip"
+                                }
+                            },
+                            {
+                                "name": "handleFocusIn",
+                                "required": false,
+                                "priority": "lowest",
+                                "value": {
+                                    "type": "(event: FocusEvent) => Promise<void>",
+                                    "required": true,
+                                    "default": "\"async (event: FocusEvent) => {\\r\\n        if (!this.contains(event.target as Node)) return;\\r\\n\\r\\n        if (!this.wasHiddenByVisibility) {\\r\\n            this.showTooltip(true);\\r\\n        }\\r\\n    }\""
+                                },
+                                "source": {
+                                    "module": "./../../components/awc-tooltip/awc-tooltip.ts",
+                                    "symbol": "AwcTooltip.handleFocusIn"
+                                }
+                            },
+                            {
+                                "name": "handleFocusOut",
+                                "required": false,
+                                "priority": "lowest",
+                                "value": {
+                                    "type": "() => void",
+                                    "required": true,
+                                    "default": "\"() => {\\r\\n        if (!this.contains(document.activeElement)) {\\r\\n            this.hideTooltip();\\r\\n        }\\r\\n    }\""
+                                },
+                                "source": {
+                                    "module": "./../../components/awc-tooltip/awc-tooltip.ts",
+                                    "symbol": "AwcTooltip.handleFocusOut"
+                                }
+                            },
+                            {
+                                "name": "handleVisibilityChange",
+                                "required": false,
+                                "priority": "lowest",
+                                "value": {
+                                    "type": "() => void",
+                                    "required": true,
+                                    "default": "\"() => {\\r\\n        if (document.visibilityState === 'hidden' && this.active) {\\r\\n            this.wasHiddenByVisibility = true;\\r\\n            this.hideTooltip();\\r\\n        } else if (document.visibilityState === 'visible') {\\r\\n            setTimeout(() => this.wasHiddenByVisibility = false, 100);\\r\\n        }\\r\\n    }\""
+                                },
+                                "source": {
+                                    "module": "./../../components/awc-tooltip/awc-tooltip.ts",
+                                    "symbol": "AwcTooltip.handleVisibilityChange"
+                                }
+                            },
+                            {
+                                "name": "styles",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": "CSSResult",
+                                    "required": true,
+                                    "default": "\"awcTooltipStyle\""
+                                },
+                                "source": {
+                                    "module": "./../../components/awc-tooltip/awc-tooltip.ts",
+                                    "symbol": "AwcTooltip.styles"
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "css": {
+            "properties": [
+                {
+                    "name": "--awc-button-display",
+                    "description": "Устанавливает свойство отображения кнопки\n\n**Default:** inline-block"
+                }
+            ]
+        }
+    }
+}

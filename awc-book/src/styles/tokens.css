@@ -1,0 +1,79 @@
+:root {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+  
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: var( --awc-book-main-primary);
+  
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    --awc-book-sidebar-font-link: var(--awc-font-text-regular-14);
+  }
+    
+  *, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  [data-awc-theme="awc-book-light"] {
+    --awc-book-sidebar-link-color: var(--colors-light-primary);
+    --awc-book-sidebar-link-active: var(--colors-light-link-hover);
+    --awc-book-sidebar-link-hover: var(--colors-light-link-hover);
+
+    --awc-book-main-primary: #f5f6f8;
+    --awc-book-main-secondary: #ffff;
+  
+    --awc-book-text: #55555A;
+    --awc-book-title: #333338;
+  
+    --awc-book-preview: #ffff;
+    --awc-book-burger: #333338;
+    --awc-book-table-head: #fafafc;
+    --awc-book-table-body: rgba(0, 0, 0, 0.05);
+  
+    --awc-book-sidebar-link: rgba(0, 0, 0, 0.05);
+    --awc-book-attribute-code: #F8F9FD;
+    --awc-book-version: #3761E9;
+  
+    --awc-preview-transparent: #FFFF;
+  
+    --awc-book-border-color: var(--colors-light-stroke);
+    
+    --awc-book-color-logo: #333338;
+    --awc-book-logo: center url("../../awc-ui/assets/logo/logo_light.svg") no-repeat;
+  }
+  
+  [data-awc-theme="awc-book-dark"] {
+    --awc-book-sidebar-link-color: var(--colors-dark-primary);
+    --awc-book-sidebar-link-color-hover: var(--colors-dark-link-hover);
+    --awc-book-sidebar-link-color-active: var(--colors-dark-link-hover);
+
+
+    --awc-book-main-secondary: #2E313E;
+    
+    --awc-preview-transparent: #333338;
+  
+    --awc-book-main-primary: #1E2029;
+    --awc-book-text: #FFFFFFA3;
+    --awc-book-title: #ffff;
+  
+    --awc-book-burger: #ffff;
+    --awc-book-table-head: #ffff;
+    --awc-book-table-body: rgba(255, 255, 255, 0.05);
+  
+    --awc-book-preview: #00000026;
+    --awc-book-sidebar-link: rgba(255, 255, 255, 0.05);
+    --awc-book-attribute-code: none;
+    --awc-book-version: #ffff;
+  
+    --awc-book-border-color: var(--colors-dark-stroke);
+  
+    --awc-book-color-logo: #ffff;
+    --awc-book-logo: center url("../../awc-ui/assets/logo/logo_dark.svg") no-repeat;
+  }

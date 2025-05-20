@@ -1,0 +1,6 @@
+{
+  "tokenFormat": "variables2json",
+  "variableFiles": ["./src/assets/design-tokens/variables.json"],
+  "outputDir": "./src/assets/design-tokens/build",
+  "platforms": ["css"]
+}

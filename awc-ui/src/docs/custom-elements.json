@@ -1,0 +1,892 @@
+{
+  "version": "experimental",
+  "modules": [
+    {
+      "path": "./..\\components\\awc-accordion\\awc-accordion-item\\awc-accordion-item.ts",
+      "exports": [
+        {
+          "kind": "definition",
+          "name": "awc-accordion-item",
+          "declaration": {
+            "name": "AwcAccordionItem",
+            "module": "./..\\components\\awc-accordion\\awc-accordion-item\\awc-accordion-item.ts"
+          }
+        },
+        {
+          "kind": "class",
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit-element"
+          },
+          "name": "default",
+          "members": [
+            {
+              "kind": "field",
+              "name": "title",
+              "privacy": "public",
+              "description": "Заголовок элемента аккордеона",
+              "type": "string",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "active",
+              "privacy": "public",
+              "description": "Активность элемента аккордеона",
+              "type": "boolean",
+              "default": "\"false\""
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "privacy": "public",
+              "description": "Отключение элемента аккордеона",
+              "type": "boolean",
+              "default": "\"false\""
+            },
+            {
+              "kind": "field",
+              "name": "styles",
+              "privacy": "public",
+              "type": "CSSResult",
+              "default": "\"accordionItemStyle\""
+            }
+          ],
+          "tagName": "awc-accordion-item",
+          "events": [
+            {
+              "description": "Событие активности элемента. Срабатывает при переключении активности.",
+              "name": "awc-accordion-toggle",
+              "type": "Event"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "title",
+              "fieldName": "title",
+              "defaultValue": "\"\"",
+              "description": "Заголовок элемента аккордеона",
+              "type": "string"
+            },
+            {
+              "name": "active",
+              "fieldName": "active",
+              "defaultValue": "\"false\"",
+              "description": "Активность элемента аккордеона",
+              "type": "boolean"
+            },
+            {
+              "name": "disabled",
+              "fieldName": "disabled",
+              "defaultValue": "\"false\"",
+              "description": "Отключение элемента аккордеона",
+              "type": "boolean"
+            }
+          ]
+        },
+        {
+          "kind": "variable",
+          "name": "awcAccordionItemTag",
+          "type": "\"awc-accordion-item\""
+        }
+      ]
+    },
+    {
+      "path": "./..\\components\\awc-accordion\\awc-accordion.ts",
+      "exports": [
+        {
+          "kind": "definition",
+          "name": "awc-accordion",
+          "declaration": {
+            "name": "AwcAccordion",
+            "module": "./..\\components\\awc-accordion\\awc-accordion.ts"
+          }
+        },
+        {
+          "kind": "class",
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit-element"
+          },
+          "name": "default",
+          "members": [
+            {
+              "kind": "field",
+              "name": "disabled",
+              "privacy": "public",
+              "description": "Отключение группы",
+              "type": "boolean",
+              "default": "\"false\""
+            },
+            {
+              "kind": "field",
+              "name": "autoclose",
+              "privacy": "public",
+              "description": "Отключение автозакрытия элементов",
+              "type": "boolean",
+              "default": "\"false\""
+            },
+            {
+              "kind": "field",
+              "name": "accordionItems",
+              "privacy": "public",
+              "type": "AwcAccordionItem[]"
+            },
+            {
+              "kind": "field",
+              "name": "styles",
+              "privacy": "public",
+              "type": "CSSResult",
+              "default": "\"accordionStyle\""
+            }
+          ],
+          "tagName": "awc-accordion",
+          "attributes": [
+            {
+              "name": "disabled",
+              "fieldName": "disabled",
+              "defaultValue": "\"false\"",
+              "description": "Отключение группы",
+              "type": "boolean"
+            },
+            {
+              "name": "autoclose",
+              "fieldName": "autoclose",
+              "defaultValue": "\"false\"",
+              "description": "Отключение автозакрытия элементов",
+              "type": "boolean"
+            }
+          ]
+        },
+        {
+          "kind": "variable",
+          "name": "awcAccordionTag",
+          "type": "\"awc-accordion\""
+        }
+      ]
+    },
+    {
+      "path": "./..\\components\\awc-alert\\awc-alert.ts",
+      "exports": [
+        {
+          "kind": "definition",
+          "name": "awc-alert",
+          "declaration": {
+            "name": "AwcAlert",
+            "module": "./..\\components\\awc-alert\\awc-alert.ts"
+          }
+        },
+        {
+          "kind": "class",
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit-element"
+          },
+          "name": "default",
+          "members": [
+            {
+              "kind": "field",
+              "name": "color",
+              "privacy": "public",
+              "description": "Цвет уведомления.",
+              "type": "AwcAlertColor",
+              "default": "\"primary\""
+            },
+            {
+              "kind": "field",
+              "name": "variant",
+              "privacy": "public",
+              "description": "Вариант отображения уведомления.",
+              "type": "'block' | 'message'",
+              "default": "\"block\""
+            },
+            {
+              "kind": "field",
+              "name": "styles",
+              "privacy": "public",
+              "type": "CSSResult | undefined",
+              "default": "\"awcAlertStyles\""
+            }
+          ],
+          "tagName": "awc-alert",
+          "attributes": [
+            {
+              "name": "color",
+              "fieldName": "color",
+              "defaultValue": "\"primary\"",
+              "description": "Цвет уведомления.",
+              "type": "AwcAlertColor"
+            },
+            {
+              "name": "variant",
+              "fieldName": "variant",
+              "defaultValue": "\"block\"",
+              "description": "Вариант отображения уведомления.",
+              "type": "'block' | 'message'"
+            }
+          ]
+        },
+        {
+          "kind": "variable",
+          "name": "awcAlertTag",
+          "description": "Элемент предупреждения awc-alert.\nИспользуется для отображения сообщений пользователю с различными цветами и вариантами отображения.\nЭтот компонент поддерживает кастомные стили и различные типы уведомлений.",
+          "type": "\"awc-alert\""
+        }
+      ]
+    },
+    {
+      "path": "./..\\components\\awc-button\\awc-button.ts",
+      "exports": [
+        {
+          "kind": "definition",
+          "name": "awc-button",
+          "declaration": {
+            "name": "AwcButton",
+            "module": "./..\\components\\awc-button\\awc-button.ts"
+          }
+        },
+        {
+          "kind": "class",
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit-element"
+          },
+          "description": "Кнопка (`awc-button`).\nИспользуется для выполнения действий пользователя при взаимодействии с элементом интерфейса.\nЭтот компонент поддерживает кастомные стили, различные состояния и варианты отображения.",
+          "name": "default",
+          "members": [
+            {
+              "kind": "field",
+              "name": "name",
+              "privacy": "public",
+              "description": "Имя кнопки",
+              "type": "string",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "value",
+              "privacy": "public",
+              "description": "Значение кнопки",
+              "type": "string",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "background",
+              "privacy": "public",
+              "description": "Цвет фона кнопки",
+              "type": "\"blue\" | \"red\" | \"green\" | \"gray\"",
+              "default": "\"blue\""
+            },
+            {
+              "kind": "field",
+              "name": "size",
+              "privacy": "public",
+              "description": "Размер кнопки",
+              "type": "\"large\" | \"regular\" | \"small\" | \"extrasmall\"",
+              "default": "\"regular\""
+            },
+            {
+              "kind": "field",
+              "name": "variant",
+              "privacy": "public",
+              "description": "Вариант стиля кнопки",
+              "type": "\"primary\" | \"secondary\" | \"transparent\" | \"link\"",
+              "default": "\"primary\""
+            },
+            {
+              "kind": "field",
+              "name": "type",
+              "privacy": "public",
+              "description": "Тип кнопки",
+              "type": "\"button\" | \"submit\" | \"reset\"",
+              "default": "\"submit\""
+            },
+            {
+              "kind": "field",
+              "name": "target",
+              "privacy": "public",
+              "description": "Тип перехода по ссылке",
+              "type": "\"_blank\" | \"_self\" | \"_parent\" | \"_top\"",
+              "default": "\"_self\""
+            },
+            {
+              "kind": "field",
+              "name": "href",
+              "privacy": "public",
+              "description": "Задает адрес документа, на который следует перейти.",
+              "type": "string",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "privacy": "public",
+              "description": "Флаг активации/деактивации кнопки",
+              "type": "boolean",
+              "default": "\"false\""
+            },
+            {
+              "kind": "field",
+              "name": "filling",
+              "privacy": "public",
+              "description": "Флаг активации/деактивации окрашивания иконки в цвет текста.",
+              "type": "boolean",
+              "default": "\"false\""
+            },
+            {
+              "kind": "field",
+              "name": "loading",
+              "privacy": "public",
+              "description": "Флаг отображения спинера загрузки",
+              "type": "boolean",
+              "default": "\"false\""
+            },
+            {
+              "kind": "field",
+              "name": "autofocus",
+              "privacy": "public",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "spinner",
+              "privacy": "public",
+              "type": "AwcSpinner"
+            },
+            {
+              "kind": "method",
+              "name": "focus",
+              "privacy": "public",
+              "type": "(): void",
+              "parameters": [],
+              "return": {
+                "type": "void"
+              }
+            }
+          ],
+          "tagName": "awc-button",
+          "slots": [
+            {
+              "description": "Основное содержимое кнопки.",
+              "name": ""
+            }
+          ],
+          "attributes": [
+            {
+              "name": "name",
+              "fieldName": "name",
+              "defaultValue": "\"\"",
+              "description": "Имя кнопки",
+              "type": "string"
+            },
+            {
+              "name": "value",
+              "fieldName": "value",
+              "defaultValue": "\"\"",
+              "description": "Значение кнопки",
+              "type": "string"
+            },
+            {
+              "name": "background",
+              "fieldName": "background",
+              "defaultValue": "\"blue\"",
+              "description": "Цвет фона кнопки",
+              "type": "\"blue\" | \"red\" | \"green\" | \"gray\""
+            },
+            {
+              "name": "size",
+              "fieldName": "size",
+              "defaultValue": "\"regular\"",
+              "description": "Размер кнопки",
+              "type": "\"large\" | \"regular\" | \"small\" | \"extrasmall\""
+            },
+            {
+              "name": "variant",
+              "fieldName": "variant",
+              "defaultValue": "\"primary\"",
+              "description": "Вариант стиля кнопки",
+              "type": "\"primary\" | \"secondary\" | \"transparent\" | \"link\""
+            },
+            {
+              "name": "type",
+              "fieldName": "type",
+              "defaultValue": "\"submit\"",
+              "description": "Тип кнопки",
+              "type": "\"button\" | \"submit\" | \"reset\""
+            },
+            {
+              "name": "target",
+              "fieldName": "target",
+              "defaultValue": "\"_self\"",
+              "description": "Тип перехода по ссылке",
+              "type": "\"_blank\" | \"_self\" | \"_parent\" | \"_top\""
+            },
+            {
+              "name": "href",
+              "fieldName": "href",
+              "defaultValue": "\"\"",
+              "description": "Задает адрес документа, на который следует перейти.",
+              "type": "string"
+            },
+            {
+              "name": "disabled",
+              "fieldName": "disabled",
+              "defaultValue": "\"false\"",
+              "description": "Флаг активации/деактивации кнопки",
+              "type": "boolean"
+            },
+            {
+              "name": "filling",
+              "fieldName": "filling",
+              "defaultValue": "\"false\"",
+              "description": "Флаг активации/деактивации окрашивания иконки в цвет текста.",
+              "type": "boolean"
+            },
+            {
+              "name": "loading",
+              "fieldName": "loading",
+              "defaultValue": "\"false\"",
+              "description": "Флаг отображения спинера загрузки",
+              "type": "boolean"
+            },
+            {
+              "name": "autofocus",
+              "fieldName": "autofocus",
+              "defaultValue": "false",
+              "type": "boolean"
+            }
+          ],
+          "cssProperties": [
+            {
+              "name": "--awc-button-display",
+              "description": "Устанавливает свойство отображения кнопки",
+              "default": "\"inline-block\""
+            }
+          ]
+        },
+        {
+          "kind": "variable",
+          "name": "awcButtonTag",
+          "type": "\"awc-button\""
+        }
+      ]
+    },
+    {
+      "path": "./..\\components\\awc-icon-loader\\awc-icon-loader.ts",
+      "exports": [
+        {
+          "kind": "definition",
+          "name": "awc-icon-loader",
+          "declaration": {
+            "name": "AwcIconLoader",
+            "module": "./..\\components\\awc-icon-loader\\awc-icon-loader.ts"
+          }
+        },
+        {
+          "kind": "class",
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit-element"
+          },
+          "name": "default",
+          "members": [
+            {
+              "kind": "field",
+              "name": "type",
+              "privacy": "public",
+              "type": "string",
+              "default": "\"icon\""
+            },
+            {
+              "kind": "field",
+              "name": "size",
+              "privacy": "public",
+              "type": "string",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "src",
+              "privacy": "public",
+              "type": "string",
+              "default": "\"\""
+            }
+          ],
+          "tagName": "awc-icon-loader",
+          "attributes": [
+            {
+              "name": "type",
+              "fieldName": "type",
+              "defaultValue": "\"icon\"",
+              "type": "string"
+            },
+            {
+              "name": "size",
+              "fieldName": "size",
+              "defaultValue": "\"\"",
+              "type": "string"
+            },
+            {
+              "name": "src",
+              "fieldName": "src",
+              "defaultValue": "\"\"",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "kind": "variable",
+          "name": "awcIconLoaderTag",
+          "type": "\"awc-icon-loader\""
+        }
+      ]
+    },
+    {
+      "path": "./..\\components\\awc-icon\\awc-icon.ts",
+      "exports": [
+        {
+          "kind": "definition",
+          "name": "awc-icon",
+          "declaration": {
+            "name": "AwcIcon",
+            "module": "./..\\components\\awc-icon\\awc-icon.ts"
+          }
+        },
+        {
+          "kind": "class",
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit-element"
+          },
+          "description": "Элемент для отображения иконок.",
+          "name": "default",
+          "members": [
+            {
+              "kind": "field",
+              "name": "type",
+              "privacy": "public",
+              "description": "Элемент для отображения иконок.",
+              "type": "string",
+              "default": "\"icon\""
+            },
+            {
+              "kind": "field",
+              "name": "size",
+              "privacy": "public",
+              "description": "Указываеся размер иконки",
+              "type": "string",
+              "default": "\"16\""
+            },
+            {
+              "kind": "field",
+              "name": "name",
+              "privacy": "public",
+              "description": "Имя или идентификатор конкретной иконки.",
+              "type": "string",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "iconScale",
+              "privacy": "public",
+              "description": "Изменение размеров иконки",
+              "type": "string",
+              "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "styles",
+              "privacy": "public",
+              "type": "CSSResult[]",
+              "default": "[\"iconStyle\"]"
+            }
+          ],
+          "tagName": "awc-icon",
+          "attributes": [
+            {
+              "name": "type",
+              "fieldName": "type",
+              "defaultValue": "\"icon\"",
+              "description": "Элемент для отображения иконок.",
+              "type": "string"
+            },
+            {
+              "name": "size",
+              "fieldName": "size",
+              "defaultValue": "\"16\"",
+              "description": "Указываеся размер иконки",
+              "type": "string"
+            },
+            {
+              "name": "name",
+              "fieldName": "name",
+              "defaultValue": "\"\"",
+              "description": "Имя или идентификатор конкретной иконки.",
+              "type": "string"
+            },
+            {
+              "name": "icon-scale",
+              "fieldName": "iconScale",
+              "defaultValue": "\"\"",
+              "description": "Изменение размеров иконки",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "kind": "variable",
+          "name": "awcIconTag",
+          "type": "\"awc-icon\""
+        }
+      ]
+    },
+    {
+      "path": "./..\\components\\awc-spinner\\awc-spinner.ts",
+      "exports": [
+        {
+          "kind": "definition",
+          "name": "awc-spinner",
+          "declaration": {
+            "name": "AwcSpinner",
+            "module": "./..\\components\\awc-spinner\\awc-spinner.ts"
+          }
+        },
+        {
+          "kind": "class",
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit-element"
+          },
+          "name": "default",
+          "members": [
+            {
+              "kind": "field",
+              "name": "size",
+              "privacy": "public",
+              "description": "Размер спинера",
+              "type": "string",
+              "default": "\"\\\"m\\\"\""
+            },
+            {
+              "kind": "field",
+              "name": "variant",
+              "privacy": "public",
+              "description": "Цвет спинера",
+              "type": "string",
+              "default": "\"\\\"primary\\\"\""
+            }
+          ],
+          "tagName": "awc-spinner",
+          "attributes": [
+            {
+              "name": "size",
+              "fieldName": "size",
+              "defaultValue": "\"\\\"m\\\"\"",
+              "description": "Размер спинера",
+              "type": "string"
+            },
+            {
+              "name": "variant",
+              "fieldName": "variant",
+              "defaultValue": "\"\\\"primary\\\"\"",
+              "description": "Цвет спинера",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "kind": "variable",
+          "name": "awcSpinnerTag",
+          "type": "\"awc-spinner\""
+        }
+      ]
+    },
+    {
+      "path": "./..\\components\\awc-tooltip\\awc-tooltip.ts",
+      "exports": [
+        {
+          "kind": "definition",
+          "name": "awc-tooltip",
+          "declaration": {
+            "name": "AwcTooltip",
+            "module": "./..\\components\\awc-tooltip\\awc-tooltip.ts"
+          }
+        },
+        {
+          "kind": "class",
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit-element"
+          },
+          "name": "default",
+          "members": [
+            {
+              "kind": "field",
+              "name": "message",
+              "privacy": "public",
+              "description": "Текст сообщения, отображаемого в тултипе.",
+              "type": "string",
+              "default": "\"Tooltip\""
+            },
+            {
+              "kind": "field",
+              "name": "position",
+              "privacy": "public",
+              "description": "Позиция тултипа относительно элемента.",
+              "type": "AwcTooltipPosition",
+              "default": "\"top\""
+            },
+            {
+              "kind": "field",
+              "name": "spacing",
+              "privacy": "public",
+              "description": "Расстояние в пикселях между тултипом и элементом.",
+              "type": "AwcTooltipSpacing",
+              "default": "\"8\""
+            },
+            {
+              "kind": "field",
+              "name": "strategy",
+              "privacy": "public",
+              "description": "Стратегия позиционирования тултипа (absolute или fixed).",
+              "type": "AwcTooltipStrategy",
+              "default": "\"absolute\""
+            },
+            {
+              "kind": "field",
+              "name": "marker",
+              "privacy": "public",
+              "description": "Показывать ли стрелку, указывающую на элемент.",
+              "type": "boolean",
+              "default": "\"true\""
+            },
+            {
+              "kind": "field",
+              "name": "active",
+              "privacy": "public",
+              "description": "Определяет, виден ли тултип в данный момент.",
+              "type": "boolean",
+              "default": "\"false\""
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "privacy": "public",
+              "description": "Отключает взаимодействие с тултипом (например, при наведении или клике).",
+              "type": "boolean",
+              "default": "\"false\""
+            },
+            {
+              "kind": "field",
+              "name": "matchWidth",
+              "privacy": "public",
+              "description": "Растягивает ширину тултипа до ширины дочернего элемента.",
+              "type": "boolean",
+              "default": "\"false\""
+            },
+            {
+              "kind": "field",
+              "name": "shadowRootOptions",
+              "privacy": "public",
+              "type": "{ delegatesFocus: boolean; mode: ShadowRootMode; slotAssignment?: SlotAssignmentMode | undefined; }",
+              "default": "{\"delegatesFocus\":true}"
+            },
+            {
+              "kind": "field",
+              "name": "styles",
+              "privacy": "public",
+              "type": "CSSResult",
+              "default": "\"awcTooltipStyle\""
+            },
+            {
+              "kind": "method",
+              "name": "show",
+              "privacy": "public",
+              "type": "(): void",
+              "parameters": [],
+              "return": {
+                "type": "void"
+              }
+            },
+            {
+              "kind": "method",
+              "name": "hide",
+              "privacy": "public",
+              "type": "(): void",
+              "parameters": [],
+              "return": {
+                "type": "void"
+              }
+            }
+          ],
+          "tagName": "awc-tooltip",
+          "attributes": [
+            {
+              "name": "message",
+              "fieldName": "message",
+              "defaultValue": "\"Tooltip\"",
+              "description": "Текст сообщения, отображаемого в тултипе.",
+              "type": "string"
+            },
+            {
+              "name": "position",
+              "fieldName": "position",
+              "defaultValue": "\"top\"",
+              "description": "Позиция тултипа относительно элемента.",
+              "type": "AwcTooltipPosition"
+            },
+            {
+              "name": "spacing",
+              "fieldName": "spacing",
+              "defaultValue": "\"8\"",
+              "description": "Расстояние в пикселях между тултипом и элементом.",
+              "type": "AwcTooltipSpacing"
+            },
+            {
+              "name": "strategy",
+              "fieldName": "strategy",
+              "defaultValue": "\"absolute\"",
+              "description": "Стратегия позиционирования тултипа (absolute или fixed).",
+              "type": "AwcTooltipStrategy"
+            },
+            {
+              "name": "marker",
+              "fieldName": "marker",
+              "defaultValue": "\"true\"",
+              "description": "Показывать ли стрелку, указывающую на элемент.",
+              "type": "boolean"
+            },
+            {
+              "name": "active",
+              "fieldName": "active",
+              "defaultValue": "\"false\"",
+              "description": "Определяет, виден ли тултип в данный момент.",
+              "type": "boolean"
+            },
+            {
+              "name": "disabled",
+              "fieldName": "disabled",
+              "defaultValue": "\"false\"",
+              "description": "Отключает взаимодействие с тултипом (например, при наведении или клике).",
+              "type": "boolean"
+            },
+            {
+              "name": "match-width",
+              "fieldName": "matchWidth",
+              "defaultValue": "\"false\"",
+              "description": "Растягивает ширину тултипа до ширины дочернего элемента.",
+              "type": "boolean"
+            }
+          ]
+        },
+        {
+          "kind": "variable",
+          "name": "awcTooltipTag",
+          "type": "\"awc-tooltip\""
+        }
+      ]
+    }
+  ]
+}

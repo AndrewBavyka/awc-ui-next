@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/aspro_cloud.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>awc-ui</title>
+  <link rel="stylesheet" href="./src/styles/main.css" />
+  <script type="module" src="./src/main.ts"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/themes/light.css" />
+  <script type="module"
+    src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/shoelace-autoloader.js"></script>
+</head>
+
+<style>
+  .problematic-host {
+    width: 200px;
+    height: 100px;
+    overflow: hidden;
+    border: 1px solid red;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+  }
+
+  body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+</style>
+
+<body>
+  <form>
+    <awc-select search  name="awc-select" placeholder="Hello">
+      <awc-select-item value="Аспро.Cloud">Аспро.Agile</awc-select-item>
+      <awc-select-item  value="Аспро.Cloud 2">
+        <div style="display: flex; align-items: center; gap: 6px;">
+          <awc-avatar size="32" rounded="circle" status="none" color="global-red-2-600" icon="none" title="Аспро.Cloud">
+          </awc-avatar>
+          Аспро.Cloud
+        </div>
+      </awc-select-item>
+      <awc-select-item>Аспро.Телефония</awc-select-item>
+      <awc-select-item>Тест 1</awc-select-item>
+      <awc-select-item value="Тест 2">Тест 2</awc-select-item>
+      <awc-select-item value="Тест 3">Тест 3</awc-select-item>
+      <awc-select-item value="Тест 4">Тест 4</awc-select-item>
+      <awc-select-item value="Тест 5">Тест 5</awc-select-item>
+      <awc-select-item value="Тест 2">Тест 2</awc-select-item>
+      <awc-select-item value="Тест 2">Тест 2</awc-select-item>
+    </awc-select>
+
+    <!-- <select multiple name="cars" id="cars">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="mercedes">Mercedes</option>
+      <option value="audi">Audi</option>
+    </select> -->
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <!-- <script>
+    const form = document.querySelector('form');
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(form);
+        
+        // Получаем все значения по имени поля
+        const selectedCars = Array.from(formData.getAll('cars'));
+        const awcSelected = Array.from(formData.getAll('select'));
+
+        console.log('Выбранные значения:', awcSelected);
+
+        // Если хотите увидеть весь объект FormData как объект:
+        const formObject = Object.fromEntries(formData);
+        console.log('FormData как объект:', formObject);
+    });
+</script> -->
+</body>
+
+</html>

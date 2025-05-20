@@ -1,0 +1,28 @@
+:root {
+  --awc-font-h1-medium: 500 40px/52px 'Inter';
+  --awc-font-h2-bold: 700 34px/44px 'Inter';
+  --awc-font-h2-medium: 500 34px/44px 'Inter';
+  --awc-font-h2-regular: 400 34px/44px 'Inter';
+  --awc-font-h3-medium: 500 28px/38px 'Inter';
+  --awc-font-h3-regular: 400 28px/38px 'Inter';
+  --awc-font-h4-medium: 500 24px/32px 'Inter';
+  --awc-font-h4-regular: 400 24px/32px 'Inter';
+  --awc-font-h5-bold: 700 18px/24px 'Inter';
+  --awc-font-h5-medium: 500 18px/24px 'Inter';
+  --awc-font-headline-medium-16: 500 16px/20px 'Inter';
+  --awc-font-headline-regular-16: 400 16px/20px 'Inter';
+  --awc-font-text-bold-15: 700 15px/22px 'Inter';
+  --awc-font-text-medium-15: 500 15px/22px 'Inter';
+  --awc-font-text-regular-15: 400 15px/22px 'Inter';
+  --awc-font-text-kb-bold: 700 16px/24px 'Inter';
+  --awc-font-text-kb-medium: 500 16px/24px 'Inter';
+  --awc-font-text-kb-regular: 400 16px/24px 'Inter';
+  --awc-font-text-bold-14: 700 14px/20px 'Inter';
+  --awc-font-text-medium-14: 500 14px/20px 'Inter';
+  --awc-font-text-regular-14: 400 14px/20px 'Inter';
+  --awc-font-caption-1-medium: 500 13px/16px 'Inter';
+  --awc-font-caption-1-regular: 400 13px/16px 'Inter';
+  --awc-font-caption-2-medium: 500 12px/14px 'Inter';
+  --awc-font-caption-2-regular: 400 12px/14px 'Inter';
+  --awc-font-caption-3-regular: 400 11px/14px 'Inter';
+}

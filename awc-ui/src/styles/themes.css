@@ -1,0 +1,153 @@
+[data-theme='light'] {
+  /* awc-divider */
+  --awc-divider-background-theme: var(--colors-light-stroke);
+  --awc-divider-text-theme: var(--colors-light-secondary);
+
+  /* awc-checkbox */
+  --awc-checkbox-background-theme: transparent;
+  --awc-checkbox-background-hover-theme: var(--colors-light-light-background);
+
+  --awc-checkbox-background-checked-theme: var(--colors-light-primary);
+  --awc-checkbox-background-checked-hover-theme: var(--colors-light-link-hover);
+
+  --awc-checkbox-border-theme: var(--colors-light-stroke-control);
+  --awc-checkbox-border-hover-theme: var(--colors-light-stroke-hover);
+
+  --awc-checkbox-label-theme: var(--colors-light-text);
+
+  /* awc-checkbox-group */
+  --awc-checkbox-group-title-theme: var(--colors-light-titles);
+
+  /* awc-switcher */
+  --awc-switcher-background-theme: var(--colors-light-stroke);
+  --awc-switcher-background-hover-theme: var(--colors-light-stroke-hover);
+
+  --awc-switcher-background-checked-theme: var(--colors-light-primary);
+  --awc-switcher-background-checked-hover-theme: var(--colors-light-link-hover);
+
+  --awc-switcher-label-theme: var(--colors-light-text);
+
+  /* awc-radio */
+  --awc-radio-background-theme: var(--colors-light-white);
+  --awc-radio-background-hover-theme: var(--colors-light-light-background);
+
+  --awc-radio-background-checked-theme: var(--colors-light-primary);
+  --awc-radio-background-checked-hover-theme: var(--colors-light-link-hover);
+
+  --awc-radio-border-theme: var(--colors-light-stroke-control);
+  --awc-radio-border-hover-theme: var(--colors-light-stroke-hover);
+
+  --awc-radio-label-theme: var(--colors-light-text);
+
+  /* awc-radio-group */
+  --awc-radio-group-title-theme: var(--colors-light-titles);
+
+  /* awc-accordion-item */
+  --awc-accordion-item-title-theme: var(--colors-light-titles);
+  --awc-accordion-item-divider-theme: var(--colors-light-stroke);
+
+  /* awc-user-info */
+  --awc-user-info-name-theme: var(--colors-light-titles);
+  --awc-user-info-status-theme: var(--colors-light-secondary);
+
+  /* awc-textarea */
+  --awc-textarea-title-theme: var(--colors-light-titles);
+  --awc-textarea-placeholder-theme: var(--colors-light-secondary);
+  --awc-textarea-text-theme: var(--colors-light-text);
+
+  --awc-textarea-border-focus-theme: var(--colors-light-secondary);
+  --awc-textarea-background-theme: var(--colors-light-input-background);
+  --awc-textarea-background-hover-theme: var(--colors-light-stroke);
+  --awc-textarea-background-focus-theme: var(--colors-light-base-surface);
+
+  /* awc-input */
+  --awc-input-title-theme: var(--colors-light-titles);
+  --awc-input-placeholder-theme: var(--colors-light-secondary);
+  --awc-input-text-theme: var(--colors-light-text);
+
+  --awc-input-border-focus-theme: var(--colors-light-secondary);
+  --awc-input-background-theme: var(--colors-light-input-background);
+  --awc-input-background-hover-theme: var(--colors-light-stroke);
+  --awc-input-background-focus-theme: var(--colors-light-base-surface);
+
+  /* awc-icon-button */
+  --awc-icon-button-background-hover-theme: var(--colors-light-hover-back);
+  --awc-icon-button-background-active-theme: var(--colors-light-pressed-back);
+}
+
+[data-theme='dark'] {
+  /* awc-divider */
+  --awc-divider-background-theme: var(--colors-dark-stroke);
+  --awc-divider-text-theme: var(--colors-light-secondary);
+
+  /* awc-checkbox */
+  --awc-checkbox-background-theme: transparent;
+  --awc-checkbox-background-hover-theme: var(--colors-dark-light-background);
+
+  --awc-checkbox-background-checked-theme: var(--colors-dark-primary);
+  --awc-checkbox-background-checked-hover-theme: var(--colors-dark-link-hover);
+
+  --awc-checkbox-border-theme: var(--colors-dark-stroke-control);
+  --awc-checkbox-border-hover-theme: var(--colors-dark-stroke-hover);
+
+  --awc-checkbox-label-theme: var(--colors-dark-text);
+
+  /* awc-checkbox-group */
+  --awc-checkbox-group-title-theme: var(--colors-dark-titles);
+
+  /* awc-switcher */
+  --awc-switcher-background-theme: var(--colors-dark-stroke);
+  --awc-switcher-background-hover-theme: var(--colors-dark-stroke-hover);
+
+  --awc-switcher-background-checked-theme: var(--colors-light-primary);
+  --awc-switcher-background-checked-hover-theme: var(--colors-dark-link-hover);
+
+  --awc-switcher-label-theme: var(--colors-dark-text);
+
+  /* awc-radio */
+  --awc-radio-background-theme: var(--colors-light-white);
+  --awc-radio-background-hover-theme: var(--colors-dark-light-background);
+
+  --awc-radio-background-checked-theme: var(--colors-dark-primary);
+  --awc-radio-background-checked-hover-theme: var(--colors-dark-link-hover);
+
+  --awc-radio-border-theme: var(--colors-dark-stroke-control);
+  --awc-radio-border-hover-theme: var(--colors-dark-stroke-hover);
+
+  --awc-radio-label-theme: var(--colors-dark-text);
+
+  /* awc-radio-group */
+  --awc-radio-group-title-theme: var(--colors-dark-titles);
+
+  /* awc-accordion-item */
+  --awc-accordion-item-title-theme: var(--colors-dark-titles);
+  --awc-accordion-item-divider-theme: var(--colors-dark-stroke);
+
+  /* awc-user-info */
+  --awc-user-info-name-theme: var(--colors-dark-titles);
+  --awc-user-info-status-theme: var(--colors-dark-secondary);
+
+  /* awc-textarea */
+  --awc-textarea-title-theme: var(--colors-dark-titles);
+  --awc-textarea-placeholder-theme: var(--colors-dark-secondary);
+  --awc-textarea-text-theme: var(--colors-dark-text);
+
+  --awc-textarea-border-focus-theme: var(--colors-dark-secondary);
+  --awc-textarea-background-theme: var(--colors-dark-input-background);
+  --awc-textarea-background-hover-theme: var(--colors-dark-input-background-hover);
+  --awc-textarea-background-focus-theme: var(--colors-dark-base-surface);
+
+  /* awc-input */
+  --awc-input-title-theme: var(--colors-dark-titles);
+  --awc-input-placeholder-theme: var(--colors-dark-secondary);
+  --awc-input-text-theme: var(--colors-dark-text);
+
+  --awc-input-border-focus-theme: var(--colors-dark-secondary);
+  --awc-input-background-theme: var(--colors-dark-input-background);
+  --awc-input-background-hover-theme: var(--colors-dark-input-background-hover);
+  --awc-input-background-focus-theme: var(--colors-dark-base-surface);
+
+  /* awc-icon-button */
+  --awc-icon-button-background-hover-theme: var(--colors-dark-hover-back);
+  --awc-icon-button-background-active-theme: var(--colors-dark-pressed-back);
+}

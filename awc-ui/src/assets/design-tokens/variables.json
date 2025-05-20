@@ -1,0 +1,1830 @@
+{
+  "version": "1.0.4",
+  "metadata": {},
+  "collections": [
+    {
+      "name": "Tmp",
+      "modes": [
+        {
+          "name": "Mode 1",
+          "variables": [
+            {
+              "name": "Комментарии",
+              "type": "boolean",
+              "isAlias": false,
+              "value": false
+            },
+            {
+              "name": "Ответить",
+              "type": "boolean",
+              "isAlias": false,
+              "value": false
+            },
+            {
+              "name": "Pin",
+              "type": "boolean",
+              "isAlias": false,
+              "value": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Colors",
+      "modes": [
+        {
+          "name": "Light",
+          "variables": [
+            {
+              "name": "primary",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Global",
+                "name": "Blue/600"
+              }
+            },
+            {
+              "name": "success",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Global",
+                "name": "Green/300"
+              }
+            },
+            {
+              "name": "warning",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Global",
+                "name": "Red/400"
+              }
+            },
+            {
+              "name": "stroke",
+              "type": "color",
+              "isAlias": false,
+              "value": "#E6E9F2"
+            },
+            {
+              "name": "input-background",
+              "type": "color",
+              "isAlias": false,
+              "value": "#F3F4F9"
+            },
+            {
+              "name": "light-background",
+              "type": "color",
+              "isAlias": false,
+              "value": "#F8F9FD"
+            },
+            {
+              "name": "base-surface",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FFFFFF"
+            },
+            {
+              "name": "kanban-surface",
+              "type": "color",
+              "isAlias": false,
+              "value": "#F8F9FD"
+            },
+            {
+              "name": "card-surface",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FFFFFF"
+            },
+            {
+              "name": "titles",
+              "type": "color",
+              "isAlias": false,
+              "value": "#333338"
+            },
+            {
+              "name": "text",
+              "type": "color",
+              "isAlias": false,
+              "value": "#55555A"
+            },
+            {
+              "name": "secondary",
+              "type": "color",
+              "isAlias": false,
+              "value": "#919BB6"
+            },
+            {
+              "name": "white",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FFFFFF"
+            },
+            {
+              "name": "element-hover",
+              "type": "color",
+              "isAlias": false,
+              "value": "#F3F4F9"
+            },
+            {
+              "name": "icons-mobile-header",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Global",
+                "name": "Blue/600"
+              }
+            },
+            {
+              "name": "link-hover",
+              "type": "color",
+              "isAlias": false,
+              "value": "#1C4ADE"
+            },
+            {
+              "name": "tooltip",
+              "type": "color",
+              "isAlias": false,
+              "value": "#333338"
+            },
+            {
+              "name": "hover-back",
+              "type": "color",
+              "isAlias": false,
+              "value": "#05237D0D"
+            },
+            {
+              "name": "pressed-back",
+              "type": "color",
+              "isAlias": false,
+              "value": "#05237D14"
+            },
+            {
+              "name": "dark-violet",
+              "type": "color",
+              "isAlias": false,
+              "value": "#151B69"
+            },
+            {
+              "name": "panel-shadow-color",
+              "type": "color",
+              "isAlias": false,
+              "value": "#0000000F"
+            },
+            {
+              "name": "Opacity/8%",
+              "type": "number",
+              "isAlias": false,
+              "value": 8
+            },
+            {
+              "name": "stroke-hover",
+              "type": "color",
+              "isAlias": false,
+              "value": "#D6DBE5"
+            },
+            {
+              "name": "input-background-hover",
+              "type": "color",
+              "isAlias": false,
+              "value": "#F3F4F9"
+            },
+            {
+              "name": "stroke-control",
+              "type": "color",
+              "isAlias": false,
+              "value": "#D8E0E6"
+            },
+            {
+              "name": "chat-message-back",
+              "type": "color",
+              "isAlias": false,
+              "value": "#E6E9F2"
+            },
+            {
+              "name": "chat-own-message-back",
+              "type": "color",
+              "isAlias": false,
+              "value": "#F5F6FA"
+            },
+            {
+              "name": "chat-emoji-back",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FFFFFF"
+            }
+          ]
+        },
+        {
+          "name": "Dark",
+          "variables": [
+            {
+              "name": "primary",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Global",
+                "name": "Blue/500"
+              }
+            },
+            {
+              "name": "success",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Global",
+                "name": "Green/300"
+              }
+            },
+            {
+              "name": "warning",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Global",
+                "name": "Red/400"
+              }
+            },
+            {
+              "name": "stroke",
+              "type": "color",
+              "isAlias": false,
+              "value": "#E6E9F21F"
+            },
+            {
+              "name": "input-background",
+              "type": "color",
+              "isAlias": false,
+              "value": "#919BB626"
+            },
+            {
+              "name": "light-background",
+              "type": "color",
+              "isAlias": false,
+              "value": "#363948"
+            },
+            {
+              "name": "base-surface",
+              "type": "color",
+              "isAlias": false,
+              "value": "#1E2029"
+            },
+            {
+              "name": "kanban-surface",
+              "type": "color",
+              "isAlias": false,
+              "value": "#1E2029"
+            },
+            {
+              "name": "card-surface",
+              "type": "color",
+              "isAlias": false,
+              "value": "#2E313E"
+            },
+            {
+              "name": "titles",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FFFFFF"
+            },
+            {
+              "name": "text",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FFFFFFA3"
+            },
+            {
+              "name": "secondary",
+              "type": "color",
+              "isAlias": false,
+              "value": "#919BB6"
+            },
+            {
+              "name": "white",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FFFFFF"
+            },
+            {
+              "name": "element-hover",
+              "type": "color",
+              "isAlias": false,
+              "value": "#363948"
+            },
+            {
+              "name": "icons-mobile-header",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Global",
+                "name": "Blue/500"
+              }
+            },
+            {
+              "name": "link-hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Global",
+                "name": "Blue/300"
+              }
+            },
+            {
+              "name": "tooltip",
+              "type": "color",
+              "isAlias": false,
+              "value": "#363948"
+            },
+            {
+              "name": "hover-back",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FFFFFF0F"
+            },
+            {
+              "name": "pressed-back",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FFFFFF14"
+            },
+            {
+              "name": "dark-violet",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Global",
+                "name": "Blue/500"
+              }
+            },
+            {
+              "name": "panel-shadow-color",
+              "type": "color",
+              "isAlias": false,
+              "value": "#0000003D"
+            },
+            {
+              "name": "Opacity/8%",
+              "type": "number",
+              "isAlias": false,
+              "value": 16
+            },
+            {
+              "name": "stroke-hover",
+              "type": "color",
+              "isAlias": false,
+              "value": "#D6DBE51F"
+            },
+            {
+              "name": "input-background-hover",
+              "type": "color",
+              "isAlias": false,
+              "value": "#919BB633"
+            },
+            {
+              "name": "stroke-control",
+              "type": "color",
+              "isAlias": false,
+              "value": "#D8E0E629"
+            },
+            {
+              "name": "chat-message-back",
+              "type": "color",
+              "isAlias": false,
+              "value": "#919BB626"
+            },
+            {
+              "name": "chat-own-message-back",
+              "type": "color",
+              "isAlias": false,
+              "value": "#4E70F259"
+            },
+            {
+              "name": "chat-emoji-back",
+              "type": "color",
+              "isAlias": false,
+              "value": "#919BB626"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Global",
+      "modes": [
+        {
+          "name": "Mode 1",
+          "variables": [
+            {
+              "name": "Red/300",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FF8694"
+            },
+            {
+              "name": "Red/400",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FF7188"
+            },
+            {
+              "name": "Red/500",
+              "type": "color",
+              "isAlias": false,
+              "value": "#E44662"
+            },
+            {
+              "name": "Red/600",
+              "type": "color",
+              "isAlias": false,
+              "value": "#D42F4D"
+            },
+            {
+              "name": "Red/700",
+              "type": "color",
+              "isAlias": false,
+              "value": "#C0213E"
+            },
+            {
+              "name": "Red/800",
+              "type": "color",
+              "isAlias": false,
+              "value": "#A41A33"
+            },
+            {
+              "name": "Red/900",
+              "type": "color",
+              "isAlias": false,
+              "value": "#6D0014"
+            },
+            {
+              "name": "Red 2/300",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FD8585"
+            },
+            {
+              "name": "Red 2/400",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FD6969"
+            },
+            {
+              "name": "Red 2/500",
+              "type": "color",
+              "isAlias": false,
+              "value": "#F74F4F"
+            },
+            {
+              "name": "Red 2/600",
+              "type": "color",
+              "isAlias": false,
+              "value": "#ED3A3A"
+            },
+            {
+              "name": "Red 2/700",
+              "type": "color",
+              "isAlias": false,
+              "value": "#DE2C2C"
+            },
+            {
+              "name": "Red 2/800",
+              "type": "color",
+              "isAlias": false,
+              "value": "#C72525"
+            },
+            {
+              "name": "Red 2/900",
+              "type": "color",
+              "isAlias": false,
+              "value": "#940000"
+            },
+            {
+              "name": "Orange/300",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FDA855"
+            },
+            {
+              "name": "Orange/400",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FD9038"
+            },
+            {
+              "name": "Orange/500",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FB7C28"
+            },
+            {
+              "name": "Orange/600",
+              "type": "color",
+              "isAlias": false,
+              "value": "#F5641F"
+            },
+            {
+              "name": "Orange/700",
+              "type": "color",
+              "isAlias": false,
+              "value": "#E6561E"
+            },
+            {
+              "name": "Orange/800",
+              "type": "color",
+              "isAlias": false,
+              "value": "#D7451D"
+            },
+            {
+              "name": "Orange/900",
+              "type": "color",
+              "isAlias": false,
+              "value": "#A12300"
+            },
+            {
+              "name": "Yellow/300",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FED34A"
+            },
+            {
+              "name": "Yellow/400",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FBC332"
+            },
+            {
+              "name": "Yellow/500",
+              "type": "color",
+              "isAlias": false,
+              "value": "#F8AF28"
+            },
+            {
+              "name": "Yellow/600",
+              "type": "color",
+              "isAlias": false,
+              "value": "#F39E23"
+            },
+            {
+              "name": "Yellow/700",
+              "type": "color",
+              "isAlias": false,
+              "value": "#EE8A20"
+            },
+            {
+              "name": "Yellow/800",
+              "type": "color",
+              "isAlias": false,
+              "value": "#E4751C"
+            },
+            {
+              "name": "Yellow/900",
+              "type": "color",
+              "isAlias": false,
+              "value": "#AB4C00"
+            },
+            {
+              "name": "Light Green/300",
+              "type": "color",
+              "isAlias": false,
+              "value": "#93E355"
+            },
+            {
+              "name": "Light Green/400",
+              "type": "color",
+              "isAlias": false,
+              "value": "#81D83C"
+            },
+            {
+              "name": "Light Green/500",
+              "type": "color",
+              "isAlias": false,
+              "value": "#6AC930"
+            },
+            {
+              "name": "Light Green/600",
+              "type": "color",
+              "isAlias": false,
+              "value": "#5FB829"
+            },
+            {
+              "name": "Light Green/700",
+              "type": "color",
+              "isAlias": false,
+              "value": "#55A822"
+            },
+            {
+              "name": "Light Green/800",
+              "type": "color",
+              "isAlias": false,
+              "value": "#43941D"
+            },
+            {
+              "name": "Light Green/900",
+              "type": "color",
+              "isAlias": false,
+              "value": "#1C5600"
+            },
+            {
+              "name": "Green/300",
+              "type": "color",
+              "isAlias": false,
+              "value": "#35D3AC"
+            },
+            {
+              "name": "Green/400",
+              "type": "color",
+              "isAlias": false,
+              "value": "#2FC998"
+            },
+            {
+              "name": "Green/500",
+              "type": "color",
+              "isAlias": false,
+              "value": "#24B887"
+            },
+            {
+              "name": "Green/600",
+              "type": "color",
+              "isAlias": false,
+              "value": "#1EA679"
+            },
+            {
+              "name": "Green/700",
+              "type": "color",
+              "isAlias": false,
+              "value": "#199269"
+            },
+            {
+              "name": "Green/800",
+              "type": "color",
+              "isAlias": false,
+              "value": "#157F5C"
+            },
+            {
+              "name": "Green/900",
+              "type": "color",
+              "isAlias": false,
+              "value": "#005539"
+            },
+            {
+              "name": "Turquoise/300",
+              "type": "color",
+              "isAlias": false,
+              "value": "#44CADA"
+            },
+            {
+              "name": "Turquoise/400",
+              "type": "color",
+              "isAlias": false,
+              "value": "#2FB9CE"
+            },
+            {
+              "name": "Turquoise/500",
+              "type": "color",
+              "isAlias": false,
+              "value": "#24ABBE"
+            },
+            {
+              "name": "Turquoise/600",
+              "type": "color",
+              "isAlias": false,
+              "value": "#1E99AC"
+            },
+            {
+              "name": "Turquoise/700",
+              "type": "color",
+              "isAlias": false,
+              "value": "#198698"
+            },
+            {
+              "name": "Turquoise/800",
+              "type": "color",
+              "isAlias": false,
+              "value": "#157384"
+            },
+            {
+              "name": "Turquoise/900",
+              "type": "color",
+              "isAlias": false,
+              "value": "#004C5A"
+            },
+            {
+              "name": "Cyan/300",
+              "type": "color",
+              "isAlias": false,
+              "value": "#52ACF5"
+            },
+            {
+              "name": "Cyan/400",
+              "type": "color",
+              "isAlias": false,
+              "value": "#399BED"
+            },
+            {
+              "name": "Cyan/500",
+              "type": "color",
+              "isAlias": false,
+              "value": "#2A8CE3"
+            },
+            {
+              "name": "Cyan/600",
+              "type": "color",
+              "isAlias": false,
+              "value": "#237FD3"
+            },
+            {
+              "name": "Cyan/700",
+              "type": "color",
+              "isAlias": false,
+              "value": "#2072C0"
+            },
+            {
+              "name": "Cyan/800",
+              "type": "color",
+              "isAlias": false,
+              "value": "#1D65A9"
+            },
+            {
+              "name": "Cyan/900",
+              "type": "color",
+              "isAlias": false,
+              "value": "#0D477E"
+            },
+            {
+              "name": "Blue/300",
+              "type": "color",
+              "isAlias": false,
+              "value": "#7590F9"
+            },
+            {
+              "name": "Blue/400",
+              "type": "color",
+              "isAlias": false,
+              "value": "#5D7EF7"
+            },
+            {
+              "name": "Blue/500",
+              "type": "color",
+              "isAlias": false,
+              "value": "#4E70F2"
+            },
+            {
+              "name": "Blue/600",
+              "type": "color",
+              "isAlias": false,
+              "value": "#3761E9"
+            },
+            {
+              "name": "Blue/700",
+              "type": "color",
+              "isAlias": false,
+              "value": "#3D5DD8"
+            },
+            {
+              "name": "Blue/800",
+              "type": "color",
+              "isAlias": false,
+              "value": "#3751C4"
+            },
+            {
+              "name": "Blue/900",
+              "type": "color",
+              "isAlias": false,
+              "value": "#142A8E"
+            },
+            {
+              "name": "Deep Purple/300",
+              "type": "color",
+              "isAlias": false,
+              "value": "#9676F7"
+            },
+            {
+              "name": "Deep Purple/400",
+              "type": "color",
+              "isAlias": false,
+              "value": "#8360F4"
+            },
+            {
+              "name": "Deep Purple/500",
+              "type": "color",
+              "isAlias": false,
+              "value": "#7852EF"
+            },
+            {
+              "name": "Deep Purple/600",
+              "type": "color",
+              "isAlias": false,
+              "value": "#704AE5"
+            },
+            {
+              "name": "Deep Purple/700",
+              "type": "color",
+              "isAlias": false,
+              "value": "#6743D6"
+            },
+            {
+              "name": "Deep Purple/800",
+              "type": "color",
+              "isAlias": false,
+              "value": "#5F3FC1"
+            },
+            {
+              "name": "Deep Purple/900",
+              "type": "color",
+              "isAlias": false,
+              "value": "#341592"
+            },
+            {
+              "name": "Purple/300",
+              "type": "color",
+              "isAlias": false,
+              "value": "#D877F0"
+            },
+            {
+              "name": "Purple/400",
+              "type": "color",
+              "isAlias": false,
+              "value": "#C764DF"
+            },
+            {
+              "name": "Purple/500",
+              "type": "color",
+              "isAlias": false,
+              "value": "#BC4BD8"
+            },
+            {
+              "name": "Purple/600",
+              "type": "color",
+              "isAlias": false,
+              "value": "#AC3EC7"
+            },
+            {
+              "name": "Purple/700",
+              "type": "color",
+              "isAlias": false,
+              "value": "#9B36B3"
+            },
+            {
+              "name": "Purple/800",
+              "type": "color",
+              "isAlias": false,
+              "value": "#852E9A"
+            },
+            {
+              "name": "Purple/900",
+              "type": "color",
+              "isAlias": false,
+              "value": "#67127B"
+            },
+            {
+              "name": "Corner radius/None",
+              "type": "number",
+              "isAlias": false,
+              "value": 0
+            },
+            {
+              "name": "Corner radius/20",
+              "type": "number",
+              "isAlias": false,
+              "value": 2
+            },
+            {
+              "name": "Corner radius/40",
+              "type": "number",
+              "isAlias": false,
+              "value": 4
+            },
+            {
+              "name": "Corner radius/60",
+              "type": "number",
+              "isAlias": false,
+              "value": 6
+            },
+            {
+              "name": "Corner radius/80",
+              "type": "number",
+              "isAlias": false,
+              "value": 8
+            },
+            {
+              "name": "Corner radius/120",
+              "type": "number",
+              "isAlias": false,
+              "value": 12
+            },
+            {
+              "name": "Corner radius/160",
+              "type": "number",
+              "isAlias": false,
+              "value": 16
+            },
+            {
+              "name": "Corner radius/Circular",
+              "type": "number",
+              "isAlias": false,
+              "value": 99
+            },
+            {
+              "name": "Size/None",
+              "type": "number",
+              "isAlias": false,
+              "value": 0
+            },
+            {
+              "name": "Size/20",
+              "type": "number",
+              "isAlias": false,
+              "value": 2
+            },
+            {
+              "name": "Size/40",
+              "type": "number",
+              "isAlias": false,
+              "value": 4
+            },
+            {
+              "name": "Size/60",
+              "type": "number",
+              "isAlias": false,
+              "value": 6
+            },
+            {
+              "name": "Size/80",
+              "type": "number",
+              "isAlias": false,
+              "value": 8
+            },
+            {
+              "name": "Size/100",
+              "type": "number",
+              "isAlias": false,
+              "value": 10
+            },
+            {
+              "name": "Size/120",
+              "type": "number",
+              "isAlias": false,
+              "value": 12
+            },
+            {
+              "name": "Size/160",
+              "type": "number",
+              "isAlias": false,
+              "value": 16
+            },
+            {
+              "name": "Size/200",
+              "type": "number",
+              "isAlias": false,
+              "value": 20
+            },
+            {
+              "name": "Size/240",
+              "type": "number",
+              "isAlias": false,
+              "value": 24
+            },
+            {
+              "name": "Size/280",
+              "type": "number",
+              "isAlias": false,
+              "value": 28
+            },
+            {
+              "name": "Size/320",
+              "type": "number",
+              "isAlias": false,
+              "value": 32
+            },
+            {
+              "name": "Size/360",
+              "type": "number",
+              "isAlias": false,
+              "value": 36
+            },
+            {
+              "name": "Size/400",
+              "type": "number",
+              "isAlias": false,
+              "value": 40
+            },
+            {
+              "name": "Size/480",
+              "type": "number",
+              "isAlias": false,
+              "value": 48
+            },
+            {
+              "name": "Size/520",
+              "type": "number",
+              "isAlias": false,
+              "value": 52
+            },
+            {
+              "name": "Size/560",
+              "type": "number",
+              "isAlias": false,
+              "value": 56
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Corner radius",
+      "modes": [
+        {
+          "name": "Mode 1",
+          "variables": [
+            {
+              "name": "none",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Global",
+                "name": "Corner radius/None"
+              }
+            },
+            {
+              "name": "xs",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Global",
+                "name": "Corner radius/20"
+              }
+            },
+            {
+              "name": "s",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Global",
+                "name": "Corner radius/40"
+              }
+            },
+            {
+              "name": "m",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Global",
+                "name": "Corner radius/60"
+              }
+            },
+            {
+              "name": "l",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Global",
+                "name": "Corner radius/80"
+              }
+            },
+            {
+              "name": "xl",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Global",
+                "name": "Corner radius/120"
+              }
+            },
+            {
+              "name": "2xl",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Global",
+                "name": "Corner radius/160"
+              }
+            },
+            {
+              "name": "circular",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Global",
+                "name": "Corner radius/Circular"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Spacing",
+      "modes": [
+        {
+          "name": "Mode 1",
+          "variables": [
+            {
+              "name": "2xs",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Global",
+                "name": "Size/20"
+              }
+            },
+            {
+              "name": "xs",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Global",
+                "name": "Size/40"
+              }
+            },
+            {
+              "name": "s",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Global",
+                "name": "Size/80"
+              }
+            },
+            {
+              "name": "sm",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Global",
+                "name": "Size/120"
+              }
+            },
+            {
+              "name": "m",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Global",
+                "name": "Size/160"
+              }
+            },
+            {
+              "name": "l",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Global",
+                "name": "Size/200"
+              }
+            },
+            {
+              "name": "xl",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Global",
+                "name": "Size/240"
+              }
+            },
+            {
+              "name": "2xl",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Global",
+                "name": "Size/320"
+              }
+            },
+            {
+              "name": "3xl",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Global",
+                "name": "Size/400"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Typography",
+      "modes": [
+        {
+          "name": "Style",
+          "variables": [
+            {
+              "name": "H1 Bold",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 40,
+                "fontFamily": "Inter",
+                "fontWeight": "Bold",
+                "lineHeight": 52,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "H1 Medium",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 40,
+                "fontFamily": "Inter",
+                "fontWeight": "Medium",
+                "lineHeight": 52,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "H2 Bold",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 34,
+                "fontFamily": "Inter",
+                "fontWeight": "Bold",
+                "lineHeight": 44,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "H2 Medium",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 34,
+                "fontFamily": "Inter",
+                "fontWeight": "Medium",
+                "lineHeight": 44,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "H2 Regular",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 34,
+                "fontFamily": "Inter",
+                "fontWeight": "Regular",
+                "lineHeight": 44,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "H3 Medium",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 28,
+                "fontFamily": "Inter",
+                "fontWeight": "Medium",
+                "lineHeight": 38,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "H3 Regular",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 28,
+                "fontFamily": "Inter",
+                "fontWeight": "Regular",
+                "lineHeight": 38,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "H4 Medium",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 24,
+                "fontFamily": "Inter",
+                "fontWeight": "Medium",
+                "lineHeight": 32,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "H4 Regular",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 24,
+                "fontFamily": "Inter",
+                "fontWeight": "Regular",
+                "lineHeight": 32,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "H5 Bold",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 18,
+                "fontFamily": "Inter",
+                "fontWeight": "Bold",
+                "lineHeight": 24,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "H5 Medium",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 18,
+                "fontFamily": "Inter",
+                "fontWeight": "Medium",
+                "lineHeight": 24,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Headline Medium 16",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 16,
+                "fontFamily": "Inter",
+                "fontWeight": "Medium",
+                "lineHeight": 20,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Headline Regular 16",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 16,
+                "fontFamily": "Inter",
+                "fontWeight": "Regular",
+                "lineHeight": 20,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Text Bold 15",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 15,
+                "fontFamily": "Inter",
+                "fontWeight": "Bold",
+                "lineHeight": 22,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Text Medium 15",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 15,
+                "fontFamily": "Inter",
+                "fontWeight": "Medium",
+                "lineHeight": 22,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Text Regular 15",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 15,
+                "fontFamily": "Inter",
+                "fontWeight": "Regular",
+                "lineHeight": 22,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Text KB Bold",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 16,
+                "fontFamily": "Inter",
+                "fontWeight": "Bold",
+                "lineHeight": 24,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Text KB Medium",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 16,
+                "fontFamily": "Inter",
+                "fontWeight": "Medium",
+                "lineHeight": 24,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Text KB Regular",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 16,
+                "fontFamily": "Inter",
+                "fontWeight": "Regular",
+                "lineHeight": 24,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Text Bold 14",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 14,
+                "fontFamily": "Inter",
+                "fontWeight": "Bold",
+                "lineHeight": 20,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PIXELS",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Text Medium 14",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 14,
+                "fontFamily": "Inter",
+                "fontWeight": "Medium",
+                "lineHeight": 20,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PIXELS",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Text Regular 14",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 14,
+                "fontFamily": "Inter",
+                "fontWeight": "Regular",
+                "lineHeight": 20,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PIXELS",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Caption 1 Medium",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 13,
+                "fontFamily": "Inter",
+                "fontWeight": "Medium",
+                "lineHeight": 16,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PIXELS",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Caption 1 Regular",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 13,
+                "fontFamily": "Inter",
+                "fontWeight": "Regular",
+                "lineHeight": 16,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PIXELS",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Caption 2 Medium",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 12,
+                "fontFamily": "Inter",
+                "fontWeight": "Medium",
+                "lineHeight": 14,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PIXELS",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Caption 2 Regular",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 12,
+                "fontFamily": "Inter",
+                "fontWeight": "Regular",
+                "lineHeight": 14,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PIXELS",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Caption 3 Regular",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 11,
+                "fontFamily": "Inter",
+                "fontWeight": "Regular",
+                "lineHeight": 14,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PIXELS",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Effects",
+      "modes": [
+        {
+          "name": "Style",
+          "variables": [
+            {
+              "name": "Dropdown shadow",
+              "type": "effect",
+              "isAlias": false,
+              "value": {
+                "effects": [
+                  {
+                    "type": "DROP_SHADOW",
+                    "color": {
+                      "r": 64,
+                      "g": 72,
+                      "b": 98,
+                      "a": 0.2
+                    },
+                    "offset": {
+                      "x": 0,
+                      "y": 10
+                    },
+                    "radius": 20,
+                    "spread": 0
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Sidepanel shadow",
+              "type": "effect",
+              "isAlias": false,
+              "value": {
+                "effects": [
+                  {
+                    "type": "DROP_SHADOW",
+                    "color": {
+                      "r": 0,
+                      "g": 0,
+                      "b": 0,
+                      "a": 0.06
+                    },
+                    "offset": {
+                      "x": -6,
+                      "y": 0
+                    },
+                    "radius": 18,
+                    "spread": 0
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Left menu shadow",
+              "type": "effect",
+              "isAlias": false,
+              "value": {
+                "effects": [
+                  {
+                    "type": "DROP_SHADOW",
+                    "color": {
+                      "r": 0,
+                      "g": 0,
+                      "b": 0,
+                      "a": 0.06
+                    },
+                    "offset": {
+                      "x": 6,
+                      "y": 0
+                    },
+                    "radius": 18,
+                    "spread": 0
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Hover block",
+              "type": "effect",
+              "isAlias": false,
+              "value": {
+                "effects": [
+                  {
+                    "type": "DROP_SHADOW",
+                    "color": {
+                      "r": 64,
+                      "g": 72,
+                      "b": 98,
+                      "a": 0.1
+                    },
+                    "offset": {
+                      "x": 0,
+                      "y": 5
+                    },
+                    "radius": 20,
+                    "spread": 0
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Select shadow",
+              "type": "effect",
+              "isAlias": false,
+              "value": {
+                "effects": [
+                  {
+                    "type": "DROP_SHADOW",
+                    "color": {
+                      "r": 64,
+                      "g": 72,
+                      "b": 98,
+                      "a": 0.15
+                    },
+                    "offset": {
+                      "x": 0,
+                      "y": 3
+                    },
+                    "radius": 5,
+                    "spread": 0
+                  }
+                ]
+              }
+            },
+            {
+              "name": "blockshadow",
+              "type": "effect",
+              "isAlias": false,
+              "value": {
+                "effects": [
+                  {
+                    "type": "DROP_SHADOW",
+                    "color": {
+                      "r": 13,
+                      "g": 22,
+                      "b": 67,
+                      "a": 0.03
+                    },
+                    "offset": {
+                      "x": 0,
+                      "y": 4
+                    },
+                    "radius": 12,
+                    "spread": 0
+                  }
+                ]
+              }
+            },
+            {
+              "name": "Popup shadow",
+              "type": "effect",
+              "isAlias": false,
+              "value": {
+                "effects": [
+                  {
+                    "type": "DROP_SHADOW",
+                    "color": {
+                      "r": 0,
+                      "g": 0,
+                      "b": 0,
+                      "a": 0.15
+                    },
+                    "offset": {
+                      "x": 0,
+                      "y": 10
+                    },
+                    "radius": 20,
+                    "spread": 0
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
