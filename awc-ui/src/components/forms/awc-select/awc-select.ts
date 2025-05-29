@@ -1,6 +1,6 @@
-import { FormControlMixin, FormValue } from '@open-wc/form-control';
+import { FormControlMixin, FormValue, requiredValidator } from '@open-wc/form-control';
 import { LitElement, PropertyValues, TemplateResult, html, nothing } from 'lit';
-import { customElement, property, state } from 'lit/decorators.js';
+import { customElement, property, state, query } from 'lit/decorators.js';
 import { live } from 'lit/directives/live.js';
 import { unsafeHTML } from 'lit/directives/unsafe-html.js';
 import { AwcSelectVariant } from './awc-select.types';
@@ -13,12 +13,12 @@ export const awcSelectTag = 'awc-select';
 @customElement(awcSelectTag)
 export default class AwcSelect extends FormControlMixin(LitElement) {
     @property({ type: String, reflect: true }) name?: string;
-    @property({ type: String }) label?: string;
+    @property({ type: String, reflect: true }) label?: string;
     @property({ type: String, reflect: true }) placeholder?: string;
-    @property({ type: String, attribute: 'input-placeholder' }) inputPlaceholder?: string;
     @property({ type: String, reflect: true }) variant: AwcSelectVariant = 'fill';
     @property({ type: String, reflect: true }) hint?: string;
     @property({ type: String, attribute: 'custom-error' }) customError?: string;
+    @property({ type: String, attribute: 'input-placeholder' }) inputPlaceholder?: string;
 
     @property({ type: Boolean, reflect: true }) html = false;
     @property({ type: Boolean, reflect: true }) disabled = false;
@@ -33,10 +33,14 @@ export default class AwcSelect extends FormControlMixin(LitElement) {
 
     @state() private isOpen = false;
     @state() private inputValue = '';
+    @state() validationMessage: string = '';
+
+    @query(".awc-select__head") validationTarget: HTMLElement;
 
     #registeredOptions = new Map<string, IAwcSelectItemData>();
 
     static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
+    static formControlValidators = [requiredValidator];
     static styles = awcSelectStyles;
 
     private get options(): AwcSelectItem[] {
@@ -53,6 +57,7 @@ export default class AwcSelect extends FormControlMixin(LitElement) {
 
     close(): void {
         this.isOpen = false;
+        this.focusedOptionIndex = -1;
     }
 
     registerOption(option: AwcSelectItem): void {
@@ -64,9 +69,124 @@ export default class AwcSelect extends FormControlMixin(LitElement) {
         });
     }
 
+    validityCallback(): string | void {
+        const selectElement = document.createElement("select") as HTMLSelectElement;
+        selectElement.required = this.required;
+        return selectElement.validationMessage;
+    }
+
+    validationMessageCallback(message: string): void {
+        if (this.customError && !this.staticError) {
+            this.validationMessage = message;
+            this.validationMessage = this.customError;
+        } else {
+            this.validationMessage = message;
+        }
+    }
+
+    shouldFormValueUpdate(): boolean {
+        if (Array.isArray(this.value) && this.multiple) {
+            return this.value.length > 0;
+        } else {
+            return this.value !== null && this.value !== "";
+        }
+    }
+
     unregisterOption(option: AwcSelectItem): void {
         const value = option.value || option.textContent?.trim() || '';
         this.#registeredOptions.delete(value);
+    }
+
+    #onInvalid(event: Event): void {
+        event.preventDefault();
+        this.validationTarget.focus();
+    };
+
+    resetFormControl(): void {
+        this.options.forEach((option) => {
+            option.selected = false;
+            option.requestUpdate();
+        });
+
+        this.value = this.multiple ? [] : undefined;
+
+        this.#registeredOptions.forEach((data) => {
+            data.selected = false;
+        });
+
+        this.syncValueWithSelected();
+        this.updateRegisteredOptions();
+
+        this.isOpen = false;
+        this.setValue(null);
+    }
+
+    private focusedOptionIndex = -1;
+    private lastKeyPressedTime = 0;
+    private typedCharacters = "";
+    private keyPressThreshold = 500;
+
+    private handleFocusOptionByKey(key: string) {
+        const currentTime = Date.now();
+        const elapsedTimeSinceLastKeyPress = currentTime - this.lastKeyPressedTime;
+
+        if (elapsedTimeSinceLastKeyPress > this.keyPressThreshold) {
+            this.typedCharacters = "";
+        }
+
+        this.lastKeyPressedTime = currentTime;
+        this.typedCharacters += key.toLowerCase();
+
+        const matchingOptionIndex = this.options.findIndex(option => {
+            if (option.disabled) {
+                return false;
+            }
+            const optionText = option.innerText.trim().toLowerCase();
+
+            return optionText.startsWith(this.typedCharacters);
+        });
+
+        if (matchingOptionIndex !== -1) {
+            this.focusedOptionIndex = matchingOptionIndex;
+            this.options[matchingOptionIndex].focus();
+        }
+    }
+
+    private _handleOptionKeyboard(event: KeyboardEvent) {
+        if (this.focusedOptionIndex === -1 && ["Enter", "Space"].includes(event.code)) {
+            this.handleToggleDropdown();
+
+            event.preventDefault();
+        } else if (this.isOpen === false && ["ArrowDown", "ArrowUp"].includes(event.code)) {
+            this.open();
+            event.preventDefault();
+        } else if (event.code === "Escape") {
+            this.close();
+            event.preventDefault();
+        } else if (this.isOpen && ["ArrowDown", "ArrowUp"].includes(event.code)) {
+            const activeOptions = this.options.filter(option => !option.disabled);
+
+            event.code === "ArrowDown" && this.focusedOptionIndex++;
+            event.code === "ArrowUp" && this.focusedOptionIndex--;
+
+            this.focusedOptionIndex = Math.max(0, Math.min(this.focusedOptionIndex, activeOptions.length - 1));
+
+            activeOptions[this.focusedOptionIndex].focus();
+
+            event.preventDefault();
+        } else if (this.isOpen && !this.search) {
+            this.handleFocusOptionByKey(event.key);
+        }
+    }
+
+    connectedCallback(): void {
+        super.connectedCallback();
+
+        this.addEventListener("invalid", this.#onInvalid);
+
+        this.updateComplete.then(() => {
+            this.setValue(null);
+        });
     }
 
     protected update(changedProperties: PropertyValues): void {
@@ -95,7 +215,7 @@ export default class AwcSelect extends FormControlMixin(LitElement) {
         }
     }
 
-    private handleOptionSelect(event: Event): void {
+    private handleOptionSelect(event: CustomEvent): void {
         const target = event.composedPath().find((node) => node instanceof AwcSelectItem) as AwcSelectItem | undefined;
         if (!target) return;
 
@@ -226,7 +346,7 @@ export default class AwcSelect extends FormControlMixin(LitElement) {
     private renderChips(): TemplateResult {
         return html`
             ${this.selectedOptions.map(
-                (option, index) => html`
+            (option, index) => html`
                     <awc-chips
                         .value=${option.value}
                         reset-button
@@ -236,7 +356,7 @@ export default class AwcSelect extends FormControlMixin(LitElement) {
                         ${this.html ? this.getOptionHTML(option) : this.getOptionText(option)}
                     </awc-chips>
                 `
-            )}
+        )}
         `;
     }
 
@@ -262,7 +382,7 @@ export default class AwcSelect extends FormControlMixin(LitElement) {
 
     private renderHead(): TemplateResult {
         return html`
-            <div class="awc-select__head" @click=${this.handleToggleDropdown}>
+            <div class="awc-select__head" tabindex="0" @click=${this.handleToggleDropdown}>
                 <slot name="awc-select-left-icon"></slot>
                 ${this.renderHeadContent()}
             </div>
@@ -271,7 +391,7 @@ export default class AwcSelect extends FormControlMixin(LitElement) {
 
     private renderList(): TemplateResult {
         return html`
-            <ul class="awc-select__list" slot="awc-popover-content" @click=${this.handleOptionSelect}>
+            <ul class="awc-select__list" slot="awc-popover-content" @awc-select-option=${this.handleOptionSelect}>
                 ${this.renderSearchInput()}
                 <slot></slot>
             </ul>
@@ -280,10 +400,23 @@ export default class AwcSelect extends FormControlMixin(LitElement) {
 
     protected render(): TemplateResult {
         return html`
-            <div class="awc-select">
+            <div class="awc-select" @keydown=${this._handleOptionKeyboard}>
+                ${this.label ? html`<label class="awc-select__label">${this.label}</label>` : nothing}
                 <awc-popover match-reference-width spacing="0" no-padding strategy="fixed" trigger-type="manual" ?active=${this.isOpen}>
                     ${this.renderHead()} ${this.renderList()}
                 </awc-popover>
+
+                ${this.showError && this.required && !this.staticError
+                ? html`<span class="awc-select__error">${this.validationMessage}</span>`
+                : this.hint && !this.staticError
+                    ? html`<span class="awc-select__hint">${this.hint}</span>`
+                    : nothing}
+
+                ${this.staticError && this.required && this.customError
+                ? html`<span class="awc-select__error">${this.customError}</span>`
+                : this.hint && this.staticError
+                    ? html`<span class="awc-select__hint">${this.hint}</span>`
+                    : nothing}
             </div>
         `;
     }

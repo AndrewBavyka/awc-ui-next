@@ -1,6 +1,6 @@
 import { computePosition, autoUpdate, offset, arrow, flip, shift, size as floatingSize } from '@floating-ui/dom';
 
-export type Placement = 'top' | 'bottom' | 'left' | 'right';
+export type Placement = "top" | "top-end" | "top-start" | "bottom" | "bottom-end" | "bottom-start" | "left" | "left-end" | "left-start" | "right" | "right-end" | "right-start";
 
 export interface PositioningOptions {
     position: Placement;
@@ -8,7 +8,7 @@ export interface PositioningOptions {
     spacing: number;
     matchReferenceWidth?: boolean;
     middleware?: any[];
-    onPlacementChange?: (placement: Placement) => void; // <-- новый колбэк
+    onPlacementChange?: (placement: Placement) => void;
 }
 
 export function setupFloating(referenceEl: HTMLElement, floatingEl: HTMLElement, arrowEl: HTMLElement | null, options: PositioningOptions) {

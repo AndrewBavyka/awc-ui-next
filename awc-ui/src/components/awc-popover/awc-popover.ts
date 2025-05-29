@@ -115,13 +115,15 @@ export default class AwcPopover extends LitElement {
     private _hoverTimeout: number | null = null;
     private referenceEl: HTMLElement | null = null;
 
+    private isMouseOverPopover = false;
+    private isMouseOverReference = false;
+
     static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 
     connectedCallback() {
         super.connectedCallback();
-
-        this.addEventListener('mouseenter', this._onMouseEnter);
-        this.addEventListener('mouseleave', this._onMouseLeave);
+        this.addEventListener('mouseenter', this._onReferenceMouseEnter);
+        this.addEventListener('mouseleave', this._onReferenceMouseLeave);
         this.addEventListener('focusin', this._onFocus);
         this.addEventListener('focusout', this._onBlur);
         this.addEventListener('click', this._onClick);
@@ -131,9 +133,8 @@ export default class AwcPopover extends LitElement {
 
     disconnectedCallback() {
         super.disconnectedCallback();
-
-        this.removeEventListener('mouseenter', this._onMouseEnter);
-        this.removeEventListener('mouseleave', this._onMouseLeave);
+        this.removeEventListener('mouseenter', this._onReferenceMouseEnter);
+        this.removeEventListener('mouseleave', this._onReferenceMouseLeave);
         this.removeEventListener('focusin', this._onFocus);
         this.removeEventListener('focusout', this._onBlur);
         this.removeEventListener('click', this._onClick);
@@ -159,18 +160,51 @@ export default class AwcPopover extends LitElement {
         document.removeEventListener('click', this._handleOutsideClick);
     }
 
-    private _onMouseEnter = (): void => {
-        if (!this.disabled && this.triggerType === 'hover') {
-            if (this._hoverTimeout) clearTimeout(this._hoverTimeout);
-            this.show();
-        }
-    };
+    private debounce<T extends (...args: any[]) => void>(callback: T, wait: number) {
+        let timeoutId: number | null = null;
+        return (...args: Parameters<T>) => {
+            if (timeoutId) clearTimeout(timeoutId);
+            timeoutId = window.setTimeout(() => callback(...args), wait);
+        };
+    }
 
-    private _onMouseLeave = (): void => {
+    private _onReferenceMouseEnter = this.debounce(() => {
         if (!this.disabled && this.triggerType === 'hover') {
-            this._hoverTimeout = window.setTimeout(() => this.hide(), 200);
+            this.isMouseOverReference = true;
+            this.show();
+            this.popoverEl?.addEventListener('mouseenter', this._onPopoverMouseEnter);
+            this.popoverEl?.addEventListener('mouseleave', this._onPopoverMouseLeave);
         }
-    };
+    }, 50);
+
+    private _onReferenceMouseLeave = this.debounce(() => {
+        if (!this.disabled && this.triggerType === 'hover') {
+            this.isMouseOverReference = false;
+            this._tryHide();
+        }
+    }, 50);
+
+    private _onPopoverMouseEnter = this.debounce(() => {
+        if (!this.disabled && this.triggerType === 'hover') {
+            this.isMouseOverPopover = true;
+            if (this._hoverTimeout) clearTimeout(this._hoverTimeout);
+        }
+    }, 50);
+
+    private _onPopoverMouseLeave = this.debounce(() => {
+        if (!this.disabled && this.triggerType === 'hover') {
+            this.isMouseOverPopover = false;
+            this._tryHide();
+        }
+    }, 300);
+
+    private _tryHide = this.debounce(() => {
+        if (!this.isMouseOverReference && !this.isMouseOverPopover) {
+            this.hide();
+            this.popoverEl?.removeEventListener('mouseenter', this._onPopoverMouseEnter);
+            this.popoverEl?.removeEventListener('mouseleave', this._onPopoverMouseLeave);
+        }
+    }, 300);
 
     private _onFocus = (): void => {
         if (!this.disabled && this.triggerType === 'focus') this.show();
@@ -196,10 +230,8 @@ export default class AwcPopover extends LitElement {
 
     private handleSlotChange = () => {
         if (!this.slotEl) return;
-
         const assignedElements = this.slotEl.assignedElements({ flatten: true }) as HTMLElement[];
         this.referenceEl = assignedElements[0] || null;
-
         if (this.active) this.updatePosition();
     };
 
@@ -242,6 +274,8 @@ export default class AwcPopover extends LitElement {
             } else {
                 this.cleanupFloating?.();
                 this._popoverCloseEvent(true);
+                this.popoverEl?.removeEventListener('mouseenter', this._onPopoverMouseEnter);
+                this.popoverEl?.removeEventListener('mouseleave', this._onPopoverMouseLeave);
             }
         }
 
@@ -257,6 +291,7 @@ export default class AwcPopover extends LitElement {
      */
     show(): void {
         if (!this.disabled && !this.active) {
+            this.cleanupFloating?.();
             this.active = true;
             if (this.triggerType === 'click') {
                 this._addOutsideClickHandler();

@@ -13,6 +13,20 @@ export const awcSelectStyles = css`
         justify-content: flex-start; */
     }
 
+    .awc-select__label {
+        display: inline-block;
+        padding: 0;
+        margin-bottom: var(--spacing-s);
+        font: var(--awc-base-font, var(--awc-font-text-medium-14));
+        color: var(--awc-input-label-color);
+    }
+
+    :host([required]) .awc-select__label::after {
+        content: "*";
+        color: var(--colors-light-warning);
+        margin-left: 4px;
+    }
+
     /* :host([placeholder]) .awc-select__head {
         color: var(--colors-light-secondary);
     } */
@@ -35,6 +49,14 @@ export const awcSelectStyles = css`
         color: var(--colors-light-text);
         transition: border-radius 0.3s ease;
     }
+
+    /* :host([required]) .awc-select__head:focus {
+        outline: none;
+    }
+
+    .awc-select__head:focus-visible {
+        outline: 1px solid var(--colors-light-warning);
+    } */
 
     .awc-select__placeholder {
         color: var(--colors-light-secondary);
@@ -73,6 +95,30 @@ export const awcSelectStyles = css`
     .awc-select__input:focus {
         outline: none;
         border-bottom: 1px solid var(--colors-dark-primary);
+    }
+
+    .awc-select__error,
+    .awc-select__hint {
+        display: block;
+        margin-top: var(--spacing-s);
+        font: var(--awc-font-caption-1-regular);
+    }
+
+    .awc-select__hint {
+        color: var(--colors-light-secondary);
+    }
+
+    .awc-select__error {
+        color: var(--colors-light-warning);
+    }
+
+    .awc-select--error.awc-select:focus:before {
+        border-color: var(--colors-light-warning);
+    }
+
+    :host([static-error][custom-error][required]) .awc-select  {
+        border: 1px solid var(--colors-light-warning);
+        border-radius: var(--corner-radius-m);
     }
 
     awc-popover {
