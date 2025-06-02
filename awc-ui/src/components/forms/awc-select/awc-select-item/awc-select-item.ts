@@ -16,7 +16,7 @@ export default class AwcSelectItem extends LitElement {
     @event("awc-select-option-focus") private onFocus: EventDispatcher<string | null>;
     @event("awc-select-option-blur") private onBlur: EventDispatcher<string | null>;
 
-    @query(".awc-item-focus") private focusTarget: HTMLElement;
+    @query(".awc-select-item") private focusTarget: HTMLUListElement;
 
     focus(): void {
         this.focusTarget.tabIndex = 0;
@@ -39,13 +39,16 @@ export default class AwcSelectItem extends LitElement {
 
     private handleKeydown(event: KeyboardEvent) {
         if (event.code === "Enter" || event.code === "Space") {
-           this.select();
+            this.select();
+
+            event.preventDefault();
+            event.stopPropagation();
         }
     }
 
     protected render(): TemplateResult {
         return html`
-            <li class="awc-select-item awc-item-focus" 
+            <li class="awc-select-item" 
                 @keydown=${this.handleKeydown}
                 @click=${this.select}
                 ?disabled=${this.disabled} 

@@ -50,13 +50,13 @@ export const awcSelectStyles = css`
         transition: border-radius 0.3s ease;
     }
 
-    /* :host([required]) .awc-select__head:focus {
+    .awc-select__head:focus {
         outline: none;
     }
 
     .awc-select__head:focus-visible {
-        outline: 1px solid var(--colors-light-warning);
-    } */
+        outline: 1px solid var(--colors-light-focus);
+    }
 
     .awc-select__placeholder {
         color: var(--colors-light-secondary);
@@ -80,6 +80,7 @@ export const awcSelectStyles = css`
     }
 
     .awc-select__input {
+        cursor: auto;
         border: none;
         border-bottom: 1px solid var(--colors-light-stroke);
         padding: 0 8px;
@@ -112,11 +113,7 @@ export const awcSelectStyles = css`
         color: var(--colors-light-warning);
     }
 
-    .awc-select--error.awc-select:focus:before {
-        border-color: var(--colors-light-warning);
-    }
-
-    :host([static-error][custom-error][required]) .awc-select  {
+    :host([static-error][custom-error][required]) .awc-select__head  {
         border: 1px solid var(--colors-light-warning);
         border-radius: var(--corner-radius-m);
     }

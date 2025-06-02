@@ -72,11 +72,14 @@ export default class AwcSelect extends FormControlMixin(LitElement) {
     validityCallback(): string | void {
         const selectElement = document.createElement("select") as HTMLSelectElement;
         selectElement.required = this.required;
+
         return selectElement.validationMessage;
     }
 
     validationMessageCallback(message: string): void {
         if (this.customError && !this.staticError) {
+            // TODO: Это нужно для того что при отправке формы, сообщение сразу отображалось,
+            // иначе пока пользователь сам не зафокусирует компонент не сработает при отправке формы.
             this.validationMessage = message;
             this.validationMessage = this.customError;
         } else {
@@ -138,11 +141,9 @@ export default class AwcSelect extends FormControlMixin(LitElement) {
         this.typedCharacters += key.toLowerCase();
 
         const matchingOptionIndex = this.options.findIndex(option => {
-            if (option.disabled) {
-                return false;
-            }
-            const optionText = option.innerText.trim().toLowerCase();
+            if (option.disabled) return false;
 
+            const optionText = option.innerText.trim().toLowerCase();
             return optionText.startsWith(this.typedCharacters);
         });
 
@@ -209,10 +210,11 @@ export default class AwcSelect extends FormControlMixin(LitElement) {
 
     private handleChipsClick(index: number): void {
         const option = this.selectedOptions[index];
-        if (option) {
-            option.selected = false;
-            this.syncValueWithSelected();
-        }
+
+        if (!option) return;
+
+        option.selected = false;
+        this.syncValueWithSelected();
     }
 
     private handleOptionSelect(event: CustomEvent): void {
@@ -339,7 +341,7 @@ export default class AwcSelect extends FormControlMixin(LitElement) {
         if (!this.search) return nothing;
 
         return html`
-            <input class="awc-select__input" .value=${live(this.inputValue)} placeholder=${this.inputPlaceholder ?? ''} @input=${this.handleInput} />
+            <input class="awc-select__input" type="search" autocomplete="off" .value=${live(this.inputValue)} placeholder=${this.inputPlaceholder ?? ''} @input=${this.handleInput} />
         `;
     }
 

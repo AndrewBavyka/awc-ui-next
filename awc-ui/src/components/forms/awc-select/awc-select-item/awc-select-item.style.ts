@@ -20,9 +20,18 @@ export const awcSelectItemStyles = css`
         cursor: pointer;
         list-style-type: none;
         padding: var(--awc-select-item-padding, 10px 12px);
-        transition: background-color 0.3s ease;
+        transition: background-color .3s ease, border .3s ease;
         user-select: none;
         background-color: var(--awc-select-item-background, transparent);
+        border: 1px solid transparent;
+        border-radius: var(--corner-radius-m);
+        position: relative;
+    }
+
+    :host(:focus) .awc-select-item,
+    :host(:focus-visible) .awc-select-item {
+        outline: none;
+        border: 1px solid var(--colors-light-focus);
     }
 
     :host(:not([selected])) .awc-select-item:hover {

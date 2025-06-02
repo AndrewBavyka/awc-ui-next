@@ -1,5 +1,3 @@
-/* Тут лежат стили которые устанааливаются по умолчанию */
-
 :root {
   /* awc-divider */
   --awc-divider-background-theme: var(--colors-light-stroke);
