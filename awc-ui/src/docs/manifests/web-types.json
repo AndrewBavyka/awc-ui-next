@@ -14305,7 +14305,8 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "string",
+                                "kind": "plain",
+                                "type": "\"none\" | \"complete\" | \"fail\"",
                                 "required": true,
                                 "default": "\"none\""
                             },
@@ -14335,7 +14336,8 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "string",
+                                "kind": "plain",
+                                "type": "\"_blank\" | \"_self\" | \"_parent\" | \"_top\"",
                                 "required": true,
                                 "default": "\"none\""
                             },
@@ -14458,7 +14460,8 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "string",
+                                    "kind": "plain",
+                                    "type": "\"none\" | \"complete\" | \"fail\"",
                                     "required": true,
                                     "default": "\"none\""
                                 },
@@ -14488,7 +14491,8 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "string",
+                                    "kind": "plain",
+                                    "type": "\"_blank\" | \"_self\" | \"_parent\" | \"_top\"",
                                     "required": true,
                                     "default": "\"none\""
                                 },

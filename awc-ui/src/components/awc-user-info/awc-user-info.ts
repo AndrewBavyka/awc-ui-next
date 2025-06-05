@@ -2,19 +2,7 @@ import { LitElement, TemplateResult, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { AwcAvatarColor, AwcAvatarSize } from '../awc-avatar/awc-avatar.types';
 import { userInfoStyle } from './awc-user-info.style';
-
-export enum UserInfoStatus {
-    None = 'none',
-    Complete = 'complete',
-    Fail = 'fail',
-}
-
-export enum UserInfoTarget {
-    Blank = '_blank',
-    Self = '_self',
-    Parent = '_parent',
-    Top = '_top',
-}
+import { AwcUserInfoStatus, AwcUserInfoTarget } from './awc-user-info.types';
 
 /**
  * Элемент для отображения информации о пользователе.
@@ -44,12 +32,11 @@ export default class AwcUserInfo extends LitElement {
     @property({ type: Boolean, reflect: true }) reverse = false;
     /**
      * Статус пользователя
-     * @type {string}
+     * @property {AwcUserInfoStatus}
      * @default none
      * @example "complete", "none", "fail"
      */
-    @property({ type: String, reflect: true, attribute: 'avatar-status' })
-    status: UserInfoStatus = UserInfoStatus.None;
+    @property({ type: String, reflect: true, attribute: 'avatar-status' }) status: AwcUserInfoStatus = "none";
 
     /**
      * Ссылка на изображение для аватарки.
@@ -59,11 +46,11 @@ export default class AwcUserInfo extends LitElement {
     @property({ type: String, attribute: 'avatar-image' }) avatarLink: string;
     /**
      * Тип перехода по ссылке
-     * @type {string}
+     * @property {AwcUserInfoTarget}
      * @default none
      * @example "_blank", "_self"
      */
-    @property({ type: String }) target: UserInfoTarget = UserInfoTarget.Self;
+    @property({ type: String }) target: AwcUserInfoTarget = "_self";
     /**
      * Принимает код hex цвета
      * @property {string}

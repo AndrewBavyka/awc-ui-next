@@ -9211,7 +9211,7 @@
               "name": "status",
               "privacy": "public",
               "description": "Статус пользователя",
-              "type": "string",
+              "type": "\"none\" | \"complete\" | \"fail\"",
               "default": "\"none\""
             },
             {
@@ -9227,7 +9227,7 @@
               "name": "target",
               "privacy": "public",
               "description": "Тип перехода по ссылке",
-              "type": "string",
+              "type": "\"_blank\" | \"_self\" | \"_parent\" | \"_top\"",
               "default": "\"none\""
             },
             {
@@ -9291,7 +9291,7 @@
               "fieldName": "status",
               "defaultValue": "\"none\"",
               "description": "Статус пользователя",
-              "type": "string"
+              "type": "\"none\" | \"complete\" | \"fail\""
             },
             {
               "name": "avatar-image",
@@ -9305,7 +9305,7 @@
               "fieldName": "target",
               "defaultValue": "\"none\"",
               "description": "Тип перехода по ссылке",
-              "type": "string"
+              "type": "\"_blank\" | \"_self\" | \"_parent\" | \"_top\""
             },
             {
               "name": "avatar-custom-color",
