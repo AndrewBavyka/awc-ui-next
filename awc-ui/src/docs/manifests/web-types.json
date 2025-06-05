@@ -4914,7 +4914,7 @@
                             "priority": "normal",
                             "value": {
                                 "kind": "plain",
-                                "type": "",
+                                "type": "\"en\" | \"ru_RU\"",
                                 "required": true,
                                 "default": "\"en\""
                             },
@@ -5164,7 +5164,7 @@
                                 "priority": "normal",
                                 "value": {
                                     "kind": "plain",
-                                    "type": "",
+                                    "type": "\"en\" | \"ru_RU\"",
                                     "required": true,
                                     "default": "\"en\""
                                 },
@@ -5481,7 +5481,7 @@
                             "priority": "normal",
                             "value": {
                                 "kind": "plain",
-                                "type": "",
+                                "type": "\"en\" | \"ru_RU\"",
                                 "required": true,
                                 "default": "\"en\""
                             },
@@ -5569,7 +5569,7 @@
                                 "priority": "normal",
                                 "value": {
                                     "kind": "plain",
-                                    "type": "",
+                                    "type": "\"en\" | \"ru_RU\"",
                                     "required": true,
                                     "default": "\"en\""
                                 },

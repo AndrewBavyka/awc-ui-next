@@ -1109,7 +1109,7 @@
     },
     {
       "name": "awc-file-item",
-      "description": "Attributes:\n\n  * `view` {`AwcFileDisplayType`} - \n\n  * `provider` {`string`} - \n\n  * `id` {`string`} - \n\n  * `thumbnail` {`string`} - \n\n  * `name` {`string`} - \n\n  * `date` {`string`} - \n\n  * `format` {`string`} - \n\n  * `type` {`AwcFileItemType`} - \n\n  * `local-file` {`string`} - \n\n  * `external-file-link` {`string`} - \n\n  * `locale` - \n\n  * `size` {`number | undefined`} - \n\n  * `private` {`boolean`} - \n\n  * `show-private` {`boolean`} - \n\n  * `show-download` {`boolean`} - \n\n  * `show-delete` {`boolean`} - \n\n  * `is-interactive` {`boolean`} - \n\n  * `hide-subinfo` {`boolean`} - \n\nProperties:\n\n  * `view` {`AwcFileDisplayType`} - \n\n  * `provider` {`string`} - \n\n  * `id` {`string`} - \n\n  * `thumbnail` {`string`} - \n\n  * `name` {`string`} - \n\n  * `date` {`string`} - \n\n  * `format` {`string`} - \n\n  * `type` {`AwcFileItemType`} - \n\n  * `localFile` {`string`} - \n\n  * `externalFileLink` {`string`} - \n\n  * `locale` - \n\n  * `size` {`number | undefined`} - \n\n  * `private` {`boolean`} - \n\n  * `showPrivate` {`boolean`} - \n\n  * `showDownload` {`boolean`} - \n\n  * `showDelete` {`boolean`} - \n\n  * `isInteractive` {`boolean`} - \n\n  * `hideSubinfo` {`boolean`} - \n\n  * `isHoveredButtons` {`boolean`} - \n\n  * `showHoverText` {`boolean`} - \n\n  * `showFallbackIcon` {`boolean`} - \n\n  * `_onDownloadEvent` - \n\n  * `_onPrivateEvent` - \n\n  * `_onDeleteEvent` - \n\n  * `_onPreviewEvent` - \n\n  * `_isImageValid` {`boolean`} - \n\n  * `_imageValidationCache` - \n\n  * `styles` {`CSSResult`} - ",
+      "description": "Attributes:\n\n  * `view` {`AwcFileDisplayType`} - \n\n  * `provider` {`string`} - \n\n  * `id` {`string`} - \n\n  * `thumbnail` {`string`} - \n\n  * `name` {`string`} - \n\n  * `date` {`string`} - \n\n  * `format` {`string`} - \n\n  * `type` {`AwcFileItemType`} - \n\n  * `local-file` {`string`} - \n\n  * `external-file-link` {`string`} - \n\n  * `locale` {`\"en\" | \"ru_RU\"`} - \n\n  * `size` {`number | undefined`} - \n\n  * `private` {`boolean`} - \n\n  * `show-private` {`boolean`} - \n\n  * `show-download` {`boolean`} - \n\n  * `show-delete` {`boolean`} - \n\n  * `is-interactive` {`boolean`} - \n\n  * `hide-subinfo` {`boolean`} - \n\nProperties:\n\n  * `view` {`AwcFileDisplayType`} - \n\n  * `provider` {`string`} - \n\n  * `id` {`string`} - \n\n  * `thumbnail` {`string`} - \n\n  * `name` {`string`} - \n\n  * `date` {`string`} - \n\n  * `format` {`string`} - \n\n  * `type` {`AwcFileItemType`} - \n\n  * `localFile` {`string`} - \n\n  * `externalFileLink` {`string`} - \n\n  * `locale` {`\"en\" | \"ru_RU\"`} - \n\n  * `size` {`number | undefined`} - \n\n  * `private` {`boolean`} - \n\n  * `showPrivate` {`boolean`} - \n\n  * `showDownload` {`boolean`} - \n\n  * `showDelete` {`boolean`} - \n\n  * `isInteractive` {`boolean`} - \n\n  * `hideSubinfo` {`boolean`} - \n\n  * `isHoveredButtons` {`boolean`} - \n\n  * `showHoverText` {`boolean`} - \n\n  * `showFallbackIcon` {`boolean`} - \n\n  * `_onDownloadEvent` {`EventDispatcher<AwcFileItemDetails>`} - \n\n  * `_onPrivateEvent` {`EventDispatcher<AwcFileItemDetails>`} - \n\n  * `_onDeleteEvent` {`EventDispatcher<AwcFileItemDetails>`} - \n\n  * `_onPreviewEvent` {`EventDispatcher<HTMLElement>`} - \n\n  * `_isImageValid` {`boolean`} - \n\n  * `_imageValidationCache` - \n\n  * `styles` {`CSSResult`} - ",
       "attributes": [
         {
           "name": "view",
@@ -1178,7 +1178,15 @@
         },
         {
           "name": "locale",
-          "description": "`locale` - \n\nProperty: locale\n\nDefault: en"
+          "description": "`locale` {`\"en\" | \"ru_RU\"`} - \n\nProperty: locale\n\nDefault: en",
+          "values": [
+            {
+              "name": "en"
+            },
+            {
+              "name": "ru_RU"
+            }
+          ]
         },
         {
           "name": "size",
@@ -1219,7 +1227,7 @@
     },
     {
       "name": "awc-file",
-      "description": "Attributes:\n\n  * `heading` {`string`} - \n\n  * `counter` {`number`} - \n\n  * `view` {`AwcFileDisplayType`} - \n\n  * `variant` {`AwcFileVariant`} - \n\n  * `locale` - \n\n  * `open` {`boolean`} - \n\nProperties:\n\n  * `heading` {`string`} - \n\n  * `counter` {`number`} - \n\n  * `view` {`AwcFileDisplayType`} - \n\n  * `variant` {`AwcFileVariant`} - \n\n  * `locale` - \n\n  * `open` {`boolean`} - \n\n  * `_viewButtons` {`NodeListOf<AwcIconButton>`} - \n\n  * `fileItems` {`AwcFileItem[]`} - \n\n  * `styles` {`CSSResult`} - ",
+      "description": "Attributes:\n\n  * `heading` {`string`} - \n\n  * `counter` {`number`} - \n\n  * `view` {`AwcFileDisplayType`} - \n\n  * `variant` {`AwcFileVariant`} - \n\n  * `locale` {`\"en\" | \"ru_RU\"`} - \n\n  * `open` {`boolean`} - \n\nProperties:\n\n  * `heading` {`string`} - \n\n  * `counter` {`number`} - \n\n  * `view` {`AwcFileDisplayType`} - \n\n  * `variant` {`AwcFileVariant`} - \n\n  * `locale` {`\"en\" | \"ru_RU\"`} - \n\n  * `open` {`boolean`} - \n\n  * `_viewButtons` {`NodeListOf<AwcIconButton>`} - \n\n  * `fileItems` {`AwcFileItem[]`} - \n\n  * `styles` {`CSSResult`} - ",
       "attributes": [
         {
           "name": "heading",
@@ -1261,7 +1269,15 @@
         },
         {
           "name": "locale",
-          "description": "`locale` - \n\nProperty: locale\n\nDefault: en"
+          "description": "`locale` {`\"en\" | \"ru_RU\"`} - \n\nProperty: locale\n\nDefault: en",
+          "values": [
+            {
+              "name": "en"
+            },
+            {
+              "name": "ru_RU"
+            }
+          ]
         },
         {
           "name": "open",

@@ -12,7 +12,7 @@
 | `isHoveredButtons` |                      | `boolean`             | false        |
 | `isInteractive`    | `is-interactive`     | `boolean`             | false        |
 | `localFile`        | `local-file`         | `string`              |              |
-| `locale`           | `locale`             |                       | "en"         |
+| `locale`           | `locale`             | `"en" \| "ru_RU"`     | "en"         |
 | `name`             | `name`               | `string`              |              |
 | `private`          | `private`            | `boolean`             | false        |
 | `provider`         | `provider`           | `string`              |              |

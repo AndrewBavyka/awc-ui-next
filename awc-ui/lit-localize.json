@@ -1,0 +1,16 @@
+{
+  "$schema": "https://raw.githubusercontent.com/lit/lit/main/packages/localize-tools/config.schema.json",
+  "sourceLocale": "en",
+  "targetLocales": ["ru_RU"],
+  "tsConfig": "tsconfig.json",
+  "inputFiles": ["src/awc-ui/components/**/*.{ts,js}"],
+  "output": {
+    "mode": "runtime",
+    "outputDir": "./src/awc-ui/generated/locales",
+    "localeCodesModule": "./src/awc-ui/generated/locale-codes.ts"
+  },
+  "interchange": {
+    "format": "xliff",
+    "xliffDir": "./src/awc-ui/xliff/"
+  }
+}

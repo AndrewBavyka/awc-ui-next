@@ -3258,6 +3258,7 @@
               "kind": "field",
               "name": "locale",
               "privacy": "public",
+              "type": "\"en\" | \"ru_RU\"",
               "default": "\"en\""
             },
             {
@@ -3394,7 +3395,8 @@
             {
               "name": "locale",
               "fieldName": "locale",
-              "defaultValue": "\"en\""
+              "defaultValue": "\"en\"",
+              "type": "\"en\" | \"ru_RU\""
             },
             {
               "name": "size",
@@ -3497,6 +3499,7 @@
               "kind": "field",
               "name": "locale",
               "privacy": "public",
+              "type": "\"en\" | \"ru_RU\"",
               "default": "\"en\""
             },
             {
@@ -3549,7 +3552,8 @@
             {
               "name": "locale",
               "fieldName": "locale",
-              "defaultValue": "\"en\""
+              "defaultValue": "\"en\"",
+              "type": "\"en\" | \"ru_RU\""
             },
             {
               "name": "open",

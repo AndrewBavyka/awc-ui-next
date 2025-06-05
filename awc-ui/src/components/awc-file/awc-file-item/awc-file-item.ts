@@ -2,8 +2,8 @@ import { CSSResult, html, LitElement, TemplateResult, nothing, PropertyValues } 
 import { customElement, property, state } from 'lit/decorators.js';
 import { localized, msg } from '@lit/localize';
 import { awcFileItemStyles } from './awc-file-item.style';
-import { EventDispatcher, event } from '../../../../awc-ui/utilities/event';
-import { formatFileSize } from '../../../../awc-ui/utilities/file-size-converter';
+import { EventDispatcher, event } from '../../../utilities/event';
+import { formatFileSize } from '../../../utilities/file-size-converter';
 import { AwcFileItemDetails, AwcFileItemType } from './awc-file-item.types';
 import { AwcFileDisplayType } from '../awc-file.types';
 import {

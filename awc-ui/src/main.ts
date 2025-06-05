@@ -11,8 +11,6 @@ import AwcEmptyStateLink from './components/awc-empty-state/awc-empty-state-link
 import AwcCard from './components/awc-card/awc-card';
 import AwcDialog from './components/awc-dialog/awc-dialog';
 
-
-
 import AwcAccordion from './components/awc-accordion/awc-accordion';
 import AwcAccordionItem from './components/awc-accordion/awc-accordion-item/awc-accordion-item';
 import AwcAlert from './components/awc-alert/awc-alert';

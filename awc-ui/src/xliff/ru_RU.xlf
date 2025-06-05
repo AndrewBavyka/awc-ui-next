@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+<file target-language="ru_RU" source-language="en" original="lit-localize-inputs" datatype="plaintext">
+<body>
+<trans-unit id="sc7e3b594ffcd9d61">
+  <source>Open access</source>
+  <target>Открыть доступ</target>
+</trans-unit>
+<trans-unit id="s89a35cca1ac7d447">
+  <source>Close access</source>
+  <target>Закрыть доступ</target>
+</trans-unit>
+<trans-unit id="sf12e38098e951932">
+  <source>Share a file with an external user</source>
+  <target>Открыть доступ к файлу для внешнего пользователя</target>
+</trans-unit>
+<trans-unit id="sd9376f87aec0c916">
+  <source>Share a file only with internal users</source>
+  <target>Закрыть доступ к файлу для внешнего пользователя</target>
+</trans-unit>
+<trans-unit id="sd3386a2ef42e80b9">
+  <source>Download</source>
+  <target>Скачать</target>
+</trans-unit>
+<trans-unit id="sdc673e73b5c13aea">
+  <source>Delete</source>
+   <target>Удалить</target>
+</trans-unit>
+<trans-unit id="s0d009e71c9de5bc2">
+  <source>Click to go</source>
+  <target>Клик для перехода</target>
+</trans-unit>
+<trans-unit id="s2a28d6df1a6fe060">
+  <source>Click to preview</source>
+  <target>Клик для просмотра</target>
+</trans-unit>
+<trans-unit id="s45a359a3fa397256">
+  <source>List view</source>
+  <target>Список</target>
+</trans-unit>
+<trans-unit id="s12c101ff86584f3d">
+  <source>List block view</source>
+  <target>Блочный список</target>
+</trans-unit>
+<trans-unit id="sb206d032da78e466">
+  <source>Grid view</source>
+  <target>Плитка</target>
+</trans-unit>
+</body>
+</file>
+</xliff>

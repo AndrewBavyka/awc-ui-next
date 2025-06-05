@@ -7,7 +7,7 @@
 | `counter`   | `counter` |           | `number`             | 0            |
 | `fileItems` |           | readonly  | `AwcFileItem[]`      |              |
 | `heading`   | `heading` |           | `string`             | ""           |
-| `locale`    | `locale`  |           |                      | "en"         |
+| `locale`    | `locale`  |           | `"en" \| "ru_RU"`    | "en"         |
 | `open`      | `open`    |           | `boolean`            | false        |
 | `variant`   | `variant` |           | `AwcFileVariant`     | "regular"    |
 | `view`      | `view`    |           | `AwcFileDisplayType` | "list_block" |
