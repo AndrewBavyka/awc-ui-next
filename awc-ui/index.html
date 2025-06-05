@@ -34,82 +34,47 @@
 
 <body>
   <form>
-    <awc-select  
-      name="awc-select" 
-      placeholder="Hello" 
-      input-placeholder="Введите текст"
-      label="Введите"
-      autoselect-off
-      search
-      required>
-      <awc-select-item value="Аспро.Cloud">Аспро.Agile</awc-select-item>
-      <awc-select-item value="Аспро.Cloud 2">
-        <div style="display: flex; align-items: center; gap: 6px;">
-          <awc-avatar size="32" rounded="circle" status="none" color="global-red-2-600" icon="none" title="Аспро.Cloud">
-          </awc-avatar>
-          Аспро.Cloud
-        </div>
-      </awc-select-item>
-      <awc-select-item seleted>Аспро.Телефония</awc-select-item>
-      <awc-select-item>Тест 1</awc-select-item>
-      <awc-select-item value="Тест 2">Тест 2</awc-select-item>
-      <awc-select-item value="Тест 3">Тест 3</awc-select-item>
-      <awc-select-item value="Тест 4">Тест 4</awc-select-item>
-      <awc-select-item value="Тест 5">Тест 5</awc-select-item>
-      <awc-select-item value="Тест 2">Тест 2</awc-select-item>
-      <awc-select-item value="Тест 2">Тест 2</awc-select-item>
-    </awc-select>
-
-     <awc-select  
-      name="awc-select" 
-      placeholder="Hello" 
-      input-placeholder="Введите текст"
-      label="Введите"
-      autoselect-off
-      search
-      required>
-      <awc-select-item value="Аспро.Cloud">Аспро.Agile</awc-select-item>
-      <awc-select-item value="Аспро.Cloud 2">
-        <div style="display: flex; align-items: center; gap: 6px;">
-          <awc-avatar size="32" rounded="circle" status="none" color="global-red-2-600" icon="none" title="Аспро.Cloud">
-          </awc-avatar>
-          Аспро.Cloud
-        </div>
-      </awc-select-item>
-      <awc-select-item seleted>Аспро.Телефония</awc-select-item>
-      <awc-select-item>Тест 1</awc-select-item>
-      <awc-select-item value="Тест 2">Тест 2</awc-select-item>
-      <awc-select-item value="Тест 3">Тест 3</awc-select-item>
-      <awc-select-item value="Тест 4">Тест 4</awc-select-item>
-      <awc-select-item value="Тест 5">Тест 5</awc-select-item>
-      <awc-select-item value="Тест 2">Тест 2</awc-select-item>
-      <awc-select-item value="Тест 2">Тест 2</awc-select-item>
-    </awc-select>
+   <awc-select
+  input-placeholder="Поиск"
+  autoselect-off=""
+  search=""
+  custom-error=""
+  name="select"
+  placeholder="Выберите продукт"
+>
+  <awc-select-item value="Аспро.Cloud">
+    <awc-avatar
+      size="32"
+      rounded="circle"
+      status="none"
+      color="global-red-2-600"
+      icon="none"
+      title="Аспро.Cloud"
+    ></awc-avatar>
+    Аспро.Cloud
+  </awc-select-item>
+  <awc-select-item value="Аспро.Agile">Аспро.Тайм-трекер</awc-select-item>
+  <awc-select-group label="Группа">
+    <awc-select-item value="Аспро.Agile">Аспро.Agile</awc-select-item>
+    <awc-select-item value="Аспро.Телефония">Аспро.Телефония</awc-select-item>
+    <awc-select-item value="Аспро.CRM">Аспро.CRM</awc-select-item>
+  </awc-select-group>
+  <awc-select-item value="Аспро.Финансы">Аспро.Финансы</awc-select-item>
+  <awc-select-group label="Группа 2">
+    <awc-select-item value="Аспро.Agile">Аспро.Agile</awc-select-item>
+    <awc-select-item value="Аспро.Телефония">Аспро.Телефония</awc-select-item>
+    <awc-select-item value="Аспро.CRM">Аспро.CRM</awc-select-item>
+  </awc-select-group>
+  <awc-select-button
+    dynamic-button=""
+    slot="awc-button"
+    icon=""
+    label="Создать"
+  ></awc-select-button>
+</awc-select>
 
 
-     <awc-select  
-      name="awc-select" 
-      placeholder="Hello" 
-      input-placeholder="Введите текст"
-      label="Введите"
-      autoselect-off
-      search
-      required>
-      <awc-select-item value="Аспро.Cloud">Аспро.Agile</awc-select-item>
-      <awc-select-item value="Аспро.Cloud 2">
-        <div style="display: flex; align-items: center; gap: 6px;">
-          Аспро.Cloud
-        </div>
-      </awc-select-item>
-      <awc-select-item seleted>Аспро.Телефония</awc-select-item>
-      <awc-select-item>Тест 1</awc-select-item>
-      <awc-select-item value="Тест 2">Тест 2</awc-select-item>
-      <awc-select-item value="Тест 3">Тест 3</awc-select-item>
-      <awc-select-item value="Тест 4">Тест 4</awc-select-item>
-      <awc-select-item value="Тест 5">Тест 5</awc-select-item>
-      <awc-select-item value="Тест 2">Тест 2</awc-select-item>
-      <awc-select-item value="Тест 2">Тест 2</awc-select-item>
-    </awc-select>
+    
 
     <awc-button size="regular" variant="primary" type="submit">
       Отправить

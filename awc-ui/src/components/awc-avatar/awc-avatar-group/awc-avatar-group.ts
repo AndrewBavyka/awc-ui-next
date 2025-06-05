@@ -1,7 +1,7 @@
 import { LitElement, html, TemplateResult, PropertyValues, CSSResult, nothing } from 'lit';
 import { customElement, property, query, state } from 'lit/decorators.js';
 import { avatarGroupStyle } from './awc-avatar-group.style';
-import AwcAvatar from '../awc-avatar';
+import AwcAvatar, { awcAvatarTag } from '../awc-avatar';
 import AwcAvatarGroupCounter, { awcAvatarGroupCounterTag } from './awc-avatar-group-counter/awc-avatar-group-counter';
 import { styleMap } from 'lit/directives/style-map.js';
 import { AwcAvatarGroupCounterSize } from './awc-avatar-group-counter/awc-avatar-group-counter.types';
@@ -46,14 +46,20 @@ export default class AwcAvatarGroup extends LitElement {
     @state() private counterHidden: boolean = false;
 
     @query('slot[name="awc-avatar-group-counter"]') _slottedCounter!: HTMLSlotElement;
+    @query('slot:not([name])') _slottedAvatars!: HTMLSlotElement;
 
     private get avatarCounter(): AwcAvatarGroupCounter | null {
         return this.querySelector<AwcAvatarGroupCounter>(awcAvatarGroupCounterTag);
     }
 
-    private updateDisplayedUsers(): void {
-        const slotElements = this.shadowRoot?.querySelector('slot')?.assignedElements()! as AwcAvatar[];
+    private initializeComponent(): void {
+        this.updateDisplayedUsers();
+        this.updateCounterValue();
+        this._applySliceEffect();
+    }
 
+    private updateDisplayedUsers(): void {
+        const slotElements = this.shadowRoot?.querySelector('slot')?.assignedElements() as AwcAvatar[];
         if (!slotElements) return;
 
         slotElements.forEach((avatar, index) => {
@@ -62,30 +68,28 @@ export default class AwcAvatarGroup extends LitElement {
     }
 
     private _applySliceEffect(): void {
-        const counter = deepQuerySelectorFromSlot(this, 'awc-avatar-group-counter', 'awc-avatar-group-counter') as AwcAvatarGroupCounter;
+        const counter = deepQuerySelectorFromSlot(this, 'awc-avatar-group-counter', 'awc-avatar-group-counter') as AwcAvatarGroupCounter | null;
         if (counter) {
             this._applyStylesToElement(counter);
         }
 
-        const slot = this.shadowRoot?.querySelector('slot');
-        const slotElements = slot?.assignedElements() as AwcAvatar[] | undefined;
+        if (this._slottedAvatars) {
+            const avatars = this._slottedAvatars.assignedElements().filter((el): el is AwcAvatar => el instanceof AwcAvatar);
 
-        if (!slotElements) return;
-
-        slotElements.forEach((avatar, index) => {
-            this._applyHoverToElement(avatar);
-
-            if (index !== 0) {
-                this._applyStylesToElement(avatar);
-            }
-        });
+            avatars.forEach((avatar, index) => {
+                this._applyHoverToElement(avatar);
+                if (index !== 0) {
+                    this._applyStylesToElement(avatar);
+                }
+            });
+        }
     }
 
     private _applyStylesToElement(element: AwcAvatar | AwcAvatarGroupCounter): void {
         element.sliced = true;
     }
 
-    private _applyHoverToElement(element: AwcAvatar) {
+    private _applyHoverToElement(element: AwcAvatar): void {
         if (element instanceof AwcAvatar) {
             element.hovered = true;
         }
@@ -103,19 +107,11 @@ export default class AwcAvatarGroup extends LitElement {
     connectedCallback(): void {
         super.connectedCallback();
 
-        document.addEventListener('DOMContentLoaded', () => {
-            this.updateDisplayedUsers();
-            this.updateCounterValue();
-            this._applySliceEffect();
-        });
-    }
-
-    protected firstUpdated(changedProperties: PropertyValues<this>): void {
-        super.firstUpdated(changedProperties);
-
-        this.updateDisplayedUsers();
-        this.updateCounterValue();
-        this._applySliceEffect();
+        if (this.shadowRoot) {
+            this.initializeComponent();
+        } else {
+            requestAnimationFrame(() => this.initializeComponent());
+        }
     }
 
     protected updated(changedProperties: PropertyValues<this>): void {
@@ -125,12 +121,20 @@ export default class AwcAvatarGroup extends LitElement {
             this.updateDisplayedUsers();
             this.updateCounterValue();
         }
+
+        if (
+            changedProperties.has('displayUsers') ||
+            changedProperties.has('totalUsers') ||
+            this.shadowRoot?.querySelector('slot')?.assignedElements().length !== changedProperties.get('displayUsers')
+        ) {
+            this._applySliceEffect();
+        }
     }
 
     protected render(): TemplateResult {
         return html`
             <div class="awc-avatar-group">
-                <slot></slot>
+                <slot @slotchange=${this._applySliceEffect}></slot>
                 ${this.counterHidden
                     ? nothing
                     : html`<awc-avatar-group-counter
@@ -139,7 +143,7 @@ export default class AwcAvatarGroup extends LitElement {
                           style=${styleMap({ display: this.counterHidden ? 'none' : 'block', 'margin-left': -10 + 'px' })}
                       >
                       </awc-avatar-group-counter>`}
-                <slot style=${styleMap({ 'margin-left': -10 + 'px' })} name="awc-avatar-group-counter"></slot>
+                <slot name="awc-avatar-group-counter"></slot>
             </div>
         `;
     }

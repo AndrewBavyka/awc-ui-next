@@ -1,4 +1,4 @@
-export type AwcAvatarSize = '20' | '24' | '32' | '36' | '40' | '48' | '128' | '160';
+export type AwcAvatarSize = '20' | '24' | '32' | '36' | '40' | '48' | '72' | '128' | '160';
 export type AwcAvatarRounded = 'circle' | 'square';
 
 export type AwcAvatarColor =

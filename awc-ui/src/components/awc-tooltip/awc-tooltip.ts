@@ -2,8 +2,10 @@ import { LitElement, html, TemplateResult, CSSResult } from 'lit';
 import { customElement, property, query } from 'lit/decorators.js';
 import { awcTooltipStyle } from './awc-tooltip.style';
 import { AwcTooltipPosition, AwcTooltipSpacing, AwcTooltipStrategy } from './awc-tooltip.types';
-import { setupFloating } from '../../utilities/floating-utils';
 import { event, EventDispatcher } from '../../utilities/event';
+import AwcTooltipMessage, { awcTooltipMessageTag } from './awc-tooltip-message/awc-tooltip-message';
+
+export const awcTooltipTag = 'awc-tooltip';
 
 /**
  *
@@ -15,8 +17,6 @@ import { event, EventDispatcher } from '../../utilities/event';
  *
  * @cssproperty [--awc-tooltip-display:block] - Устанавливает блочное отображение кнопки.
  */
-export const awcTooltipTag = 'awc-tooltip';
-
 @customElement(awcTooltipTag)
 export default class AwcTooltip extends LitElement {
     /**
@@ -85,7 +85,23 @@ export default class AwcTooltip extends LitElement {
     @property({ type: Boolean, reflect: true, attribute: 'match-width' }) matchWidth = false;
 
     /**
-     * Событие, генерируемое при показе тултипа.
+     * Указывает, в какой элемент DOM будет помещён awc-tooltip-message.
+     *
+     * @property {Boolean}
+     * @default body
+     */
+
+    @property({ type: String, reflect: true }) target = 'body';
+    /**
+     * Отключение порталиннга
+     *
+     * @property {Boolean}
+     * @default false
+     */
+    @property({ type: Boolean, attribute: 'portal-off' }) portalOff = false;
+
+    /**
+     * Событие, генерируемое при открытии тултипа.
      *
      * @event awc-tooltip-show
      * @type {EventDispatcher<boolean>}
@@ -100,20 +116,23 @@ export default class AwcTooltip extends LitElement {
      */
     @event('awc-tooltip-hide') private _onHideEvent: EventDispatcher<boolean>;
 
-    @query('.awc-tooltip') private tooltipEl!: HTMLElement;
-    @query('.awc-tooltip__arrow') private arrowEl!: HTMLElement;
     @query('slot') private slotEl!: HTMLSlotElement;
+    @query(awcTooltipMessageTag) private tooltipMessageEl?: AwcTooltipMessage;
+
+    private static tooltipMessage: AwcTooltipMessage | null = null;
+    private static activeTooltip: AwcTooltip | null = null;
+
+    private referenceEl: HTMLElement | null = null;
+    private showTimeout: number | null = null;
+    private wasHiddenByVisibility = false;
 
     static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
 
-    private cleanupFloating: (() => void) | null = null;
-    private showTimeout: number | null = null;
-    private referenceEl: HTMLElement | null = null;
-    private wasHiddenByVisibility = false;
-
     connectedCallback() {
         super.connectedCallback();
-
+        if (!this.portalOff) {
+            this.ensureTooltipMessage();
+        }
         this.addEventListener('mouseenter', () => this.showTooltip());
         this.addEventListener('mouseleave', () => this.hideTooltip());
         this.addEventListener('focusin', this.handleFocusIn);
@@ -124,57 +143,93 @@ export default class AwcTooltip extends LitElement {
 
     disconnectedCallback() {
         super.disconnectedCallback();
-
         this.removeEventListener('mouseenter', () => this.showTooltip());
         this.removeEventListener('mouseleave', () => this.hideTooltip());
         this.removeEventListener('focusin', this.handleFocusIn);
         this.removeEventListener('focusout', this.handleFocusOut);
         this.removeEventListener('slotchange', this.handleSlotChange);
         document.removeEventListener('visibilitychange', this.handleVisibilityChange);
-        this.cleanupFloating?.();
 
         if (this.showTimeout !== null) clearTimeout(this.showTimeout);
+
+        if (AwcTooltip.activeTooltip === this) {
+            this.hideTooltip();
+        }
     }
 
     protected updated(changedProperties: Map<string | number | symbol, unknown>) {
         super.updated(changedProperties);
-
         if (
-            (changedProperties.has('active') && this.active) ||
+            changedProperties.has('message') ||
             changedProperties.has('position') ||
-            changedProperties.has('spacing') ||
             changedProperties.has('strategy') ||
-            changedProperties.has('matchWidth')
+            changedProperties.has('spacing') ||
+            changedProperties.has('marker') ||
+            changedProperties.has('active') ||
+            changedProperties.has('matchWidth') ||
+            changedProperties.has('target') ||
+            changedProperties.has('portalOff')
         ) {
-            this.updatePosition();
+            if (this.active && AwcTooltip.activeTooltip === this) {
+                this.updateTooltipMessage();
+            }
         }
-
         if (changedProperties.has('spacing') && isNaN(Number(this.spacing))) {
             this.spacing = 8;
+        }
+        if (changedProperties.has('portalOff') && !this.portalOff && this.active) {
+            this.ensureTooltipMessage();
+            this.updateTooltipMessage();
         }
     }
 
     private handleSlotChange = () => {
         const assignedElements = this.slotEl.assignedElements({ flatten: true }) as HTMLElement[];
         this.referenceEl = assignedElements[0] || null;
-
-        if (this.active) this.updatePosition();
+        if (this.active && AwcTooltip.activeTooltip === this) {
+            this.updateTooltipMessage();
+        }
     };
+
+    private ensureTooltipMessage() {
+        if (!this.portalOff && !AwcTooltip.tooltipMessage) {
+            AwcTooltip.tooltipMessage = document.createElement(awcTooltipMessageTag) as AwcTooltipMessage;
+            const targetElement = document.querySelector(this.target) || document.body;
+            targetElement.appendChild(AwcTooltip.tooltipMessage);
+        }
+    }
+
+    private updateTooltipMessage() {
+        const tooltipMessage = this.portalOff ? this.tooltipMessageEl : AwcTooltip.tooltipMessage;
+        if (tooltipMessage && this.referenceEl) {
+            tooltipMessage.message = this.message;
+            tooltipMessage.position = this.position;
+            tooltipMessage.strategy = this.strategy;
+            tooltipMessage.spacing = this.spacing;
+            tooltipMessage.marker = this.marker;
+            tooltipMessage.active = this.active;
+            tooltipMessage.matchWidth = this.matchWidth;
+            tooltipMessage.referenceEl = this.referenceEl;
+        }
+    }
 
     private showTooltip = (immediate = false) => {
         if (!this.disabled) {
             if (this.showTimeout !== null) {
                 clearTimeout(this.showTimeout);
             }
-
-            const show = async () => {
-                await this.updatePosition();
+            const show = () => {
+                if (AwcTooltip.activeTooltip && AwcTooltip.activeTooltip !== this) {
+                    AwcTooltip.activeTooltip.active = false;
+                    AwcTooltip.activeTooltip._onHideEvent(true);
+                }
+                AwcTooltip.activeTooltip = this;
                 this.active = true;
+                this.updateTooltipMessage();
                 this.showTimeout = null;
                 this.wasHiddenByVisibility = false;
                 this._onShowEvent(true);
             };
-
             if (immediate) {
                 show();
             } else {
@@ -189,15 +244,17 @@ export default class AwcTooltip extends LitElement {
                 clearTimeout(this.showTimeout);
                 this.showTimeout = null;
             }
-            this.active = false;
-            this.cleanupFloating?.();
-            this._onHideEvent(true);
+            if (AwcTooltip.activeTooltip === this) {
+                this.active = false;
+                this.updateTooltipMessage();
+                AwcTooltip.activeTooltip = null;
+                this._onHideEvent(true);
+            }
         }
     };
 
-    private handleFocusIn = async (event: FocusEvent) => {
+    private handleFocusIn = (event: FocusEvent) => {
         if (!this.contains(event.target as Node)) return;
-
         if (!this.wasHiddenByVisibility) {
             this.showTooltip(true);
         }
@@ -218,49 +275,10 @@ export default class AwcTooltip extends LitElement {
         }
     };
 
-    private getValidSpacing(): number {
-        const parsedSpacing = Number(this.spacing);
-        return isNaN(parsedSpacing) ? 8 : parsedSpacing;
-    }
-
-    private updatePosition(): Promise<void> {
-        if (!this.tooltipEl || this.disabled || !this.referenceEl) {
-            return Promise.resolve();
-        }
-
-        this.cleanupFloating?.();
-
-        if (this.matchWidth) {
-            const referenceWidth = this.referenceEl.getBoundingClientRect().width;
-            this.tooltipEl.style.width = `${referenceWidth}px`;
-        } else {
-            this.tooltipEl.style.width = '';
-        }
-
-        return new Promise((resolve) => {
-            this.cleanupFloating = setupFloating(this.referenceEl!, this.tooltipEl, this.marker ? this.arrowEl : null, {
-                position: this.position,
-                strategy: this.strategy,
-                spacing: this.getValidSpacing(),
-            });
-            requestAnimationFrame(() => resolve());
-        });
-    }
-
-    /**
-     * @method show
-     * @description Программно показывает тултип.
-     * @fires awc-tooltip-show
-     */
     public show(): void {
         this.showTooltip(true);
     }
 
-    /**
-     * @method hide
-     * @description Программно скрывает тултип.
-     * @fires awc-tooltip-hide
-     */
     public hide(): void {
         this.hideTooltip();
     }
@@ -268,10 +286,20 @@ export default class AwcTooltip extends LitElement {
     protected render(): TemplateResult {
         return html`
             <slot @slotchange=${this.handleSlotChange}></slot>
-            <div class="awc-tooltip ${this.active ? 'visible' : ''}" role="tooltip">
-                <p class="awc-tooltip__message">${this.message}</p>
-                ${this.marker ? html`<div class="awc-tooltip__arrow" data-popper-arrow></div>` : ''}
-            </div>
+            ${this.portalOff
+                ? html`
+                      <awc-tooltip-message
+                          .message=${this.message}
+                          .position=${this.position}
+                          .strategy=${this.strategy}
+                          .spacing=${this.spacing}
+                          .marker=${this.marker}
+                          .active=${this.active}
+                          .matchWidth=${this.matchWidth}
+                          .referenceEl=${this.referenceEl}
+                      ></awc-tooltip-message>
+                  `
+                : ''}
         `;
     }
 

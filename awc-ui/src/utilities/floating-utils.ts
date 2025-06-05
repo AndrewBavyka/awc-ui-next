@@ -1,6 +1,18 @@
 import { computePosition, autoUpdate, offset, arrow, flip, shift, size as floatingSize } from '@floating-ui/dom';
 
-export type Placement = "top" | "top-end" | "top-start" | "bottom" | "bottom-end" | "bottom-start" | "left" | "left-end" | "left-start" | "right" | "right-end" | "right-start";
+export type Placement =
+    | 'top'
+    | 'top-end'
+    | 'top-start'
+    | 'bottom'
+    | 'bottom-end'
+    | 'bottom-start'
+    | 'left'
+    | 'left-end'
+    | 'left-start'
+    | 'right'
+    | 'right-end'
+    | 'right-start';
 
 export interface PositioningOptions {
     position: Placement;

@@ -13,22 +13,22 @@ export const awcAvatarStyle = css`
     }
 
     .awc-avatar {
-        box-sizing: border-box;
         position: relative;
         width: var(--awc-avatar-size, 36px);
         height: var(--awc-avatar-size, 36px);
         border-radius: var(--awc-avatar-border-radius, var(--corner-radius-circular));
-        border: var(--awc-avatar-border, none);
-        transition: all 0.3s ease;
+        outline: var(--awc-avatar-border, none);
+        transition: transform 0.3s ease;
     }
 
     .awc-avatar--sliced {
         --awc-avatar-margin: 10px;
+        --awc-avatar-border: 2px solid var(--colors-light-white);
         margin-left: calc(-1 * var(--awc-avatar-margin));
     }
 
     .awc-avatar--hovered:hover {
-        --awc-avatar-transform: 8px;
+        --awc-avatar-transform: 5px;
         transform: translate(calc(-1 * var(--awc-avatar-transform)));
     }
 
@@ -70,14 +70,19 @@ export const awcAvatarStyle = css`
         --awc-avatar-font: var(--awc-font-h3-medium);
     }
 
+    :host([size='72']) {
+        --awc-avatar-size: 72px;
+        --awc-avatar-font: var(--awc-font-h2-medium);
+    }
+
     :host([size='128']) {
         --awc-avatar-size: 128px;
-        --awc-avatar-font: var(--awc-font-h2-medium);
+        --awc-avatar-font: 500 64px/52px 'Inter';
     }
 
     :host([size='160']) {
         --awc-avatar-size: 160px;
-        --awc-avatar-font: var(--awc-font-h1-medium);
+        --awc-avatar-font: 500 96px/52px 'Inter';
     }
 
     :host([invisible]) {
@@ -85,7 +90,7 @@ export const awcAvatarStyle = css`
     }
 
     .awc-avatar__status {
-        --badge-translate: 10%;
+        --badge-translate: 0;
         display: flex;
         position: absolute;
         bottom: 0;
@@ -114,7 +119,9 @@ export const awcAvatarStyle = css`
     :host([size='40'][status='online']) .awc-avatar__status,
     :host([size='40'][status='offline']) .awc-avatar__status,
     :host([size='48'][status='online']) .awc-avatar__status,
-    :host([size='48'][status='offline']) .awc-avatar__status {
+    :host([size='48'][status='offline']) .awc-avatar__status,
+    :host([size='72'][status='online']) .awc-avatar__status,
+    :host([size='72'][status='offline']) .awc-avatar__status {
         --badge-translate: 0;
         bottom: 3px;
         right: 3px;

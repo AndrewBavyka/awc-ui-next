@@ -24,17 +24,6 @@ export const avatarGroupStyle = css`
         background-color: var(--colors-light-secondary);
     }
 
-    .awc-avatar-group > ::slotted(awc-avatar),
-    .awc-avatar-group > ::slotted([slot='awc-avatar-group-counter']) {
-        --awc-avatar-margin: 10px;
-        --awc-avatar-border: 2px solid var(--colors-light-white);
-    }
-
-    .awc-avatar-group > ::slotted([slot='awc-avatar-group-counter']) {
-        --awc-avatar-margin: 10px;
-        margin-left: calc(-1 * var(--awc-avatar-margin)) !important;
-    }
-
     .awc-avatar-group__counter p {
         color: var(--colors-light-white);
     }

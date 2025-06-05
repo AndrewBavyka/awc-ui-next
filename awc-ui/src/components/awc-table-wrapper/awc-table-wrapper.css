@@ -1,0 +1,51 @@
+awc-table-wrapper {
+    display: block;
+    max-inline-size: 100%;
+    overflow-x: auto;
+    user-select: none;
+}
+
+awc-table-wrapper table {
+    border-spacing: 0 !important;
+    border-collapse: separate !important;
+    font: var(--awc-font-text-regular-14) !important;
+    text-align: start !important;
+    color: var(--colors-light-text) !important;
+    inline-size: 100% !important;
+    border-radius: var(--corner-radius-m) !important;
+    border: 1px solid var(--colors-light-stroke) !important;
+    background-color: var(--colors-light-white) !important;
+}
+
+awc-table-wrapper th {
+    --awc-table-wrapper-head: var(--colors-light-input-background);
+    border-block-end: 1px solid var(--colors-light-stroke) !important;
+    font: var(--awc-font-text-medium-14) !important;
+    color: var(--colors-light-titles) !important;
+    text-align: start !important;
+    background: var(--awc-table-wrapper-head) !important;
+}
+
+awc-table-wrapper :is(td, th) {
+    padding: 14px 16px !important;
+}
+
+awc-table-wrapper td {
+    max-width: 150px !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    border-block-end: 1px solid var(--colors-light-stroke) !important;
+}
+
+awc-table-wrapper tr:last-child td {
+    border-block-end: none !important;
+}
+
+awc-table-wrapper tbody tr {
+    transition: background-color 0.3s ease !important;
+}
+
+awc-table-wrapper tbody tr:hover {
+    background: #eff2fd !important;
+}

@@ -58,7 +58,7 @@ export const awcAvatarBadgeStyle = css`
         --badge-size: 24px;
     }
     :host([size='32'][status='online']),
-    :host([size='24'][status='offline']) {
+    :host([size='32'][status='offline']) {
         --badge-shadow-size: 6px;
         --badge-size: 32px;
     }

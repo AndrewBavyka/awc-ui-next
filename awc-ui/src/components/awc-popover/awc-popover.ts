@@ -231,8 +231,24 @@ export default class AwcPopover extends LitElement {
     private handleSlotChange = () => {
         if (!this.slotEl) return;
         const assignedElements = this.slotEl.assignedElements({ flatten: true }) as HTMLElement[];
-        this.referenceEl = assignedElements[0] || null;
-        if (this.active) this.updatePosition();
+
+        let referenceElement: HTMLElement | null = null;
+
+        for (const el of assignedElements) {
+            if (el.tagName === 'AWC-TOOLTIP') {
+                referenceElement = (el as any).referenceEl || null;
+            } else {
+                referenceElement = el;
+            }
+
+            if (referenceElement) break;
+        }
+
+        this.referenceEl = referenceElement;
+
+        if (this.active) {
+            this.updatePosition();
+        }
     };
 
     private getValidSpacing(): number {

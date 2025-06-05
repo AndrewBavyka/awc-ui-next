@@ -9,7 +9,6 @@ export const avatarCounterStyle = css`
     .awc-avatar-group__counter {
         box-sizing: border-box;
         position: relative;
-        z-index: 1;
         display: flex;
         min-width: 24px;
         height: 24px;
@@ -32,7 +31,7 @@ export const avatarCounterStyle = css`
 
     :host([counter-rounded='circle']) .awc-avatar-group__counter {
         border-radius: var(--corner-radius-circular);
-        border: 2px solid var(--colors-light-white);
+        outline: 2px solid var(--colors-light-white);
     }
 
     :host([counter-size='24']) .awc-avatar-group__counter {

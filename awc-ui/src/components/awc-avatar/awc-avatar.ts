@@ -45,6 +45,11 @@ export default class AwcAvatar extends LitElement {
      */
     @property({ type: String, reflect: true }) title: string;
     /**
+     * Текст заголовка для аватарки без подсказки.
+     * @property {string}
+     */
+    @property({ type: String, reflect: true }) label: string;
+    /**
      * Ссылка на изображение для аватарки.
      * @property {string}
      */
@@ -65,7 +70,6 @@ export default class AwcAvatar extends LitElement {
      * @property {string}
      */
     @property({ type: String, reflect: true, attribute: 'custom-color' }) customColor?: string;
-
     /**
      * Выбор иконки внутри аватара.
      * @property {AwcAvatarIcon}
@@ -81,27 +85,34 @@ export default class AwcAvatar extends LitElement {
         const badgeElement = deepQuerySelectorFromSlot(this, 'awc-avatar-badge', 'awc-avatar-badge') as AwcAvatarBadge;
 
         if (badgeElement) {
-            if ('size' in badgeElement) {
-                badgeElement.size = this.getBadgeSize();
-            }
-            if ('status' in badgeElement) {
-                badgeElement.status = this.status;
-            }
+            badgeElement.size = this.getBadgeSize();
+            badgeElement.status = this.status;
+            return true;
         }
 
-        return !!badgeElement;
+        return false;
     }
 
     connectedCallback(): void {
         super.connectedCallback();
 
         document.addEventListener('DOMContentLoaded', () => {
-            this.hasBadgeSlot();
+            setTimeout(() => {
+                if (this.hasBadgeSlot()) {
+                    this.requestUpdate();
+                }
+            }, 0);
         });
     }
 
     protected firstUpdated(_changedProperties: PropertyValues): void {
-        this.hasBadgeSlot();
+        super.firstUpdated(_changedProperties);
+
+        setTimeout(() => {
+            if (this.hasBadgeSlot()) {
+                this.requestUpdate();
+            }
+        }, 0);
     }
 
     protected updated(changedProperties: PropertyValues): void {
@@ -111,13 +122,17 @@ export default class AwcAvatar extends LitElement {
             this.croppedTitle = this.trimTitle(this.title);
         }
 
+        if (changedProperties.has('label')) {
+            this.croppedTitle = this.trimTitle(this.label);
+        }
+
         if (changedProperties.has('size') || changedProperties.has('status')) {
             this.hasBadgeSlot();
         }
     }
 
     private trimTitle(title: string): string {
-        return title.length > 1 ? title.charAt(0).toUpperCase() : title;
+        return title.length > 0 ? title.charAt(0) : title;
     }
 
     private getBadgeSize(): AwcAvatarBadgeSize {
@@ -130,6 +145,7 @@ export default class AwcAvatar extends LitElement {
             '36': '12',
             '40': '12',
             '48': '14',
+            '72': '24',
             '128': '32',
             '160': '32',
         };
@@ -141,6 +157,7 @@ export default class AwcAvatar extends LitElement {
             '36': '5',
             '40': '6',
             '48': '8',
+            '72': '14',
             '128': '32',
             '160': '32',
         };
@@ -153,7 +170,7 @@ export default class AwcAvatar extends LitElement {
 
     private renderAvatarContent(): TemplateResult {
         if (this.imageLink) {
-            return html` <img class="awc-avatar--image" src=${this.imageLink} alt=${this.title} loading="lazy" /> `;
+            return html` <img class="awc-avatar--image" src=${this.imageLink} alt=${this.label || this.title} loading="lazy" /> `;
         }
 
         if (this.icon !== 'none' && this.icon in AWC_AVATAR_ICONS) {
@@ -164,15 +181,22 @@ export default class AwcAvatar extends LitElement {
             backgroundColor: this.customColor || `var(--${this.color})`,
         };
 
-        return html` <span style=${styleMap(styles)} class="awc-avatar--no-image" title="${this.title}"> ${this.croppedTitle} </span> `;
+        const displayedText = this.label ? this.trimTitle(this.label) : this.trimTitle(this.title);
+        const displayedTitle = this.label ? this.label : this.title;
+
+        return html` <span style=${styleMap(styles)} class="awc-avatar--no-image" title="${displayedTitle}"> ${displayedText} </span> `;
     }
 
     private renderStatus(): TemplateResult | typeof nothing {
-        if (this.hasBadgeSlot() || this.status === 'none') {
+        if (this.hasBadgeSlot()) {
             return nothing;
         }
 
-        return html` <awc-avatar-badge status=${this.status} size=${this.getBadgeSize()}></awc-avatar-badge> `;
+        if (this.status !== 'none') {
+            return html` <awc-avatar-badge status=${this.status} size=${this.getBadgeSize()}></awc-avatar-badge> `;
+        }
+
+        return nothing;
     }
 
     protected render(): TemplateResult {
@@ -180,8 +204,8 @@ export default class AwcAvatar extends LitElement {
             <div class="awc-avatar${this.sliced ? ' awc-avatar--sliced' : ''} ${this.hovered ? 'awc-avatar--hovered' : ''}">
                 ${this.renderAvatarContent()}
                 <div class="awc-avatar__status">
-                    ${this.renderStatus()}
                     <slot name="awc-avatar-badge"></slot>
+                    ${this.renderStatus()}
                 </div>
             </div>
         `;
