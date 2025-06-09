@@ -257,14 +257,14 @@
               "kind": "field",
               "name": "status",
               "privacy": "public",
-              "type": "AwcAvatarBadgeStatus",
+              "type": "\"none\" | \"online\" | \"offline\" | \"complete\" | \"fail\" | \"dnd\"",
               "default": "\"none\""
             },
             {
               "kind": "field",
               "name": "size",
               "privacy": "public",
-              "type": "AwcAvatarBadgeSize",
+              "type": "\"4\" | \"5\" | \"6\" | \"8\" | \"10\" | \"12\" | \"14\" | \"24\" | \"32\"",
               "default": "\"12\""
             },
             {
@@ -281,13 +281,13 @@
               "name": "status",
               "fieldName": "status",
               "defaultValue": "\"none\"",
-              "type": "AwcAvatarBadgeStatus"
+              "type": "\"none\" | \"online\" | \"offline\" | \"complete\" | \"fail\" | \"dnd\""
             },
             {
               "name": "size",
               "fieldName": "size",
               "defaultValue": "\"12\"",
-              "type": "AwcAvatarBadgeSize"
+              "type": "\"4\" | \"5\" | \"6\" | \"8\" | \"10\" | \"12\" | \"14\" | \"24\" | \"32\""
             }
           ]
         },
@@ -330,7 +330,7 @@
               "name": "counterSize",
               "privacy": "public",
               "description": "Размер счетчика пользователей в группе.",
-              "type": "AwcAvatarGroupCounterSize",
+              "type": "\"24\" | \"32\"",
               "default": "\"24\""
             },
             {
@@ -370,7 +370,7 @@
               "fieldName": "counterSize",
               "defaultValue": "\"24\"",
               "description": "Размер счетчика пользователей в группе.",
-              "type": "AwcAvatarGroupCounterSize"
+              "type": "\"24\" | \"32\""
             },
             {
               "name": "counter-rounded",
@@ -428,7 +428,7 @@
               "name": "counterSize",
               "privacy": "public",
               "description": "Размер счетчика пользователей в группе.",
-              "type": "AwcAvatarGroupCounterSize",
+              "type": "\"24\" | \"32\"",
               "default": "\"\\\"24\\\"\""
             },
             {
@@ -468,7 +468,7 @@
               "fieldName": "counterSize",
               "defaultValue": "\"\\\"24\\\"\"",
               "description": "Размер счетчика пользователей в группе.",
-              "type": "AwcAvatarGroupCounterSize"
+              "type": "\"24\" | \"32\""
             },
             {
               "name": "counter-rounded",
@@ -586,7 +586,7 @@
               "name": "icon",
               "privacy": "public",
               "description": "Выбор иконки внутри аватара.",
-              "type": "AwcAvatarIcon",
+              "type": "\"undefined\" | \"none\" | \"robot\" | \"user\" | \"group\" | \"deleted\" | \"anonymous\"",
               "default": "\"none\""
             },
             {
@@ -683,7 +683,7 @@
               "fieldName": "icon",
               "defaultValue": "\"none\"",
               "description": "Выбор иконки внутри аватара.",
-              "type": "AwcAvatarIcon"
+              "type": "\"undefined\" | \"none\" | \"robot\" | \"user\" | \"group\" | \"deleted\" | \"anonymous\""
             }
           ]
         },
@@ -720,8 +720,15 @@
               "name": "color",
               "privacy": "public",
               "description": "Цвет бейджа",
-              "type": "string",
+              "type": "\"primary\" | \"warning\"",
               "default": "\"primary\""
+            },
+            {
+              "kind": "field",
+              "name": "styles",
+              "privacy": "public",
+              "type": "CSSResult",
+              "default": "\"badgeStyle\""
             }
           ],
           "tagName": "awc-badge",
@@ -731,7 +738,7 @@
               "fieldName": "color",
               "defaultValue": "\"primary\"",
               "description": "Цвет бейджа",
-              "type": "string"
+              "type": "\"primary\" | \"warning\""
             }
           ]
         }
@@ -2395,6 +2402,13 @@
               "default": "{\"delegatesFocus\":true}"
             },
             {
+              "kind": "field",
+              "name": "styles",
+              "privacy": "public",
+              "type": "CSSResultGroup | undefined",
+              "default": "[\"dialogStyle\"]"
+            },
+            {
               "kind": "method",
               "name": "open",
               "privacy": "public",
@@ -2608,6 +2622,13 @@
               "description": "Отступы",
               "type": "String",
               "default": "\"'l'\""
+            },
+            {
+              "kind": "field",
+              "name": "styles",
+              "privacy": "public",
+              "type": "CSSResult",
+              "default": "\"dividerStyle\""
             }
           ],
           "tagName": "awc-divider",
@@ -2729,7 +2750,7 @@
               "name": "target",
               "privacy": "public",
               "description": "Выбор тип перехода при нажатии на ссылку",
-              "type": "AwcDropdownItemTarget",
+              "type": "\"_blank\" | \"_self\" | \"_parent\" | \"_top\" | \"framename\"",
               "default": "\"_self\""
             },
             {
@@ -2773,7 +2794,7 @@
               "fieldName": "target",
               "defaultValue": "\"_self\"",
               "description": "Выбор тип перехода при нажатии на ссылку",
-              "type": "AwcDropdownItemTarget"
+              "type": "\"_blank\" | \"_self\" | \"_parent\" | \"_top\" | \"framename\""
             },
             {
               "name": "selected",
@@ -2854,7 +2875,7 @@
               "name": "position",
               "privacy": "public",
               "description": "Позиция отображения списка",
-              "type": "AwcPopoverPosition",
+              "type": "\"top\" | \"top-end\" | \"top-start\" | \"bottom\" | \"bottom-end\" | \"bottom-start\" | \"left\" | \"left-end\" | \"left-start\" | \"right\" | \"right-end\" | \"right-start\"",
               "default": "\"bottom-start\""
             },
             {
@@ -2862,7 +2883,7 @@
               "name": "strategy",
               "privacy": "public",
               "description": "Стратегия позиционирования всплывающего окна.",
-              "type": "AwcPopoverStrategy",
+              "type": "\"absolute\" | \"fixed\"",
               "default": "\"absolute\""
             },
             {
@@ -2970,14 +2991,14 @@
               "fieldName": "position",
               "defaultValue": "\"bottom-start\"",
               "description": "Позиция отображения списка",
-              "type": "AwcPopoverPosition"
+              "type": "\"top\" | \"top-end\" | \"top-start\" | \"bottom\" | \"bottom-end\" | \"bottom-start\" | \"left\" | \"left-end\" | \"left-start\" | \"right\" | \"right-end\" | \"right-start\""
             },
             {
               "name": "strategy",
               "fieldName": "strategy",
               "defaultValue": "\"absolute\"",
               "description": "Стратегия позиционирования всплывающего окна.",
-              "type": "AwcPopoverStrategy"
+              "type": "\"absolute\" | \"fixed\""
             },
             {
               "name": "disabled",
@@ -3027,7 +3048,7 @@
               "name": "href",
               "privacy": "public",
               "description": "Задает адрес документа, на который следует перейти.",
-              "type": "String",
+              "type": "string",
               "default": "\"\""
             },
             {
@@ -3035,7 +3056,7 @@
               "name": "target",
               "privacy": "public",
               "description": "Тип перехода по ссылке",
-              "type": "String",
+              "type": "\"_blank\" | \"_self\" | \"_parent\" | \"_top\"",
               "default": "\"_self\""
             }
           ],
@@ -3046,14 +3067,14 @@
               "fieldName": "href",
               "defaultValue": "\"\"",
               "description": "Задает адрес документа, на который следует перейти.",
-              "type": "String"
+              "type": "string"
             },
             {
               "name": "target",
               "fieldName": "target",
               "defaultValue": "\"_self\"",
               "description": "Тип перехода по ссылке",
-              "type": "String"
+              "type": "\"_blank\" | \"_self\" | \"_parent\" | \"_top\""
             }
           ]
         },
@@ -3088,7 +3109,7 @@
               "name": "head",
               "privacy": "public",
               "description": "Задает заголовок компонента.",
-              "type": "String",
+              "type": "string",
               "default": "\"\""
             },
             {
@@ -3096,7 +3117,7 @@
               "name": "size",
               "privacy": "public",
               "description": "Задает рамзер компонента.",
-              "type": "String",
+              "type": "\"large\" | \"small\"",
               "default": "\"large\""
             },
             {
@@ -3119,14 +3140,14 @@
               "fieldName": "head",
               "defaultValue": "\"\"",
               "description": "Задает заголовок компонента.",
-              "type": "String"
+              "type": "string"
             },
             {
               "name": "size",
               "fieldName": "size",
               "defaultValue": "\"large\"",
               "description": "Задает рамзер компонента.",
-              "type": "String"
+              "type": "\"large\" | \"small\""
             }
           ]
         },
@@ -3196,7 +3217,7 @@
               "kind": "field",
               "name": "view",
               "privacy": "public",
-              "type": "AwcFileDisplayType",
+              "type": "\"grid\" | \"list_block\" | \"list\"",
               "default": "\"list_block\""
             },
             {
@@ -3239,7 +3260,7 @@
               "kind": "field",
               "name": "type",
               "privacy": "public",
-              "type": "AwcFileItemType",
+              "type": "\"file\" | \"folder\" | \"systemFolder\" | \"publicFolder\"",
               "default": "\"file\""
             },
             {
@@ -3344,7 +3365,7 @@
               "name": "view",
               "fieldName": "view",
               "defaultValue": "\"list_block\"",
-              "type": "AwcFileDisplayType"
+              "type": "\"grid\" | \"list_block\" | \"list\""
             },
             {
               "name": "provider",
@@ -3380,7 +3401,7 @@
               "name": "type",
               "fieldName": "type",
               "defaultValue": "\"file\"",
-              "type": "AwcFileItemType"
+              "type": "\"file\" | \"folder\" | \"systemFolder\" | \"publicFolder\""
             },
             {
               "name": "local-file",
@@ -3485,14 +3506,14 @@
               "kind": "field",
               "name": "view",
               "privacy": "public",
-              "type": "AwcFileDisplayType",
+              "type": "\"grid\" | \"list_block\" | \"list\"",
               "default": "\"list_block\""
             },
             {
               "kind": "field",
               "name": "variant",
               "privacy": "public",
-              "type": "AwcFileVariant",
+              "type": "\"regular\" | \"accordion\" | \"compact\"",
               "default": "\"regular\""
             },
             {
@@ -3541,13 +3562,13 @@
               "name": "view",
               "fieldName": "view",
               "defaultValue": "\"list_block\"",
-              "type": "AwcFileDisplayType"
+              "type": "\"grid\" | \"list_block\" | \"list\""
             },
             {
               "name": "variant",
               "fieldName": "variant",
               "defaultValue": "\"regular\"",
-              "type": "AwcFileVariant"
+              "type": "\"regular\" | \"accordion\" | \"compact\""
             },
             {
               "name": "locale",
@@ -3621,7 +3642,7 @@
               "name": "name",
               "privacy": "public",
               "description": "Имя кнопки.",
-              "type": "String",
+              "type": "string",
               "default": "\"\""
             },
             {
@@ -3629,7 +3650,7 @@
               "name": "value",
               "privacy": "public",
               "description": "Значение кнопки.",
-              "type": "String",
+              "type": "string",
               "default": "\"\""
             },
             {
@@ -3637,7 +3658,7 @@
               "name": "size",
               "privacy": "public",
               "description": "Размер кнопки (Вложенные иконки меняют размер в том числе).",
-              "type": "String",
+              "type": "\"24\" | \"32\" | \"20\" | \"28\" | \"30\" | \"36\" | \"40\"",
               "default": "\"24\""
             },
             {
@@ -3645,7 +3666,7 @@
               "name": "type",
               "privacy": "public",
               "description": "Тип кнопки.",
-              "type": "String",
+              "type": "\"button\" | \"submit\" | \"reset\"",
               "default": "\"submit\""
             },
             {
@@ -3653,7 +3674,7 @@
               "name": "href",
               "privacy": "public",
               "description": "Задает адрес документа, на который следует перейти.",
-              "type": "String",
+              "type": "string",
               "default": "\"\""
             },
             {
@@ -3661,7 +3682,7 @@
               "name": "target",
               "privacy": "public",
               "description": "Тип перехода по ссылке.",
-              "type": "String",
+              "type": "\"_blank\" | \"_self\" | \"_parent\" | \"_top\"",
               "default": "\"_self\""
             },
             {
@@ -3669,7 +3690,7 @@
               "name": "disabled",
               "privacy": "public",
               "description": "Флаг, отключающий кнопку.",
-              "type": "Boolean",
+              "type": "boolean",
               "default": "\"false\""
             }
           ],
@@ -3680,49 +3701,49 @@
               "fieldName": "name",
               "defaultValue": "\"\"",
               "description": "Имя кнопки.",
-              "type": "String"
+              "type": "string"
             },
             {
               "name": "value",
               "fieldName": "value",
               "defaultValue": "\"\"",
               "description": "Значение кнопки.",
-              "type": "String"
+              "type": "string"
             },
             {
               "name": "size",
               "fieldName": "size",
               "defaultValue": "\"24\"",
               "description": "Размер кнопки (Вложенные иконки меняют размер в том числе).",
-              "type": "String"
+              "type": "\"24\" | \"32\" | \"20\" | \"28\" | \"30\" | \"36\" | \"40\""
             },
             {
               "name": "type",
               "fieldName": "type",
               "defaultValue": "\"submit\"",
               "description": "Тип кнопки.",
-              "type": "String"
+              "type": "\"button\" | \"submit\" | \"reset\""
             },
             {
               "name": "href",
               "fieldName": "href",
               "defaultValue": "\"\"",
               "description": "Задает адрес документа, на который следует перейти.",
-              "type": "String"
+              "type": "string"
             },
             {
               "name": "target",
               "fieldName": "target",
               "defaultValue": "\"_self\"",
               "description": "Тип перехода по ссылке.",
-              "type": "String"
+              "type": "\"_blank\" | \"_self\" | \"_parent\" | \"_top\""
             },
             {
               "name": "disabled",
               "fieldName": "disabled",
               "defaultValue": "\"false\"",
               "description": "Флаг, отключающий кнопку.",
-              "type": "Boolean"
+              "type": "boolean"
             }
           ]
         },
@@ -3750,26 +3771,30 @@
             "name": "LitElement",
             "package": "lit-element"
           },
+          "description": "Компонент для загрузки спрайтов иконок",
           "name": "default",
           "members": [
             {
               "kind": "field",
               "name": "type",
               "privacy": "public",
-              "type": "string",
+              "description": "Указывается тип иконки",
+              "type": "\"icon\" | \"module\"",
               "default": "\"icon\""
             },
             {
               "kind": "field",
               "name": "size",
               "privacy": "public",
-              "type": "string",
-              "default": "\"\""
+              "description": "Указываеся размер иконки",
+              "type": "\"24\" | \"32\" | \"20\" | \"40\" | \"16\"",
+              "default": "\"16\""
             },
             {
               "kind": "field",
               "name": "src",
               "privacy": "public",
+              "description": "Путь до спрайта с иконками",
               "type": "string",
               "default": "\"\""
             }
@@ -3780,18 +3805,21 @@
               "name": "type",
               "fieldName": "type",
               "defaultValue": "\"icon\"",
-              "type": "string"
+              "description": "Указывается тип иконки",
+              "type": "\"icon\" | \"module\""
             },
             {
               "name": "size",
               "fieldName": "size",
-              "defaultValue": "\"\"",
-              "type": "string"
+              "defaultValue": "\"16\"",
+              "description": "Указываеся размер иконки",
+              "type": "\"24\" | \"32\" | \"20\" | \"40\" | \"16\""
             },
             {
               "name": "src",
               "fieldName": "src",
               "defaultValue": "\"\"",
+              "description": "Путь до спрайта с иконками",
               "type": "string"
             }
           ]
@@ -3827,8 +3855,8 @@
               "kind": "field",
               "name": "type",
               "privacy": "public",
-              "description": "Элемент для отображения иконок.",
-              "type": "string",
+              "description": "Указывается тип иконки",
+              "type": "\"icon\" | \"module\"",
               "default": "\"icon\""
             },
             {
@@ -3836,7 +3864,7 @@
               "name": "size",
               "privacy": "public",
               "description": "Указываеся размер иконки",
-              "type": "string",
+              "type": "\"24\" | \"32\" | \"20\" | \"40\" | \"16\"",
               "default": "\"16\""
             },
             {
@@ -3869,15 +3897,15 @@
               "name": "type",
               "fieldName": "type",
               "defaultValue": "\"icon\"",
-              "description": "Элемент для отображения иконок.",
-              "type": "string"
+              "description": "Указывается тип иконки",
+              "type": "\"icon\" | \"module\""
             },
             {
               "name": "size",
               "fieldName": "size",
               "defaultValue": "\"16\"",
               "description": "Указываеся размер иконки",
-              "type": "string"
+              "type": "\"24\" | \"32\" | \"20\" | \"40\" | \"16\""
             },
             {
               "name": "name",
@@ -3973,7 +4001,7 @@
               "name": "type",
               "privacy": "public",
               "description": "Тип атрибута для поля ввода.",
-              "type": "string",
+              "type": "\"number\" | \"text\" | \"email\" | \"date\" | \"time\" | \"datetime-local\" | \"month\" | \"week\" | \"password\" | \"tel\" | \"url\" | \"search\" | \"hidden\"",
               "default": "\"text\""
             },
             {
@@ -3988,7 +4016,7 @@
               "kind": "field",
               "name": "customError",
               "privacy": "public",
-              "description": "Пользовательская ошибка валидации. (Автоматически становится приоритетной)",
+              "description": "Пользовательская ошибка валидации.\r\n(Автоматически становится приоритетной)",
               "type": "string",
               "default": "\"\\\"\\\"\""
             },
@@ -4359,7 +4387,7 @@
               "fieldName": "type",
               "defaultValue": "\"text\"",
               "description": "Тип атрибута для поля ввода.",
-              "type": "string"
+              "type": "\"number\" | \"text\" | \"email\" | \"date\" | \"time\" | \"datetime-local\" | \"month\" | \"week\" | \"password\" | \"tel\" | \"url\" | \"search\" | \"hidden\""
             },
             {
               "name": "size",
@@ -4372,7 +4400,7 @@
               "name": "custom-error",
               "fieldName": "customError",
               "defaultValue": "\"\\\"\\\"\"",
-              "description": "Пользовательская ошибка валидации. (Автоматически становится приоритетной)",
+              "description": "Пользовательская ошибка валидации.\r\n(Автоматически становится приоритетной)",
               "type": "string"
             },
             {
@@ -4781,7 +4809,7 @@
               "name": "position",
               "privacy": "public",
               "description": "Позиция всплывающего окна относительно элемента.",
-              "type": "AwcPopoverPosition",
+              "type": "\"top\" | \"top-end\" | \"top-start\" | \"bottom\" | \"bottom-end\" | \"bottom-start\" | \"left\" | \"left-end\" | \"left-start\" | \"right\" | \"right-end\" | \"right-start\"",
               "default": "\"top\""
             },
             {
@@ -4789,7 +4817,7 @@
               "name": "strategy",
               "privacy": "public",
               "description": "Стратегия позиционирования всплывающего окна (absolute или fixed).",
-              "type": "AwcPopoverStrategy",
+              "type": "\"absolute\" | \"fixed\"",
               "default": "\"absolute\""
             },
             {
@@ -4797,7 +4825,7 @@
               "name": "triggerType",
               "privacy": "public",
               "description": "Тип триггера для открытия всплывающего окна (click, hover, focus, manual).",
-              "type": "AwcPopoverTriggerType",
+              "type": "\"manual\" | \"hover\" | \"click\" | \"focus\"",
               "default": "\"click\""
             },
             {
@@ -4882,21 +4910,21 @@
               "fieldName": "position",
               "defaultValue": "\"top\"",
               "description": "Позиция всплывающего окна относительно элемента.",
-              "type": "AwcPopoverPosition"
+              "type": "\"top\" | \"top-end\" | \"top-start\" | \"bottom\" | \"bottom-end\" | \"bottom-start\" | \"left\" | \"left-end\" | \"left-start\" | \"right\" | \"right-end\" | \"right-start\""
             },
             {
               "name": "strategy",
               "fieldName": "strategy",
               "defaultValue": "\"absolute\"",
               "description": "Стратегия позиционирования всплывающего окна (absolute или fixed).",
-              "type": "AwcPopoverStrategy"
+              "type": "\"absolute\" | \"fixed\""
             },
             {
               "name": "trigger-type",
               "fieldName": "triggerType",
               "defaultValue": "\"click\"",
               "description": "Тип триггера для открытия всплывающего окна (click, hover, focus, manual).",
-              "type": "AwcPopoverTriggerType"
+              "type": "\"manual\" | \"hover\" | \"click\" | \"focus\""
             },
             {
               "name": "spacing",
@@ -4991,7 +5019,7 @@
               "name": "size",
               "privacy": "public",
               "description": "Размер полосы загрузки.",
-              "type": "AwcProgressBarSizes",
+              "type": "\"large\" | \"small\" | \"extrasmall\" | \"medium\"",
               "default": "\"midium\""
             },
             {
@@ -5044,7 +5072,7 @@
               "fieldName": "size",
               "defaultValue": "\"midium\"",
               "description": "Размер полосы загрузки.",
-              "type": "AwcProgressBarSizes"
+              "type": "\"large\" | \"small\" | \"extrasmall\" | \"medium\""
             },
             {
               "name": "hide-percent",
@@ -5386,13 +5414,6 @@
           "members": [
             {
               "kind": "field",
-              "name": "shadowRootOptions",
-              "privacy": "public",
-              "type": "{ delegatesFocus: boolean; mode: ShadowRootMode; slotAssignment?: SlotAssignmentMode | undefined; }",
-              "default": "{\"delegatesFocus\":true}"
-            },
-            {
-              "kind": "field",
               "name": "name",
               "privacy": "public",
               "description": "Уникальное имя группы радиокнопок, к которой принадлежит данная радиокнопка.",
@@ -5441,7 +5462,7 @@
               "name": "size",
               "privacy": "public",
               "description": "Выборо размера radio.",
-              "type": "string",
+              "type": "\"regular\" | \"small\"",
               "default": "\"regular\""
             },
             {
@@ -5467,6 +5488,13 @@
               "description": "Цвет состояния radio.",
               "type": "string",
               "default": "\"\""
+            },
+            {
+              "kind": "field",
+              "name": "shadowRootOptions",
+              "privacy": "public",
+              "type": "{ delegatesFocus: boolean; mode: ShadowRootMode; slotAssignment?: SlotAssignmentMode | undefined; }",
+              "default": "{\"delegatesFocus\":true}"
             },
             {
               "kind": "field",
@@ -5738,7 +5766,7 @@
               "fieldName": "size",
               "defaultValue": "\"regular\"",
               "description": "Выборо размера radio.",
-              "type": "string"
+              "type": "\"regular\" | \"small\""
             },
             {
               "name": "checked",
@@ -5766,7 +5794,6 @@
         {
           "kind": "variable",
           "name": "awcRadioTag",
-          "description": "Тег для элемента радиокнопки.",
           "type": "\"awc-radio\""
         }
       ]
@@ -7037,7 +7064,7 @@
               "name": "effect",
               "privacy": "public",
               "description": "Определяет, какой эффект будет использовать скелетон.",
-              "type": "string",
+              "type": "\"none\" | \"pulse\" | \"wave\"",
               "default": "\"pulse\""
             },
             {
@@ -7045,7 +7072,7 @@
               "name": "rounded",
               "privacy": "public",
               "description": "Задает скругления.",
-              "type": "string",
+              "type": "\"8\" | \"12\" | \"rounded\"",
               "default": "\"rounded\""
             },
             {
@@ -7053,8 +7080,15 @@
               "name": "color",
               "privacy": "public",
               "description": "Цвет скелетона",
-              "type": "string",
+              "type": "\"primary\" | \"secondary\"",
               "default": "\"primary\""
+            },
+            {
+              "kind": "field",
+              "name": "styles",
+              "privacy": "public",
+              "type": "CSSResultGroup",
+              "default": "[\"skeletonStyle\"]"
             }
           ],
           "tagName": "awc-skeleton",
@@ -7064,21 +7098,21 @@
               "fieldName": "effect",
               "defaultValue": "\"pulse\"",
               "description": "Определяет, какой эффект будет использовать скелетон.",
-              "type": "string"
+              "type": "\"none\" | \"pulse\" | \"wave\""
             },
             {
               "name": "rounded",
               "fieldName": "rounded",
               "defaultValue": "\"rounded\"",
               "description": "Задает скругления.",
-              "type": "string"
+              "type": "\"8\" | \"12\" | \"rounded\""
             },
             {
               "name": "color",
               "fieldName": "color",
               "defaultValue": "\"primary\"",
               "description": "Цвет скелетона",
-              "type": "string"
+              "type": "\"primary\" | \"secondary\""
             }
           ]
         },
@@ -7113,7 +7147,7 @@
               "name": "size",
               "privacy": "public",
               "description": "Размер спинера",
-              "type": "AwcSpinnerSize",
+              "type": "\"s\" | \"m\" | \"l\"",
               "default": "\"\\\"m\\\"\""
             },
             {
@@ -7121,7 +7155,7 @@
               "name": "variant",
               "privacy": "public",
               "description": "Цвет спинера",
-              "type": "AwcSpinnerVariant",
+              "type": "\"primary\" | \"secondary\"",
               "default": "\"\\\"primary\\\"\""
             },
             {
@@ -7139,14 +7173,14 @@
               "fieldName": "size",
               "defaultValue": "\"\\\"m\\\"\"",
               "description": "Размер спинера",
-              "type": "AwcSpinnerSize"
+              "type": "\"s\" | \"m\" | \"l\""
             },
             {
               "name": "variant",
               "fieldName": "variant",
               "defaultValue": "\"\\\"primary\\\"\"",
               "description": "Цвет спинера",
-              "type": "AwcSpinnerVariant"
+              "type": "\"primary\" | \"secondary\""
             }
           ]
         },
@@ -7273,7 +7307,7 @@
               "name": "flexDirection",
               "privacy": "public",
               "description": "Определяет, как элементы flexbox упорядочиваются внутри контейнера flexbox.\r\nВозможные значения: \"row\", \"column\".",
-              "type": "string",
+              "type": "\"row\" | \"column\"",
               "default": "\"row\""
             },
             {
@@ -7281,7 +7315,7 @@
               "name": "alignItems",
               "privacy": "public",
               "description": "Определяет, как элементы flexbox выравниваются вдоль поперечной оси.\r\nВозможные значения: \"start\", \"center\", \"end\".",
-              "type": "string",
+              "type": "\"start\" | \"center\" | \"end\"",
               "default": "\"start\""
             },
             {
@@ -7289,14 +7323,14 @@
               "name": "justifyContent",
               "privacy": "public",
               "description": "Определяет, как элементы flexbox распределяются вдоль основной оси.\r\nВозможные значения: \"center\", \"start\", \"end\", \"baseline\", \"space-between\", \"space-around\", \"space-evenly\".",
-              "type": "string | undefined"
+              "type": "\"start\" | \"center\" | \"end\" | \"baseline\" | \"space-between\" | \"space-around\" | \"space-evenly\" | undefined"
             },
             {
               "kind": "field",
               "name": "gap",
               "privacy": "public",
               "description": "Определяет размер промежутка между элементами flexbox.\r\nВозможные значения: \"none\", \"2xs\", \"xs\", \"s\", \"sm\", \"m\", \"l\", \"xl\", \"2xl\", \"3xl\".",
-              "type": "string",
+              "type": "\"none\" | \"s\" | \"m\" | \"l\" | \"2xs\" | \"xs\" | \"sm\" | \"xl\" | \"2xl\" | \"3xl\"",
               "default": "\"s\""
             },
             {
@@ -7304,7 +7338,7 @@
               "name": "flexWrap",
               "privacy": "public",
               "description": "Определяет, будет ли flex-контейнер однострочным или многострочным.\r\nВозможные значения: \"nowrap\", \"wrap\", \"wrap-reverse\".",
-              "type": "string"
+              "type": "\"nowrap\" | \"wrap\" | \"wrap-reverse\""
             },
             {
               "kind": "field",
@@ -7321,6 +7355,13 @@
               "description": "Устанавливает ширину 100%",
               "type": "boolean",
               "default": "\"false\""
+            },
+            {
+              "kind": "field",
+              "name": "styles",
+              "privacy": "public",
+              "type": "CSSResultGroup",
+              "default": "[\"stackStyle\"]"
             }
           ],
           "tagName": "awc-stack",
@@ -7330,33 +7371,33 @@
               "fieldName": "flexDirection",
               "defaultValue": "\"row\"",
               "description": "Определяет, как элементы flexbox упорядочиваются внутри контейнера flexbox.\r\nВозможные значения: \"row\", \"column\".",
-              "type": "string"
+              "type": "\"row\" | \"column\""
             },
             {
               "name": "align-items",
               "fieldName": "alignItems",
               "defaultValue": "\"start\"",
               "description": "Определяет, как элементы flexbox выравниваются вдоль поперечной оси.\r\nВозможные значения: \"start\", \"center\", \"end\".",
-              "type": "string"
+              "type": "\"start\" | \"center\" | \"end\""
             },
             {
               "name": "justify-content",
               "fieldName": "justifyContent",
               "description": "Определяет, как элементы flexbox распределяются вдоль основной оси.\r\nВозможные значения: \"center\", \"start\", \"end\", \"baseline\", \"space-between\", \"space-around\", \"space-evenly\".",
-              "type": "string | undefined"
+              "type": "\"start\" | \"center\" | \"end\" | \"baseline\" | \"space-between\" | \"space-around\" | \"space-evenly\" | undefined"
             },
             {
               "name": "gap",
               "fieldName": "gap",
               "defaultValue": "\"s\"",
               "description": "Определяет размер промежутка между элементами flexbox.\r\nВозможные значения: \"none\", \"2xs\", \"xs\", \"s\", \"sm\", \"m\", \"l\", \"xl\", \"2xl\", \"3xl\".",
-              "type": "string"
+              "type": "\"none\" | \"s\" | \"m\" | \"l\" | \"2xs\" | \"xs\" | \"sm\" | \"xl\" | \"2xl\" | \"3xl\""
             },
             {
               "name": "flex-wrap",
               "fieldName": "flexWrap",
               "description": "Определяет, будет ли flex-контейнер однострочным или многострочным.\r\nВозможные значения: \"nowrap\", \"wrap\", \"wrap-reverse\".",
-              "type": "string"
+              "type": "\"nowrap\" | \"wrap\" | \"wrap-reverse\""
             },
             {
               "name": "inline-flex",
@@ -7594,7 +7635,7 @@
               "name": "variant",
               "privacy": "public",
               "description": "Вариант отображения переключателя.",
-              "type": "AwcSwitcherVariant",
+              "type": "\"primary\" | \"gray\" | \"white\"",
               "default": "\"primary\""
             },
             {
@@ -7602,7 +7643,7 @@
               "name": "size",
               "privacy": "public",
               "description": "Варианты размеров переключателя.",
-              "type": "AwcSwitcherSize",
+              "type": "\"regular\" | \"small\"",
               "default": "\"regular\""
             },
             {
@@ -7816,14 +7857,14 @@
               "fieldName": "variant",
               "defaultValue": "\"primary\"",
               "description": "Вариант отображения переключателя.",
-              "type": "AwcSwitcherVariant"
+              "type": "\"primary\" | \"gray\" | \"white\""
             },
             {
               "name": "size",
               "fieldName": "size",
               "defaultValue": "\"regular\"",
               "description": "Варианты размеров переключателя.",
-              "type": "AwcSwitcherSize"
+              "type": "\"regular\" | \"small\""
             },
             {
               "name": "custom-color",
@@ -7860,6 +7901,15 @@
             "package": "lit-element"
           },
           "name": "default",
+          "members": [
+            {
+              "kind": "field",
+              "name": "styles",
+              "privacy": "public",
+              "type": "CSSResultGroup | undefined",
+              "default": "[\"tableWrapperStyles\"]"
+            }
+          ],
           "tagName": "awc-table-wrapper"
         },
         {
@@ -8006,7 +8056,7 @@
               "name": "baseColor",
               "privacy": "public",
               "description": "Установка базовых цветов из палитры",
-              "type": "TagColor",
+              "type": "\"global-red-2-600\" | \"global-red-2-500\" | \"global-orange-500\" | \"global-yellow-500\" | \"global-yellow-300\" | \"global-light-green-400\" | \"global-light-green-600\" | \"global-green-600\" | ... 15 more ... | \"colors-light-dark-blue\"",
               "default": "\"colors-light-secondary\""
             },
             {
@@ -8014,7 +8064,7 @@
               "name": "variant",
               "privacy": "public",
               "description": "Выбор формы компонента",
-              "type": "TagVariant",
+              "type": "\"circle\" | \"square\" | \"bullet\"",
               "default": "\"square\""
             },
             {
@@ -8055,14 +8105,14 @@
               "fieldName": "baseColor",
               "defaultValue": "\"colors-light-secondary\"",
               "description": "Установка базовых цветов из палитры",
-              "type": "TagColor"
+              "type": "\"global-red-2-600\" | \"global-red-2-500\" | \"global-orange-500\" | \"global-yellow-500\" | \"global-yellow-300\" | \"global-light-green-400\" | \"global-light-green-600\" | \"global-green-600\" | ... 15 more ... | \"colors-light-dark-blue\""
             },
             {
               "name": "variant",
               "fieldName": "variant",
               "defaultValue": "\"square\"",
               "description": "Выбор формы компонента",
-              "type": "TagVariant"
+              "type": "\"circle\" | \"square\" | \"bullet\""
             }
           ]
         },
@@ -8524,16 +8574,16 @@
               "kind": "field",
               "name": "position",
               "privacy": "public",
-              "description": "Позиция уведомления на странице (отражается в атрибутах элемента).\r\nВозможные значения: \"top-center\", \"bottom-left\".",
-              "type": "AwcToastPosition",
+              "description": "Позиция уведомления на странице (отражается в атрибутах элемента).",
+              "type": "\"top-center\" | \"bottom-left\"",
               "default": "\"\\\"top-center\\\"\""
             },
             {
               "kind": "field",
               "name": "variant",
               "privacy": "public",
-              "description": "Тип уведомления (отражается в атрибутах элемента).\r\nВозможные значения: \"info\", \"error\", \"success\".",
-              "type": "AwcToastType",
+              "description": "Тип уведомления (отражается в атрибутах элемента).",
+              "type": "\"warning\" | \"info\" | \"error\" | \"success\"",
               "default": "\"\\\"info\\\"\""
             },
             {
@@ -8573,7 +8623,7 @@
               "name": "contentSanitize",
               "privacy": "public",
               "description": "Уровень санитизации HTML-контента уведомления.",
-              "type": "AwcToastSanitizeLevel",
+              "type": "\"unsafe\" | \"sanitize\" | \"safety\"",
               "default": "\"\\\"sanitize\\\"\""
             },
             {
@@ -8645,15 +8695,15 @@
               "name": "position",
               "fieldName": "position",
               "defaultValue": "\"\\\"top-center\\\"\"",
-              "description": "Позиция уведомления на странице (отражается в атрибутах элемента).\r\nВозможные значения: \"top-center\", \"bottom-left\".",
-              "type": "AwcToastPosition"
+              "description": "Позиция уведомления на странице (отражается в атрибутах элемента).",
+              "type": "\"top-center\" | \"bottom-left\""
             },
             {
               "name": "variant",
               "fieldName": "variant",
               "defaultValue": "\"\\\"info\\\"\"",
-              "description": "Тип уведомления (отражается в атрибутах элемента).\r\nВозможные значения: \"info\", \"error\", \"success\".",
-              "type": "AwcToastType"
+              "description": "Тип уведомления (отражается в атрибутах элемента).",
+              "type": "\"warning\" | \"info\" | \"error\" | \"success\""
             },
             {
               "name": "duration",
@@ -8688,7 +8738,7 @@
               "fieldName": "contentSanitize",
               "defaultValue": "\"\\\"sanitize\\\"\"",
               "description": "Уровень санитизации HTML-контента уведомления.",
-              "type": "AwcToastSanitizeLevel"
+              "type": "\"unsafe\" | \"sanitize\" | \"safety\""
             }
           ]
         },
@@ -8775,21 +8825,21 @@
               "kind": "field",
               "name": "position",
               "privacy": "public",
-              "type": "AwcTooltipPosition",
+              "type": "\"top\" | \"bottom\" | \"left\" | \"right\"",
               "default": "\"top\""
             },
             {
               "kind": "field",
               "name": "strategy",
               "privacy": "public",
-              "type": "AwcTooltipStrategy",
+              "type": "\"absolute\" | \"fixed\"",
               "default": "\"absolute\""
             },
             {
               "kind": "field",
               "name": "spacing",
               "privacy": "public",
-              "type": "AwcTooltipSpacing",
+              "type": "2 | 4 | 12 | 8 | 24 | 20 | 16 | 32 | 40",
               "default": "8"
             },
             {
@@ -8839,19 +8889,19 @@
               "name": "position",
               "fieldName": "position",
               "defaultValue": "\"top\"",
-              "type": "AwcTooltipPosition"
+              "type": "\"top\" | \"bottom\" | \"left\" | \"right\""
             },
             {
               "name": "strategy",
               "fieldName": "strategy",
               "defaultValue": "\"absolute\"",
-              "type": "AwcTooltipStrategy"
+              "type": "\"absolute\" | \"fixed\""
             },
             {
               "name": "spacing",
               "fieldName": "spacing",
               "defaultValue": "8",
-              "type": "AwcTooltipSpacing"
+              "type": "2 | 4 | 12 | 8 | 24 | 20 | 16 | 32 | 40"
             },
             {
               "name": "marker",
@@ -8917,7 +8967,7 @@
               "name": "position",
               "privacy": "public",
               "description": "Позиция тултипа относительно элемента.",
-              "type": "AwcTooltipPosition",
+              "type": "\"top\" | \"bottom\" | \"left\" | \"right\"",
               "default": "\"top\""
             },
             {
@@ -8925,7 +8975,7 @@
               "name": "strategy",
               "privacy": "public",
               "description": "Стратегия позиционирования тултипа (absolute или fixed).",
-              "type": "AwcTooltipStrategy",
+              "type": "\"absolute\" | \"fixed\"",
               "default": "\"absolute\""
             },
             {
@@ -9045,14 +9095,14 @@
               "fieldName": "position",
               "defaultValue": "\"top\"",
               "description": "Позиция тултипа относительно элемента.",
-              "type": "AwcTooltipPosition"
+              "type": "\"top\" | \"bottom\" | \"left\" | \"right\""
             },
             {
               "name": "strategy",
               "fieldName": "strategy",
               "defaultValue": "\"absolute\"",
               "description": "Стратегия позиционирования тултипа (absolute или fixed).",
-              "type": "AwcTooltipStrategy"
+              "type": "\"absolute\" | \"fixed\""
             },
             {
               "name": "spacing",
@@ -9135,23 +9185,33 @@
             "name": "LitElement",
             "package": "lit-element"
           },
+          "description": "`awc-triple-toggler` - Компонент тройного переключателя.\r\n\r\nЭтот компонент представляет собой тройной переключатель с возможностью выбора одного из трех состояний.",
           "name": "default",
           "members": [
             {
               "kind": "field",
               "name": "state",
               "privacy": "public",
-              "type": "string",
+              "description": "Состояние переключателя.",
+              "type": "\"first\" | \"second\" | \"third\"",
               "default": "\"first\""
             }
           ],
           "tagName": "awc-triple-toggler",
+          "events": [
+            {
+              "description": "Событие, которое срабатывает при изменении состояния переключателя.",
+              "name": "awc-triple-toggler-change",
+              "type": "Event"
+            }
+          ],
           "attributes": [
             {
               "name": "state",
               "fieldName": "state",
               "defaultValue": "\"first\"",
-              "type": "string"
+              "description": "Состояние переключателя.",
+              "type": "\"first\" | \"second\" | \"third\""
             }
           ]
         },

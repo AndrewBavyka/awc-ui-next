@@ -79,11 +79,11 @@
     },
     {
       "name": "awc-avatar-badge",
-      "description": "Attributes:\n\n  * `status` {`AwcAvatarBadgeStatus`} - \n\n  * `size` {`AwcAvatarBadgeSize`} - \n\nProperties:\n\n  * `status` {`AwcAvatarBadgeStatus`} - \n\n  * `size` {`AwcAvatarBadgeSize`} - \n\n  * `styles` {`CSSResult | undefined`} - ",
+      "description": "Attributes:\n\n  * `status` {`\"none\" | \"online\" | \"offline\" | \"complete\" | \"fail\" | \"dnd\"`} - \n\n  * `size` {`\"4\" | \"5\" | \"6\" | \"8\" | \"10\" | \"12\" | \"14\" | \"24\" | \"32\"`} - \n\nProperties:\n\n  * `status` {`\"none\" | \"online\" | \"offline\" | \"complete\" | \"fail\" | \"dnd\"`} - \n\n  * `size` {`\"4\" | \"5\" | \"6\" | \"8\" | \"10\" | \"12\" | \"14\" | \"24\" | \"32\"`} - \n\n  * `styles` {`CSSResult | undefined`} - ",
       "attributes": [
         {
           "name": "status",
-          "description": "`status` {`AwcAvatarBadgeStatus`} - \n\nProperty: status\n\nDefault: none",
+          "description": "`status` {`\"none\" | \"online\" | \"offline\" | \"complete\" | \"fail\" | \"dnd\"`} - \n\nProperty: status\n\nDefault: none",
           "values": [
             {
               "name": "none"
@@ -107,7 +107,7 @@
         },
         {
           "name": "size",
-          "description": "`size` {`AwcAvatarBadgeSize`} - \n\nProperty: size\n\nDefault: 12",
+          "description": "`size` {`\"4\" | \"5\" | \"6\" | \"8\" | \"10\" | \"12\" | \"14\" | \"24\" | \"32\"`} - \n\nProperty: size\n\nDefault: 12",
           "values": [
             {
               "name": "4"
@@ -142,7 +142,7 @@
     },
     {
       "name": "awc-avatar-group-counter",
-      "description": "Attributes:\n\n  * `total-users` {`number`} - Значение счетчика общего количества пользователей.\n\n  * `counter-size` {`AwcAvatarGroupCounterSize`} - Размер счетчика пользователей в группе.\n\n  * `counter-rounded` {`string`} - Форма счетчика пользователей в группе.\n\nProperties:\n\n  * `totalUsers` {`number`} - Значение счетчика общего количества пользователей.\n\n  * `counterSize` {`AwcAvatarGroupCounterSize`} - Размер счетчика пользователей в группе.\n\n  * `counterRounded` {`string`} - Форма счетчика пользователей в группе.\n\n  * `sliced` {`boolean`} - \n\n  * `styles` {`CSSResultGroup | undefined`} - ",
+      "description": "Attributes:\n\n  * `total-users` {`number`} - Значение счетчика общего количества пользователей.\n\n  * `counter-size` {`\"24\" | \"32\"`} - Размер счетчика пользователей в группе.\n\n  * `counter-rounded` {`string`} - Форма счетчика пользователей в группе.\n\nProperties:\n\n  * `totalUsers` {`number`} - Значение счетчика общего количества пользователей.\n\n  * `counterSize` {`\"24\" | \"32\"`} - Размер счетчика пользователей в группе.\n\n  * `counterRounded` {`string`} - Форма счетчика пользователей в группе.\n\n  * `sliced` {`boolean`} - \n\n  * `styles` {`CSSResultGroup | undefined`} - ",
       "attributes": [
         {
           "name": "total-users",
@@ -150,7 +150,7 @@
         },
         {
           "name": "counter-size",
-          "description": "`counter-size` {`AwcAvatarGroupCounterSize`} - Размер счетчика пользователей в группе.\n\nProperty: counterSize\n\nDefault: 24",
+          "description": "`counter-size` {`\"24\" | \"32\"`} - Размер счетчика пользователей в группе.\n\nProperty: counterSize\n\nDefault: 24",
           "values": [
             {
               "name": "24"
@@ -168,7 +168,7 @@
     },
     {
       "name": "awc-avatar-group",
-      "description": "Attributes:\n\n  * `display-users` {`number`} - Количество отображаемых пользователей в группе.\n\n  * `total-users` {`number`} - Значение счетчика общего количества пользователей.\n\n  * `counter-size` {`AwcAvatarGroupCounterSize`} - Размер счетчика пользователей в группе.\n\n  * `counter-rounded` {`string`} - Форма счетчика пользователей в группе.\n\nProperties:\n\n  * `displayUsers` {`number`} - Количество отображаемых пользователей в группе.\n\n  * `totalUsers` {`number`} - Значение счетчика общего количества пользователей.\n\n  * `counterSize` {`AwcAvatarGroupCounterSize`} - Размер счетчика пользователей в группе.\n\n  * `counterRounded` {`string`} - Форма счетчика пользователей в группе.\n\n  * `counterValue` {`number`} - \n\n  * `counterHidden` {`boolean`} - \n\n  * `_slottedCounter` {`HTMLSlotElement`} - \n\n  * `_slottedAvatars` {`HTMLSlotElement`} - \n\n  * `avatarCounter` {`AwcAvatarGroupCounter | null`} - \n\n  * `styles` {`CSSResult | undefined`} - ",
+      "description": "Attributes:\n\n  * `display-users` {`number`} - Количество отображаемых пользователей в группе.\n\n  * `total-users` {`number`} - Значение счетчика общего количества пользователей.\n\n  * `counter-size` {`\"24\" | \"32\"`} - Размер счетчика пользователей в группе.\n\n  * `counter-rounded` {`string`} - Форма счетчика пользователей в группе.\n\nProperties:\n\n  * `displayUsers` {`number`} - Количество отображаемых пользователей в группе.\n\n  * `totalUsers` {`number`} - Значение счетчика общего количества пользователей.\n\n  * `counterSize` {`\"24\" | \"32\"`} - Размер счетчика пользователей в группе.\n\n  * `counterRounded` {`string`} - Форма счетчика пользователей в группе.\n\n  * `counterValue` {`number`} - \n\n  * `counterHidden` {`boolean`} - \n\n  * `_slottedCounter` {`HTMLSlotElement`} - \n\n  * `_slottedAvatars` {`HTMLSlotElement`} - \n\n  * `avatarCounter` {`AwcAvatarGroupCounter | null`} - \n\n  * `styles` {`CSSResult | undefined`} - ",
       "attributes": [
         {
           "name": "display-users",
@@ -180,7 +180,7 @@
         },
         {
           "name": "counter-size",
-          "description": "`counter-size` {`AwcAvatarGroupCounterSize`} - Размер счетчика пользователей в группе.\n\nProperty: counterSize\n\nDefault: \"24\"",
+          "description": "`counter-size` {`\"24\" | \"32\"`} - Размер счетчика пользователей в группе.\n\nProperty: counterSize\n\nDefault: \"24\"",
           "values": [
             {
               "name": "24"
@@ -198,7 +198,7 @@
     },
     {
       "name": "awc-avatar",
-      "description": "Attributes:\n\n  * `size` {AwcAvatarSize} - Размер аватарки.\n\n  * `rounded` {AwcAvatarRounded} - Форма аватарки.\n\n  * `status` {string} - Статус пользователя.\n\n  * `color` {string} - Цвет аватарки.\n\n  * `title` {`string`} - Текст заголовка для аватарки.\n\n  * `label` {`string`} - Текст заголовка для аватарки без подсказки.\n\n  * `image-link` {`string | undefined`} - Ссылка на изображение для аватарки.\n\n  * `href` {`string | undefined`} - Задает адрес документа, на который следует перейти.\n\n  * `target` {AwcAvatarTargetType} - Тип перехода по ссылке\n\n  * `custom-color` {`string | undefined`} - Принимает код hex цвета.\n\n  * `icon` {`AwcAvatarIcon`} - Выбор иконки внутри аватара.\n\nProperties:\n\n  * `size` {AwcAvatarSize} - Размер аватарки.\n\n  * `rounded` {AwcAvatarRounded} - Форма аватарки.\n\n  * `status` {string} - Статус пользователя.\n\n  * `color` {string} - Цвет аватарки.\n\n  * `title` {`string`} - Текст заголовка для аватарки.\n\n  * `label` {`string`} - Текст заголовка для аватарки без подсказки.\n\n  * `imageLink` {`string | undefined`} - Ссылка на изображение для аватарки.\n\n  * `href` {`string | undefined`} - Задает адрес документа, на который следует перейти.\n\n  * `target` {AwcAvatarTargetType} - Тип перехода по ссылке\n\n  * `customColor` {`string | undefined`} - Принимает код hex цвета.\n\n  * `icon` {`AwcAvatarIcon`} - Выбор иконки внутри аватара.\n\n  * `croppedTitle` {`string`} - \n\n  * `sliced` {`boolean`} - \n\n  * `hovered` {`boolean`} - \n\n  * `styles` {`CSSResult | undefined`} - ",
+      "description": "Attributes:\n\n  * `size` {AwcAvatarSize} - Размер аватарки.\n\n  * `rounded` {AwcAvatarRounded} - Форма аватарки.\n\n  * `status` {string} - Статус пользователя.\n\n  * `color` {string} - Цвет аватарки.\n\n  * `title` {`string`} - Текст заголовка для аватарки.\n\n  * `label` {`string`} - Текст заголовка для аватарки без подсказки.\n\n  * `image-link` {`string | undefined`} - Ссылка на изображение для аватарки.\n\n  * `href` {`string | undefined`} - Задает адрес документа, на который следует перейти.\n\n  * `target` {AwcAvatarTargetType} - Тип перехода по ссылке\n\n  * `custom-color` {`string | undefined`} - Принимает код hex цвета.\n\n  * `icon` {`\"undefined\" | \"none\" | \"robot\" | \"user\" | \"group\" | \"deleted\" | \"anonymous\"`} - Выбор иконки внутри аватара.\n\nProperties:\n\n  * `size` {AwcAvatarSize} - Размер аватарки.\n\n  * `rounded` {AwcAvatarRounded} - Форма аватарки.\n\n  * `status` {string} - Статус пользователя.\n\n  * `color` {string} - Цвет аватарки.\n\n  * `title` {`string`} - Текст заголовка для аватарки.\n\n  * `label` {`string`} - Текст заголовка для аватарки без подсказки.\n\n  * `imageLink` {`string | undefined`} - Ссылка на изображение для аватарки.\n\n  * `href` {`string | undefined`} - Задает адрес документа, на который следует перейти.\n\n  * `target` {AwcAvatarTargetType} - Тип перехода по ссылке\n\n  * `customColor` {`string | undefined`} - Принимает код hex цвета.\n\n  * `icon` {`\"undefined\" | \"none\" | \"robot\" | \"user\" | \"group\" | \"deleted\" | \"anonymous\"`} - Выбор иконки внутри аватара.\n\n  * `croppedTitle` {`string`} - \n\n  * `sliced` {`boolean`} - \n\n  * `hovered` {`boolean`} - \n\n  * `styles` {`CSSResult | undefined`} - ",
       "attributes": [
         {
           "name": "size",
@@ -390,7 +390,7 @@
         },
         {
           "name": "icon",
-          "description": "`icon` {`AwcAvatarIcon`} - Выбор иконки внутри аватара.\n\nProperty: icon\n\nDefault: none",
+          "description": "`icon` {`\"undefined\" | \"none\" | \"robot\" | \"user\" | \"group\" | \"deleted\" | \"anonymous\"`} - Выбор иконки внутри аватара.\n\nProperty: icon\n\nDefault: none",
           "values": [
             {
               "name": "undefined"
@@ -419,11 +419,19 @@
     },
     {
       "name": "awc-badge",
-      "description": "Элемент бейдж\n\nAttributes:\n\n  * `color` {`string`} - Цвет бейджа\n\nProperties:\n\n  * `color` {`string`} - Цвет бейджа",
+      "description": "Элемент бейдж\n\nAttributes:\n\n  * `color` {`\"primary\" | \"warning\"`} - Цвет бейджа\n\nProperties:\n\n  * `color` {`\"primary\" | \"warning\"`} - Цвет бейджа\n\n  * `styles` {`CSSResult`} - ",
       "attributes": [
         {
           "name": "color",
-          "description": "`color` {`string`} - Цвет бейджа\n\nProperty: color\n\nDefault: primary"
+          "description": "`color` {`\"primary\" | \"warning\"`} - Цвет бейджа\n\nProperty: color\n\nDefault: primary",
+          "values": [
+            {
+              "name": "primary"
+            },
+            {
+              "name": "warning"
+            }
+          ]
         }
       ]
     },
@@ -704,7 +712,15 @@
         },
         {
           "name": "size",
-          "description": "`size` {string} - Выборо размера checkbox.\n\nProperty: size\n\nDefault: regular"
+          "description": "`size` {string} - Выборо размера checkbox.\n\nProperty: size\n\nDefault: regular",
+          "values": [
+            {
+              "name": "regular"
+            },
+            {
+              "name": "small"
+            }
+          ]
         },
         {
           "name": "custom-color",
@@ -779,7 +795,7 @@
     },
     {
       "name": "awc-dialog",
-      "description": "\r\nНебольшое окно, используемое для отображения информации.\n\nEvents:\n\n  * `awc-dialog-open` {} - Событие, возникающее при открытии диалогового окна.\n\n  * `awc-dialog-close` {} - Событие, возникающее при закрытии диалогового окна.\n\nAttributes:\n\n  * `heading` {`string`} - Заголовок окна\n\n  * `description` {`string`} - Описание окна\n\n  * `variant` {String} - Вариант отображения окна\n\n  * `opened` {`boolean`} - Флаг открытия/закрытия окна\n\nProperties:\n\n  * `heading` {`string`} - Заголовок окна\n\n  * `description` {`string`} - Описание окна\n\n  * `variant` {String} - Вариант отображения окна\n\n  * `opened` {`boolean`} - Флаг открытия/закрытия окна\n\n  * `_onOpening` {EventDispatcher<boolean>} - Событие, возникающее при открытии диалогового окна.\n\n  * `_onClosing` {EventDispatcher<boolean>} - Событие, возникающее при закрытии диалогового окна.\n\n  * `_slotButtons` {`HTMLSlotElement`} - \n\n  * `_dialogContent` {`HTMLDivElement`} - \n\n  * `shadowRootOptions` {`{ delegatesFocus: boolean; mode: ShadowRootMode; slotAssignment?: SlotAssignmentMode | undefined; }`} - \n\n  * `_clickOutside` - ",
+      "description": "\r\nНебольшое окно, используемое для отображения информации.\n\nEvents:\n\n  * `awc-dialog-open` {} - Событие, возникающее при открытии диалогового окна.\n\n  * `awc-dialog-close` {} - Событие, возникающее при закрытии диалогового окна.\n\nAttributes:\n\n  * `heading` {`string`} - Заголовок окна\n\n  * `description` {`string`} - Описание окна\n\n  * `variant` {String} - Вариант отображения окна\n\n  * `opened` {`boolean`} - Флаг открытия/закрытия окна\n\nProperties:\n\n  * `heading` {`string`} - Заголовок окна\n\n  * `description` {`string`} - Описание окна\n\n  * `variant` {String} - Вариант отображения окна\n\n  * `opened` {`boolean`} - Флаг открытия/закрытия окна\n\n  * `_onOpening` {EventDispatcher<boolean>} - Событие, возникающее при открытии диалогового окна.\n\n  * `_onClosing` {EventDispatcher<boolean>} - Событие, возникающее при закрытии диалогового окна.\n\n  * `_slotButtons` {`HTMLSlotElement`} - \n\n  * `_dialogContent` {`HTMLDivElement`} - \n\n  * `shadowRootOptions` {`{ delegatesFocus: boolean; mode: ShadowRootMode; slotAssignment?: SlotAssignmentMode | undefined; }`} - \n\n  * `_clickOutside` - \n\n  * `styles` {`CSSResultGroup | undefined`} - ",
       "attributes": [
         {
           "name": "heading",
@@ -853,7 +869,7 @@
     },
     {
       "name": "awc-divider",
-      "description": "Элемент-разделитель.\n\nAttributes:\n\n  * `label` {String} - Название label\n\n  * `spacing` {String} - Отступы\n\nProperties:\n\n  * `label` {String} - Название label\n\n  * `spacing` {String} - Отступы",
+      "description": "Элемент-разделитель.\n\nAttributes:\n\n  * `label` {String} - Название label\n\n  * `spacing` {String} - Отступы\n\nProperties:\n\n  * `label` {String} - Название label\n\n  * `spacing` {String} - Отступы\n\n  * `styles` {`CSSResult`} - ",
       "attributes": [
         {
           "name": "label",
@@ -867,22 +883,22 @@
               "name": "none"
             },
             {
-              "name": "2xs"
-            },
-            {
-              "name": "xs"
-            },
-            {
               "name": "s"
-            },
-            {
-              "name": "sm"
             },
             {
               "name": "m"
             },
             {
               "name": "l"
+            },
+            {
+              "name": "2xs"
+            },
+            {
+              "name": "xs"
+            },
+            {
+              "name": "sm"
             },
             {
               "name": "xl"
@@ -915,7 +931,7 @@
     },
     {
       "name": "awc-dropdown-item",
-      "description": "Элемент списка awc-dropdown-list\n\nAttributes:\n\n  * `href` {`string | undefined`} - Установка ссылки\n\n  * `target` {`AwcDropdownItemTarget`} - Выбор тип перехода при нажатии на ссылку\n\n  * `selected` {`boolean`} - Выбранный элемент\n\n  * `warning` {`boolean`} - Определяет, что элемент является опасным (например, \"Удалить\"). Окрашивает элемент в красный.\n\nProperties:\n\n  * `href` {`string | undefined`} - Установка ссылки\n\n  * `target` {`AwcDropdownItemTarget`} - Выбор тип перехода при нажатии на ссылку\n\n  * `selected` {`boolean`} - Выбранный элемент\n\n  * `warning` {`boolean`} - Определяет, что элемент является опасным (например, \"Удалить\"). Окрашивает элемент в красный.\n\n  * `_dropdownItem` {`AwcDropdownItem`} - \n\n  * `_selectedIcon` {`HTMLElement | undefined`} - ",
+      "description": "Элемент списка awc-dropdown-list\n\nAttributes:\n\n  * `href` {`string | undefined`} - Установка ссылки\n\n  * `target` {`\"_blank\" | \"_self\" | \"_parent\" | \"_top\" | \"framename\"`} - Выбор тип перехода при нажатии на ссылку\n\n  * `selected` {`boolean`} - Выбранный элемент\n\n  * `warning` {`boolean`} - Определяет, что элемент является опасным (например, \"Удалить\"). Окрашивает элемент в красный.\n\nProperties:\n\n  * `href` {`string | undefined`} - Установка ссылки\n\n  * `target` {`\"_blank\" | \"_self\" | \"_parent\" | \"_top\" | \"framename\"`} - Выбор тип перехода при нажатии на ссылку\n\n  * `selected` {`boolean`} - Выбранный элемент\n\n  * `warning` {`boolean`} - Определяет, что элемент является опасным (например, \"Удалить\"). Окрашивает элемент в красный.\n\n  * `_dropdownItem` {`AwcDropdownItem`} - \n\n  * `_selectedIcon` {`HTMLElement | undefined`} - ",
       "attributes": [
         {
           "name": "href",
@@ -924,7 +940,7 @@
         },
         {
           "name": "target",
-          "description": "`target` {`AwcDropdownItemTarget`} - Выбор тип перехода при нажатии на ссылку\n\nProperty: target\n\nDefault: _self",
+          "description": "`target` {`\"_blank\" | \"_self\" | \"_parent\" | \"_top\" | \"framename\"`} - Выбор тип перехода при нажатии на ссылку\n\nProperty: target\n\nDefault: _self",
           "values": [
             {
               "name": "_blank"
@@ -957,7 +973,7 @@
     },
     {
       "name": "awc-dropdown",
-      "description": "Элемент выпадающего меню awc-dropdown\n\nEvents:\n\n  * `awc-dropdown-open` {} - Событие, возникающее при открытии выпадающего списка.\n\n  * `awc-dropdown-close` {} - Событие, возникающее при закрытии выпадающего списка.\n\nAttributes:\n\n  * `not-closing` {`boolean`} - Отключение автоматического закрытия при клике по свободному пространству.\n\n  * `visible` {`boolean`} - Включение/отключение отображения выпадающего меню\n\n  * `width` {`number`} - Пользовательская ширина выпадающего меню\n\n  * `selected-mode` {`boolean`} - Включение/отключение режима выбора\n\n  * `position` {`AwcPopoverPosition`} - Позиция отображения списка\n\n  * `strategy` {`AwcPopoverStrategy`} - Стратегия позиционирования всплывающего окна.\n\n  * `disabled` {boolean} - Отключает dropdown\n\n  * `scroll-off` {boolean} - Отключает отображение скролла списка\n\nProperties:\n\n  * `notClosing` {`boolean`} - Отключение автоматического закрытия при клике по свободному пространству.\n\n  * `visible` {`boolean`} - Включение/отключение отображения выпадающего меню\n\n  * `width` {`number`} - Пользовательская ширина выпадающего меню\n\n  * `selectedMode` {`boolean`} - Включение/отключение режима выбора\n\n  * `position` {`AwcPopoverPosition`} - Позиция отображения списка\n\n  * `strategy` {`AwcPopoverStrategy`} - Стратегия позиционирования всплывающего окна.\n\n  * `disabled` {boolean} - Отключает dropdown\n\n  * `scrollOff` {boolean} - Отключает отображение скролла списка\n\n  * `_onOpen` {EventDispatcher<{ visible: boolean }>} - Событие, возникающее при открытии выпадающего списка.\n\n  * `_onClose` {EventDispatcher<{ visible: boolean }>} - Событие, возникающее при закрытии выпадающего списка.\n\n  * `_dropdownList` {`HTMLElement`} - \n\n  * `shadowRootOptions` {`{ delegatesFocus: boolean; mode: ShadowRootMode; slotAssignment?: SlotAssignmentMode | undefined; }`} - \n\n  * `_handleOutsideClick` - \n\n  * `options` {`AwcDropdownItem[]`} - \n\n  * `focusedOptionIndex` {`number`} - \n\n  * `styles` {`CSSResultGroup`} - ",
+      "description": "Элемент выпадающего меню awc-dropdown\n\nEvents:\n\n  * `awc-dropdown-open` {} - Событие, возникающее при открытии выпадающего списка.\n\n  * `awc-dropdown-close` {} - Событие, возникающее при закрытии выпадающего списка.\n\nAttributes:\n\n  * `not-closing` {`boolean`} - Отключение автоматического закрытия при клике по свободному пространству.\n\n  * `visible` {`boolean`} - Включение/отключение отображения выпадающего меню\n\n  * `width` {`number`} - Пользовательская ширина выпадающего меню\n\n  * `selected-mode` {`boolean`} - Включение/отключение режима выбора\n\n  * `position` {`\"top\" | \"top-end\" | \"top-start\" | \"bottom\" | \"bottom-end\" | \"bottom-start\" | \"left\" | \"left-end\" | \"left-start\" | \"right\" | \"right-end\" | \"right-start\"`} - Позиция отображения списка\n\n  * `strategy` {`\"absolute\" | \"fixed\"`} - Стратегия позиционирования всплывающего окна.\n\n  * `disabled` {boolean} - Отключает dropdown\n\n  * `scroll-off` {boolean} - Отключает отображение скролла списка\n\nProperties:\n\n  * `notClosing` {`boolean`} - Отключение автоматического закрытия при клике по свободному пространству.\n\n  * `visible` {`boolean`} - Включение/отключение отображения выпадающего меню\n\n  * `width` {`number`} - Пользовательская ширина выпадающего меню\n\n  * `selectedMode` {`boolean`} - Включение/отключение режима выбора\n\n  * `position` {`\"top\" | \"top-end\" | \"top-start\" | \"bottom\" | \"bottom-end\" | \"bottom-start\" | \"left\" | \"left-end\" | \"left-start\" | \"right\" | \"right-end\" | \"right-start\"`} - Позиция отображения списка\n\n  * `strategy` {`\"absolute\" | \"fixed\"`} - Стратегия позиционирования всплывающего окна.\n\n  * `disabled` {boolean} - Отключает dropdown\n\n  * `scrollOff` {boolean} - Отключает отображение скролла списка\n\n  * `_onOpen` {EventDispatcher<{ visible: boolean }>} - Событие, возникающее при открытии выпадающего списка.\n\n  * `_onClose` {EventDispatcher<{ visible: boolean }>} - Событие, возникающее при закрытии выпадающего списка.\n\n  * `_dropdownList` {`HTMLElement`} - \n\n  * `shadowRootOptions` {`{ delegatesFocus: boolean; mode: ShadowRootMode; slotAssignment?: SlotAssignmentMode | undefined; }`} - \n\n  * `_handleOutsideClick` - \n\n  * `options` {`AwcDropdownItem[]`} - \n\n  * `focusedOptionIndex` {`number`} - \n\n  * `styles` {`CSSResultGroup`} - ",
       "attributes": [
         {
           "name": "not-closing",
@@ -980,7 +996,7 @@
         },
         {
           "name": "position",
-          "description": "`position` {`AwcPopoverPosition`} - Позиция отображения списка\n\nProperty: position\n\nDefault: bottom-start",
+          "description": "`position` {`\"top\" | \"top-end\" | \"top-start\" | \"bottom\" | \"bottom-end\" | \"bottom-start\" | \"left\" | \"left-end\" | \"left-start\" | \"right\" | \"right-end\" | \"right-start\"`} - Позиция отображения списка\n\nProperty: position\n\nDefault: bottom-start",
           "values": [
             {
               "name": "top"
@@ -1022,7 +1038,7 @@
         },
         {
           "name": "strategy",
-          "description": "`strategy` {`AwcPopoverStrategy`} - Стратегия позиционирования всплывающего окна.\n\nProperty: strategy\n\nDefault: absolute",
+          "description": "`strategy` {`\"absolute\" | \"fixed\"`} - Стратегия позиционирования всплывающего окна.\n\nProperty: strategy\n\nDefault: absolute",
           "values": [
             {
               "name": "absolute"
@@ -1054,15 +1070,15 @@
     },
     {
       "name": "awc-empty-state-link",
-      "description": "Attributes:\n\n  * `href` {String} - Задает адрес документа, на который следует перейти.\n\n  * `target` {String} - Тип перехода по ссылке\n\nProperties:\n\n  * `href` {String} - Задает адрес документа, на который следует перейти.\n\n  * `target` {String} - Тип перехода по ссылке",
+      "description": "Attributes:\n\n  * `href` {`string`} - Задает адрес документа, на который следует перейти.\n\n  * `target` {`\"_blank\" | \"_self\" | \"_parent\" | \"_top\"`} - Тип перехода по ссылке\n\nProperties:\n\n  * `href` {`string`} - Задает адрес документа, на который следует перейти.\n\n  * `target` {`\"_blank\" | \"_self\" | \"_parent\" | \"_top\"`} - Тип перехода по ссылке",
       "attributes": [
         {
           "name": "href",
-          "description": "`href` {String} - Задает адрес документа, на который следует перейти.\n\nProperty: href\n\nDefault: "
+          "description": "`href` {`string`} - Задает адрес документа, на который следует перейти.\n\nProperty: href\n\nDefault: "
         },
         {
           "name": "target",
-          "description": "`target` {String} - Тип перехода по ссылке\n\nProperty: target\n\nDefault: _self",
+          "description": "`target` {`\"_blank\" | \"_self\" | \"_parent\" | \"_top\"`} - Тип перехода по ссылке\n\nProperty: target\n\nDefault: _self",
           "values": [
             {
               "name": "_blank"
@@ -1082,21 +1098,21 @@
     },
     {
       "name": "awc-empty-state",
-      "description": "Attributes:\n\n  * `head` {String} - Задает заголовок компонента.\n\n  * `size` {String} - Задает рамзер компонента.\n\nProperties:\n\n  * `head` {String} - Задает заголовок компонента.\n\n  * `size` {String} - Задает рамзер компонента.\n\n  * `icons` {`AwcIcon[]`} - \n\n  * `buttons` {`AwcButton[]`} - ",
+      "description": "Attributes:\n\n  * `head` {`string`} - Задает заголовок компонента.\n\n  * `size` {`\"large\" | \"small\"`} - Задает рамзер компонента.\n\nProperties:\n\n  * `head` {`string`} - Задает заголовок компонента.\n\n  * `size` {`\"large\" | \"small\"`} - Задает рамзер компонента.\n\n  * `icons` {`AwcIcon[]`} - \n\n  * `buttons` {`AwcButton[]`} - ",
       "attributes": [
         {
           "name": "head",
-          "description": "`head` {String} - Задает заголовок компонента.\n\nProperty: head\n\nDefault: "
+          "description": "`head` {`string`} - Задает заголовок компонента.\n\nProperty: head\n\nDefault: "
         },
         {
           "name": "size",
-          "description": "`size` {String} - Задает рамзер компонента.\n\nProperty: size\n\nDefault: large",
+          "description": "`size` {`\"large\" | \"small\"`} - Задает рамзер компонента.\n\nProperty: size\n\nDefault: large",
           "values": [
             {
-              "name": "small"
+              "name": "large"
             },
             {
-              "name": "large"
+              "name": "small"
             }
           ]
         }
@@ -1109,11 +1125,11 @@
     },
     {
       "name": "awc-file-item",
-      "description": "Attributes:\n\n  * `view` {`AwcFileDisplayType`} - \n\n  * `provider` {`string`} - \n\n  * `id` {`string`} - \n\n  * `thumbnail` {`string`} - \n\n  * `name` {`string`} - \n\n  * `date` {`string`} - \n\n  * `format` {`string`} - \n\n  * `type` {`AwcFileItemType`} - \n\n  * `local-file` {`string`} - \n\n  * `external-file-link` {`string`} - \n\n  * `locale` {`\"en\" | \"ru_RU\"`} - \n\n  * `size` {`number | undefined`} - \n\n  * `private` {`boolean`} - \n\n  * `show-private` {`boolean`} - \n\n  * `show-download` {`boolean`} - \n\n  * `show-delete` {`boolean`} - \n\n  * `is-interactive` {`boolean`} - \n\n  * `hide-subinfo` {`boolean`} - \n\nProperties:\n\n  * `view` {`AwcFileDisplayType`} - \n\n  * `provider` {`string`} - \n\n  * `id` {`string`} - \n\n  * `thumbnail` {`string`} - \n\n  * `name` {`string`} - \n\n  * `date` {`string`} - \n\n  * `format` {`string`} - \n\n  * `type` {`AwcFileItemType`} - \n\n  * `localFile` {`string`} - \n\n  * `externalFileLink` {`string`} - \n\n  * `locale` {`\"en\" | \"ru_RU\"`} - \n\n  * `size` {`number | undefined`} - \n\n  * `private` {`boolean`} - \n\n  * `showPrivate` {`boolean`} - \n\n  * `showDownload` {`boolean`} - \n\n  * `showDelete` {`boolean`} - \n\n  * `isInteractive` {`boolean`} - \n\n  * `hideSubinfo` {`boolean`} - \n\n  * `isHoveredButtons` {`boolean`} - \n\n  * `showHoverText` {`boolean`} - \n\n  * `showFallbackIcon` {`boolean`} - \n\n  * `_onDownloadEvent` {`EventDispatcher<AwcFileItemDetails>`} - \n\n  * `_onPrivateEvent` {`EventDispatcher<AwcFileItemDetails>`} - \n\n  * `_onDeleteEvent` {`EventDispatcher<AwcFileItemDetails>`} - \n\n  * `_onPreviewEvent` {`EventDispatcher<HTMLElement>`} - \n\n  * `_isImageValid` {`boolean`} - \n\n  * `_imageValidationCache` - \n\n  * `styles` {`CSSResult`} - ",
+      "description": "Attributes:\n\n  * `view` {`\"grid\" | \"list_block\" | \"list\"`} - \n\n  * `provider` {`string`} - \n\n  * `id` {`string`} - \n\n  * `thumbnail` {`string`} - \n\n  * `name` {`string`} - \n\n  * `date` {`string`} - \n\n  * `format` {`string`} - \n\n  * `type` {`\"file\" | \"folder\" | \"systemFolder\" | \"publicFolder\"`} - \n\n  * `local-file` {`string`} - \n\n  * `external-file-link` {`string`} - \n\n  * `locale` {`\"en\" | \"ru_RU\"`} - \n\n  * `size` {`number | undefined`} - \n\n  * `private` {`boolean`} - \n\n  * `show-private` {`boolean`} - \n\n  * `show-download` {`boolean`} - \n\n  * `show-delete` {`boolean`} - \n\n  * `is-interactive` {`boolean`} - \n\n  * `hide-subinfo` {`boolean`} - \n\nProperties:\n\n  * `view` {`\"grid\" | \"list_block\" | \"list\"`} - \n\n  * `provider` {`string`} - \n\n  * `id` {`string`} - \n\n  * `thumbnail` {`string`} - \n\n  * `name` {`string`} - \n\n  * `date` {`string`} - \n\n  * `format` {`string`} - \n\n  * `type` {`\"file\" | \"folder\" | \"systemFolder\" | \"publicFolder\"`} - \n\n  * `localFile` {`string`} - \n\n  * `externalFileLink` {`string`} - \n\n  * `locale` {`\"en\" | \"ru_RU\"`} - \n\n  * `size` {`number | undefined`} - \n\n  * `private` {`boolean`} - \n\n  * `showPrivate` {`boolean`} - \n\n  * `showDownload` {`boolean`} - \n\n  * `showDelete` {`boolean`} - \n\n  * `isInteractive` {`boolean`} - \n\n  * `hideSubinfo` {`boolean`} - \n\n  * `isHoveredButtons` {`boolean`} - \n\n  * `showHoverText` {`boolean`} - \n\n  * `showFallbackIcon` {`boolean`} - \n\n  * `_onDownloadEvent` {`EventDispatcher<IAwcFileItemDetails>`} - \n\n  * `_onPrivateEvent` {`EventDispatcher<IAwcFileItemDetails>`} - \n\n  * `_onDeleteEvent` {`EventDispatcher<IAwcFileItemDetails>`} - \n\n  * `_onPreviewEvent` {`EventDispatcher<HTMLElement>`} - \n\n  * `_isImageValid` {`boolean`} - \n\n  * `_imageValidationCache` - \n\n  * `styles` {`CSSResult`} - ",
       "attributes": [
         {
           "name": "view",
-          "description": "`view` {`AwcFileDisplayType`} - \n\nProperty: view\n\nDefault: list_block",
+          "description": "`view` {`\"grid\" | \"list_block\" | \"list\"`} - \n\nProperty: view\n\nDefault: list_block",
           "values": [
             {
               "name": "grid"
@@ -1152,7 +1168,7 @@
         },
         {
           "name": "type",
-          "description": "`type` {`AwcFileItemType`} - \n\nProperty: type\n\nDefault: file",
+          "description": "`type` {`\"file\" | \"folder\" | \"systemFolder\" | \"publicFolder\"`} - \n\nProperty: type\n\nDefault: file",
           "values": [
             {
               "name": "file"
@@ -1227,7 +1243,7 @@
     },
     {
       "name": "awc-file",
-      "description": "Attributes:\n\n  * `heading` {`string`} - \n\n  * `counter` {`number`} - \n\n  * `view` {`AwcFileDisplayType`} - \n\n  * `variant` {`AwcFileVariant`} - \n\n  * `locale` {`\"en\" | \"ru_RU\"`} - \n\n  * `open` {`boolean`} - \n\nProperties:\n\n  * `heading` {`string`} - \n\n  * `counter` {`number`} - \n\n  * `view` {`AwcFileDisplayType`} - \n\n  * `variant` {`AwcFileVariant`} - \n\n  * `locale` {`\"en\" | \"ru_RU\"`} - \n\n  * `open` {`boolean`} - \n\n  * `_viewButtons` {`NodeListOf<AwcIconButton>`} - \n\n  * `fileItems` {`AwcFileItem[]`} - \n\n  * `styles` {`CSSResult`} - ",
+      "description": "Attributes:\n\n  * `heading` {`string`} - \n\n  * `counter` {`number`} - \n\n  * `view` {`\"grid\" | \"list_block\" | \"list\"`} - \n\n  * `variant` {`\"regular\" | \"accordion\" | \"compact\"`} - \n\n  * `locale` {`\"en\" | \"ru_RU\"`} - \n\n  * `open` {`boolean`} - \n\nProperties:\n\n  * `heading` {`string`} - \n\n  * `counter` {`number`} - \n\n  * `view` {`\"grid\" | \"list_block\" | \"list\"`} - \n\n  * `variant` {`\"regular\" | \"accordion\" | \"compact\"`} - \n\n  * `locale` {`\"en\" | \"ru_RU\"`} - \n\n  * `open` {`boolean`} - \n\n  * `_viewButtons` {`NodeListOf<AwcIconButton>`} - \n\n  * `fileItems` {`AwcFileItem[]`} - \n\n  * `styles` {`CSSResult`} - ",
       "attributes": [
         {
           "name": "heading",
@@ -1239,7 +1255,7 @@
         },
         {
           "name": "view",
-          "description": "`view` {`AwcFileDisplayType`} - \n\nProperty: view\n\nDefault: list_block",
+          "description": "`view` {`\"grid\" | \"list_block\" | \"list\"`} - \n\nProperty: view\n\nDefault: list_block",
           "values": [
             {
               "name": "grid"
@@ -1254,7 +1270,7 @@
         },
         {
           "name": "variant",
-          "description": "`variant` {`AwcFileVariant`} - \n\nProperty: variant\n\nDefault: regular",
+          "description": "`variant` {`\"regular\" | \"accordion\" | \"compact\"`} - \n\nProperty: variant\n\nDefault: regular",
           "values": [
             {
               "name": "regular"
@@ -1292,19 +1308,19 @@
     },
     {
       "name": "awc-icon-button",
-      "description": "Attributes:\n\n  * `name` {String} - Имя кнопки.\n\n  * `value` {String} - Значение кнопки.\n\n  * `size` {String} - Размер кнопки (Вложенные иконки меняют размер в том числе).\n\n  * `type` {String} - Тип кнопки.\n\n  * `href` {String} - Задает адрес документа, на который следует перейти.\n\n  * `target` {String} - Тип перехода по ссылке.\n\n  * `disabled` {Boolean} - Флаг, отключающий кнопку.\n\nProperties:\n\n  * `name` {String} - Имя кнопки.\n\n  * `value` {String} - Значение кнопки.\n\n  * `size` {String} - Размер кнопки (Вложенные иконки меняют размер в том числе).\n\n  * `type` {String} - Тип кнопки.\n\n  * `href` {String} - Задает адрес документа, на который следует перейти.\n\n  * `target` {String} - Тип перехода по ссылке.\n\n  * `disabled` {Boolean} - Флаг, отключающий кнопку.",
+      "description": "Attributes:\n\n  * `name` {`string`} - Имя кнопки.\n\n  * `value` {`string`} - Значение кнопки.\n\n  * `size` {`\"24\" | \"32\" | \"20\" | \"36\" | \"40\" | \"28\" | \"30\"`} - Размер кнопки (Вложенные иконки меняют размер в том числе).\n\n  * `type` {`\"button\" | \"submit\" | \"reset\"`} - Тип кнопки.\n\n  * `href` {`string`} - Задает адрес документа, на который следует перейти.\n\n  * `target` {`\"_blank\" | \"_self\" | \"_parent\" | \"_top\"`} - Тип перехода по ссылке.\n\n  * `disabled` {`boolean`} - Флаг, отключающий кнопку.\n\nProperties:\n\n  * `name` {`string`} - Имя кнопки.\n\n  * `value` {`string`} - Значение кнопки.\n\n  * `size` {`\"24\" | \"32\" | \"20\" | \"36\" | \"40\" | \"28\" | \"30\"`} - Размер кнопки (Вложенные иконки меняют размер в том числе).\n\n  * `type` {`\"button\" | \"submit\" | \"reset\"`} - Тип кнопки.\n\n  * `href` {`string`} - Задает адрес документа, на который следует перейти.\n\n  * `target` {`\"_blank\" | \"_self\" | \"_parent\" | \"_top\"`} - Тип перехода по ссылке.\n\n  * `disabled` {`boolean`} - Флаг, отключающий кнопку.",
       "attributes": [
         {
           "name": "name",
-          "description": "`name` {String} - Имя кнопки.\n\nProperty: name\n\nDefault: "
+          "description": "`name` {`string`} - Имя кнопки.\n\nProperty: name\n\nDefault: "
         },
         {
           "name": "value",
-          "description": "`value` {String} - Значение кнопки.\n\nProperty: value\n\nDefault: "
+          "description": "`value` {`string`} - Значение кнопки.\n\nProperty: value\n\nDefault: "
         },
         {
           "name": "size",
-          "description": "`size` {String} - Размер кнопки (Вложенные иконки меняют размер в том числе).\n\nProperty: size\n\nDefault: 24",
+          "description": "`size` {`\"24\" | \"32\" | \"20\" | \"36\" | \"40\" | \"28\" | \"30\"`} - Размер кнопки (Вложенные иконки меняют размер в том числе).\n\nProperty: size\n\nDefault: 24",
           "values": [
             {
               "name": "24"
@@ -1331,7 +1347,7 @@
         },
         {
           "name": "type",
-          "description": "`type` {String} - Тип кнопки.\n\nProperty: type\n\nDefault: submit",
+          "description": "`type` {`\"button\" | \"submit\" | \"reset\"`} - Тип кнопки.\n\nProperty: type\n\nDefault: submit",
           "values": [
             {
               "name": "button"
@@ -1346,11 +1362,11 @@
         },
         {
           "name": "href",
-          "description": "`href` {String} - Задает адрес документа, на который следует перейти.\n\nProperty: href\n\nDefault: "
+          "description": "`href` {`string`} - Задает адрес документа, на который следует перейти.\n\nProperty: href\n\nDefault: "
         },
         {
           "name": "target",
-          "description": "`target` {String} - Тип перехода по ссылке.\n\nProperty: target\n\nDefault: _self",
+          "description": "`target` {`\"_blank\" | \"_self\" | \"_parent\" | \"_top\"`} - Тип перехода по ссылке.\n\nProperty: target\n\nDefault: _self",
           "values": [
             {
               "name": "_blank"
@@ -1368,40 +1384,90 @@
         },
         {
           "name": "disabled",
-          "description": "`disabled` {Boolean} - Флаг, отключающий кнопку.\n\nProperty: disabled\n\nDefault: false",
+          "description": "`disabled` {`boolean`} - Флаг, отключающий кнопку.\n\nProperty: disabled\n\nDefault: false",
           "valueSet": "v"
         }
       ]
     },
     {
       "name": "awc-icon-loader",
-      "description": "Attributes:\n\n  * `type` {`string`} - \n\n  * `size` {`string`} - \n\n  * `src` {`string`} - \n\nProperties:\n\n  * `type` {`string`} - \n\n  * `size` {`string`} - \n\n  * `src` {`string`} - ",
+      "description": "Компонент для загрузки спрайтов иконок\n\nAttributes:\n\n  * `type` {`\"icon\" | \"module\"`} - Указывается тип иконки\n\n  * `size` {`\"24\" | \"32\" | \"20\" | \"40\" | \"16\"`} - Указываеся размер иконки\n\n  * `src` {`string`} - Путь до спрайта с иконками\n\nProperties:\n\n  * `type` {`\"icon\" | \"module\"`} - Указывается тип иконки\n\n  * `size` {`\"24\" | \"32\" | \"20\" | \"40\" | \"16\"`} - Указываеся размер иконки\n\n  * `src` {`string`} - Путь до спрайта с иконками",
       "attributes": [
         {
           "name": "type",
-          "description": "`type` {`string`} - \n\nProperty: type\n\nDefault: icon"
+          "description": "`type` {`\"icon\" | \"module\"`} - Указывается тип иконки\n\nProperty: type\n\nDefault: icon",
+          "values": [
+            {
+              "name": "icon"
+            },
+            {
+              "name": "module"
+            }
+          ]
         },
         {
           "name": "size",
-          "description": "`size` {`string`} - \n\nProperty: size\n\nDefault: "
+          "description": "`size` {`\"24\" | \"32\" | \"20\" | \"40\" | \"16\"`} - Указываеся размер иконки\n\nProperty: size\n\nDefault: 16",
+          "values": [
+            {
+              "name": "24"
+            },
+            {
+              "name": "32"
+            },
+            {
+              "name": "20"
+            },
+            {
+              "name": "40"
+            },
+            {
+              "name": "16"
+            }
+          ]
         },
         {
           "name": "src",
-          "description": "`src` {`string`} - \n\nProperty: src\n\nDefault: "
+          "description": "`src` {`string`} - Путь до спрайта с иконками\n\nProperty: src\n\nDefault: "
         }
       ]
     },
     {
       "name": "awc-icon",
-      "description": "Элемент для отображения иконок.\n\nAttributes:\n\n  * `type` {`string`} - Элемент для отображения иконок.\n\n  * `size` {`string`} - Указываеся размер иконки\n\n  * `name` {`string`} - Имя или идентификатор конкретной иконки.\n\n  * `icon-scale` {`string`} - Изменение размеров иконки\n\nProperties:\n\n  * `type` {`string`} - Элемент для отображения иконок.\n\n  * `size` {`string`} - Указываеся размер иконки\n\n  * `name` {`string`} - Имя или идентификатор конкретной иконки.\n\n  * `iconScale` {`string`} - Изменение размеров иконки\n\n  * `styles` {`CSSResult[]`} - ",
+      "description": "Элемент для отображения иконок.\n\nAttributes:\n\n  * `type` {`\"icon\" | \"module\"`} - Указывается тип иконки\n\n  * `size` {`\"24\" | \"32\" | \"20\" | \"40\" | \"16\"`} - Указываеся размер иконки\n\n  * `name` {`string`} - Имя или идентификатор конкретной иконки.\n\n  * `icon-scale` {`string`} - Изменение размеров иконки\n\nProperties:\n\n  * `type` {`\"icon\" | \"module\"`} - Указывается тип иконки\n\n  * `size` {`\"24\" | \"32\" | \"20\" | \"40\" | \"16\"`} - Указываеся размер иконки\n\n  * `name` {`string`} - Имя или идентификатор конкретной иконки.\n\n  * `iconScale` {`string`} - Изменение размеров иконки\n\n  * `styles` {`CSSResult[]`} - ",
       "attributes": [
         {
           "name": "type",
-          "description": "`type` {`string`} - Элемент для отображения иконок.\n\nProperty: type\n\nDefault: icon"
+          "description": "`type` {`\"icon\" | \"module\"`} - Указывается тип иконки\n\nProperty: type\n\nDefault: icon",
+          "values": [
+            {
+              "name": "icon"
+            },
+            {
+              "name": "module"
+            }
+          ]
         },
         {
           "name": "size",
-          "description": "`size` {`string`} - Указываеся размер иконки\n\nProperty: size\n\nDefault: 16"
+          "description": "`size` {`\"24\" | \"32\" | \"20\" | \"40\" | \"16\"`} - Указываеся размер иконки\n\nProperty: size\n\nDefault: 16",
+          "values": [
+            {
+              "name": "24"
+            },
+            {
+              "name": "32"
+            },
+            {
+              "name": "20"
+            },
+            {
+              "name": "40"
+            },
+            {
+              "name": "16"
+            }
+          ]
         },
         {
           "name": "name",
@@ -1415,7 +1481,7 @@
     },
     {
       "name": "awc-input",
-      "description": "Поле ввода\n\nEvents:\n\n  * `input` {`InputEvent`} - \n\n  * `change` {`Event`} - \n\nAttributes:\n\n  * `label` {`string`} - Метка для поля ввода.\n\n  * `value` {`string`} - Текущее значение поля ввода.\n\n  * `placeholder` {`string`} - Текст подсказки для поля ввода.\n\n  * `name` {`string | undefined`} - Имя атрибута для поля ввода.\n\n  * `hint` {`string | undefined`} - Отображение дополнительной информации.\n\n  * `type` {string} - Тип атрибута для поля ввода.\n\n  * `size` {`\"large\" | \"small\" | \"medium\"`} - Размер поля ввода.\n\n  * `custom-error` {string} - Пользовательская ошибка валидации. (Автоматически становится приоритетной)\n\n  * `maxlength` {`number | undefined`} - Максимальная длина поля ввода.\n\n  * `minlength` {`number | undefined`} - Минимальная длина поля ввода.\n\n  * `min` {`number | undefined`} - Минимальное значение для поля ввода.\n\n  * `max` {`number | undefined`} - Максимальное значение для поля ввода.\n\n  * `step` {`number | undefined`} - Шаг для поля ввода.\n\n  * `pattern` {`string | undefined`} - Шаблон для поля ввода.\n\n  * `autocomplete` {`\"off\" | \"on\"`} - Включение/отключение автозаполнения.\n\n  * `autofocus` {`boolean`} - Указывает, должно ли поле ввода автоматически получать фокус при загрузке.\n\n  * `required` {`boolean`} - Указывает, является ли поле ввода обязательным.\n\n  * `disabled` {`boolean`} - Указывает, отключено ли поле ввода.\n\n  * `readonly` {`boolean`} - Указывает, только для чтения ли поле ввода.\n\n  * `static-error` {`boolean`} - Статичное, принудительное отображение ошибки.\n\nProperties:\n\n  * `label` {`string`} - Метка для поля ввода.\n\n  * `value` {`string`} - Текущее значение поля ввода.\n\n  * `placeholder` {`string`} - Текст подсказки для поля ввода.\n\n  * `name` {`string | undefined`} - Имя атрибута для поля ввода.\n\n  * `hint` {`string | undefined`} - Отображение дополнительной информации.\n\n  * `type` {string} - Тип атрибута для поля ввода.\n\n  * `size` {`\"large\" | \"small\" | \"medium\"`} - Размер поля ввода.\n\n  * `customError` {string} - Пользовательская ошибка валидации. (Автоматически становится приоритетной)\n\n  * `maxlength` {`number | undefined`} - Максимальная длина поля ввода.\n\n  * `minlength` {`number | undefined`} - Минимальная длина поля ввода.\n\n  * `min` {`number | undefined`} - Минимальное значение для поля ввода.\n\n  * `max` {`number | undefined`} - Максимальное значение для поля ввода.\n\n  * `step` {`number | undefined`} - Шаг для поля ввода.\n\n  * `pattern` {`string | undefined`} - Шаблон для поля ввода.\n\n  * `autocomplete` {`\"off\" | \"on\"`} - Включение/отключение автозаполнения.\n\n  * `autofocus` {`boolean`} - Указывает, должно ли поле ввода автоматически получать фокус при загрузке.\n\n  * `required` {`boolean`} - Указывает, является ли поле ввода обязательным.\n\n  * `disabled` {`boolean`} - Указывает, отключено ли поле ввода.\n\n  * `readonly` {`boolean`} - Указывает, только для чтения ли поле ввода.\n\n  * `staticError` {`boolean`} - Статичное, принудительное отображение ошибки.\n\n  * `input` {`HTMLInputElement`} - \n\n  * `_passwordButton` {`HTMLElement`} - \n\n  * `_progressBar` {`HTMLElement`} - \n\n  * `formControlValidators` {`{ key: keyof ValidityState; isValid(instance: HTMLElement & { validationTarget: HTMLInputElement; }): boolean; }[]`} - \n\n  * `shadowRootOptions` {`{ delegatesFocus: boolean; mode: ShadowRootMode; slotAssignment?: SlotAssignmentMode | undefined; }`} - \n\n  * `inputId` {`string`} - \n\n  * `validationTarget` {`HTMLInputElement`} - \n\n  * `form` {`HTMLFormElement`} - \n\n  * `internals` - \n\n  * `showError` {`boolean`} - \n\n  * `validationMessage` {`string`} - \n\n  * `validity` {`ValidityState`} - \n\n  * `validationComplete` {`Promise<void>`} - ",
+      "description": "Поле ввода\n\nEvents:\n\n  * `input` {`InputEvent`} - \n\n  * `change` {`Event`} - \n\nAttributes:\n\n  * `label` {`string`} - Метка для поля ввода.\n\n  * `value` {`string`} - Текущее значение поля ввода.\n\n  * `placeholder` {`string`} - Текст подсказки для поля ввода.\n\n  * `name` {`string | undefined`} - Имя атрибута для поля ввода.\n\n  * `hint` {`string | undefined`} - Отображение дополнительной информации.\n\n  * `type` {`\"number\" | \"email\" | \"tel\" | \"text\" | \"date\" | \"time\" | \"datetime-local\" | \"month\" | \"week\" | \"password\" | \"url\" | \"search\" | \"hidden\"`} - Тип атрибута для поля ввода.\n\n  * `size` {`\"large\" | \"small\" | \"medium\"`} - Размер поля ввода.\n\n  * `custom-error` {`string`} - Пользовательская ошибка валидации.\r\n(Автоматически становится приоритетной)\n\n  * `maxlength` {`number | undefined`} - Максимальная длина поля ввода.\n\n  * `minlength` {`number | undefined`} - Минимальная длина поля ввода.\n\n  * `min` {`number | undefined`} - Минимальное значение для поля ввода.\n\n  * `max` {`number | undefined`} - Максимальное значение для поля ввода.\n\n  * `step` {`number | undefined`} - Шаг для поля ввода.\n\n  * `pattern` {`string | undefined`} - Шаблон для поля ввода.\n\n  * `autocomplete` {`\"off\" | \"on\"`} - Включение/отключение автозаполнения.\n\n  * `autofocus` {`boolean`} - Указывает, должно ли поле ввода автоматически получать фокус при загрузке.\n\n  * `required` {`boolean`} - Указывает, является ли поле ввода обязательным.\n\n  * `disabled` {`boolean`} - Указывает, отключено ли поле ввода.\n\n  * `readonly` {`boolean`} - Указывает, только для чтения ли поле ввода.\n\n  * `static-error` {`boolean`} - Статичное, принудительное отображение ошибки.\n\nProperties:\n\n  * `label` {`string`} - Метка для поля ввода.\n\n  * `value` {`string`} - Текущее значение поля ввода.\n\n  * `placeholder` {`string`} - Текст подсказки для поля ввода.\n\n  * `name` {`string | undefined`} - Имя атрибута для поля ввода.\n\n  * `hint` {`string | undefined`} - Отображение дополнительной информации.\n\n  * `type` {`\"number\" | \"email\" | \"tel\" | \"text\" | \"date\" | \"time\" | \"datetime-local\" | \"month\" | \"week\" | \"password\" | \"url\" | \"search\" | \"hidden\"`} - Тип атрибута для поля ввода.\n\n  * `size` {`\"large\" | \"small\" | \"medium\"`} - Размер поля ввода.\n\n  * `customError` {`string`} - Пользовательская ошибка валидации.\r\n(Автоматически становится приоритетной)\n\n  * `maxlength` {`number | undefined`} - Максимальная длина поля ввода.\n\n  * `minlength` {`number | undefined`} - Минимальная длина поля ввода.\n\n  * `min` {`number | undefined`} - Минимальное значение для поля ввода.\n\n  * `max` {`number | undefined`} - Максимальное значение для поля ввода.\n\n  * `step` {`number | undefined`} - Шаг для поля ввода.\n\n  * `pattern` {`string | undefined`} - Шаблон для поля ввода.\n\n  * `autocomplete` {`\"off\" | \"on\"`} - Включение/отключение автозаполнения.\n\n  * `autofocus` {`boolean`} - Указывает, должно ли поле ввода автоматически получать фокус при загрузке.\n\n  * `required` {`boolean`} - Указывает, является ли поле ввода обязательным.\n\n  * `disabled` {`boolean`} - Указывает, отключено ли поле ввода.\n\n  * `readonly` {`boolean`} - Указывает, только для чтения ли поле ввода.\n\n  * `staticError` {`boolean`} - Статичное, принудительное отображение ошибки.\n\n  * `input` {`HTMLInputElement`} - \n\n  * `_passwordButton` {`HTMLElement`} - \n\n  * `_progressBar` {`HTMLElement`} - \n\n  * `formControlValidators` {`{ key: keyof ValidityState; isValid(instance: HTMLElement & { validationTarget: HTMLInputElement; }): boolean; }[]`} - \n\n  * `shadowRootOptions` {`{ delegatesFocus: boolean; mode: ShadowRootMode; slotAssignment?: SlotAssignmentMode | undefined; }`} - \n\n  * `inputId` {`string`} - \n\n  * `validationTarget` {`HTMLInputElement`} - \n\n  * `form` {`HTMLFormElement`} - \n\n  * `internals` - \n\n  * `showError` {`boolean`} - \n\n  * `validationMessage` {`string`} - \n\n  * `validity` {`ValidityState`} - \n\n  * `validationComplete` {`Promise<void>`} - ",
       "attributes": [
         {
           "name": "label",
@@ -1441,7 +1507,7 @@
         },
         {
           "name": "type",
-          "description": "`type` {string} - Тип атрибута для поля ввода.\n\nProperty: type\n\nDefault: text",
+          "description": "`type` {`\"number\" | \"email\" | \"tel\" | \"text\" | \"date\" | \"time\" | \"datetime-local\" | \"month\" | \"week\" | \"password\" | \"url\" | \"search\" | \"hidden\"`} - Тип атрибута для поля ввода.\n\nProperty: type\n\nDefault: text",
           "values": [
             {
               "name": "number"
@@ -1501,7 +1567,7 @@
         },
         {
           "name": "custom-error",
-          "description": "`custom-error` {string} - Пользовательская ошибка валидации. (Автоматически становится приоритетной)\n\nProperty: customError\n\nDefault: \"\""
+          "description": "`custom-error` {`string`} - Пользовательская ошибка валидации.\r\n(Автоматически становится приоритетной)\n\nProperty: customError\n\nDefault: \"\""
         },
         {
           "name": "maxlength",
@@ -1656,11 +1722,11 @@
     },
     {
       "name": "awc-popover",
-      "description": "Attributes:\n\n  * `position` {`AwcPopoverPosition`} - Позиция всплывающего окна относительно элемента.\n\n  * `strategy` {`AwcPopoverStrategy`} - Стратегия позиционирования всплывающего окна (absolute или fixed).\n\n  * `trigger-type` {`AwcPopoverTriggerType`} - Тип триггера для открытия всплывающего окна (click, hover, focus, manual).\n\n  * `spacing` {AwcPopoverSpacing} - Расстояние в пикселях между всплывающим окном и элементом.\n\n  * `active` {`boolean`} - Определяет, видно ли всплывающее окно в данный момент.\n\n  * `disabled` {`boolean`} - Отключает взаимодействие с всплывающим окном (например, при наведении, клике или фокусе).\n\n  * `no-padding` {`boolean`} - Убирает внутренние отступы у всплывающего окна.\n\n  * `match-reference-width` {`boolean`} - Автоматически устанавливает ширину popover равной ширине связанного элемента (reference).\n\nProperties:\n\n  * `position` {`AwcPopoverPosition`} - Позиция всплывающего окна относительно элемента.\n\n  * `strategy` {`AwcPopoverStrategy`} - Стратегия позиционирования всплывающего окна (absolute или fixed).\n\n  * `triggerType` {`AwcPopoverTriggerType`} - Тип триггера для открытия всплывающего окна (click, hover, focus, manual).\n\n  * `spacing` {AwcPopoverSpacing} - Расстояние в пикселях между всплывающим окном и элементом.\n\n  * `active` {`boolean`} - Определяет, видно ли всплывающее окно в данный момент.\n\n  * `disabled` {`boolean`} - Отключает взаимодействие с всплывающим окном (например, при наведении, клике или фокусе).\n\n  * `noPadding` {`boolean`} - Убирает внутренние отступы у всплывающего окна.\n\n  * `matchReferenceWidth` {`boolean`} - Автоматически устанавливает ширину popover равной ширине связанного элемента (reference).\n\n  * `_popoverOpenEvent` {EventDispatcher<boolean>} - Событие, генерируемое при открытии всплывающего окна.\n\n  * `_popoverCloseEvent` {EventDispatcher<boolean>} - Событие, генерируемое при закрытии всплывающего окна.\n\n  * `_popoverToggleEvent` {`EventDispatcher<AwcPopover>`} - \n\n  * `popoverEl` {`HTMLElement`} - \n\n  * `slotEl` {`HTMLSlotElement`} - \n\n  * `cleanupFloating` - \n\n  * `_hoverTimeout` {`number | null`} - \n\n  * `referenceEl` {`HTMLElement | null`} - \n\n  * `isMouseOverPopover` {`boolean`} - \n\n  * `isMouseOverReference` {`boolean`} - \n\n  * `shadowRootOptions` {`{ delegatesFocus: boolean; mode: ShadowRootMode; slotAssignment?: SlotAssignmentMode | undefined; }`} - \n\n  * `_handleOutsideClick` - \n\n  * `_onReferenceMouseEnter` - \n\n  * `_onReferenceMouseLeave` - \n\n  * `_onPopoverMouseEnter` - \n\n  * `_onPopoverMouseLeave` - \n\n  * `_tryHide` - \n\n  * `_onFocus` - \n\n  * `_onBlur` - \n\n  * `_onClick` - \n\n  * `_handlePopoverToggle` - \n\n  * `handleSlotChange` - \n\n  * `styles` {`CSSResultGroup | undefined`} - ",
+      "description": "Attributes:\n\n  * `position` {`\"top\" | \"top-end\" | \"top-start\" | \"bottom\" | \"bottom-end\" | \"bottom-start\" | \"left\" | \"left-end\" | \"left-start\" | \"right\" | \"right-end\" | \"right-start\"`} - Позиция всплывающего окна относительно элемента.\n\n  * `strategy` {`\"absolute\" | \"fixed\"`} - Стратегия позиционирования всплывающего окна (absolute или fixed).\n\n  * `trigger-type` {`\"manual\" | \"hover\" | \"click\" | \"focus\"`} - Тип триггера для открытия всплывающего окна (click, hover, focus, manual).\n\n  * `spacing` {AwcPopoverSpacing} - Расстояние в пикселях между всплывающим окном и элементом.\n\n  * `active` {`boolean`} - Определяет, видно ли всплывающее окно в данный момент.\n\n  * `disabled` {`boolean`} - Отключает взаимодействие с всплывающим окном (например, при наведении, клике или фокусе).\n\n  * `no-padding` {`boolean`} - Убирает внутренние отступы у всплывающего окна.\n\n  * `match-reference-width` {`boolean`} - Автоматически устанавливает ширину popover равной ширине связанного элемента (reference).\n\nProperties:\n\n  * `position` {`\"top\" | \"top-end\" | \"top-start\" | \"bottom\" | \"bottom-end\" | \"bottom-start\" | \"left\" | \"left-end\" | \"left-start\" | \"right\" | \"right-end\" | \"right-start\"`} - Позиция всплывающего окна относительно элемента.\n\n  * `strategy` {`\"absolute\" | \"fixed\"`} - Стратегия позиционирования всплывающего окна (absolute или fixed).\n\n  * `triggerType` {`\"manual\" | \"hover\" | \"click\" | \"focus\"`} - Тип триггера для открытия всплывающего окна (click, hover, focus, manual).\n\n  * `spacing` {AwcPopoverSpacing} - Расстояние в пикселях между всплывающим окном и элементом.\n\n  * `active` {`boolean`} - Определяет, видно ли всплывающее окно в данный момент.\n\n  * `disabled` {`boolean`} - Отключает взаимодействие с всплывающим окном (например, при наведении, клике или фокусе).\n\n  * `noPadding` {`boolean`} - Убирает внутренние отступы у всплывающего окна.\n\n  * `matchReferenceWidth` {`boolean`} - Автоматически устанавливает ширину popover равной ширине связанного элемента (reference).\n\n  * `_popoverOpenEvent` {EventDispatcher<boolean>} - Событие, генерируемое при открытии всплывающего окна.\n\n  * `_popoverCloseEvent` {EventDispatcher<boolean>} - Событие, генерируемое при закрытии всплывающего окна.\n\n  * `_popoverToggleEvent` {`EventDispatcher<AwcPopover>`} - \n\n  * `popoverEl` {`HTMLElement`} - \n\n  * `slotEl` {`HTMLSlotElement`} - \n\n  * `cleanupFloating` - \n\n  * `_hoverTimeout` {`number | null`} - \n\n  * `referenceEl` {`HTMLElement | null`} - \n\n  * `isMouseOverPopover` {`boolean`} - \n\n  * `isMouseOverReference` {`boolean`} - \n\n  * `shadowRootOptions` {`{ delegatesFocus: boolean; mode: ShadowRootMode; slotAssignment?: SlotAssignmentMode | undefined; }`} - \n\n  * `_handleOutsideClick` - \n\n  * `_onReferenceMouseEnter` - \n\n  * `_onReferenceMouseLeave` - \n\n  * `_onPopoverMouseEnter` - \n\n  * `_onPopoverMouseLeave` - \n\n  * `_tryHide` - \n\n  * `_onFocus` - \n\n  * `_onBlur` - \n\n  * `_onClick` - \n\n  * `_handlePopoverToggle` - \n\n  * `handleSlotChange` - \n\n  * `styles` {`CSSResultGroup | undefined`} - ",
       "attributes": [
         {
           "name": "position",
-          "description": "`position` {`AwcPopoverPosition`} - Позиция всплывающего окна относительно элемента.\n\nProperty: position\n\nDefault: top",
+          "description": "`position` {`\"top\" | \"top-end\" | \"top-start\" | \"bottom\" | \"bottom-end\" | \"bottom-start\" | \"left\" | \"left-end\" | \"left-start\" | \"right\" | \"right-end\" | \"right-start\"`} - Позиция всплывающего окна относительно элемента.\n\nProperty: position\n\nDefault: top",
           "values": [
             {
               "name": "top"
@@ -1702,7 +1768,7 @@
         },
         {
           "name": "strategy",
-          "description": "`strategy` {`AwcPopoverStrategy`} - Стратегия позиционирования всплывающего окна (absolute или fixed).\n\nProperty: strategy\n\nDefault: absolute",
+          "description": "`strategy` {`\"absolute\" | \"fixed\"`} - Стратегия позиционирования всплывающего окна (absolute или fixed).\n\nProperty: strategy\n\nDefault: absolute",
           "values": [
             {
               "name": "absolute"
@@ -1714,7 +1780,7 @@
         },
         {
           "name": "trigger-type",
-          "description": "`trigger-type` {`AwcPopoverTriggerType`} - Тип триггера для открытия всплывающего окна (click, hover, focus, manual).\n\nProperty: triggerType\n\nDefault: click",
+          "description": "`trigger-type` {`\"manual\" | \"hover\" | \"click\" | \"focus\"`} - Тип триггера для открытия всплывающего окна (click, hover, focus, manual).\n\nProperty: triggerType\n\nDefault: click",
           "values": [
             {
               "name": "manual"
@@ -1756,10 +1822,10 @@
               "name": "32"
             },
             {
-              "name": "20"
+              "name": "24"
             },
             {
-              "name": "24"
+              "name": "20"
             },
             {
               "name": "40"
@@ -1790,7 +1856,7 @@
     },
     {
       "name": "awc-progress-bar",
-      "description": "Элемент интерфейса, основная задача которого, показать на каком этапе находится загрузка данных.\n\nEvents:\n\n  * `awc-progress-bar-success` {} - Событие, возникающее когда value достигает максимального (max) значения.\n\nAttributes:\n\n  * `value` {`number`} - Текущее значение прогресса.\n\n  * `max` {`number`} - Максимальное значение прогресса.\n\n  * `label` {`string`} - Текстовый заголовок, отображаемый рядом с прогресс-баром.\n\n  * `size` {`AwcProgressBarSizes`} - Размер полосы загрузки.\n\n  * `hide-percent` {`boolean`} - Флаг для отображения процентов.\n\nProperties:\n\n  * `value` {`number`} - Текущее значение прогресса.\n\n  * `max` {`number`} - Максимальное значение прогресса.\n\n  * `label` {`string`} - Текстовый заголовок, отображаемый рядом с прогресс-баром.\n\n  * `size` {`AwcProgressBarSizes`} - Размер полосы загрузки.\n\n  * `hidePercent` {`boolean`} - Флаг для отображения процентов.\n\n  * `_onSucces` {EventDispatcher<ProgressUpdate>} - Событие, возникающее когда value достигает максимального (max) значения.\n\n  * `fillerElement` {`HTMLElement`} - ",
+      "description": "Элемент интерфейса, основная задача которого, показать на каком этапе находится загрузка данных.\n\nEvents:\n\n  * `awc-progress-bar-success` {} - Событие, возникающее когда value достигает максимального (max) значения.\n\nAttributes:\n\n  * `value` {`number`} - Текущее значение прогресса.\n\n  * `max` {`number`} - Максимальное значение прогресса.\n\n  * `label` {`string`} - Текстовый заголовок, отображаемый рядом с прогресс-баром.\n\n  * `size` {`\"large\" | \"small\" | \"extrasmall\" | \"medium\"`} - Размер полосы загрузки.\n\n  * `hide-percent` {`boolean`} - Флаг для отображения процентов.\n\nProperties:\n\n  * `value` {`number`} - Текущее значение прогресса.\n\n  * `max` {`number`} - Максимальное значение прогресса.\n\n  * `label` {`string`} - Текстовый заголовок, отображаемый рядом с прогресс-баром.\n\n  * `size` {`\"large\" | \"small\" | \"extrasmall\" | \"medium\"`} - Размер полосы загрузки.\n\n  * `hidePercent` {`boolean`} - Флаг для отображения процентов.\n\n  * `_onSucces` {EventDispatcher<IProgressUpdateEvent>} - Событие, возникающее когда value достигает максимального (max) значения.\n\n  * `fillerElement` {`HTMLElement`} - ",
       "attributes": [
         {
           "name": "value",
@@ -1806,19 +1872,19 @@
         },
         {
           "name": "size",
-          "description": "`size` {`AwcProgressBarSizes`} - Размер полосы загрузки.\n\nProperty: size\n\nDefault: midium",
+          "description": "`size` {`\"large\" | \"small\" | \"extrasmall\" | \"medium\"`} - Размер полосы загрузки.\n\nProperty: size\n\nDefault: midium",
           "values": [
             {
-              "name": "extrasmall"
+              "name": "large"
             },
             {
               "name": "small"
             },
             {
-              "name": "medium"
+              "name": "extrasmall"
             },
             {
-              "name": "large"
+              "name": "medium"
             }
           ]
         },
@@ -1866,7 +1932,7 @@
     },
     {
       "name": "awc-radio",
-      "description": "Элемент радиокнопки.\n\nEvents:\n\n  * `awc-checked` {} - Событие, возникающее при выборе радиокнопки.\n\n  * `awc-focus` {} - Событие, возникающее при фокусировке на радиокнопке.\n\n  * `awc-blur` {} - Событие, возникающее при потере фокуса радиокнопкой.\n\n  * `change` {`Event`} - \n\nAttributes:\n\n  * `name` {`string`} - Уникальное имя группы радиокнопок, к которой принадлежит данная радиокнопка.\n\n  * `value` {`string`} - Значение радиокнопки.\n\n  * `label` {`string`} - Текстовая метка радиокнопки.\n\n  * `custom-error` {string} - Пользовательская ошибка валидации. (Автоматически становится приоритетной)\n\n  * `static-error` {`boolean`} - Статичное, принудительное отображение ошибки.\n\n  * `disabled` {`boolean`} - Флаг, указывающий, выделена ли радиокнопка.\n\n  * `size` {string} - Выборо размера radio.\n\n  * `checked` {`boolean`} - Флаг, указывающий, выбрана ли радиокнопка.\n\n  * `required` {`boolean`} - Флаг, указывающий, является ли радиокнопка обязательной для выбора.\n\n  * `custom-color` {string} - Цвет состояния radio.\n\nProperties:\n\n  * `shadowRootOptions` {`{ delegatesFocus: boolean; mode: ShadowRootMode; slotAssignment?: SlotAssignmentMode | undefined; }`} - \n\n  * `name` {`string`} - Уникальное имя группы радиокнопок, к которой принадлежит данная радиокнопка.\n\n  * `value` {`string`} - Значение радиокнопки.\n\n  * `label` {`string`} - Текстовая метка радиокнопки.\n\n  * `customError` {string} - Пользовательская ошибка валидации. (Автоматически становится приоритетной)\n\n  * `staticError` {`boolean`} - Статичное, принудительное отображение ошибки.\n\n  * `disabled` {`boolean`} - Флаг, указывающий, выделена ли радиокнопка.\n\n  * `size` {string} - Выборо размера radio.\n\n  * `checked` {`boolean`} - Флаг, указывающий, выбрана ли радиокнопка.\n\n  * `required` {`boolean`} - Флаг, указывающий, является ли радиокнопка обязательной для выбора.\n\n  * `customColor` {string} - Цвет состояния radio.\n\n  * `_onChecked` {EventDispatcher<string>} - Событие выбора радиокнопки.\n\n  * `_onFocus` {EventDispatcher<string>} - Событие фокусировки на радиокнопке.\n\n  * `_onBlur` {EventDispatcher<string>} - Событие потери фокуса радиокнопкой.\n\n  * `field` {`AwcRadioGroup | null`} - \n\n  * `_radioElement` {`HTMLElement`} - \n\n  * `formControlValidators` {`Validator[]`} - \n\n  * `_handleFieldValueChange` - \n\n  * `_onChange` - \n\n  * `_onInvalid` - \n\n  * `validationTarget` {`HTMLElement`} - \n\n  * `form` {`HTMLFormElement`} - \n\n  * `internals` - \n\n  * `showError` {`boolean`} - \n\n  * `validationMessage` {`string`} - \n\n  * `validity` {`ValidityState`} - \n\n  * `validationComplete` {`Promise<void>`} - ",
+      "description": "Элемент радиокнопки.\n\nEvents:\n\n  * `awc-checked` {} - Событие, возникающее при выборе радиокнопки.\n\n  * `awc-focus` {} - Событие, возникающее при фокусировке на радиокнопке.\n\n  * `awc-blur` {} - Событие, возникающее при потере фокуса радиокнопкой.\n\n  * `change` {`Event`} - \n\nAttributes:\n\n  * `name` {`string`} - Уникальное имя группы радиокнопок, к которой принадлежит данная радиокнопка.\n\n  * `value` {`string`} - Значение радиокнопки.\n\n  * `label` {`string`} - Текстовая метка радиокнопки.\n\n  * `custom-error` {string} - Пользовательская ошибка валидации. (Автоматически становится приоритетной)\n\n  * `static-error` {`boolean`} - Статичное, принудительное отображение ошибки.\n\n  * `disabled` {`boolean`} - Флаг, указывающий, выделена ли радиокнопка.\n\n  * `size` {`\"regular\" | \"small\"`} - Выборо размера radio.\n\n  * `checked` {`boolean`} - Флаг, указывающий, выбрана ли радиокнопка.\n\n  * `required` {`boolean`} - Флаг, указывающий, является ли радиокнопка обязательной для выбора.\n\n  * `custom-color` {string} - Цвет состояния radio.\n\nProperties:\n\n  * `name` {`string`} - Уникальное имя группы радиокнопок, к которой принадлежит данная радиокнопка.\n\n  * `value` {`string`} - Значение радиокнопки.\n\n  * `label` {`string`} - Текстовая метка радиокнопки.\n\n  * `customError` {string} - Пользовательская ошибка валидации. (Автоматически становится приоритетной)\n\n  * `staticError` {`boolean`} - Статичное, принудительное отображение ошибки.\n\n  * `disabled` {`boolean`} - Флаг, указывающий, выделена ли радиокнопка.\n\n  * `size` {`\"regular\" | \"small\"`} - Выборо размера radio.\n\n  * `checked` {`boolean`} - Флаг, указывающий, выбрана ли радиокнопка.\n\n  * `required` {`boolean`} - Флаг, указывающий, является ли радиокнопка обязательной для выбора.\n\n  * `customColor` {string} - Цвет состояния radio.\n\n  * `_onChecked` {EventDispatcher<string>} - Событие выбора радиокнопки.\n\n  * `_onFocus` {EventDispatcher<string>} - Событие фокусировки на радиокнопке.\n\n  * `_onBlur` {EventDispatcher<string>} - Событие потери фокуса радиокнопкой.\n\n  * `field` {`AwcRadioGroup | null`} - \n\n  * `_radioElement` {`HTMLElement`} - \n\n  * `shadowRootOptions` {`{ delegatesFocus: boolean; mode: ShadowRootMode; slotAssignment?: SlotAssignmentMode | undefined; }`} - \n\n  * `formControlValidators` {`Validator[]`} - \n\n  * `_handleFieldValueChange` - \n\n  * `_onChange` - \n\n  * `_onInvalid` - \n\n  * `validationTarget` {`HTMLElement`} - \n\n  * `form` {`HTMLFormElement`} - \n\n  * `internals` - \n\n  * `showError` {`boolean`} - \n\n  * `validationMessage` {`string`} - \n\n  * `validity` {`ValidityState`} - \n\n  * `validationComplete` {`Promise<void>`} - ",
       "attributes": [
         {
           "name": "name",
@@ -1896,7 +1962,7 @@
         },
         {
           "name": "size",
-          "description": "`size` {string} - Выборо размера radio.\n\nProperty: size\n\nDefault: regular",
+          "description": "`size` {`\"regular\" | \"small\"`} - Выборо размера radio.\n\nProperty: size\n\nDefault: regular",
           "values": [
             {
               "name": "regular"
@@ -2192,11 +2258,11 @@
     },
     {
       "name": "awc-skeleton",
-      "description": "Attributes:\n\n  * `effect` {string} - Определяет, какой эффект будет использовать скелетон.\n\n  * `rounded` {string} - Задает скругления.\n\n  * `color` {string} - Цвет скелетона\n\nProperties:\n\n  * `effect` {string} - Определяет, какой эффект будет использовать скелетон.\n\n  * `rounded` {string} - Задает скругления.\n\n  * `color` {string} - Цвет скелетона",
+      "description": "Attributes:\n\n  * `effect` {`\"none\" | \"pulse\" | \"wave\"`} - Определяет, какой эффект будет использовать скелетон.\n\n  * `rounded` {`\"8\" | \"12\" | \"rounded\"`} - Задает скругления.\n\n  * `color` {`\"primary\" | \"secondary\"`} - Цвет скелетона\n\nProperties:\n\n  * `effect` {`\"none\" | \"pulse\" | \"wave\"`} - Определяет, какой эффект будет использовать скелетон.\n\n  * `rounded` {`\"8\" | \"12\" | \"rounded\"`} - Задает скругления.\n\n  * `color` {`\"primary\" | \"secondary\"`} - Цвет скелетона\n\n  * `styles` {`CSSResultGroup`} - ",
       "attributes": [
         {
           "name": "effect",
-          "description": "`effect` {string} - Определяет, какой эффект будет использовать скелетон.\n\nProperty: effect\n\nDefault: pulse",
+          "description": "`effect` {`\"none\" | \"pulse\" | \"wave\"`} - Определяет, какой эффект будет использовать скелетон.\n\nProperty: effect\n\nDefault: pulse",
           "values": [
             {
               "name": "none"
@@ -2205,13 +2271,13 @@
               "name": "pulse"
             },
             {
-              "name": "sheen"
+              "name": "wave"
             }
           ]
         },
         {
           "name": "rounded",
-          "description": "`rounded` {string} - Задает скругления.\n\nProperty: rounded\n\nDefault: rounded",
+          "description": "`rounded` {`\"8\" | \"12\" | \"rounded\"`} - Задает скругления.\n\nProperty: rounded\n\nDefault: rounded",
           "values": [
             {
               "name": "8"
@@ -2226,7 +2292,7 @@
         },
         {
           "name": "color",
-          "description": "`color` {string} - Цвет скелетона\n\nProperty: color\n\nDefault: primary",
+          "description": "`color` {`\"primary\" | \"secondary\"`} - Цвет скелетона\n\nProperty: color\n\nDefault: primary",
           "values": [
             {
               "name": "primary"
@@ -2240,11 +2306,11 @@
     },
     {
       "name": "awc-spinner",
-      "description": "Attributes:\n\n  * `size` {AwcSpinnerSize} - Размер спинера\n\n  * `variant` {AwcSpinnerVariant} - Цвет спинера\n\nProperties:\n\n  * `size` {AwcSpinnerSize} - Размер спинера\n\n  * `variant` {AwcSpinnerVariant} - Цвет спинера\n\n  * `styles` {`CSSResult`} - ",
+      "description": "Attributes:\n\n  * `size` {`\"s\" | \"m\" | \"l\"`} - Размер спинера\n\n  * `variant` {`\"primary\" | \"secondary\"`} - Цвет спинера\n\nProperties:\n\n  * `size` {`\"s\" | \"m\" | \"l\"`} - Размер спинера\n\n  * `variant` {`\"primary\" | \"secondary\"`} - Цвет спинера\n\n  * `styles` {`CSSResult`} - ",
       "attributes": [
         {
           "name": "size",
-          "description": "`size` {AwcSpinnerSize} - Размер спинера\n\nProperty: size\n\nDefault: \"m\"",
+          "description": "`size` {`\"s\" | \"m\" | \"l\"`} - Размер спинера\n\nProperty: size\n\nDefault: \"m\"",
           "values": [
             {
               "name": "s"
@@ -2259,7 +2325,7 @@
         },
         {
           "name": "variant",
-          "description": "`variant` {AwcSpinnerVariant} - Цвет спинера\n\nProperty: variant\n\nDefault: \"primary\"",
+          "description": "`variant` {`\"primary\" | \"secondary\"`} - Цвет спинера\n\nProperty: variant\n\nDefault: \"primary\"",
           "values": [
             {
               "name": "primary"
@@ -2292,11 +2358,11 @@
     },
     {
       "name": "awc-stack",
-      "description": "`awc-stack` - Компонент-обертка, который управляет расположением ближайших дочерних элементов по вертикальной или горизонтальной оси с необязательным интервалом между каждым дочерним элементом.\n\nAttributes:\n\n  * `flex-direction` {string} - Определяет, как элементы flexbox упорядочиваются внутри контейнера flexbox.\r\nВозможные значения: \"row\", \"column\".\n\n  * `align-items` {string} - Определяет, как элементы flexbox выравниваются вдоль поперечной оси.\r\nВозможные значения: \"start\", \"center\", \"end\".\n\n  * `justify-content` {string | undefined} - Определяет, как элементы flexbox распределяются вдоль основной оси.\r\nВозможные значения: \"center\", \"start\", \"end\", \"baseline\", \"space-between\", \"space-around\", \"space-evenly\".\n\n  * `gap` {string} - Определяет размер промежутка между элементами flexbox.\r\nВозможные значения: \"none\", \"2xs\", \"xs\", \"s\", \"sm\", \"m\", \"l\", \"xl\", \"2xl\", \"3xl\".\n\n  * `flex-wrap` {string} - Определяет, будет ли flex-контейнер однострочным или многострочным.\r\nВозможные значения: \"nowrap\", \"wrap\", \"wrap-reverse\".\n\n  * `inline-flex` {boolean} - Определяет, будет ли элемент отрисовываться как flex или inline-flex.\n\n  * `full-width` {boolean} - Устанавливает ширину 100%\n\nProperties:\n\n  * `flexDirection` {string} - Определяет, как элементы flexbox упорядочиваются внутри контейнера flexbox.\r\nВозможные значения: \"row\", \"column\".\n\n  * `alignItems` {string} - Определяет, как элементы flexbox выравниваются вдоль поперечной оси.\r\nВозможные значения: \"start\", \"center\", \"end\".\n\n  * `justifyContent` {string | undefined} - Определяет, как элементы flexbox распределяются вдоль основной оси.\r\nВозможные значения: \"center\", \"start\", \"end\", \"baseline\", \"space-between\", \"space-around\", \"space-evenly\".\n\n  * `gap` {string} - Определяет размер промежутка между элементами flexbox.\r\nВозможные значения: \"none\", \"2xs\", \"xs\", \"s\", \"sm\", \"m\", \"l\", \"xl\", \"2xl\", \"3xl\".\n\n  * `flexWrap` {string} - Определяет, будет ли flex-контейнер однострочным или многострочным.\r\nВозможные значения: \"nowrap\", \"wrap\", \"wrap-reverse\".\n\n  * `isInline` {boolean} - Определяет, будет ли элемент отрисовываться как flex или inline-flex.\n\n  * `fullWidth` {boolean} - Устанавливает ширину 100%",
+      "description": "`awc-stack` - Компонент-обертка, который управляет расположением ближайших дочерних элементов по вертикальной или горизонтальной оси с необязательным интервалом между каждым дочерним элементом.\n\nAttributes:\n\n  * `flex-direction` {`\"row\" | \"column\"`} - Определяет, как элементы flexbox упорядочиваются внутри контейнера flexbox.\r\nВозможные значения: \"row\", \"column\".\n\n  * `align-items` {`\"start\" | \"center\" | \"end\"`} - Определяет, как элементы flexbox выравниваются вдоль поперечной оси.\r\nВозможные значения: \"start\", \"center\", \"end\".\n\n  * `justify-content` {`\"start\" | \"center\" | \"end\" | \"baseline\" | \"space-between\" | \"space-around\" | \"space-evenly\" | undefined`} - Определяет, как элементы flexbox распределяются вдоль основной оси.\r\nВозможные значения: \"center\", \"start\", \"end\", \"baseline\", \"space-between\", \"space-around\", \"space-evenly\".\n\n  * `gap` {`\"none\" | \"s\" | \"m\" | \"l\" | \"2xs\" | \"xs\" | \"sm\" | \"xl\" | \"2xl\" | \"3xl\"`} - Определяет размер промежутка между элементами flexbox.\r\nВозможные значения: \"none\", \"2xs\", \"xs\", \"s\", \"sm\", \"m\", \"l\", \"xl\", \"2xl\", \"3xl\".\n\n  * `flex-wrap` {`\"nowrap\" | \"wrap\" | \"wrap-reverse\"`} - Определяет, будет ли flex-контейнер однострочным или многострочным.\r\nВозможные значения: \"nowrap\", \"wrap\", \"wrap-reverse\".\n\n  * `inline-flex` {`boolean`} - Определяет, будет ли элемент отрисовываться как flex или inline-flex.\n\n  * `full-width` {`boolean`} - Устанавливает ширину 100%\n\nProperties:\n\n  * `flexDirection` {`\"row\" | \"column\"`} - Определяет, как элементы flexbox упорядочиваются внутри контейнера flexbox.\r\nВозможные значения: \"row\", \"column\".\n\n  * `alignItems` {`\"start\" | \"center\" | \"end\"`} - Определяет, как элементы flexbox выравниваются вдоль поперечной оси.\r\nВозможные значения: \"start\", \"center\", \"end\".\n\n  * `justifyContent` {`\"start\" | \"center\" | \"end\" | \"baseline\" | \"space-between\" | \"space-around\" | \"space-evenly\" | undefined`} - Определяет, как элементы flexbox распределяются вдоль основной оси.\r\nВозможные значения: \"center\", \"start\", \"end\", \"baseline\", \"space-between\", \"space-around\", \"space-evenly\".\n\n  * `gap` {`\"none\" | \"s\" | \"m\" | \"l\" | \"2xs\" | \"xs\" | \"sm\" | \"xl\" | \"2xl\" | \"3xl\"`} - Определяет размер промежутка между элементами flexbox.\r\nВозможные значения: \"none\", \"2xs\", \"xs\", \"s\", \"sm\", \"m\", \"l\", \"xl\", \"2xl\", \"3xl\".\n\n  * `flexWrap` {`\"nowrap\" | \"wrap\" | \"wrap-reverse\"`} - Определяет, будет ли flex-контейнер однострочным или многострочным.\r\nВозможные значения: \"nowrap\", \"wrap\", \"wrap-reverse\".\n\n  * `isInline` {`boolean`} - Определяет, будет ли элемент отрисовываться как flex или inline-flex.\n\n  * `fullWidth` {`boolean`} - Устанавливает ширину 100%\n\n  * `styles` {`CSSResultGroup`} - ",
       "attributes": [
         {
           "name": "flex-direction",
-          "description": "`flex-direction` {string} - Определяет, как элементы flexbox упорядочиваются внутри контейнера flexbox.\r\nВозможные значения: \"row\", \"column\".\n\nProperty: flexDirection\n\nDefault: row",
+          "description": "`flex-direction` {`\"row\" | \"column\"`} - Определяет, как элементы flexbox упорядочиваются внутри контейнера flexbox.\r\nВозможные значения: \"row\", \"column\".\n\nProperty: flexDirection\n\nDefault: row",
           "values": [
             {
               "name": "row"
@@ -2308,7 +2374,7 @@
         },
         {
           "name": "align-items",
-          "description": "`align-items` {string} - Определяет, как элементы flexbox выравниваются вдоль поперечной оси.\r\nВозможные значения: \"start\", \"center\", \"end\".\n\nProperty: alignItems\n\nDefault: start",
+          "description": "`align-items` {`\"start\" | \"center\" | \"end\"`} - Определяет, как элементы flexbox выравниваются вдоль поперечной оси.\r\nВозможные значения: \"start\", \"center\", \"end\".\n\nProperty: alignItems\n\nDefault: start",
           "values": [
             {
               "name": "start"
@@ -2323,7 +2389,7 @@
         },
         {
           "name": "justify-content",
-          "description": "`justify-content` {string | undefined} - Определяет, как элементы flexbox распределяются вдоль основной оси.\r\nВозможные значения: \"center\", \"start\", \"end\", \"baseline\", \"space-between\", \"space-around\", \"space-evenly\".\n\nProperty: justifyContent",
+          "description": "`justify-content` {`\"start\" | \"center\" | \"end\" | \"baseline\" | \"space-between\" | \"space-around\" | \"space-evenly\" | undefined`} - Определяет, как элементы flexbox распределяются вдоль основной оси.\r\nВозможные значения: \"center\", \"start\", \"end\", \"baseline\", \"space-between\", \"space-around\", \"space-evenly\".\n\nProperty: justifyContent",
           "values": [
             {
               "name": "start"
@@ -2350,7 +2416,7 @@
         },
         {
           "name": "gap",
-          "description": "`gap` {string} - Определяет размер промежутка между элементами flexbox.\r\nВозможные значения: \"none\", \"2xs\", \"xs\", \"s\", \"sm\", \"m\", \"l\", \"xl\", \"2xl\", \"3xl\".\n\nProperty: gap\n\nDefault: s",
+          "description": "`gap` {`\"none\" | \"s\" | \"m\" | \"l\" | \"2xs\" | \"xs\" | \"sm\" | \"xl\" | \"2xl\" | \"3xl\"`} - Определяет размер промежутка между элементами flexbox.\r\nВозможные значения: \"none\", \"2xs\", \"xs\", \"s\", \"sm\", \"m\", \"l\", \"xl\", \"2xl\", \"3xl\".\n\nProperty: gap\n\nDefault: s",
           "values": [
             {
               "name": "none"
@@ -2386,7 +2452,7 @@
         },
         {
           "name": "flex-wrap",
-          "description": "`flex-wrap` {string} - Определяет, будет ли flex-контейнер однострочным или многострочным.\r\nВозможные значения: \"nowrap\", \"wrap\", \"wrap-reverse\".\n\nProperty: flexWrap",
+          "description": "`flex-wrap` {`\"nowrap\" | \"wrap\" | \"wrap-reverse\"`} - Определяет, будет ли flex-контейнер однострочным или многострочным.\r\nВозможные значения: \"nowrap\", \"wrap\", \"wrap-reverse\".\n\nProperty: flexWrap",
           "values": [
             {
               "name": "nowrap"
@@ -2401,12 +2467,12 @@
         },
         {
           "name": "inline-flex",
-          "description": "`inline-flex` {boolean} - Определяет, будет ли элемент отрисовываться как flex или inline-flex.\n\nProperty: isInline\n\nDefault: false",
+          "description": "`inline-flex` {`boolean`} - Определяет, будет ли элемент отрисовываться как flex или inline-flex.\n\nProperty: isInline\n\nDefault: false",
           "valueSet": "v"
         },
         {
           "name": "full-width",
-          "description": "`full-width` {boolean} - Устанавливает ширину 100%\n\nProperty: fullWidth\n\nDefault: false",
+          "description": "`full-width` {`boolean`} - Устанавливает ширину 100%\n\nProperty: fullWidth\n\nDefault: false",
           "valueSet": "v"
         }
       ]
@@ -2453,7 +2519,7 @@
     },
     {
       "name": "awc-switcher",
-      "description": "Events:\n\n  * `change` {`Event`} - \n\nAttributes:\n\n  * `checked` {`boolean`} - Определяет активность свитчера.\n\n  * `disabled` {`boolean`} - Отключает свитчер.\n\n  * `name` {`string`} - Имя свитчера.\n\n  * `value` {`string`} - Значение свитчера.\n\n  * `variant` {`AwcSwitcherVariant`} - Вариант отображения переключателя.\n\n  * `size` {`AwcSwitcherSize`} - Варианты размеров переключателя.\n\n  * `custom-color` {string} - Цвет состояния переключателя.\n\nProperties:\n\n  * `checked` {`boolean`} - Определяет активность свитчера.\n\n  * `disabled` {`boolean`} - Отключает свитчер.\n\n  * `name` {`string`} - Имя свитчера.\n\n  * `value` {`string`} - Значение свитчера.\n\n  * `variant` {`AwcSwitcherVariant`} - Вариант отображения переключателя.\n\n  * `size` {`AwcSwitcherSize`} - Варианты размеров переключателя.\n\n  * `customColor` {string} - Цвет состояния переключателя.\n\n  * `_onToggle` {EventDispatcher<boolean>} - \n\n  * `validationTarget` {`HTMLElement | null | undefined`} - \n\n  * `form` {`HTMLFormElement`} - \n\n  * `internals` - \n\n  * `showError` {`boolean`} - \n\n  * `validationMessage` {`string`} - \n\n  * `validity` {`ValidityState`} - \n\n  * `validationComplete` {`Promise<void>`} - ",
+      "description": "Events:\n\n  * `change` {`Event`} - \n\nAttributes:\n\n  * `checked` {`boolean`} - Определяет активность свитчера.\n\n  * `disabled` {`boolean`} - Отключает свитчер.\n\n  * `name` {`string`} - Имя свитчера.\n\n  * `value` {`string`} - Значение свитчера.\n\n  * `variant` {`\"primary\" | \"gray\" | \"white\"`} - Вариант отображения переключателя.\n\n  * `size` {`\"regular\" | \"small\"`} - Варианты размеров переключателя.\n\n  * `custom-color` {string} - Цвет состояния переключателя.\n\nProperties:\n\n  * `checked` {`boolean`} - Определяет активность свитчера.\n\n  * `disabled` {`boolean`} - Отключает свитчер.\n\n  * `name` {`string`} - Имя свитчера.\n\n  * `value` {`string`} - Значение свитчера.\n\n  * `variant` {`\"primary\" | \"gray\" | \"white\"`} - Вариант отображения переключателя.\n\n  * `size` {`\"regular\" | \"small\"`} - Варианты размеров переключателя.\n\n  * `customColor` {string} - Цвет состояния переключателя.\n\n  * `_onToggle` {EventDispatcher<boolean>} - \n\n  * `validationTarget` {`HTMLElement | null | undefined`} - \n\n  * `form` {`HTMLFormElement`} - \n\n  * `internals` - \n\n  * `showError` {`boolean`} - \n\n  * `validationMessage` {`string`} - \n\n  * `validity` {`ValidityState`} - \n\n  * `validationComplete` {`Promise<void>`} - ",
       "attributes": [
         {
           "name": "checked",
@@ -2475,7 +2541,7 @@
         },
         {
           "name": "variant",
-          "description": "`variant` {`AwcSwitcherVariant`} - Вариант отображения переключателя.\n\nProperty: variant\n\nDefault: primary",
+          "description": "`variant` {`\"primary\" | \"gray\" | \"white\"`} - Вариант отображения переключателя.\n\nProperty: variant\n\nDefault: primary",
           "values": [
             {
               "name": "primary"
@@ -2490,7 +2556,7 @@
         },
         {
           "name": "size",
-          "description": "`size` {`AwcSwitcherSize`} - Варианты размеров переключателя.\n\nProperty: size\n\nDefault: regular",
+          "description": "`size` {`\"regular\" | \"small\"`} - Варианты размеров переключателя.\n\nProperty: size\n\nDefault: regular",
           "values": [
             {
               "name": "regular"
@@ -2512,6 +2578,7 @@
     },
     {
       "name": "awc-table-wrapper",
+      "description": "Properties:\n\n  * `styles` {`CSSResultGroup | undefined`} - ",
       "attributes": []
     },
     {
@@ -2542,7 +2609,7 @@
     },
     {
       "name": "awc-tag",
-      "description": "Attributes:\n\n  * `custom-color` {`string`} - Установка пользовательского цвета в формате HEX\n\n  * `base-color` {`TagColor`} - Установка базовых цветов из палитры\n\n  * `variant` {`TagVariant`} - Выбор формы компонента\n\nProperties:\n\n  * `customColor` {`string`} - Установка пользовательского цвета в формате HEX\n\n  * `baseColor` {`TagColor`} - Установка базовых цветов из палитры\n\n  * `variant` {`TagVariant`} - Выбор формы компонента",
+      "description": "Attributes:\n\n  * `custom-color` {`string`} - Установка пользовательского цвета в формате HEX\n\n  * `base-color` {`\"global-red-2-600\" | \"global-red-2-500\" | \"global-orange-500\" | \"global-yellow-500\" | \"global-yellow-300\" | \"global-light-green-400\" | \"global-light-green-600\" | \"global-green-600\" | ... 15 more ... | \"colors-light-dark-blue\"`} - Установка базовых цветов из палитры\n\n  * `variant` {`\"circle\" | \"square\" | \"bullet\"`} - Выбор формы компонента\n\nProperties:\n\n  * `customColor` {`string`} - Установка пользовательского цвета в формате HEX\n\n  * `baseColor` {`\"global-red-2-600\" | \"global-red-2-500\" | \"global-orange-500\" | \"global-yellow-500\" | \"global-yellow-300\" | \"global-light-green-400\" | \"global-light-green-600\" | \"global-green-600\" | ... 15 more ... | \"colors-light-dark-blue\"`} - Установка базовых цветов из палитры\n\n  * `variant` {`\"circle\" | \"square\" | \"bullet\"`} - Выбор формы компонента",
       "attributes": [
         {
           "name": "custom-color",
@@ -2550,7 +2617,7 @@
         },
         {
           "name": "base-color",
-          "description": "`base-color` {`TagColor`} - Установка базовых цветов из палитры\n\nProperty: baseColor\n\nDefault: colors-light-secondary",
+          "description": "`base-color` {`\"global-red-2-600\" | \"global-red-2-500\" | \"global-orange-500\" | \"global-yellow-500\" | \"global-yellow-300\" | \"global-light-green-400\" | \"global-light-green-600\" | \"global-green-600\" | ... 15 more ... | \"colors-light-dark-blue\"`} - Установка базовых цветов из палитры\n\nProperty: baseColor\n\nDefault: colors-light-secondary",
           "values": [
             {
               "name": "global-red-2-600"
@@ -2628,13 +2695,13 @@
         },
         {
           "name": "variant",
-          "description": "`variant` {`TagVariant`} - Выбор формы компонента\n\nProperty: variant\n\nDefault: square",
+          "description": "`variant` {`\"circle\" | \"square\" | \"bullet\"`} - Выбор формы компонента\n\nProperty: variant\n\nDefault: square",
           "values": [
             {
-              "name": "square"
+              "name": "circle"
             },
             {
-              "name": "circle"
+              "name": "square"
             },
             {
               "name": "bullet"
@@ -2722,7 +2789,7 @@
     },
     {
       "name": "awc-toast",
-      "description": "Attributes:\n\n  * `text` {`string | undefined`} - Текст уведомления.\n\n  * `htmlContent` {string | undefined} - HTML-контент уведомления.\n\n  * `position` {AwcToastPosition} - Позиция уведомления на странице (отражается в атрибутах элемента).\r\nВозможные значения: \"top-center\", \"bottom-left\".\n\n  * `variant` {AwcToastType} - Тип уведомления (отражается в атрибутах элемента).\r\nВозможные значения: \"info\", \"error\", \"success\".\n\n  * `duration` {number} - Длительность отображения уведомления в миллисекундах (отражается в атрибутах элемента).\n\n  * `with-close` {boolean} - Флаг, указывающий, следует ли отображать кнопку закрытия (отражается в атрибутах элемента).\n\n  * `sanitize` {boolean} - Флаг, указывающий, следует ли санитизировать HTML-контент для безопасности.\n\n  * `textSanitize` {\"unsafe\" | \"sanitize\" | \"safety\"} - Уровень санитизации текста уведомления.\n\n  * `contentSanitize` {AwcToastSanitizeLevel} - Уровень санитизации HTML-контента уведомления.\n\nProperties:\n\n  * `text` {`string | undefined`} - Текст уведомления.\n\n  * `htmlContent` {string | undefined} - HTML-контент уведомления.\n\n  * `position` {AwcToastPosition} - Позиция уведомления на странице (отражается в атрибутах элемента).\r\nВозможные значения: \"top-center\", \"bottom-left\".\n\n  * `variant` {AwcToastType} - Тип уведомления (отражается в атрибутах элемента).\r\nВозможные значения: \"info\", \"error\", \"success\".\n\n  * `duration` {number} - Длительность отображения уведомления в миллисекундах (отражается в атрибутах элемента).\n\n  * `withClose` {boolean} - Флаг, указывающий, следует ли отображать кнопку закрытия (отражается в атрибутах элемента).\n\n  * `sanitize` {boolean} - Флаг, указывающий, следует ли санитизировать HTML-контент для безопасности.\n\n  * `textSanitize` {\"unsafe\" | \"sanitize\" | \"safety\"} - Уровень санитизации текста уведомления.\n\n  * `contentSanitize` {AwcToastSanitizeLevel} - Уровень санитизации HTML-контента уведомления.\n\n  * `onShown` - Callback: Вызывается при показе тоста.\n\n  * `onHidden` - Callback: Вызывается при скрытии тоста.\n\n  * `onClick` - Callback: Вызывается при клике на тост.\n\n  * `onCloseClick` - Callback: Вызывается при клике на крестик.\n\n  * `isVisible` {`boolean`} - \n\n  * `isQueued` {`boolean`} - \n\n  * `timeoutId` {`number | Timeout | undefined`} - \n\n  * `isHovered` {`boolean`} - \n\n  * `resumeTimeoutAfterHover` {`number | Timeout | undefined`} - \n\n  * `toastQueue` {`AwcToast[]`} - \n\n  * `maxVisibleToasts` {`number`} - \n\n  * `styles` {`CSSResult | undefined`} - ",
+      "description": "Attributes:\n\n  * `text` {`string | undefined`} - Текст уведомления.\n\n  * `htmlContent` {`string | undefined`} - HTML-контент уведомления.\n\n  * `position` {`\"top-center\" | \"bottom-left\"`} - Позиция уведомления на странице (отражается в атрибутах элемента).\n\n  * `variant` {`\"warning\" | \"success\" | \"info\" | \"error\"`} - Тип уведомления (отражается в атрибутах элемента).\n\n  * `duration` {`number`} - Длительность отображения уведомления в миллисекундах (отражается в атрибутах элемента).\n\n  * `with-close` {`boolean`} - Флаг, указывающий, следует ли отображать кнопку закрытия (отражается в атрибутах элемента).\n\n  * `sanitize` {`boolean`} - Флаг, указывающий, следует ли санитизировать HTML-контент для безопасности.\n\n  * `textSanitize` {`\"unsafe\" | \"sanitize\" | \"safety\"`} - Уровень санитизации текста уведомления.\n\n  * `contentSanitize` {`\"unsafe\" | \"sanitize\" | \"safety\"`} - Уровень санитизации HTML-контента уведомления.\n\nProperties:\n\n  * `text` {`string | undefined`} - Текст уведомления.\n\n  * `htmlContent` {`string | undefined`} - HTML-контент уведомления.\n\n  * `position` {`\"top-center\" | \"bottom-left\"`} - Позиция уведомления на странице (отражается в атрибутах элемента).\n\n  * `variant` {`\"warning\" | \"success\" | \"info\" | \"error\"`} - Тип уведомления (отражается в атрибутах элемента).\n\n  * `duration` {`number`} - Длительность отображения уведомления в миллисекундах (отражается в атрибутах элемента).\n\n  * `withClose` {`boolean`} - Флаг, указывающий, следует ли отображать кнопку закрытия (отражается в атрибутах элемента).\n\n  * `sanitize` {`boolean`} - Флаг, указывающий, следует ли санитизировать HTML-контент для безопасности.\n\n  * `textSanitize` {`\"unsafe\" | \"sanitize\" | \"safety\"`} - Уровень санитизации текста уведомления.\n\n  * `contentSanitize` {`\"unsafe\" | \"sanitize\" | \"safety\"`} - Уровень санитизации HTML-контента уведомления.\n\n  * `onShown` - Callback: Вызывается при показе тоста.\n\n  * `onHidden` - Callback: Вызывается при скрытии тоста.\n\n  * `onClick` - Callback: Вызывается при клике на тост.\n\n  * `onCloseClick` - Callback: Вызывается при клике на крестик.\n\n  * `isVisible` {`boolean`} - \n\n  * `isQueued` {`boolean`} - \n\n  * `timeoutId` {`number | Timeout | undefined`} - \n\n  * `isHovered` {`boolean`} - \n\n  * `resumeTimeoutAfterHover` {`number | Timeout | undefined`} - \n\n  * `toastQueue` {`AwcToast[]`} - \n\n  * `maxVisibleToasts` {`number`} - \n\n  * `styles` {`CSSResult | undefined`} - ",
       "attributes": [
         {
           "name": "text",
@@ -2731,12 +2798,12 @@
         },
         {
           "name": "htmlContent",
-          "description": "`htmlContent` {string | undefined} - HTML-контент уведомления.\n\nProperty: htmlContent",
+          "description": "`htmlContent` {`string | undefined`} - HTML-контент уведомления.\n\nProperty: htmlContent",
           "values": []
         },
         {
           "name": "position",
-          "description": "`position` {AwcToastPosition} - Позиция уведомления на странице (отражается в атрибутах элемента).\r\nВозможные значения: \"top-center\", \"bottom-left\".\n\nProperty: position\n\nDefault: \"top-center\"",
+          "description": "`position` {`\"top-center\" | \"bottom-left\"`} - Позиция уведомления на странице (отражается в атрибутах элемента).\n\nProperty: position\n\nDefault: \"top-center\"",
           "values": [
             {
               "name": "top-center"
@@ -2748,7 +2815,7 @@
         },
         {
           "name": "variant",
-          "description": "`variant` {AwcToastType} - Тип уведомления (отражается в атрибутах элемента).\r\nВозможные значения: \"info\", \"error\", \"success\".\n\nProperty: variant\n\nDefault: \"info\"",
+          "description": "`variant` {`\"warning\" | \"success\" | \"info\" | \"error\"`} - Тип уведомления (отражается в атрибутах элемента).\n\nProperty: variant\n\nDefault: \"info\"",
           "values": [
             {
               "name": "warning"
@@ -2766,21 +2833,21 @@
         },
         {
           "name": "duration",
-          "description": "`duration` {number} - Длительность отображения уведомления в миллисекундах (отражается в атрибутах элемента).\n\nProperty: duration\n\nDefault: 3000"
+          "description": "`duration` {`number`} - Длительность отображения уведомления в миллисекундах (отражается в атрибутах элемента).\n\nProperty: duration\n\nDefault: 3000"
         },
         {
           "name": "with-close",
-          "description": "`with-close` {boolean} - Флаг, указывающий, следует ли отображать кнопку закрытия (отражается в атрибутах элемента).\n\nProperty: withClose\n\nDefault: false",
+          "description": "`with-close` {`boolean`} - Флаг, указывающий, следует ли отображать кнопку закрытия (отражается в атрибутах элемента).\n\nProperty: withClose\n\nDefault: false",
           "valueSet": "v"
         },
         {
           "name": "sanitize",
-          "description": "`sanitize` {boolean} - Флаг, указывающий, следует ли санитизировать HTML-контент для безопасности.\n\nProperty: sanitize\n\nDefault: true",
+          "description": "`sanitize` {`boolean`} - Флаг, указывающий, следует ли санитизировать HTML-контент для безопасности.\n\nProperty: sanitize\n\nDefault: true",
           "valueSet": "v"
         },
         {
           "name": "textSanitize",
-          "description": "`textSanitize` {\"unsafe\" | \"sanitize\" | \"safety\"} - Уровень санитизации текста уведомления.\n\nProperty: textSanitize\n\nDefault: \"sanitize\"",
+          "description": "`textSanitize` {`\"unsafe\" | \"sanitize\" | \"safety\"`} - Уровень санитизации текста уведомления.\n\nProperty: textSanitize\n\nDefault: \"sanitize\"",
           "values": [
             {
               "name": "unsafe"
@@ -2795,7 +2862,7 @@
         },
         {
           "name": "contentSanitize",
-          "description": "`contentSanitize` {AwcToastSanitizeLevel} - Уровень санитизации HTML-контента уведомления.\n\nProperty: contentSanitize\n\nDefault: \"sanitize\"",
+          "description": "`contentSanitize` {`\"unsafe\" | \"sanitize\" | \"safety\"`} - Уровень санитизации HTML-контента уведомления.\n\nProperty: contentSanitize\n\nDefault: \"sanitize\"",
           "values": [
             {
               "name": "unsafe"
@@ -2822,7 +2889,7 @@
     },
     {
       "name": "awc-tooltip-message",
-      "description": "Attributes:\n\n  * `message` {`string`} - \n\n  * `position` {`AwcTooltipPosition`} - \n\n  * `strategy` {`AwcTooltipStrategy`} - \n\n  * `spacing` {`AwcTooltipSpacing`} - \n\n  * `marker` {`boolean`} - \n\n  * `active` {`boolean`} - \n\n  * `match-width` {`boolean`} - \n\n  * `referenceEl` {`HTMLElement | null`} - \n\nProperties:\n\n  * `message` {`string`} - \n\n  * `position` {`AwcTooltipPosition`} - \n\n  * `strategy` {`AwcTooltipStrategy`} - \n\n  * `spacing` {`AwcTooltipSpacing`} - \n\n  * `marker` {`boolean`} - \n\n  * `active` {`boolean`} - \n\n  * `matchWidth` {`boolean`} - \n\n  * `referenceEl` {`HTMLElement | null`} - \n\n  * `tooltipEl` {`HTMLElement`} - \n\n  * `arrowEl` {`HTMLElement`} - \n\n  * `cleanupFloating` - \n\n  * `styles` {`CSSResult`} - ",
+      "description": "Attributes:\n\n  * `message` {`string`} - \n\n  * `position` {`\"top\" | \"bottom\" | \"left\" | \"right\"`} - \n\n  * `strategy` {`\"absolute\" | \"fixed\"`} - \n\n  * `spacing` {`2 | 4 | 8 | 12 | 16 | 32 | 24 | 20 | 40`} - \n\n  * `marker` {`boolean`} - \n\n  * `active` {`boolean`} - \n\n  * `match-width` {`boolean`} - \n\n  * `referenceEl` {`HTMLElement | null`} - \n\nProperties:\n\n  * `message` {`string`} - \n\n  * `position` {`\"top\" | \"bottom\" | \"left\" | \"right\"`} - \n\n  * `strategy` {`\"absolute\" | \"fixed\"`} - \n\n  * `spacing` {`2 | 4 | 8 | 12 | 16 | 32 | 24 | 20 | 40`} - \n\n  * `marker` {`boolean`} - \n\n  * `active` {`boolean`} - \n\n  * `matchWidth` {`boolean`} - \n\n  * `referenceEl` {`HTMLElement | null`} - \n\n  * `tooltipEl` {`HTMLElement`} - \n\n  * `arrowEl` {`HTMLElement`} - \n\n  * `cleanupFloating` - \n\n  * `styles` {`CSSResult`} - ",
       "attributes": [
         {
           "name": "message",
@@ -2830,7 +2897,7 @@
         },
         {
           "name": "position",
-          "description": "`position` {`AwcTooltipPosition`} - \n\nProperty: position\n\nDefault: top",
+          "description": "`position` {`\"top\" | \"bottom\" | \"left\" | \"right\"`} - \n\nProperty: position\n\nDefault: top",
           "values": [
             {
               "name": "top"
@@ -2848,7 +2915,7 @@
         },
         {
           "name": "strategy",
-          "description": "`strategy` {`AwcTooltipStrategy`} - \n\nProperty: strategy\n\nDefault: absolute",
+          "description": "`strategy` {`\"absolute\" | \"fixed\"`} - \n\nProperty: strategy\n\nDefault: absolute",
           "values": [
             {
               "name": "absolute"
@@ -2860,7 +2927,7 @@
         },
         {
           "name": "spacing",
-          "description": "`spacing` {`AwcTooltipSpacing`} - \n\nProperty: spacing\n\nDefault: 8",
+          "description": "`spacing` {`2 | 4 | 8 | 12 | 16 | 32 | 24 | 20 | 40`} - \n\nProperty: spacing\n\nDefault: 8",
           "values": [
             {
               "name": "2"
@@ -2881,10 +2948,10 @@
               "name": "32"
             },
             {
-              "name": "20"
+              "name": "24"
             },
             {
-              "name": "24"
+              "name": "20"
             },
             {
               "name": "40"
@@ -2915,7 +2982,7 @@
     },
     {
       "name": "awc-tooltip",
-      "description": "Events:\n\n  * `awc-tooltip-show` {} - Событие, генерируемое при показе тултипа.\n\n  * `awc-tooltip-hide` {} - Событие, генерируемое при скрытии тултипа.\n\nAttributes:\n\n  * `message` {`string`} - Текст сообщения, отображаемого в тултипе.\n\n  * `position` {`AwcTooltipPosition`} - Позиция тултипа относительно элемента.\n\n  * `strategy` {`AwcTooltipStrategy`} - Стратегия позиционирования тултипа (absolute или fixed).\n\n  * `spacing` {AwcTooltipSpacing} - Расстояние в пикселях между тултипом и элементом.\n\n  * `marker` {`boolean`} - Показывать ли стрелку, указывающую на элемент.\n\n  * `active` {`boolean`} - Определяет, виден ли тултип в данный момент.\n\n  * `disabled` {`boolean`} - Отключает взаимодействие с тултипом (например, при наведении или клике).\n\n  * `match-width` {`boolean`} - Растягивает ширину тултипа до ширины дочернего элемента.\n\n  * `target` {`string`} - Указывает, в какой элемент DOM будет помещён awc-tooltip-message.\n\n  * `portal-off` {`boolean`} - Отключение порталиннга\n\nProperties:\n\n  * `message` {`string`} - Текст сообщения, отображаемого в тултипе.\n\n  * `position` {`AwcTooltipPosition`} - Позиция тултипа относительно элемента.\n\n  * `strategy` {`AwcTooltipStrategy`} - Стратегия позиционирования тултипа (absolute или fixed).\n\n  * `spacing` {AwcTooltipSpacing} - Расстояние в пикселях между тултипом и элементом.\n\n  * `marker` {`boolean`} - Показывать ли стрелку, указывающую на элемент.\n\n  * `active` {`boolean`} - Определяет, виден ли тултип в данный момент.\n\n  * `disabled` {`boolean`} - Отключает взаимодействие с тултипом (например, при наведении или клике).\n\n  * `matchWidth` {`boolean`} - Растягивает ширину тултипа до ширины дочернего элемента.\n\n  * `target` {`string`} - Указывает, в какой элемент DOM будет помещён awc-tooltip-message.\n\n  * `portalOff` {`boolean`} - Отключение порталиннга\n\n  * `_onShowEvent` {EventDispatcher<boolean>} - Событие, генерируемое при открытии тултипа.\n\n  * `_onHideEvent` {EventDispatcher<boolean>} - Событие, генерируемое при скрытии тултипа.\n\n  * `slotEl` {`HTMLSlotElement`} - \n\n  * `tooltipMessageEl` {`AwcTooltipMessage | undefined`} - \n\n  * `tooltipMessage` {`AwcTooltipMessage | null`} - \n\n  * `activeTooltip` {`AwcTooltip | null`} - \n\n  * `referenceEl` {`HTMLElement | null`} - \n\n  * `showTimeout` {`number | null`} - \n\n  * `wasHiddenByVisibility` {`boolean`} - \n\n  * `shadowRootOptions` {`{ delegatesFocus: boolean; mode: ShadowRootMode; slotAssignment?: SlotAssignmentMode | undefined; }`} - \n\n  * `handleSlotChange` - \n\n  * `showTooltip` - \n\n  * `hideTooltip` - \n\n  * `handleFocusIn` - \n\n  * `handleFocusOut` - \n\n  * `handleVisibilityChange` - \n\n  * `styles` {`CSSResult`} - ",
+      "description": "Events:\n\n  * `awc-tooltip-show` {} - Событие, генерируемое при показе тултипа.\n\n  * `awc-tooltip-hide` {} - Событие, генерируемое при скрытии тултипа.\n\nAttributes:\n\n  * `message` {`string`} - Текст сообщения, отображаемого в тултипе.\n\n  * `position` {`\"top\" | \"bottom\" | \"left\" | \"right\"`} - Позиция тултипа относительно элемента.\n\n  * `strategy` {`\"absolute\" | \"fixed\"`} - Стратегия позиционирования тултипа (absolute или fixed).\n\n  * `spacing` {AwcTooltipSpacing} - Расстояние в пикселях между тултипом и элементом.\n\n  * `marker` {`boolean`} - Показывать ли стрелку, указывающую на элемент.\n\n  * `active` {`boolean`} - Определяет, виден ли тултип в данный момент.\n\n  * `disabled` {`boolean`} - Отключает взаимодействие с тултипом (например, при наведении или клике).\n\n  * `match-width` {`boolean`} - Растягивает ширину тултипа до ширины дочернего элемента.\n\n  * `target` {`string`} - Указывает, в какой элемент DOM будет помещён awc-tooltip-message.\n\n  * `portal-off` {`boolean`} - Отключение порталиннга\n\nProperties:\n\n  * `message` {`string`} - Текст сообщения, отображаемого в тултипе.\n\n  * `position` {`\"top\" | \"bottom\" | \"left\" | \"right\"`} - Позиция тултипа относительно элемента.\n\n  * `strategy` {`\"absolute\" | \"fixed\"`} - Стратегия позиционирования тултипа (absolute или fixed).\n\n  * `spacing` {AwcTooltipSpacing} - Расстояние в пикселях между тултипом и элементом.\n\n  * `marker` {`boolean`} - Показывать ли стрелку, указывающую на элемент.\n\n  * `active` {`boolean`} - Определяет, виден ли тултип в данный момент.\n\n  * `disabled` {`boolean`} - Отключает взаимодействие с тултипом (например, при наведении или клике).\n\n  * `matchWidth` {`boolean`} - Растягивает ширину тултипа до ширины дочернего элемента.\n\n  * `target` {`string`} - Указывает, в какой элемент DOM будет помещён awc-tooltip-message.\n\n  * `portalOff` {`boolean`} - Отключение порталиннга\n\n  * `_onShowEvent` {EventDispatcher<boolean>} - Событие, генерируемое при открытии тултипа.\n\n  * `_onHideEvent` {EventDispatcher<boolean>} - Событие, генерируемое при скрытии тултипа.\n\n  * `slotEl` {`HTMLSlotElement`} - \n\n  * `tooltipMessageEl` {`AwcTooltipMessage | undefined`} - \n\n  * `tooltipMessage` {`AwcTooltipMessage | null`} - \n\n  * `activeTooltip` {`AwcTooltip | null`} - \n\n  * `referenceEl` {`HTMLElement | null`} - \n\n  * `showTimeout` {`number | null`} - \n\n  * `wasHiddenByVisibility` {`boolean`} - \n\n  * `shadowRootOptions` {`{ delegatesFocus: boolean; mode: ShadowRootMode; slotAssignment?: SlotAssignmentMode | undefined; }`} - \n\n  * `handleSlotChange` - \n\n  * `showTooltip` - \n\n  * `hideTooltip` - \n\n  * `handleFocusIn` - \n\n  * `handleFocusOut` - \n\n  * `handleVisibilityChange` - \n\n  * `styles` {`CSSResult`} - ",
       "attributes": [
         {
           "name": "message",
@@ -2923,7 +2990,7 @@
         },
         {
           "name": "position",
-          "description": "`position` {`AwcTooltipPosition`} - Позиция тултипа относительно элемента.\n\nProperty: position\n\nDefault: top",
+          "description": "`position` {`\"top\" | \"bottom\" | \"left\" | \"right\"`} - Позиция тултипа относительно элемента.\n\nProperty: position\n\nDefault: top",
           "values": [
             {
               "name": "top"
@@ -2941,7 +3008,7 @@
         },
         {
           "name": "strategy",
-          "description": "`strategy` {`AwcTooltipStrategy`} - Стратегия позиционирования тултипа (absolute или fixed).\n\nProperty: strategy\n\nDefault: absolute",
+          "description": "`strategy` {`\"absolute\" | \"fixed\"`} - Стратегия позиционирования тултипа (absolute или fixed).\n\nProperty: strategy\n\nDefault: absolute",
           "values": [
             {
               "name": "absolute"
@@ -2974,10 +3041,10 @@
               "name": "32"
             },
             {
-              "name": "20"
+              "name": "24"
             },
             {
-              "name": "24"
+              "name": "20"
             },
             {
               "name": "40"
@@ -3025,11 +3092,11 @@
     },
     {
       "name": "awc-triple-toggler",
-      "description": "Attributes:\n\n  * `state` {string} - \n\nProperties:\n\n  * `state` {string} - \n\n  * `_onChangeState` {CustomEvent<ToggleState>} - Событие изменения состояния.",
+      "description": "`awc-triple-toggler` - Компонент тройного переключателя.\r\n\r\nЭтот компонент представляет собой тройной переключатель с возможностью выбора одного из трех состояний.\n\nEvents:\n\n  * `awc-triple-toggler-change` {} - Событие, которое срабатывает при изменении состояния переключателя.\n\nAttributes:\n\n  * `state` {`\"first\" | \"second\" | \"third\"`} - Состояние переключателя.\n\nProperties:\n\n  * `state` {`\"first\" | \"second\" | \"third\"`} - Состояние переключателя.\n\n  * `_onChangeState` {CustomEvent<ToggleState>} - Событие изменения состояния.",
       "attributes": [
         {
           "name": "state",
-          "description": "`state` {string} - \n\nProperty: state\n\nDefault: first",
+          "description": "`state` {`\"first\" | \"second\" | \"third\"`} - Состояние переключателя.\n\nProperty: state\n\nDefault: first",
           "values": [
             {
               "name": "first"
@@ -3041,6 +3108,10 @@
               "name": "third"
             }
           ]
+        },
+        {
+          "name": "onawc-triple-toggler-change",
+          "description": "`awc-triple-toggler-change` {} - Событие, которое срабатывает при изменении состояния переключателя."
         }
       ]
     },

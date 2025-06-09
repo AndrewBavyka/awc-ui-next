@@ -1,2 +1,2 @@
 const AwcRadioSizeTypes = ['regular', 'small'] as const;
-export type AwcRadioSize = typeof AwcRadioSizeTypes[number];
+export type AwcRadioSize = (typeof AwcRadioSizeTypes)[number];

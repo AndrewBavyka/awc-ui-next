@@ -18,7 +18,7 @@ export default class AwcEmtyStateLink extends LitElement {
      * @property {AwcEmptyStateLinkTarget}
      * @default _self
      */
-    @property({ type: String, reflect: true }) target: AwcEmptyStateLinkTarget = "_self";
+    @property({ type: String, reflect: true }) target: AwcEmptyStateLinkTarget = '_self';
 
     protected render(): TemplateResult {
         return this.href

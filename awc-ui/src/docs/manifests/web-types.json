@@ -360,7 +360,8 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "AwcAvatarBadgeStatus",
+                                "kind": "plain",
+                                "type": "\"none\" | \"online\" | \"offline\" | \"complete\" | \"fail\" | \"dnd\"",
                                 "required": true,
                                 "default": "\"none\""
                             },
@@ -374,7 +375,8 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "AwcAvatarBadgeSize",
+                                "kind": "plain",
+                                "type": "\"4\" | \"5\" | \"6\" | \"8\" | \"10\" | \"12\" | \"14\" | \"24\" | \"32\"",
                                 "required": true,
                                 "default": "\"12\""
                             },
@@ -391,7 +393,8 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "AwcAvatarBadgeStatus",
+                                    "kind": "plain",
+                                    "type": "\"none\" | \"online\" | \"offline\" | \"complete\" | \"fail\" | \"dnd\"",
                                     "required": true,
                                     "default": "\"none\""
                                 },
@@ -405,7 +408,8 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "AwcAvatarBadgeSize",
+                                    "kind": "plain",
+                                    "type": "\"4\" | \"5\" | \"6\" | \"8\" | \"10\" | \"12\" | \"14\" | \"24\" | \"32\"",
                                     "required": true,
                                     "default": "\"12\""
                                 },
@@ -461,7 +465,8 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "AwcAvatarGroupCounterSize",
+                                "kind": "plain",
+                                "type": "\"24\" | \"32\"",
                                 "required": true,
                                 "default": "\"24\""
                             },
@@ -509,7 +514,8 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "AwcAvatarGroupCounterSize",
+                                    "kind": "plain",
+                                    "type": "\"24\" | \"32\"",
                                     "required": true,
                                     "default": "\"24\""
                                 },
@@ -610,7 +616,8 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "AwcAvatarGroupCounterSize",
+                                "kind": "plain",
+                                "type": "\"24\" | \"32\"",
                                 "required": true,
                                 "default": "\"\\\"24\\\"\""
                             },
@@ -673,7 +680,8 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "AwcAvatarGroupCounterSize",
+                                    "kind": "plain",
+                                    "type": "\"24\" | \"32\"",
                                     "required": true,
                                     "default": "\"\\\"24\\\"\""
                                 },
@@ -954,7 +962,8 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "AwcAvatarIcon",
+                                "kind": "plain",
+                                "type": "\"undefined\" | \"none\" | \"robot\" | \"user\" | \"group\" | \"deleted\" | \"anonymous\"",
                                 "required": true,
                                 "default": "\"none\""
                             },
@@ -1126,7 +1135,8 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "AwcAvatarIcon",
+                                    "kind": "plain",
+                                    "type": "\"undefined\" | \"none\" | \"robot\" | \"user\" | \"group\" | \"deleted\" | \"anonymous\"",
                                     "required": true,
                                     "default": "\"none\""
                                 },
@@ -1211,7 +1221,8 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "string",
+                                "kind": "plain",
+                                "type": "\"primary\" | \"warning\"",
                                 "required": true,
                                 "default": "\"primary\""
                             },
@@ -1229,7 +1240,8 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "string",
+                                    "kind": "plain",
+                                    "type": "\"primary\" | \"warning\"",
                                     "required": true,
                                     "default": "\"primary\""
                                 },
@@ -1237,6 +1249,20 @@
                                 "source": {
                                     "module": "./../../components/awc-badge/awc-badge.ts",
                                     "symbol": "AwcBadge.color"
+                                }
+                            },
+                            {
+                                "name": "styles",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": "CSSResult",
+                                    "required": true,
+                                    "default": "\"badgeStyle\""
+                                },
+                                "source": {
+                                    "module": "./../../components/awc-badge/awc-badge.ts",
+                                    "symbol": "AwcBadge.styles"
                                 }
                             }
                         ]
@@ -3643,6 +3669,23 @@
                                     "module": "./../../components/awc-dialog/awc-dialog.ts",
                                     "symbol": "AwcDialog._clickOutside"
                                 }
+                            },
+                            {
+                                "name": "styles",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": [
+                                        "CSSResultGroup",
+                                        "undefined"
+                                    ],
+                                    "required": true,
+                                    "default": "[\"dialogStyle\"]"
+                                },
+                                "source": {
+                                    "module": "./../../components/awc-dialog/awc-dialog.ts",
+                                    "symbol": "AwcDialog.styles"
+                                }
                             }
                         ],
                         "events": [
@@ -3927,6 +3970,20 @@
                                     "module": "./../../components/awc-divider/awc-divider.ts",
                                     "symbol": "AwcDivider.spacing"
                                 }
+                            },
+                            {
+                                "name": "styles",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": "CSSResult",
+                                    "required": true,
+                                    "default": "\"dividerStyle\""
+                                },
+                                "source": {
+                                    "module": "./../../components/awc-divider/awc-divider.ts",
+                                    "symbol": "AwcDivider.styles"
+                                }
                             }
                         ]
                     }
@@ -4056,7 +4113,8 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "AwcDropdownItemTarget",
+                                "kind": "plain",
+                                "type": "\"_blank\" | \"_self\" | \"_parent\" | \"_top\" | \"framename\"",
                                 "required": true,
                                 "default": "\"_self\""
                             },
@@ -4122,7 +4180,8 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "AwcDropdownItemTarget",
+                                    "kind": "plain",
+                                    "type": "\"_blank\" | \"_self\" | \"_parent\" | \"_top\" | \"framename\"",
                                     "required": true,
                                     "default": "\"_self\""
                                 },
@@ -4266,7 +4325,8 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "AwcPopoverPosition",
+                                "kind": "plain",
+                                "type": "\"top\" | \"top-end\" | \"top-start\" | \"bottom\" | \"bottom-end\" | \"bottom-start\" | \"left\" | \"left-end\" | \"left-start\" | \"right\" | \"right-end\" | \"right-start\"",
                                 "required": true,
                                 "default": "\"bottom-start\""
                             },
@@ -4281,7 +4341,8 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "AwcPopoverStrategy",
+                                "kind": "plain",
+                                "type": "\"absolute\" | \"fixed\"",
                                 "required": true,
                                 "default": "\"absolute\""
                             },
@@ -4388,7 +4449,8 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "AwcPopoverPosition",
+                                    "kind": "plain",
+                                    "type": "\"top\" | \"top-end\" | \"top-start\" | \"bottom\" | \"bottom-end\" | \"bottom-start\" | \"left\" | \"left-end\" | \"left-start\" | \"right\" | \"right-end\" | \"right-start\"",
                                     "required": true,
                                     "default": "\"bottom-start\""
                                 },
@@ -4403,7 +4465,8 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "AwcPopoverStrategy",
+                                    "kind": "plain",
+                                    "type": "\"absolute\" | \"fixed\"",
                                     "required": true,
                                     "default": "\"absolute\""
                                 },
@@ -4581,7 +4644,7 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "String",
+                                "type": "string",
                                 "required": true,
                                 "default": "\"\""
                             },
@@ -4596,7 +4659,8 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "String",
+                                "kind": "plain",
+                                "type": "\"_blank\" | \"_self\" | \"_parent\" | \"_top\"",
                                 "required": true,
                                 "default": "\"_self\""
                             },
@@ -4614,7 +4678,7 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "String",
+                                    "type": "string",
                                     "required": true,
                                     "default": "\"\""
                                 },
@@ -4629,7 +4693,8 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "String",
+                                    "kind": "plain",
+                                    "type": "\"_blank\" | \"_self\" | \"_parent\" | \"_top\"",
                                     "required": true,
                                     "default": "\"_self\""
                                 },
@@ -4654,7 +4719,7 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "String",
+                                "type": "string",
                                 "required": true,
                                 "default": "\"\""
                             },
@@ -4669,7 +4734,8 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "String",
+                                "kind": "plain",
+                                "type": "\"large\" | \"small\"",
                                 "required": true,
                                 "default": "\"large\""
                             },
@@ -4687,7 +4753,7 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "String",
+                                    "type": "string",
                                     "required": true,
                                     "default": "\"\""
                                 },
@@ -4702,7 +4768,8 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "String",
+                                    "kind": "plain",
+                                    "type": "\"large\" | \"small\"",
                                     "required": true,
                                     "default": "\"large\""
                                 },
@@ -4781,7 +4848,8 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "AwcFileDisplayType",
+                                "kind": "plain",
+                                "type": "\"grid\" | \"list_block\" | \"list\"",
                                 "required": true,
                                 "default": "\"list_block\""
                             },
@@ -4873,7 +4941,8 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "AwcFileItemType",
+                                "kind": "plain",
+                                "type": "\"file\" | \"folder\" | \"systemFolder\" | \"publicFolder\"",
                                 "required": true,
                                 "default": "\"file\""
                             },
@@ -5031,7 +5100,8 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "AwcFileDisplayType",
+                                    "kind": "plain",
+                                    "type": "\"grid\" | \"list_block\" | \"list\"",
                                     "required": true,
                                     "default": "\"list_block\""
                                 },
@@ -5123,7 +5193,8 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "AwcFileItemType",
+                                    "kind": "plain",
+                                    "type": "\"file\" | \"folder\" | \"systemFolder\" | \"publicFolder\"",
                                     "required": true,
                                     "default": "\"file\""
                                 },
@@ -5320,7 +5391,7 @@
                                 "required": false,
                                 "priority": "lowest",
                                 "value": {
-                                    "type": "EventDispatcher<AwcFileItemDetails>",
+                                    "type": "EventDispatcher<IAwcFileItemDetails>",
                                     "required": true
                                 },
                                 "source": {
@@ -5333,7 +5404,7 @@
                                 "required": false,
                                 "priority": "lowest",
                                 "value": {
-                                    "type": "EventDispatcher<AwcFileItemDetails>",
+                                    "type": "EventDispatcher<IAwcFileItemDetails>",
                                     "required": true
                                 },
                                 "source": {
@@ -5346,7 +5417,7 @@
                                 "required": false,
                                 "priority": "lowest",
                                 "value": {
-                                    "type": "EventDispatcher<AwcFileItemDetails>",
+                                    "type": "EventDispatcher<IAwcFileItemDetails>",
                                     "required": true
                                 },
                                 "source": {
@@ -5452,7 +5523,8 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "AwcFileDisplayType",
+                                "kind": "plain",
+                                "type": "\"grid\" | \"list_block\" | \"list\"",
                                 "required": true,
                                 "default": "\"list_block\""
                             },
@@ -5466,7 +5538,8 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "AwcFileVariant",
+                                "kind": "plain",
+                                "type": "\"regular\" | \"accordion\" | \"compact\"",
                                 "required": true,
                                 "default": "\"regular\""
                             },
@@ -5540,7 +5613,8 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "AwcFileDisplayType",
+                                    "kind": "plain",
+                                    "type": "\"grid\" | \"list_block\" | \"list\"",
                                     "required": true,
                                     "default": "\"list_block\""
                                 },
@@ -5554,7 +5628,8 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "AwcFileVariant",
+                                    "kind": "plain",
+                                    "type": "\"regular\" | \"accordion\" | \"compact\"",
                                     "required": true,
                                     "default": "\"regular\""
                                 },
@@ -5654,7 +5729,7 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "String",
+                                "type": "string",
                                 "required": true,
                                 "default": "\"\""
                             },
@@ -5669,7 +5744,7 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "String",
+                                "type": "string",
                                 "required": true,
                                 "default": "\"\""
                             },
@@ -5684,7 +5759,8 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "String",
+                                "kind": "plain",
+                                "type": "\"24\" | \"32\" | \"20\" | \"28\" | \"30\" | \"36\" | \"40\"",
                                 "required": true,
                                 "default": "\"24\""
                             },
@@ -5699,7 +5775,8 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "String",
+                                "kind": "plain",
+                                "type": "\"button\" | \"submit\" | \"reset\"",
                                 "required": true,
                                 "default": "\"submit\""
                             },
@@ -5714,7 +5791,7 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "String",
+                                "type": "string",
                                 "required": true,
                                 "default": "\"\""
                             },
@@ -5729,7 +5806,8 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "String",
+                                "kind": "plain",
+                                "type": "\"_blank\" | \"_self\" | \"_parent\" | \"_top\"",
                                 "required": true,
                                 "default": "\"_self\""
                             },
@@ -5744,7 +5822,7 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "Boolean",
+                                "type": "boolean",
                                 "required": false,
                                 "default": "\"false\""
                             },
@@ -5762,7 +5840,7 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "String",
+                                    "type": "string",
                                     "required": true,
                                     "default": "\"\""
                                 },
@@ -5777,7 +5855,7 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "String",
+                                    "type": "string",
                                     "required": true,
                                     "default": "\"\""
                                 },
@@ -5792,7 +5870,8 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "String",
+                                    "kind": "plain",
+                                    "type": "\"24\" | \"32\" | \"20\" | \"28\" | \"30\" | \"36\" | \"40\"",
                                     "required": true,
                                     "default": "\"24\""
                                 },
@@ -5807,7 +5886,8 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "String",
+                                    "kind": "plain",
+                                    "type": "\"button\" | \"submit\" | \"reset\"",
                                     "required": true,
                                     "default": "\"submit\""
                                 },
@@ -5822,7 +5902,7 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "String",
+                                    "type": "string",
                                     "required": true,
                                     "default": "\"\""
                                 },
@@ -5837,7 +5917,8 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "String",
+                                    "kind": "plain",
+                                    "type": "\"_blank\" | \"_self\" | \"_parent\" | \"_top\"",
                                     "required": true,
                                     "default": "\"_self\""
                                 },
@@ -5852,7 +5933,7 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "Boolean",
+                                    "type": "boolean",
                                     "required": false,
                                     "default": "\"false\""
                                 },
@@ -5867,6 +5948,7 @@
                 },
                 {
                     "name": "awc-icon-loader",
+                    "description": "Компонент для загрузки спрайтов иконок",
                     "source": {
                         "module": "./../../components/awc-icon-loader/awc-icon-loader.ts",
                         "symbol": "AwcIconLoader"
@@ -5877,10 +5959,12 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "string",
+                                "kind": "plain",
+                                "type": "\"icon\" | \"module\"",
                                 "required": true,
                                 "default": "\"icon\""
                             },
+                            "description": "Указывается тип иконки",
                             "source": {
                                 "module": "./../../components/awc-icon-loader/awc-icon-loader.ts",
                                 "symbol": "AwcIconLoader.type"
@@ -5891,10 +5975,12 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "string",
+                                "kind": "plain",
+                                "type": "\"24\" | \"32\" | \"20\" | \"40\" | \"16\"",
                                 "required": true,
-                                "default": "\"\""
+                                "default": "\"16\""
                             },
+                            "description": "Указываеся размер иконки",
                             "source": {
                                 "module": "./../../components/awc-icon-loader/awc-icon-loader.ts",
                                 "symbol": "AwcIconLoader.size"
@@ -5909,6 +5995,7 @@
                                 "required": true,
                                 "default": "\"\""
                             },
+                            "description": "Путь до спрайта с иконками",
                             "source": {
                                 "module": "./../../components/awc-icon-loader/awc-icon-loader.ts",
                                 "symbol": "AwcIconLoader.src"
@@ -5922,10 +6009,12 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "string",
+                                    "kind": "plain",
+                                    "type": "\"icon\" | \"module\"",
                                     "required": true,
                                     "default": "\"icon\""
                                 },
+                                "description": "Указывается тип иконки",
                                 "source": {
                                     "module": "./../../components/awc-icon-loader/awc-icon-loader.ts",
                                     "symbol": "AwcIconLoader.type"
@@ -5936,10 +6025,12 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "string",
+                                    "kind": "plain",
+                                    "type": "\"24\" | \"32\" | \"20\" | \"40\" | \"16\"",
                                     "required": true,
-                                    "default": "\"\""
+                                    "default": "\"16\""
                                 },
+                                "description": "Указываеся размер иконки",
                                 "source": {
                                     "module": "./../../components/awc-icon-loader/awc-icon-loader.ts",
                                     "symbol": "AwcIconLoader.size"
@@ -5954,6 +6045,7 @@
                                     "required": true,
                                     "default": "\"\""
                                 },
+                                "description": "Путь до спрайта с иконками",
                                 "source": {
                                     "module": "./../../components/awc-icon-loader/awc-icon-loader.ts",
                                     "symbol": "AwcIconLoader.src"
@@ -5975,11 +6067,12 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "string",
+                                "kind": "plain",
+                                "type": "\"icon\" | \"module\"",
                                 "required": true,
                                 "default": "\"icon\""
                             },
-                            "description": "Элемент для отображения иконок.",
+                            "description": "Указывается тип иконки",
                             "source": {
                                 "module": "./../../components/awc-icon/awc-icon.ts",
                                 "symbol": "AwcIcon.type"
@@ -5990,7 +6083,8 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "string",
+                                "kind": "plain",
+                                "type": "\"24\" | \"32\" | \"20\" | \"40\" | \"16\"",
                                 "required": true,
                                 "default": "\"16\""
                             },
@@ -6038,11 +6132,12 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "string",
+                                    "kind": "plain",
+                                    "type": "\"icon\" | \"module\"",
                                     "required": true,
                                     "default": "\"icon\""
                                 },
-                                "description": "Элемент для отображения иконок.",
+                                "description": "Указывается тип иконки",
                                 "source": {
                                     "module": "./../../components/awc-icon/awc-icon.ts",
                                     "symbol": "AwcIcon.type"
@@ -6053,7 +6148,8 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "string",
+                                    "kind": "plain",
+                                    "type": "\"24\" | \"32\" | \"20\" | \"40\" | \"16\"",
                                     "required": true,
                                     "default": "\"16\""
                                 },
@@ -6204,7 +6300,8 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "string",
+                                "kind": "plain",
+                                "type": "\"number\" | \"text\" | \"email\" | \"date\" | \"time\" | \"datetime-local\" | \"month\" | \"week\" | \"password\" | \"tel\" | \"url\" | \"search\" | \"hidden\"",
                                 "required": true,
                                 "default": "\"text\""
                             },
@@ -6239,7 +6336,7 @@
                                 "required": true,
                                 "default": "\"\\\"\\\"\""
                             },
-                            "description": "Пользовательская ошибка валидации. (Автоматически становится приоритетной)",
+                            "description": "Пользовательская ошибка валидации.\r\n(Автоматически становится приоритетной)",
                             "source": {
                                 "module": "./../../components/awc-input/awc-input.ts",
                                 "symbol": "AwcInput.customError"
@@ -6533,7 +6630,8 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "string",
+                                    "kind": "plain",
+                                    "type": "\"number\" | \"text\" | \"email\" | \"date\" | \"time\" | \"datetime-local\" | \"month\" | \"week\" | \"password\" | \"tel\" | \"url\" | \"search\" | \"hidden\"",
                                     "required": true,
                                     "default": "\"text\""
                                 },
@@ -6568,7 +6666,7 @@
                                     "required": true,
                                     "default": "\"\\\"\\\"\""
                                 },
-                                "description": "Пользовательская ошибка валидации. (Автоматически становится приоритетной)",
+                                "description": "Пользовательская ошибка валидации.\r\n(Автоматически становится приоритетной)",
                                 "source": {
                                     "module": "./../../components/awc-input/awc-input.ts",
                                     "symbol": "AwcInput.customError"
@@ -7478,7 +7576,8 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "AwcPopoverPosition",
+                                "kind": "plain",
+                                "type": "\"top\" | \"top-end\" | \"top-start\" | \"bottom\" | \"bottom-end\" | \"bottom-start\" | \"left\" | \"left-end\" | \"left-start\" | \"right\" | \"right-end\" | \"right-start\"",
                                 "required": true,
                                 "default": "\"top\""
                             },
@@ -7493,7 +7592,8 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "AwcPopoverStrategy",
+                                "kind": "plain",
+                                "type": "\"absolute\" | \"fixed\"",
                                 "required": true,
                                 "default": "\"absolute\""
                             },
@@ -7508,7 +7608,8 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "AwcPopoverTriggerType",
+                                "kind": "plain",
+                                "type": "\"manual\" | \"hover\" | \"click\" | \"focus\"",
                                 "required": true,
                                 "default": "\"click\""
                             },
@@ -7601,7 +7702,8 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "AwcPopoverPosition",
+                                    "kind": "plain",
+                                    "type": "\"top\" | \"top-end\" | \"top-start\" | \"bottom\" | \"bottom-end\" | \"bottom-start\" | \"left\" | \"left-end\" | \"left-start\" | \"right\" | \"right-end\" | \"right-start\"",
                                     "required": true,
                                     "default": "\"top\""
                                 },
@@ -7616,7 +7718,8 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "AwcPopoverStrategy",
+                                    "kind": "plain",
+                                    "type": "\"absolute\" | \"fixed\"",
                                     "required": true,
                                     "default": "\"absolute\""
                                 },
@@ -7631,7 +7734,8 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "AwcPopoverTriggerType",
+                                    "kind": "plain",
+                                    "type": "\"manual\" | \"hover\" | \"click\" | \"focus\"",
                                     "required": true,
                                     "default": "\"click\""
                                 },
@@ -8111,7 +8215,8 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "AwcProgressBarSizes",
+                                "kind": "plain",
+                                "type": "\"large\" | \"small\" | \"extrasmall\" | \"medium\"",
                                 "required": true,
                                 "default": "\"midium\""
                             },
@@ -8189,7 +8294,8 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "AwcProgressBarSizes",
+                                    "kind": "plain",
+                                    "type": "\"large\" | \"small\" | \"extrasmall\" | \"medium\"",
                                     "required": true,
                                     "default": "\"midium\""
                                 },
@@ -8219,7 +8325,7 @@
                                 "required": false,
                                 "priority": "lowest",
                                 "value": {
-                                    "type": "EventDispatcher<ProgressUpdate>",
+                                    "type": "EventDispatcher<IProgressUpdateEvent>",
                                     "required": true
                                 },
                                 "description": "Событие, возникающее когда value достигает максимального (max) значения.",
@@ -8670,7 +8776,8 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "string",
+                                "kind": "plain",
+                                "type": "\"regular\" | \"small\"",
                                 "required": true,
                                 "default": "\"regular\""
                             },
@@ -8728,23 +8835,6 @@
                     ],
                     "js": {
                         "properties": [
-                            {
-                                "name": "shadowRootOptions",
-                                "required": false,
-                                "priority": "normal",
-                                "value": {
-                                    "type": [
-                                        "{ delegatesFocus: boolean; mode: ShadowRootMode; slotAssignment?: SlotAssignmentMode",
-                                        "undefined; }"
-                                    ],
-                                    "required": false,
-                                    "default": "{\"delegatesFocus\":true}"
-                                },
-                                "source": {
-                                    "module": "./../../components/awc-radio-group/awc-radio/awc-radio.ts",
-                                    "symbol": "AwcRadio.shadowRootOptions"
-                                }
-                            },
                             {
                                 "name": "name",
                                 "required": false,
@@ -8837,7 +8927,8 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "string",
+                                    "kind": "plain",
+                                    "type": "\"regular\" | \"small\"",
                                     "required": true,
                                     "default": "\"regular\""
                                 },
@@ -8961,6 +9052,23 @@
                                 "source": {
                                     "module": "./../../components/awc-radio-group/awc-radio/awc-radio.ts",
                                     "symbol": "AwcRadio._radioElement"
+                                }
+                            },
+                            {
+                                "name": "shadowRootOptions",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": [
+                                        "{ delegatesFocus: boolean; mode: ShadowRootMode; slotAssignment?: SlotAssignmentMode",
+                                        "undefined; }"
+                                    ],
+                                    "required": false,
+                                    "default": "{\"delegatesFocus\":true}"
+                                },
+                                "source": {
+                                    "module": "./../../components/awc-radio-group/awc-radio/awc-radio.ts",
+                                    "symbol": "AwcRadio.shadowRootOptions"
                                 }
                             },
                             {
@@ -10993,7 +11101,8 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "string",
+                                "kind": "plain",
+                                "type": "\"none\" | \"pulse\" | \"wave\"",
                                 "required": true,
                                 "default": "\"pulse\""
                             },
@@ -11008,7 +11117,8 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "string",
+                                "kind": "plain",
+                                "type": "\"8\" | \"12\" | \"rounded\"",
                                 "required": true,
                                 "default": "\"rounded\""
                             },
@@ -11023,7 +11133,8 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "string",
+                                "kind": "plain",
+                                "type": "\"primary\" | \"secondary\"",
                                 "required": true,
                                 "default": "\"primary\""
                             },
@@ -11041,7 +11152,8 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "string",
+                                    "kind": "plain",
+                                    "type": "\"none\" | \"pulse\" | \"wave\"",
                                     "required": true,
                                     "default": "\"pulse\""
                                 },
@@ -11056,7 +11168,8 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "string",
+                                    "kind": "plain",
+                                    "type": "\"8\" | \"12\" | \"rounded\"",
                                     "required": true,
                                     "default": "\"rounded\""
                                 },
@@ -11071,7 +11184,8 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "string",
+                                    "kind": "plain",
+                                    "type": "\"primary\" | \"secondary\"",
                                     "required": true,
                                     "default": "\"primary\""
                                 },
@@ -11079,6 +11193,20 @@
                                 "source": {
                                     "module": "./../../components/awc-skeleton/awc-skeleton.ts",
                                     "symbol": "AwcSkeleton.color"
+                                }
+                            },
+                            {
+                                "name": "styles",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": "CSSResultGroup",
+                                    "required": true,
+                                    "default": "[\"skeletonStyle\"]"
+                                },
+                                "source": {
+                                    "module": "./../../components/awc-skeleton/awc-skeleton.ts",
+                                    "symbol": "AwcSkeleton.styles"
                                 }
                             }
                         ]
@@ -11096,7 +11224,8 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "AwcSpinnerSize",
+                                "kind": "plain",
+                                "type": "\"s\" | \"m\" | \"l\"",
                                 "required": true,
                                 "default": "\"\\\"m\\\"\""
                             },
@@ -11111,7 +11240,8 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "AwcSpinnerVariant",
+                                "kind": "plain",
+                                "type": "\"primary\" | \"secondary\"",
                                 "required": true,
                                 "default": "\"\\\"primary\\\"\""
                             },
@@ -11129,7 +11259,8 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "AwcSpinnerSize",
+                                    "kind": "plain",
+                                    "type": "\"s\" | \"m\" | \"l\"",
                                     "required": true,
                                     "default": "\"\\\"m\\\"\""
                                 },
@@ -11144,7 +11275,8 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "AwcSpinnerVariant",
+                                    "kind": "plain",
+                                    "type": "\"primary\" | \"secondary\"",
                                     "required": true,
                                     "default": "\"\\\"primary\\\"\""
                                 },
@@ -11277,7 +11409,8 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "string",
+                                "kind": "plain",
+                                "type": "\"row\" | \"column\"",
                                 "required": true,
                                 "default": "\"row\""
                             },
@@ -11292,7 +11425,8 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "string",
+                                "kind": "plain",
+                                "type": "\"start\" | \"center\" | \"end\"",
                                 "required": true,
                                 "default": "\"start\""
                             },
@@ -11307,10 +11441,8 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": [
-                                    "string",
-                                    "undefined"
-                                ],
+                                "kind": "plain",
+                                "type": "\"start\" | \"center\" | \"end\" | \"baseline\" | \"space-between\" | \"space-around\" | \"space-evenly\" | undefined",
                                 "required": true
                             },
                             "description": "Определяет, как элементы flexbox распределяются вдоль основной оси.\r\nВозможные значения: \"center\", \"start\", \"end\", \"baseline\", \"space-between\", \"space-around\", \"space-evenly\".",
@@ -11324,7 +11456,8 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "string",
+                                "kind": "plain",
+                                "type": "\"none\" | \"s\" | \"m\" | \"l\" | \"2xs\" | \"xs\" | \"sm\" | \"xl\" | \"2xl\" | \"3xl\"",
                                 "required": true,
                                 "default": "\"s\""
                             },
@@ -11339,7 +11472,8 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "string",
+                                "kind": "plain",
+                                "type": "\"nowrap\" | \"wrap\" | \"wrap-reverse\"",
                                 "required": true
                             },
                             "description": "Определяет, будет ли flex-контейнер однострочным или многострочным.\r\nВозможные значения: \"nowrap\", \"wrap\", \"wrap-reverse\".",
@@ -11386,7 +11520,8 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "string",
+                                    "kind": "plain",
+                                    "type": "\"row\" | \"column\"",
                                     "required": true,
                                     "default": "\"row\""
                                 },
@@ -11401,7 +11536,8 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "string",
+                                    "kind": "plain",
+                                    "type": "\"start\" | \"center\" | \"end\"",
                                     "required": true,
                                     "default": "\"start\""
                                 },
@@ -11416,10 +11552,8 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": [
-                                        "string",
-                                        "undefined"
-                                    ],
+                                    "kind": "plain",
+                                    "type": "\"start\" | \"center\" | \"end\" | \"baseline\" | \"space-between\" | \"space-around\" | \"space-evenly\" | undefined",
                                     "required": true
                                 },
                                 "description": "Определяет, как элементы flexbox распределяются вдоль основной оси.\r\nВозможные значения: \"center\", \"start\", \"end\", \"baseline\", \"space-between\", \"space-around\", \"space-evenly\".",
@@ -11433,7 +11567,8 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "string",
+                                    "kind": "plain",
+                                    "type": "\"none\" | \"s\" | \"m\" | \"l\" | \"2xs\" | \"xs\" | \"sm\" | \"xl\" | \"2xl\" | \"3xl\"",
                                     "required": true,
                                     "default": "\"s\""
                                 },
@@ -11448,7 +11583,8 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "string",
+                                    "kind": "plain",
+                                    "type": "\"nowrap\" | \"wrap\" | \"wrap-reverse\"",
                                     "required": true
                                 },
                                 "description": "Определяет, будет ли flex-контейнер однострочным или многострочным.\r\nВозможные значения: \"nowrap\", \"wrap\", \"wrap-reverse\".",
@@ -11485,6 +11621,20 @@
                                 "source": {
                                     "module": "./../../components/awc-stack/awc-stack.ts",
                                     "symbol": "AwcStack.fullWidth"
+                                }
+                            },
+                            {
+                                "name": "styles",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": "CSSResultGroup",
+                                    "required": true,
+                                    "default": "[\"stackStyle\"]"
+                                },
+                                "source": {
+                                    "module": "./../../components/awc-stack/awc-stack.ts",
+                                    "symbol": "AwcStack.styles"
                                 }
                             }
                         ]
@@ -11803,7 +11953,8 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "AwcSwitcherVariant",
+                                "kind": "plain",
+                                "type": "\"primary\" | \"gray\" | \"white\"",
                                 "required": true,
                                 "default": "\"primary\""
                             },
@@ -11818,7 +11969,8 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "AwcSwitcherSize",
+                                "kind": "plain",
+                                "type": "\"regular\" | \"small\"",
                                 "required": true,
                                 "default": "\"regular\""
                             },
@@ -11911,7 +12063,8 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "AwcSwitcherVariant",
+                                    "kind": "plain",
+                                    "type": "\"primary\" | \"gray\" | \"white\"",
                                     "required": true,
                                     "default": "\"primary\""
                                 },
@@ -11926,7 +12079,8 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "AwcSwitcherSize",
+                                    "kind": "plain",
+                                    "type": "\"regular\" | \"small\"",
                                     "required": true,
                                     "default": "\"regular\""
                                 },
@@ -12073,6 +12227,27 @@
                     "source": {
                         "module": "./../../components/awc-table-wrapper/awc-table-wrapper.ts",
                         "symbol": "AwcTableWrapper"
+                    },
+                    "js": {
+                        "properties": [
+                            {
+                                "name": "styles",
+                                "required": false,
+                                "priority": "normal",
+                                "value": {
+                                    "type": [
+                                        "CSSResultGroup",
+                                        "undefined"
+                                    ],
+                                    "required": true,
+                                    "default": "[\"tableWrapperStyles\"]"
+                                },
+                                "source": {
+                                    "module": "./../../components/awc-table-wrapper/awc-table-wrapper.ts",
+                                    "symbol": "AwcTableWrapper.styles"
+                                }
+                            }
+                        ]
                     }
                 },
                 {
@@ -12206,7 +12381,18 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "TagColor",
+                                "type": [
+                                    "\"global-red-2-600\"",
+                                    "\"global-red-2-500\"",
+                                    "\"global-orange-500\"",
+                                    "\"global-yellow-500\"",
+                                    "\"global-yellow-300\"",
+                                    "\"global-light-green-400\"",
+                                    "\"global-light-green-600\"",
+                                    "\"global-green-600\"",
+                                    "... 15 more ...",
+                                    "\"colors-light-dark-blue\""
+                                ],
                                 "required": true,
                                 "default": "\"colors-light-secondary\""
                             },
@@ -12221,7 +12407,8 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "TagVariant",
+                                "kind": "plain",
+                                "type": "\"circle\" | \"square\" | \"bullet\"",
                                 "required": true,
                                 "default": "\"square\""
                             },
@@ -12254,7 +12441,18 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "TagColor",
+                                    "type": [
+                                        "\"global-red-2-600\"",
+                                        "\"global-red-2-500\"",
+                                        "\"global-orange-500\"",
+                                        "\"global-yellow-500\"",
+                                        "\"global-yellow-300\"",
+                                        "\"global-light-green-400\"",
+                                        "\"global-light-green-600\"",
+                                        "\"global-green-600\"",
+                                        "... 15 more ...",
+                                        "\"colors-light-dark-blue\""
+                                    ],
                                     "required": true,
                                     "default": "\"colors-light-secondary\""
                                 },
@@ -12269,7 +12467,8 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "TagVariant",
+                                    "kind": "plain",
+                                    "type": "\"circle\" | \"square\" | \"bullet\"",
                                     "required": true,
                                     "default": "\"square\""
                                 },
@@ -12863,11 +13062,12 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "AwcToastPosition",
+                                "kind": "plain",
+                                "type": "\"top-center\" | \"bottom-left\"",
                                 "required": true,
                                 "default": "\"\\\"top-center\\\"\""
                             },
-                            "description": "Позиция уведомления на странице (отражается в атрибутах элемента).\r\nВозможные значения: \"top-center\", \"bottom-left\".",
+                            "description": "Позиция уведомления на странице (отражается в атрибутах элемента).",
                             "source": {
                                 "module": "./../../components/awc-toast/awc-toast.ts",
                                 "symbol": "AwcToast.position"
@@ -12878,11 +13078,12 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "AwcToastType",
+                                "kind": "plain",
+                                "type": "\"warning\" | \"info\" | \"error\" | \"success\"",
                                 "required": true,
                                 "default": "\"\\\"info\\\"\""
                             },
-                            "description": "Тип уведомления (отражается в атрибутах элемента).\r\nВозможные значения: \"info\", \"error\", \"success\".",
+                            "description": "Тип уведомления (отражается в атрибутах элемента).",
                             "source": {
                                 "module": "./../../components/awc-toast/awc-toast.ts",
                                 "symbol": "AwcToast.variant"
@@ -12954,7 +13155,8 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "AwcToastSanitizeLevel",
+                                "kind": "plain",
+                                "type": "\"unsafe\" | \"sanitize\" | \"safety\"",
                                 "required": true,
                                 "default": "\"\\\"sanitize\\\"\""
                             },
@@ -13006,11 +13208,12 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "AwcToastPosition",
+                                    "kind": "plain",
+                                    "type": "\"top-center\" | \"bottom-left\"",
                                     "required": true,
                                     "default": "\"\\\"top-center\\\"\""
                                 },
-                                "description": "Позиция уведомления на странице (отражается в атрибутах элемента).\r\nВозможные значения: \"top-center\", \"bottom-left\".",
+                                "description": "Позиция уведомления на странице (отражается в атрибутах элемента).",
                                 "source": {
                                     "module": "./../../components/awc-toast/awc-toast.ts",
                                     "symbol": "AwcToast.position"
@@ -13021,11 +13224,12 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "AwcToastType",
+                                    "kind": "plain",
+                                    "type": "\"warning\" | \"info\" | \"error\" | \"success\"",
                                     "required": true,
                                     "default": "\"\\\"info\\\"\""
                                 },
-                                "description": "Тип уведомления (отражается в атрибутах элемента).\r\nВозможные значения: \"info\", \"error\", \"success\".",
+                                "description": "Тип уведомления (отражается в атрибутах элемента).",
                                 "source": {
                                     "module": "./../../components/awc-toast/awc-toast.ts",
                                     "symbol": "AwcToast.variant"
@@ -13097,7 +13301,8 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "AwcToastSanitizeLevel",
+                                    "kind": "plain",
+                                    "type": "\"unsafe\" | \"sanitize\" | \"safety\"",
                                     "required": true,
                                     "default": "\"\\\"sanitize\\\"\""
                                 },
@@ -13341,7 +13546,8 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "AwcTooltipPosition",
+                                "kind": "plain",
+                                "type": "\"top\" | \"bottom\" | \"left\" | \"right\"",
                                 "required": true,
                                 "default": "\"top\""
                             },
@@ -13355,7 +13561,8 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "AwcTooltipStrategy",
+                                "kind": "plain",
+                                "type": "\"absolute\" | \"fixed\"",
                                 "required": true,
                                 "default": "\"absolute\""
                             },
@@ -13369,7 +13576,17 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "AwcTooltipSpacing",
+                                "type": [
+                                    "2",
+                                    "4",
+                                    "12",
+                                    "8",
+                                    "24",
+                                    "20",
+                                    "16",
+                                    "32",
+                                    "40"
+                                ],
                                 "required": true,
                                 "default": "8"
                             },
@@ -13459,7 +13676,8 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "AwcTooltipPosition",
+                                    "kind": "plain",
+                                    "type": "\"top\" | \"bottom\" | \"left\" | \"right\"",
                                     "required": true,
                                     "default": "\"top\""
                                 },
@@ -13473,7 +13691,8 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "AwcTooltipStrategy",
+                                    "kind": "plain",
+                                    "type": "\"absolute\" | \"fixed\"",
                                     "required": true,
                                     "default": "\"absolute\""
                                 },
@@ -13487,7 +13706,17 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "AwcTooltipSpacing",
+                                    "type": [
+                                        "2",
+                                        "4",
+                                        "12",
+                                        "8",
+                                        "24",
+                                        "20",
+                                        "16",
+                                        "32",
+                                        "40"
+                                    ],
                                     "required": true,
                                     "default": "8"
                                 },
@@ -13642,7 +13871,8 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "AwcTooltipPosition",
+                                "kind": "plain",
+                                "type": "\"top\" | \"bottom\" | \"left\" | \"right\"",
                                 "required": true,
                                 "default": "\"top\""
                             },
@@ -13657,7 +13887,8 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "AwcTooltipStrategy",
+                                "kind": "plain",
+                                "type": "\"absolute\" | \"fixed\"",
                                 "required": true,
                                 "default": "\"absolute\""
                             },
@@ -13795,7 +14026,8 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "AwcTooltipPosition",
+                                    "kind": "plain",
+                                    "type": "\"top\" | \"bottom\" | \"left\" | \"right\"",
                                     "required": true,
                                     "default": "\"top\""
                                 },
@@ -13810,7 +14042,8 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "AwcTooltipStrategy",
+                                    "kind": "plain",
+                                    "type": "\"absolute\" | \"fixed\"",
                                     "required": true,
                                     "default": "\"absolute\""
                                 },
@@ -14194,6 +14427,7 @@
                 },
                 {
                     "name": "awc-triple-toggler",
+                    "description": "`awc-triple-toggler` - Компонент тройного переключателя.\r\n\r\nЭтот компонент представляет собой тройной переключатель с возможностью выбора одного из трех состояний.",
                     "source": {
                         "module": "./../../components/awc-triple-toggler/awc-triple-toggler.ts",
                         "symbol": "AwcTripleToggler"
@@ -14204,10 +14438,12 @@
                             "required": false,
                             "priority": "normal",
                             "value": {
-                                "type": "string",
+                                "kind": "plain",
+                                "type": "\"first\" | \"second\" | \"third\"",
                                 "required": true,
                                 "default": "\"first\""
                             },
+                            "description": "Состояние переключателя.",
                             "source": {
                                 "module": "./../../components/awc-triple-toggler/awc-triple-toggler.ts",
                                 "symbol": "AwcTripleToggler.state"
@@ -14221,10 +14457,12 @@
                                 "required": false,
                                 "priority": "normal",
                                 "value": {
-                                    "type": "string",
+                                    "kind": "plain",
+                                    "type": "\"first\" | \"second\" | \"third\"",
                                     "required": true,
                                     "default": "\"first\""
                                 },
+                                "description": "Состояние переключателя.",
                                 "source": {
                                     "module": "./../../components/awc-triple-toggler/awc-triple-toggler.ts",
                                     "symbol": "AwcTripleToggler.state"
@@ -14243,6 +14481,12 @@
                                     "module": "./../../components/awc-triple-toggler/awc-triple-toggler.ts",
                                     "symbol": "AwcTripleToggler._onChangeState"
                                 }
+                            }
+                        ],
+                        "events": [
+                            {
+                                "name": "awc-triple-toggler-change",
+                                "description": "Событие, которое срабатывает при изменении состояния переключателя."
                             }
                         ]
                     }

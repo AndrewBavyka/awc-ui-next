@@ -1,9 +1,11 @@
 # awc-icon-loader
 
+Компонент для загрузки спрайтов иконок
+
 ## Properties
 
-| Property | Attribute | Type     | Default |
-|----------|-----------|----------|---------|
-| `size`   | `size`    | `string` | ""      |
-| `src`    | `src`     | `string` | ""      |
-| `type`   | `type`    | `string` | "icon"  |
+| Property | Attribute | Type                                   | Default | Description                |
+|----------|-----------|----------------------------------------|---------|----------------------------|
+| `size`   | `size`    | `"24" \| "32" \| "20" \| "40" \| "16"` | "16"    | Указываеся размер иконки   |
+| `src`    | `src`     | `string`                               | ""      | Путь до спрайта с иконками |
+| `type`   | `type`    | `"icon" \| "module"`                   | "icon"  | Указывается тип иконки     |

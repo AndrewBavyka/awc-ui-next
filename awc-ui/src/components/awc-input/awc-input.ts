@@ -62,7 +62,7 @@ export default class AwcInput extends FormControlMixin(LitElement) {
      */
     @property({ type: String, reflect: true }) size: AwcInputSize = 'medium';
     /**
-     * Пользовательская ошибка валидации. 
+     * Пользовательская ошибка валидации.
      * (Автоматически становится приоритетной)
      * @property {string}
      * @default ""

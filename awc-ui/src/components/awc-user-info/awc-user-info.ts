@@ -36,7 +36,7 @@ export default class AwcUserInfo extends LitElement {
      * @default none
      * @example "complete", "none", "fail"
      */
-    @property({ type: String, reflect: true, attribute: 'avatar-status' }) status: AwcUserInfoStatus = "none";
+    @property({ type: String, reflect: true, attribute: 'avatar-status' }) status: AwcUserInfoStatus = 'none';
 
     /**
      * Ссылка на изображение для аватарки.
@@ -50,7 +50,7 @@ export default class AwcUserInfo extends LitElement {
      * @default none
      * @example "_blank", "_self"
      */
-    @property({ type: String }) target: AwcUserInfoTarget = "_self";
+    @property({ type: String }) target: AwcUserInfoTarget = '_self';
     /**
      * Принимает код hex цвета
      * @property {string}

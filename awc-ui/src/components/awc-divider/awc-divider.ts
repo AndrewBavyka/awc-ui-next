@@ -20,7 +20,7 @@ export default class AwcDivider extends LitElement {
      * @type {String}
      * @default 'l'
      */
-    @property({ type: String, reflect: true }) spacing: AwcDividerSpacing = "l";
+    @property({ type: String, reflect: true }) spacing: AwcDividerSpacing = 'l';
 
     protected render(): TemplateResult {
         return html`

@@ -12,7 +12,7 @@ export default class AwcSkeleton extends LitElement {
      * @property {AwcSkeletonEffect}
      * @default pulse
      */
-    @property({ type: String, reflect: true }) effect: AwcSkeletonEffect = "pulse";
+    @property({ type: String, reflect: true }) effect: AwcSkeletonEffect = 'pulse';
 
     /**
      * Задает скругления.

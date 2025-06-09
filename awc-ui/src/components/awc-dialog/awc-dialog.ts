@@ -36,7 +36,7 @@ export default class AwcDialog extends LitElement {
      * @type {String}
      * @default info
      */
-    @property({ type: String, reflect: true }) variant: AwcDialogVariant = "info";
+    @property({ type: String, reflect: true }) variant: AwcDialogVariant = 'info';
     /**
      * Флаг открытия/закрытия окна
      * @property {Boolean}
@@ -187,7 +187,7 @@ export default class AwcDialog extends LitElement {
     }
 
     protected render(): TemplateResult {
-        const setCurrentIcon = this.variant === "info" ? AWC_DIALOG_ICONS.infoIcon : AWC_DIALOG_ICONS.errorIcon;
+        const setCurrentIcon = this.variant === 'info' ? AWC_DIALOG_ICONS.infoIcon : AWC_DIALOG_ICONS.errorIcon;
 
         return html`
             <div @keydown=${this._closingOnEscape} tabindex="-1" class="awc-dialog">

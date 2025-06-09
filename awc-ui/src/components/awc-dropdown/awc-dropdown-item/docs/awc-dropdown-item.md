@@ -4,12 +4,12 @@
 
 ## Properties
 
-| Property   | Attribute  | Type                    | Default | Description                                      |
-|------------|------------|-------------------------|---------|--------------------------------------------------|
-| `href`     | `href`     | `string \| undefined`   | ""      | Установка ссылки                                 |
-| `selected` | `selected` | `boolean`               | "false" | Выбранный элемент                                |
-| `target`   | `target`   | `AwcDropdownItemTarget` | "_self" | Выбор тип перехода при нажатии на ссылку         |
-| `warning`  | `warning`  | `boolean`               | "false" | Определяет, что элемент является опасным (например, "Удалить"). Окрашивает элемент в красный. |
+| Property   | Attribute  | Type                                             | Default | Description                                      |
+|------------|------------|--------------------------------------------------|---------|--------------------------------------------------|
+| `href`     | `href`     | `string \| undefined`                            | ""      | Установка ссылки                                 |
+| `selected` | `selected` | `boolean`                                        | "false" | Выбранный элемент                                |
+| `target`   | `target`   | `"_blank" \| "_self" \| "_parent" \| "_top" \| "framename"` | "_self" | Выбор тип перехода при нажатии на ссылку         |
+| `warning`  | `warning`  | `boolean`                                        | "false" | Определяет, что элемент является опасным (например, "Удалить"). Окрашивает элемент в красный. |
 
 ## Methods
 

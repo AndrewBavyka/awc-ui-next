@@ -4,4 +4,4 @@ export interface IProgressUpdateEvent {
 }
 
 const AwcProgressBarSizeTypes = ['extrasmall', 'small', 'medium', 'large'] as const;
-export type AwcProgressBarSize = typeof AwcProgressBarSizeTypes[number];
+export type AwcProgressBarSize = (typeof AwcProgressBarSizeTypes)[number];

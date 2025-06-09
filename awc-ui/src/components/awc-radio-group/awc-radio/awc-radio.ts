@@ -8,7 +8,6 @@ import type AwcRadioGroup from '../awc-radio-group';
 import { awcChangeEventName } from '../awc-radio-group';
 import { classMap } from 'lit/directives/class-map.js';
 
-
 export const awcRadioTag = 'awc-radio';
 
 /**
@@ -43,7 +42,7 @@ export default class AwcRadio extends FormControlMixin(LitElement) {
      * @property {String}
      */
     @property({ type: String, reflect: true }) label: string;
-    
+
     /**
      * Пользовательская ошибка валидации. (Автоматически становится приоритетной)
      *

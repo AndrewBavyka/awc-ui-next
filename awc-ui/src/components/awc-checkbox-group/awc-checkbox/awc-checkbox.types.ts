@@ -1,2 +1,2 @@
 const AwcCheckboxSizeTypes = ['regular', 'small'] as const;
-export type AwcCheckboxSize = typeof AwcCheckboxSizeTypes[number];
+export type AwcCheckboxSize = (typeof AwcCheckboxSizeTypes)[number];

@@ -4,6 +4,6 @@
 
 ## Properties
 
-| Property | Attribute | Type     | Default   | Description |
-|----------|-----------|----------|-----------|-------------|
-| `color`  | `color`   | `string` | "primary" | Цвет бейджа |
+| Property | Attribute | Type                     | Default   | Description |
+|----------|-----------|--------------------------|-----------|-------------|
+| `color`  | `color`   | `"primary" \| "warning"` | "primary" | Цвет бейджа |

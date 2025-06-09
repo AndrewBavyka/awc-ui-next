@@ -13,13 +13,13 @@
 | `internals`          |                | readonly  |                                    |           |                                    |
 | `name`               | `name`         |           | `string`                           | ""        | Имя свитчера.                      |
 | `showError`          |                | readonly  | `boolean`                          |           |                                    |
-| `size`               | `size`         |           | `AwcSwitcherSize`                  | "regular" | Варианты размеров переключателя.   |
+| `size`               | `size`         |           | `"regular" \| "small"`             | "regular" | Варианты размеров переключателя.   |
 | `validationComplete` |                | readonly  | `Promise<void>`                    |           |                                    |
 | `validationMessage`  |                | readonly  | `string`                           |           |                                    |
 | `validationTarget`   |                |           | `HTMLElement \| null \| undefined` |           |                                    |
 | `validity`           |                | readonly  | `ValidityState`                    |           |                                    |
 | `value`              | `value`        |           | `string`                           | ""        | Значение свитчера.                 |
-| `variant`            | `variant`      |           | `AwcSwitcherVariant`               | "primary" | Вариант отображения переключателя. |
+| `variant`            | `variant`      |           | `"primary" \| "gray" \| "white"`   | "primary" | Вариант отображения переключателя. |
 
 ## Methods
 

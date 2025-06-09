@@ -1,4 +1,4 @@
-import { svg } from "lit";
+import { svg } from 'lit';
 
 export const AWC_NOTIFIER_CLOSE_ICON = svg`
     <svg class="awc-notifier__icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

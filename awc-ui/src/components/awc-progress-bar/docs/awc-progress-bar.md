@@ -4,14 +4,14 @@
 
 ## Properties
 
-| Property        | Attribute      | Type                  | Default  | Description                                      |
-|-----------------|----------------|-----------------------|----------|--------------------------------------------------|
-| `fillerElement` |                | `HTMLElement`         |          |                                                  |
-| `hidePercent`   | `hide-percent` | `boolean`             | "false"  | Флаг для отображения процентов.                  |
-| `label`         | `label`        | `string`              | ""       | Текстовый заголовок, отображаемый рядом с прогресс-баром. |
-| `max`           | `max`          | `number`              | "100"    | Максимальное значение прогресса.                 |
-| `size`          | `size`         | `AwcProgressBarSizes` | "midium" | Размер полосы загрузки.                          |
-| `value`         | `value`        | `number`              | "0"      | Текущее значение прогресса.                      |
+| Property        | Attribute      | Type                                             | Default  | Description                                      |
+|-----------------|----------------|--------------------------------------------------|----------|--------------------------------------------------|
+| `fillerElement` |                | `HTMLElement`                                    |          |                                                  |
+| `hidePercent`   | `hide-percent` | `boolean`                                        | "false"  | Флаг для отображения процентов.                  |
+| `label`         | `label`        | `string`                                         | ""       | Текстовый заголовок, отображаемый рядом с прогресс-баром. |
+| `max`           | `max`          | `number`                                         | "100"    | Максимальное значение прогресса.                 |
+| `size`          | `size`         | `"large" \| "small" \| "extrasmall" \| "medium"` | "midium" | Размер полосы загрузки.                          |
+| `value`         | `value`        | `number`                                         | "0"      | Текущее значение прогресса.                      |
 
 ## Events
 

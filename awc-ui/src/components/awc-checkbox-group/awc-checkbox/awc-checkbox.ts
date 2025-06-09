@@ -97,7 +97,7 @@ export default class AwcCheckbox extends FormControlMixin(LitElement) {
      * @type {string}
      * @default regular
      */
-    @property({reflect: true }) size: AwcCheckboxSize = 'regular';
+    @property({ reflect: true }) size: AwcCheckboxSize = 'regular';
     /**
      * Цвет состояния checkbox.
      * @type {string}

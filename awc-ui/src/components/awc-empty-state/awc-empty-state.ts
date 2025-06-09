@@ -20,7 +20,7 @@ export default class AwcEmtyState extends LitElement {
      * @property {String}
      * @default large
      */
-    @property({ type: String, reflect: true }) size: AwcEmptyStateSize = "large";
+    @property({ type: String, reflect: true }) size: AwcEmptyStateSize = 'large';
 
     get icons(): AwcIcon[] {
         return [...this.querySelectorAll(awcIconTag)]!;
@@ -33,7 +33,7 @@ export default class AwcEmtyState extends LitElement {
     private _scalingIcon(): void {
         if (this.icons) {
             this.icons.forEach((icon) => {
-                if (this.size === "large") {
+                if (this.size === 'large') {
                     icon.iconScale = '78px';
                 } else {
                     icon.iconScale = '48px';
@@ -45,7 +45,7 @@ export default class AwcEmtyState extends LitElement {
     private _setCurrentButtons(): void {
         if (this.buttons) {
             this.buttons.forEach((button) => {
-                if (this.size === "large") {
+                if (this.size === 'large') {
                     button.size = 'large';
                 } else {
                     button.size = 'regular';

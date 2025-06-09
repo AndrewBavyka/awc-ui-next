@@ -2,8 +2,8 @@
 
 ## Properties
 
-| Property  | Attribute | Type     | Default   | Description                                      |
-|-----------|-----------|----------|-----------|--------------------------------------------------|
-| `color`   | `color`   | `string` | "primary" | Цвет скелетона                                   |
-| `effect`  | `effect`  | `string` | "pulse"   | Определяет, какой эффект будет использовать скелетон. |
-| `rounded` | `rounded` | `string` | "rounded" | Задает скругления.                               |
+| Property  | Attribute | Type                          | Default   | Description                                      |
+|-----------|-----------|-------------------------------|-----------|--------------------------------------------------|
+| `color`   | `color`   | `"primary" \| "secondary"`    | "primary" | Цвет скелетона                                   |
+| `effect`  | `effect`  | `"none" \| "pulse" \| "wave"` | "pulse"   | Определяет, какой эффект будет использовать скелетон. |
+| `rounded` | `rounded` | `"8" \| "12" \| "rounded"`    | "rounded" | Задает скругления.                               |
