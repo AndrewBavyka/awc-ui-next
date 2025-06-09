@@ -2,7 +2,7 @@ import { LitElement, html, TemplateResult, PropertyValueMap, CSSResultGroup } fr
 import { customElement, property, query } from 'lit/decorators.js';
 import { ifDefined } from 'lit/directives/if-defined.js';
 import { submit } from '@open-wc/form-helpers';
-import { ButtonType, SizeType, VariantType, ColorType, TargetType } from './awc-button.types';
+import { AwcButtonVariant, AwcButtonSize, AwcButtonColor, AwcButtonType, AwcButtonTarget } from './awc-button.types';
 import { buttonStyle } from './awc-button.style';
 import AwcSpinner, { awcSpinnerTag } from '../awc-spinner/awc-spinner';
 
@@ -37,31 +37,31 @@ export default class AwcButton extends LitElement {
      * @property {ColorType}
      * @default blue
      */
-    @property({ type: String, reflect: true }) background: ColorType = 'blue';
+    @property({ type: String, reflect: true }) background: AwcButtonColor = 'blue';
     /**
      * Размер кнопки
      * @property {SizeType}
      * @default regular
      */
-    @property({ type: String, reflect: true }) size: SizeType = 'regular';
+    @property({ type: String, reflect: true }) size: AwcButtonSize = 'regular';
     /**
      * Вариант стиля кнопки
      * @property {VariantType}
      * @default primary
      */
-    @property({ type: String, reflect: true }) variant: VariantType = 'primary';
+    @property({ type: String, reflect: true }) variant: AwcButtonVariant = 'primary';
     /**
      * Тип кнопки
      * @property {ButtonType}
      * @default submit
      */
-    @property({ type: String, reflect: true }) type: ButtonType = 'submit';
+    @property({ type: String, reflect: true }) type: AwcButtonType = 'submit';
     /**
      * Тип перехода по ссылке
      * @property {TargetType}
      * @default _self
      */
-    @property({ type: String }) target: TargetType = '_self';
+    @property({ type: String }) target: AwcButtonTarget = '_self';
     /**
      * Задает адрес документа, на который следует перейти.
      * @property {String}

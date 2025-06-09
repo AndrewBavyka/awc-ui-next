@@ -1,19 +1,7 @@
-import { LitElement, TemplateResult, html } from 'lit';
+import { CSSResult, LitElement, TemplateResult, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { dividerStyle } from './awc-divider.style';
-
-export enum Spacing {
-    None = 'none',
-    XXS = '2xs',
-    XS = 'xs',
-    S = 's',
-    SM = 'sm',
-    M = 'm',
-    L = 'l',
-    XL = 'xl',
-    XXL = '2xl',
-    XXXL = '3xl',
-}
+import { AwcDividerSpacing } from './awc-divider.types';
 
 /**
  * Элемент-разделитель.
@@ -32,7 +20,7 @@ export default class AwcDivider extends LitElement {
      * @type {String}
      * @default 'l'
      */
-    @property({ type: String, reflect: true }) spacing: Spacing = Spacing.L;
+    @property({ type: String, reflect: true }) spacing: AwcDividerSpacing = "l";
 
     protected render(): TemplateResult {
         return html`
@@ -42,8 +30,5 @@ export default class AwcDivider extends LitElement {
         `;
     }
 
-    /**
-     * @ignore
-     */
-    static styles = [dividerStyle];
+    static styles: CSSResult = dividerStyle;
 }

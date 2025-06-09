@@ -1,1 +1,2 @@
-export type AwcAvatarGroupCounterSize = '24' | '32';
+const AwcAvatarGroupCounterSizeTypes = ['24', '32'] as const;
+export type AwcAvatarGroupCounterSize = typeof AwcAvatarGroupCounterSizeTypes[number];

@@ -1,7 +1,7 @@
 import { CSSResult, html, LitElement, TemplateResult } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { awcIconButtonStyles } from './awc-icon-button.style';
-import { ButtonType, TargetType } from '../awc-button/awc-button.types';
+import { AwcButtonType, AwcButtonTarget } from '../awc-button/awc-button.types';
 import { AwcIconButtonSize } from './awc-icon-button.types';
 
 export const awcIocnButtonTag = 'awc-icon-button';
@@ -10,43 +10,43 @@ export const awcIocnButtonTag = 'awc-icon-button';
 export default class AwcIconButton extends LitElement {
     /**
      * Имя кнопки.
-     * @type {String}
+     * @property {String}
      * @default
      */
     @property({ type: String, reflect: true }) name: string;
     /**
      * Значение кнопки.
-     * @type {String}
+     * @property {String}
      * @default
      */
     @property({ type: String, reflect: true }) value: string;
     /**
      * Размер кнопки (Вложенные иконки меняют размер в том числе).
-     * @type {String}
+     * @property {AwcIconButtonSize}
      * @default 24
      */
     @property({ type: String, reflect: true }) size: AwcIconButtonSize = '24';
     /**
      * Тип кнопки.
-     * @type {String}
+     * @property {AwcButtonType}
      * @default submit
      */
-    @property({ type: String, reflect: true }) type: ButtonType = 'submit';
+    @property({ type: String, reflect: true }) type: AwcButtonType = 'submit';
     /**
      * Задает адрес документа, на который следует перейти.
-     * @type {String}
+     * @property {String}
      * @default
      */
     @property({ type: String, reflect: true }) href: string;
     /**
      * Тип перехода по ссылке.
-     * @type {String}
+     * @property {AwcButtonTarget}
      * @default _self
      */
-    @property({ type: String }) target: TargetType = '_self';
+    @property({ type: String }) target: AwcButtonTarget = '_self';
     /**
      * Флаг, отключающий кнопку.
-     * @type {Boolean}
+     * @property {Boolean}
      * @default false
      */
     @property({ type: Boolean, reflect: true }) disabled = false;

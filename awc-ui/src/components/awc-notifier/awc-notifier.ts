@@ -1,6 +1,7 @@
 import { LitElement, html, TemplateResult, CSSResultGroup } from 'lit';
 import { customElement } from 'lit/decorators.js';
 import { notifierStyle } from './awc-notifier.style';
+import { AWC_NOTIFIER_CLOSE_ICON } from './awc-notifier.icons';
 
 export const awcNotifierTag = 'awc-notifier';
 
@@ -11,16 +12,6 @@ export default class AwcNotifier extends LitElement {
     }
 
     protected render(): TemplateResult {
-        const closeIcon = html`
-            <svg class="awc-notifier__icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M8.70711 7.29289C8.31658 6.90237 7.68342 6.90237 7.29289 7.29289C6.90237 7.68342 6.90237 8.31658 7.29289 8.70711L10.5858 12L7.29295 15.2929C6.90243 15.6834 6.90243 16.3166 7.29295 16.7071C7.68348 17.0976 8.31664 17.0976 8.70717 16.7071L12 13.4142L15.2929 16.7071C15.6834 17.0976 16.3166 17.0976 16.7071 16.7071C17.0976 16.3166 17.0976 15.6834 16.7071 15.2929L13.4142 12L16.7072 8.70711C17.0977 8.31658 17.0977 7.68342 16.7072 7.29289C16.3166 6.90237 15.6835 6.90237 15.293 7.29289L12 10.5858L8.70711 7.29289Z"
-                />
-            </svg>
-        `;
-
         return html`
             <div class="awc-notifier">
                 <div class="awc-notifier__wrapper">
@@ -28,7 +19,7 @@ export default class AwcNotifier extends LitElement {
                         <slot></slot>
                         <slot name="button"></slot>
                     </div>
-                    <button @click=${this._onChange} class="awc-notifier__button" type="button">${closeIcon}</button>
+                    <button @click=${this._onChange} class="awc-notifier__button" type="button">${AWC_NOTIFIER_CLOSE_ICON}</button>
                 </div>
             </div>
         `;

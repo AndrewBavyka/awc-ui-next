@@ -1,6 +1,8 @@
-import { LitElement, TemplateResult, html } from 'lit';
+import { CSSResult, LitElement, TemplateResult, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { badgeStyle } from './awc-badge.style';
+import { AwcBadgeColor } from './awc-badge.types';
+
 /**
  * Элемент бейдж
  * @element awc-badge
@@ -12,14 +14,11 @@ export default class AwcBadge extends LitElement {
      * @property {string}
      * @default primary
      */
-    @property({ type: String, reflect: true }) color = 'primary' || 'warning';
+    @property({ type: String, reflect: true }) color: AwcBadgeColor = 'primary';
 
     protected render(): TemplateResult {
         return html` <span class="awc-badge ${this.color}"></span> `;
     }
 
-    /**
-     * @ignore
-     */
-    static styles = [badgeStyle];
+    static styles: CSSResult = badgeStyle;
 }

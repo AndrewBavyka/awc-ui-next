@@ -3,6 +3,7 @@ import { customElement, property } from 'lit/decorators.js';
 import { event, EventDispatcher } from '../../utilities/event';
 import { FormControlMixin } from '@open-wc/form-control';
 import { switcherStyle } from './awc-switcher.style';
+import { AwcSwitcherSize, AwcSwitcherVariant } from './awc-switcher.types';
 
 /**
  * `awc-switcher` - Компонент переключатель
@@ -14,17 +15,6 @@ import { switcherStyle } from './awc-switcher.style';
  */
 
 export const awcSwitcherTag = 'awc-switcher';
-
-export enum AwcSwitcherVariant {
-    primary = 'primary',
-    gray = 'gray',
-    white = 'white',
-}
-
-export enum AwcSwitcherSize {
-    Regular = 'regular',
-    Small = 'small',
-}
 
 @customElement(awcSwitcherTag)
 export default class AwcSwitcher extends FormControlMixin(LitElement) {
@@ -58,17 +48,17 @@ export default class AwcSwitcher extends FormControlMixin(LitElement) {
 
     /**
      * Вариант отображения переключателя.
-     * @property {string} variant
+     * @property {AwcSwitcherVariant} variant
      * @default primary
      */
-    @property({ type: String, reflect: true }) variant: AwcSwitcherVariant = AwcSwitcherVariant.primary;
+    @property({ type: String, reflect: true }) variant: AwcSwitcherVariant = 'primary';
 
     /**
      * Варианты размеров переключателя.
-     * @property {string} size
+     * @property {AwcSwitcherSize} size
      * @default regular
      */
-    @property({ type: String, reflect: true }) size: AwcSwitcherSize = AwcSwitcherSize.Regular;
+    @property({ type: String, reflect: true }) size: AwcSwitcherSize = 'regular';
     /**
      * Цвет состояния переключателя.
      * @type {string}

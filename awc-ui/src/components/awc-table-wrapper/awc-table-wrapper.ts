@@ -1,4 +1,4 @@
-import { LitElement, html, TemplateResult, CSSResultGroup, PropertyValues } from 'lit';
+import { LitElement, html, TemplateResult, CSSResultGroup } from 'lit';
 import { customElement } from 'lit/decorators.js';
 import { tableWrapperStyles } from './awc-table-wrapper.style';
 
@@ -14,8 +14,5 @@ export default class AwcTableWrapper extends LitElement {
         return html``;
     }
 
-    /**
-     * @ignore
-     */
     static styles?: CSSResultGroup = [tableWrapperStyles];
 }

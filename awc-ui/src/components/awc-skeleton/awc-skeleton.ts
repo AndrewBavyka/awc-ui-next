@@ -1,48 +1,32 @@
 import { LitElement, html, TemplateResult, CSSResultGroup } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { skeletonStyle } from './awc-skeleton.style';
+import { AwcSkeletonEffect, AwcSkeletonColor, AwcSkeletonRounded } from './awc-skeleton.types';
 
 export const awcSkeletonTag = 'awc-skeleton';
-
-export enum SkeletonEffect {
-    None = 'none',
-    Pulse = 'pulse',
-    Sheen = 'sheen',
-}
-
-export enum SkeletonRounded {
-    Radius_8 = '8',
-    Radius_12 = '12',
-    Radius_Rounded = 'rounded',
-}
-
-export enum SkeletonColor {
-    Primary = 'primary',
-    Secodary = 'secondary',
-}
 
 @customElement(awcSkeletonTag)
 export default class AwcSkeleton extends LitElement {
     /**
      * Определяет, какой эффект будет использовать скелетон.
-     * @type {string}
+     * @property {AwcSkeletonEffect}
      * @default pulse
      */
-    @property({ type: String, reflect: true }) effect: SkeletonEffect = SkeletonEffect.Pulse;
+    @property({ type: String, reflect: true }) effect: AwcSkeletonEffect = "pulse";
 
     /**
      * Задает скругления.
-     * @type {string}
+     * @property {AwcSkeletonRounded}
      * @default rounded
      */
-    @property({ type: String, reflect: true }) rounded: SkeletonRounded = SkeletonRounded.Radius_Rounded;
+    @property({ type: String, reflect: true }) rounded: AwcSkeletonRounded = 'rounded';
 
     /**
      * Цвет скелетона
-     * @type {string}
+     * @property {AwcSkeletonColor}
      * @default primary
      */
-    @property({ type: String, reflect: true }) color: SkeletonColor = SkeletonColor.Primary;
+    @property({ type: String, reflect: true }) color: AwcSkeletonColor = 'primary';
 
     protected render(): TemplateResult {
         return html`
@@ -52,8 +36,5 @@ export default class AwcSkeleton extends LitElement {
         `;
     }
 
-    /**
-     * @ignore
-     */
     static styles: CSSResultGroup = [skeletonStyle];
 }

@@ -1,13 +1,31 @@
 import { LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
+import { AwcIconType, AwcIconSize } from '../awc-icon/awc-icon.types';
 
 export const awcIconLoaderTag = 'awc-icon-loader';
 
+/**
+ * Компонент для загрузки спрайтов иконок
+ * @element awc-icon-loader
+ */
 @customElement(awcIconLoaderTag)
 export default class AwcIconLoader extends LitElement {
-    @property({ type: String }) type = 'icon';
-    @property({ type: String }) size = '';
-    @property({ type: String }) src = '';
+    /**
+     * Указывается тип иконки
+     * @property {AwcIconType}
+     */
+    @property({ type: String }) type: AwcIconType = 'icon';
+    /**
+     * Указываеся размер иконки
+     * @property {AwcIconSize}.
+     * @default 16
+     */
+    @property({ type: String }) size: AwcIconSize = '16';
+    /**
+     * Путь до спрайта с иконками
+     * @property {String}
+     */
+    @property({ type: String }) src: string = '';
 
     private _setGlobalIcons(): Record<string, Record<string, string>> {
         const type = this.type;

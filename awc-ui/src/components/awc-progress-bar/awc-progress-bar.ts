@@ -2,20 +2,9 @@ import { LitElement, html, CSSResultGroup, TemplateResult } from 'lit';
 import { customElement, property, query } from 'lit/decorators.js';
 import { event, EventDispatcher } from '../../utilities/event';
 import { progressBarStyle } from './awc-progress-bar.style';
+import { IProgressUpdateEvent, AwcProgressBarSize } from './awc-progress-bar.types';
 
 export const awcProgressBarTag = 'awc-progress-bar';
-
-interface ProgressUpdate {
-    value: number;
-    maxReached: boolean;
-}
-
-export enum AwcProgressBarSizes {
-    EXTRASMALL = 'extrasmall',
-    SMALL = 'small',
-    MEDIUM = 'medium',
-    LARGE = 'large',
-}
 
 /**
  * Элемент интерфейса, основная задача которого, показать на каком этапе находится загрузка данных.
@@ -52,13 +41,13 @@ export default class AwcProgressBar extends LitElement {
     /**
      * Размер полосы загрузки.
      *
-     * @property {string} size
+     * @property {AwcProgressBarSize} size
      * @default midium
      */
-    @property({ type: String, reflect: true }) size: AwcProgressBarSizes = AwcProgressBarSizes.MEDIUM;
+    @property({ type: String, reflect: true }) size: AwcProgressBarSize = 'medium';
     /**
      * Флаг для отображения процентов.
-     * @property {boolean} hide-percent
+     * @property {boolean}
      * @default false
      */
     @property({ type: Boolean, reflect: true, attribute: 'hide-percent' }) hidePercent = false;
@@ -67,10 +56,10 @@ export default class AwcProgressBar extends LitElement {
      * Событие, возникающее когда value достигает максимального (max) значения.
      *
      * @event awc-progress-bar-success
-     * @type {EventDispatcher<ProgressUpdate>}
+     * @type {EventDispatcher<IProgressUpdateEvent>}
      * @private
      */
-    @event('awc-progress-bar-success') private _onSucces: EventDispatcher<ProgressUpdate>;
+    @event('awc-progress-bar-success') private _onSucces: EventDispatcher<IProgressUpdateEvent>;
 
     @query('.awc-progress-bar__filler') fillerElement!: HTMLElement;
 
@@ -100,7 +89,7 @@ export default class AwcProgressBar extends LitElement {
     }
 
     private _onSuccesEvent(): void {
-        const update: ProgressUpdate = { value: this.value, maxReached: true };
+        const update: IProgressUpdateEvent = { value: this.value, maxReached: true };
 
         this._onSucces(update);
         this._updateFillerWidth();

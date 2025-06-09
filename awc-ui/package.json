@@ -44,6 +44,7 @@
     "@open-wc/form-control": "^1.0.0",
     "@open-wc/form-helpers": "^1.0.0",
     "@popperjs/core": "^2.11.8",
+    "@types/animejs": "^3.1.13",
     "@typescript-eslint/eslint-plugin": "^8.33.1",
     "@typescript-eslint/parser": "^8.33.1",
     "eslint": "^9.28.0",

@@ -1,6 +1,6 @@
 import { LitElement, html, svg, TemplateResult, SVGTemplateResult, nothing, CSSResult } from 'lit';
 import { customElement, property, query, state } from 'lit/decorators.js';
-import { AwcCardType } from './awc-card.types';
+import { AwcCardTarget } from './awc-card.types';
 import { cardStyle } from './awc-card.style';
 import AwcIcon from '../awc-icon/awc-icon';
 import { ifDefined } from 'lit/directives/if-defined.js';
@@ -31,7 +31,7 @@ export default class AwcCard extends LitElement {
      * Атрибут target для ссылки карточки.
      * @type {string}
      */
-    @property({ type: String }) target: AwcCardType = '_self';
+    @property({ type: String }) target: AwcCardTarget = '_self';
 
     /**
      * Цвет иконки.

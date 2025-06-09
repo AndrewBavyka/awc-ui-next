@@ -1,41 +1,9 @@
 import { LitElement, html, TemplateResult, CSSResultGroup } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { tagStyle } from './awc-tag.style';
+import { AwcTagColor, AwcTagVariant } from './awc-tag.types';
 
 export const awcTagTag = 'awc-tag';
-
-export enum TagVariant {
-    Square = 'square',
-    Circle = 'circle',
-    Bullet = 'bullet',
-}
-
-export enum TagColor {
-    GlobalRed2600 = 'global-red-2-600',
-    GlobalRed2500 = 'global-red-2-500',
-    GlobalOrange500 = 'global-orange-500',
-    GlobalYellow500 = 'global-yellow-500',
-    GlobalYellow300 = 'global-yellow-300',
-    GlobalLightGreen400 = 'global-light-green-400',
-    GlobalLightGreen600 = 'global-light-green-600',
-    GlobalGreen600 = 'global-green-600',
-    GlobalGreen300 = 'global-green-300',
-    GlobalTurquoise300 = 'global-turquoise-300',
-    GlobalTurquoise400 = 'global-turquoise-400',
-    GlobalCyan300 = 'global-cyan-300',
-    GlobalCyan500 = 'global-cyan-500',
-    GlobalBlue600 = 'global-blue-600',
-    GlobalBlue400 = 'global-blue-400',
-    GlobalDeepPurple400 = 'global-deep-purple-400',
-    GlobalDeepPurple600 = 'global-deep-purple-600',
-    GlobalPurple600 = 'global-purple-600',
-    GlobalPurple400 = 'global-purple-400',
-    GlobalRed500 = 'global-red-500',
-    GlobalRed400 = 'global-red-400',
-    ColorsLightSecondary = 'colors-light-secondary',
-    ColorsLightText = 'colors-light-text',
-    ColorsLightDarkBlue = 'colors-light-dark-blue',
-}
 
 @customElement(awcTagTag)
 export default class AwcTag extends LitElement {
@@ -45,23 +13,21 @@ export default class AwcTag extends LitElement {
      * @property {string}
      * @default -
      */
-    @property({ type: String, reflect: true, attribute: 'custom-color' })
-    customColor: string;
+    @property({ type: String, reflect: true, attribute: 'custom-color' }) customColor: string;
     /**
      * Установка базовых цветов из палитры
      *
-     * @property {string}
+     * @property {AwcTagColor}
      * @default colors-light-secondary
      */
-    @property({ type: String, reflect: true, attribute: 'base-color' })
-    baseColor: TagColor = TagColor.ColorsLightSecondary;
+    @property({ type: String, reflect: true, attribute: 'base-color' }) baseColor: AwcTagColor = 'colors-light-secondary';
     /**
      * Выбор формы компонента
      *
-     * @property {string}
+     * @property {AwcTagVariant}
      * @default square
      */
-    @property({ type: String, reflect: true }) variant: TagVariant = TagVariant.Square;
+    @property({ type: String, reflect: true }) variant: AwcTagVariant = 'square';
 
     pickTextColorBasedOnBgColor(bgColor: string, lightColor: string, darkColor: string) {
         if (bgColor) {
@@ -76,7 +42,7 @@ export default class AwcTag extends LitElement {
 
     protected render(): TemplateResult {
         const currentTextColor =
-            this.variant === TagVariant.Square
+            this.variant === 'square'
                 ? this.pickTextColorBasedOnBgColor(this.customColor || this.baseColor, '--awc-tag-text-color: #FFFFFF', '--awc-tag-text-color: #55555A')
                 : '';
 

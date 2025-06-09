@@ -1,6 +1,7 @@
-export type AwcFileItemType = 'file' | 'folder' | 'systemFolder' | 'publicFolder';
+const AwcFileItemTypes = ['file', 'folder', 'systemFolder', 'publicFolder'] as const;
+export type AwcFileItemType = typeof AwcFileItemTypes[number];
 
-export interface AwcFileItemDetails {
+export interface IAwcFileItemDetails {
     id: string;
     type: AwcFileItemType;
     name: string;

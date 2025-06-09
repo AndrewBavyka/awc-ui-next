@@ -9,13 +9,13 @@ export const awcSpinnerTag = 'awc-spinner';
 export default class AwcSpinner extends LitElement {
     /**
      * Размер спинера
-     * @type {AwcSpinnerSize}
+     * @property {AwcSpinnerSize}
      * @default "m"
      */
     @property({ type: String, reflect: true }) size: AwcSpinnerSize = 'm';
     /**
      * Цвет спинера
-     * @type {AwcSpinnerVariant}
+     * @property {AwcSpinnerVariant}
      * @default "primary"
      */
     @property({ type: String, reflect: true }) variant: AwcSpinnerVariant = 'primary';

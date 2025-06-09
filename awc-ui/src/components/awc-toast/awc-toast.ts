@@ -18,57 +18,55 @@ export default class AwcToast extends LitElement {
 
     /**
      * HTML-контент уведомления.
-     * @type {string | undefined}
+     * @property {string | undefined}
      */
     @property({ type: String }) htmlContent?: string;
 
     /**
      * Позиция уведомления на странице (отражается в атрибутах элемента).
-     * Возможные значения: "top-center", "bottom-left".
-     * @type {AwcToastPosition}
+     * @property {AwcToastPosition}
      * @default "top-center"
      */
     @property({ type: String, reflect: true }) position: AwcToastPosition = 'top-center';
 
     /**
      * Тип уведомления (отражается в атрибутах элемента).
-     * Возможные значения: "info", "error", "success".
-     * @type {AwcToastType}
+     * @property {AwcToastType}
      * @default "info"
      */
     @property({ type: String, reflect: true }) variant: AwcToastType = 'info';
 
     /**
      * Длительность отображения уведомления в миллисекундах (отражается в атрибутах элемента).
-     * @type {number}
+     * @property {number}
      * @default 3000
      */
     @property({ type: Number, reflect: true }) duration = 3000;
 
     /**
      * Флаг, указывающий, следует ли отображать кнопку закрытия (отражается в атрибутах элемента).
-     * @type {boolean}
+     * @property {boolean}
      * @default false
      */
     @property({ type: Boolean, attribute: 'with-close' }) withClose = false;
 
     /**
      * Флаг, указывающий, следует ли санитизировать HTML-контент для безопасности.
-     * @type {boolean}
+     * @property {boolean}
      * @default true
      */
     @property({ type: Boolean }) sanitize = true;
 
     /**
      * Уровень санитизации текста уведомления.
-     * @type {"unsafe" | "sanitize" | "safety"}
+     * @property {AwcToastSanitizeLevel}
      * @default "sanitize"
      */
     @property({ type: String }) textSanitize: AwcToastSanitizeLevel = 'sanitize';
 
     /**
      * Уровень санитизации HTML-контента уведомления.
-     * @type {AwcToastSanitizeLevel}
+     * @property {AwcToastSanitizeLevel}
      * @default "sanitize"
      */
     @property({ type: String }) contentSanitize: AwcToastSanitizeLevel = 'sanitize';

@@ -8,7 +8,7 @@ import { innerInputValidators } from '../../utilities/form-control';
 import { submit } from '@open-wc/form-helpers';
 import { inputStyle } from './awc-input.style';
 import AwcButton from '../awc-button/awc-button';
-import { InputType, InputAutocompleteType, InputSizeType } from './awc-input.types';
+import { AwcInputType, AwcInputAutocompleteType, AwcInputSize } from './awc-input.types';
 
 export const awcInputTag = 'awc-input';
 
@@ -51,19 +51,20 @@ export default class AwcInput extends FormControlMixin(LitElement) {
     @property({ type: String, reflect: true }) hint?: string;
     /**
      * Тип атрибута для поля ввода.
-     * @type {string}
+     * @property {AwcInputType}
      * @default text
      */
-    @property({ reflect: true }) type: InputType = 'text';
+    @property({ reflect: true }) type: AwcInputType = 'text';
     /**
      * Размер поля ввода.
-     * @property {string}
+     * @property {AwcInputSize}
      * @default medium
      */
-    @property({ type: String, reflect: true }) size: InputSizeType = 'medium';
+    @property({ type: String, reflect: true }) size: AwcInputSize = 'medium';
     /**
-     * Пользовательская ошибка валидации. (Автоматически становится приоритетной)
-     * @type {string}
+     * Пользовательская ошибка валидации. 
+     * (Автоматически становится приоритетной)
+     * @property {string}
      * @default ""
      */
     @property({ reflect: true, attribute: 'custom-error' }) customError: string = '';
@@ -105,11 +106,10 @@ export default class AwcInput extends FormControlMixin(LitElement) {
     @property({ type: String, reflect: true }) pattern?: string;
     /**
      * Включение/отключение автозаполнения.
-     * @property {string}
+     * @property {AwcInputAutocompleteType}
      * @default off
      */
-    @property({ type: String, reflect: true })
-    autocomplete: InputAutocompleteType = 'off';
+    @property({ type: String, reflect: true }) autocomplete: AwcInputAutocompleteType = 'off';
     /**
      * Указывает, должно ли поле ввода автоматически получать фокус при загрузке.
      * @property {boolean}

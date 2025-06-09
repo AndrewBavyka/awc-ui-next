@@ -1,4 +1,4 @@
-import { CSSResult, html, LitElement, svg, TemplateResult } from 'lit';
+import { CSSResult, html, LitElement, TemplateResult } from 'lit';
 import { customElement } from 'lit/decorators.js';
 import { awcFileButtonStyles } from './awc-file-button.style';
 

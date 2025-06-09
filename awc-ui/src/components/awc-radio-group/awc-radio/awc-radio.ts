@@ -2,22 +2,14 @@ import { LitElement, html, TemplateResult } from 'lit';
 import { customElement, property, query, state } from 'lit/decorators.js';
 import { FormControlMixin, requiredValidator } from '@open-wc/form-control';
 import { radioStyle } from './awc-radio.style';
+import { AwcRadioSize } from './awc-radio.types';
 import { event, EventDispatcher } from '../../../utilities/event';
 import type AwcRadioGroup from '../awc-radio-group';
 import { awcChangeEventName } from '../awc-radio-group';
 import { classMap } from 'lit/directives/class-map.js';
 
-/**
- * Тег для элемента радиокнопки.
- *
- * @type {string}
- */
-export const awcRadioTag = 'awc-radio';
 
-export enum AwcRadioSize {
-    Regular = 'regular',
-    Small = 'small',
-}
+export const awcRadioTag = 'awc-radio';
 
 /**
  * Элемент радиокнопки.
@@ -31,11 +23,6 @@ export enum AwcRadioSize {
  */
 @customElement(awcRadioTag)
 export default class AwcRadio extends FormControlMixin(LitElement) {
-    static shadowRootOptions = {
-        ...LitElement.shadowRootOptions,
-        delegatesFocus: true,
-    };
-
     /**
      * Уникальное имя группы радиокнопок, к которой принадлежит данная радиокнопка.
      *
@@ -56,6 +43,7 @@ export default class AwcRadio extends FormControlMixin(LitElement) {
      * @property {String}
      */
     @property({ type: String, reflect: true }) label: string;
+    
     /**
      * Пользовательская ошибка валидации. (Автоматически становится приоритетной)
      *
@@ -63,6 +51,7 @@ export default class AwcRadio extends FormControlMixin(LitElement) {
      * @default
      */
     @property({ reflect: true, attribute: 'custom-error' }) customError: string;
+
     /**
      * Статичное, принудительное отображение ошибки.
      * @property {boolean}
@@ -70,6 +59,7 @@ export default class AwcRadio extends FormControlMixin(LitElement) {
      */
     @property({ type: Boolean, reflect: true, attribute: 'static-error' })
     staticError = false;
+
     /**
      * Флаг, указывающий, выделена ли радиокнопка.
      *
@@ -80,10 +70,10 @@ export default class AwcRadio extends FormControlMixin(LitElement) {
 
     /**
      * Выборо размера radio.
-     * @type {string}
+     * @property {AwcRadioSize}
      * @default regular
      */
-    @property({ reflect: true }) size: AwcRadioSize = AwcRadioSize.Regular;
+    @property({ reflect: true }) size: AwcRadioSize = 'regular';
 
     /**
      * Флаг, указывающий, выбрана ли радиокнопка.
@@ -138,6 +128,7 @@ export default class AwcRadio extends FormControlMixin(LitElement) {
     @query('[role=radio]') private _radioElement: HTMLElement;
     @query('[role=radio]') validationTarget: HTMLElement;
 
+    static shadowRootOptions = { ...LitElement.shadowRootOptions, delegatesFocus: true };
     static formControlValidators = [requiredValidator];
 
     @state() validationMessage = '';

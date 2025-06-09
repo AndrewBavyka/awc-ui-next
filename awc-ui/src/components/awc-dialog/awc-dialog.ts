@@ -1,28 +1,12 @@
-import { LitElement, html, svg, TemplateResult, CSSResultGroup, PropertyValues } from 'lit';
+import { LitElement, html, TemplateResult, CSSResultGroup, PropertyValues } from 'lit';
 import { customElement, property, query } from 'lit/decorators.js';
 import { dialogStyle } from './awc-dialog.style';
+import { AWC_DIALOG_ICONS } from './awc-dialog.icons';
 import AwcButton from '../awc-button/awc-button';
 import { EventDispatcher, event } from '../../utilities/event';
+import { AwcDialogVariant } from './awc-dialog.types';
 
 const awcDialogTag = 'awc-dialog';
-
-export enum DialogVariant {
-    info = 'info',
-    error = 'error',
-}
-
-const DIALOG_ICONS = {
-    infoIcon: svg`
-    <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M22.5 42C33.2696 42 42 33.2696 42 22.5C42 11.7304 33.2696 3 22.5 3C11.7304 3 3 11.7304 3 22.5C3 33.2696 11.7304 42 22.5 42ZM22.5 45C34.9264 45 45 34.9264 45 22.5C45 10.0736 34.9264 0 22.5 0C10.0736 0 0 10.0736 0 22.5C0 34.9264 10.0736 45 22.5 45ZM21 9.5C21 8.67157 21.6716 8 22.5 8C23.3284 8 24 8.67157 24 9.5V28.5C24 29.3284 23.3284 30 22.5 30C21.6716 30 21 29.3284 21 28.5V9.5ZM22.5 37C23.3284 37 24 36.3284 24 35.5C24 34.6716 23.3284 34 22.5 34C21.6716 34 21 34.6716 21 35.5C21 36.3284 21.6716 37 22.5 37Z" fill="white"/>
-    </svg>
-    `,
-    errorIcon: svg`
-    <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M22.5 42C33.2696 42 42 33.2696 42 22.5C42 11.7304 33.2696 3 22.5 3C11.7304 3 3 11.7304 3 22.5C3 33.2696 11.7304 42 22.5 42ZM22.5 45C34.9264 45 45 34.9264 45 22.5C45 10.0736 34.9264 0 22.5 0C10.0736 0 0 10.0736 0 22.5C0 34.9264 10.0736 45 22.5 45ZM14.1809 13.6699C13.6817 14.1691 13.6817 14.9786 14.1809 15.4778L20.9474 22.2444L14.181 29.0108C13.6817 29.51 13.6817 30.3195 14.181 30.8187C14.6802 31.318 15.4897 31.318 15.9889 30.8187L22.7554 24.0523L29.5218 30.8187C30.0211 31.318 30.8305 31.318 31.3298 30.8187C31.829 30.3195 31.829 29.51 31.3298 29.0108L24.5633 22.2444L31.3298 15.4778C31.8291 14.9786 31.8291 14.1691 31.3298 13.6699C30.8306 13.1706 30.0211 13.1706 29.5219 13.6699L22.7554 20.4364L15.9888 13.6699C15.4896 13.1706 14.6802 13.1706 14.1809 13.6699Z" fill="white"/>
-    </svg>
-    `,
-};
 
 /**
  *
@@ -52,7 +36,7 @@ export default class AwcDialog extends LitElement {
      * @type {String}
      * @default info
      */
-    @property({ type: String, reflect: true }) variant: DialogVariant = DialogVariant.info;
+    @property({ type: String, reflect: true }) variant: AwcDialogVariant = "info";
     /**
      * Флаг открытия/закрытия окна
      * @property {Boolean}
@@ -203,7 +187,7 @@ export default class AwcDialog extends LitElement {
     }
 
     protected render(): TemplateResult {
-        const setCurrentIcon = this.variant === DialogVariant.info ? DIALOG_ICONS.infoIcon : DIALOG_ICONS.errorIcon;
+        const setCurrentIcon = this.variant === "info" ? AWC_DIALOG_ICONS.infoIcon : AWC_DIALOG_ICONS.errorIcon;
 
         return html`
             <div @keydown=${this._closingOnEscape} tabindex="-1" class="awc-dialog">
@@ -226,8 +210,5 @@ export default class AwcDialog extends LitElement {
         `;
     }
 
-    /**
-     * @ignore
-     */
     static styles?: CSSResultGroup = [dialogStyle];
 }

@@ -6,16 +6,12 @@ import { ifDefined } from 'lit/directives/if-defined.js';
 import { live } from 'lit/directives/live.js';
 import type AwcCheckboxGroup from '../awc-checkbox-group';
 import { awcCheckboxGroupTag, awcChangeEventName } from '../awc-checkbox-group';
+import { AwcCheckboxSize } from './awc-checkbox.types';
 import { checkboxStyle } from './awc-checkbox.style';
 import { classMap } from 'lit/directives/class-map.js';
 import { when } from 'lit/directives/when.js';
 
 export const awcCheckboxTag = 'awc-checkbox';
-
-export enum AwcCheckboxSize {
-    Regular = 'regular',
-    Small = 'small',
-}
 
 /**
  * Элемент checkbox.
@@ -101,18 +97,7 @@ export default class AwcCheckbox extends FormControlMixin(LitElement) {
      * @type {string}
      * @default regular
      */
-    @property({
-        reflect: true,
-        converter: {
-            toAttribute(value: string): string | null {
-                return value === AwcCheckboxSize.Regular ? null : value; // Не отражаем дефолтное значение
-            },
-            fromAttribute(value: string | null): string {
-                return value ?? AwcCheckboxSize.Regular; // Если атрибут не задан, возвращаем дефолт
-            },
-        },
-    })
-    size: string = AwcCheckboxSize.Regular;
+    @property({reflect: true }) size: AwcCheckboxSize = 'regular';
     /**
      * Цвет состояния checkbox.
      * @type {string}

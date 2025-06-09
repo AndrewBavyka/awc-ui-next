@@ -1,30 +1,24 @@
 import { LitElement, html, TemplateResult, CSSResultGroup } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { emptyStateLinkStyle } from '../awc-empty-state-link/awc-empty-state-link.style';
+import { AwcEmptyStateLinkTarget } from './awc-empty-state-link.types';
 
 export const awcEmptyStateTag = 'awc-empty-state-link';
-
-export enum EmptyLinkTargetType {
-    Blank = '_blank',
-    Self = '_self',
-    Parent = '_parent',
-    Top = '_top',
-}
 
 @customElement(awcEmptyStateTag)
 export default class AwcEmtyStateLink extends LitElement {
     /**
      * Задает адрес документа, на который следует перейти.
-     * @type {String}
+     * @property {String}
      * @default
      */
     @property({ type: String, reflect: true }) href: string;
     /**
      * Тип перехода по ссылке
-     * @type {String}
+     * @property {AwcEmptyStateLinkTarget}
      * @default _self
      */
-    @property({ type: String, reflect: true }) target: EmptyLinkTargetType = EmptyLinkTargetType.Self;
+    @property({ type: String, reflect: true }) target: AwcEmptyStateLinkTarget = "_self";
 
     protected render(): TemplateResult {
         return this.href

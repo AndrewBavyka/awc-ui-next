@@ -1,6 +1,7 @@
 import { LitElement, svg } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { iconStyle } from './awc-icon.style';
+import { AwcIconType, AwcIconSize } from './awc-icon.types';
 import '../awc-icon-loader/awc-icon-loader';
 
 export const awcIconTag = 'awc-icon';
@@ -12,27 +13,27 @@ export const awcIconTag = 'awc-icon';
 @customElement(awcIconTag)
 export default class AwcIcon extends LitElement {
     /**
-     * Элемент для отображения иконок.
-     * @property {String} type - Тип иконки (например, 'module').
+     * Указывается тип иконки
+     * @property {AwcIconType}
      */
-    @property({ type: String, reflect: true }) type = 'icon';
+    @property({ type: String, reflect: true }) type: AwcIconType = 'icon';
 
     /**
      * Указываеся размер иконки
-     * @property {String} size - Размер иконки (например, '16').
+     * @property {AwcIconSize}.
      * @default 16
      */
-    @property({ type: String, reflect: true }) size = '16';
+    @property({ type: String, reflect: true }) size: AwcIconSize = '16';
 
     /**
      * Имя или идентификатор конкретной иконки.
-     * @property {String} name
+     * @property {String}
      */
     @property({ type: String, reflect: true }) name = '';
 
     /**
      * Изменение размеров иконки
-     * @property {String} iconScale
+     * @property {String}
      */
     @property({ type: String, attribute: 'icon-scale' }) iconScale = '';
 

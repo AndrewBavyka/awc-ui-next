@@ -4,7 +4,7 @@ import { localized, msg } from '@lit/localize';
 import { awcFileItemStyles } from './awc-file-item.style';
 import { EventDispatcher, event } from '../../../utilities/event';
 import { formatFileSize } from '../../../utilities/file-size-converter';
-import { AwcFileItemDetails, AwcFileItemType } from './awc-file-item.types';
+import { IAwcFileItemDetails, AwcFileItemType } from './awc-file-item.types';
 import { AwcFileDisplayType } from '../awc-file.types';
 import {
     AWC_FILE_ITEM_DOTS_ICON,
@@ -50,12 +50,12 @@ export default class AwcFileItem extends LitElement {
     @state() showHoverText: boolean = false;
     @state() showFallbackIcon: boolean = false;
 
-    @event('awc-file-download') private _onDownloadEvent!: EventDispatcher<AwcFileItemDetails>;
-    @event('awc-file-private') private _onPrivateEvent!: EventDispatcher<AwcFileItemDetails>;
-    @event('awc-file-delete') private _onDeleteEvent!: EventDispatcher<AwcFileItemDetails>;
+    @event('awc-file-download') private _onDownloadEvent!: EventDispatcher<IAwcFileItemDetails>;
+    @event('awc-file-private') private _onPrivateEvent!: EventDispatcher<IAwcFileItemDetails>;
+    @event('awc-file-delete') private _onDeleteEvent!: EventDispatcher<IAwcFileItemDetails>;
     @event('awc-file-preview') private _onPreviewEvent!: EventDispatcher<HTMLElement>;
 
-    private _getFileDetails(): AwcFileItemDetails {
+    private _getFileDetails(): IAwcFileItemDetails {
         return {
             id: this.id,
             type: this.type,

@@ -1,30 +1,26 @@
 import { LitElement, html, TemplateResult, CSSResultGroup, PropertyValueMap } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { emptyStateStyle } from './awc-empty-state.style';
+import { AwcEmptyStateSize } from './awc-empty-state.types';
 import AwcIcon, { awcIconTag } from '../awc-icon/awc-icon';
 import AwcButton, { awcButtonTag } from '../awc-button/awc-button';
 
 export const awcEmptyStateTag = 'awc-empty-state';
 
-export enum EmptyStateSize {
-    Small = 'small',
-    Large = 'large',
-}
-
 @customElement(awcEmptyStateTag)
 export default class AwcEmtyState extends LitElement {
     /**
      * Задает заголовок компонента.
-     * @type {String}
+     * @property {String}
      * @default
      */
     @property({ type: String, reflect: true }) head: string;
     /**
      * Задает рамзер компонента.
-     * @type {String}
+     * @property {String}
      * @default large
      */
-    @property({ type: String, reflect: true }) size: EmptyStateSize = EmptyStateSize.Large;
+    @property({ type: String, reflect: true }) size: AwcEmptyStateSize = "large";
 
     get icons(): AwcIcon[] {
         return [...this.querySelectorAll(awcIconTag)]!;
@@ -37,7 +33,7 @@ export default class AwcEmtyState extends LitElement {
     private _scalingIcon(): void {
         if (this.icons) {
             this.icons.forEach((icon) => {
-                if (this.size === EmptyStateSize.Large) {
+                if (this.size === "large") {
                     icon.iconScale = '78px';
                 } else {
                     icon.iconScale = '48px';
@@ -49,7 +45,7 @@ export default class AwcEmtyState extends LitElement {
     private _setCurrentButtons(): void {
         if (this.buttons) {
             this.buttons.forEach((button) => {
-                if (this.size === EmptyStateSize.Large) {
+                if (this.size === "large") {
                     button.size = 'large';
                 } else {
                     button.size = 'regular';
