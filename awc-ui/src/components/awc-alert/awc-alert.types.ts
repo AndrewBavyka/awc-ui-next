@@ -1,5 +1,5 @@
-// export type AwcAlertColor = 'primary' | 'warning' | 'success' | 'attention';
-export type AwcAlertVariant = 'block' | 'message';
+export const AwcAlertVariantTypes = ['block', 'message'] as const;
+export type AwcAlertVariant = typeof AwcAlertVariantTypes[number];
 
-export const AlertColor = ['primary', 'warning', 'success', 'attention'] as const;
-export type AwcAlertColor = (typeof AlertColor)[number];
+export const AwcAlertColorTypes = ['primary', 'warning', 'success', 'attention'] as const;
+export type AwcAlertColor = typeof AwcAlertColorTypes[number];
