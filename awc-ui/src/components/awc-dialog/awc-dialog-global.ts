@@ -1,18 +1,19 @@
-import AwcDialog, { DialogVariant } from './awc-dialog';
+import AwcDialog from './awc-dialog';
+import { AwcDialogVariant } from './awc-dialog.types';
 import AwcButton from '../awc-button/awc-button';
-import { VariantType, ColorType } from '../awc-button/awc-button.types';
+import { AwcButtonVariant, AwcButtonColor } from '../awc-button/awc-button.types';
 
 interface AwcDialogButtonConfig {
     text: string;
-    variant: VariantType;
-    background: ColorType;
+    variant: AwcButtonVariant;
+    background: AwcButtonColor;
     onClick: () => void;
 }
 
 interface AwcDialogConfig {
     heading?: string;
     description?: string;
-    variant?: DialogVariant;
+    variant?: AwcDialogVariant;
     buttons?: AwcDialogButtonConfig[];
     timer?: number;
 }
@@ -20,7 +21,7 @@ interface AwcDialogConfig {
 interface SweetAlertOptions {
     title?: string;
     text?: string;
-    variant?: DialogVariant;
+    variant?: AwcDialogVariant;
     // не нужен так-как иконки зашиты в зависимости от variant
     // icon?: 'warning' | 'error' | 'info' | 'success';
     showCancelButton?: boolean;
@@ -49,7 +50,7 @@ class AwcDialogService {
             return null;
         }
 
-        const { heading = 'Title', description = '', variant = DialogVariant.info, buttons = [], timer = 0 } = config;
+        const { heading = 'Title', description = '', variant = 'info', buttons = [], timer = 0 } = config;
 
         const dialog = document.createElement('awc-dialog') as AwcDialog;
 
@@ -96,13 +97,13 @@ class AwcDialogService {
     }
 
     static info(options?: AwcDialogConfig): void {
-        if (!this.createDialog({ ...options, variant: DialogVariant.info })) {
+        if (!this.createDialog({ ...options, variant: 'info' })) {
             console.warn('A dialog is already open.');
         }
     }
 
     static error(options?: AwcDialogConfig): void {
-        if (!this.createDialog({ ...options, variant: DialogVariant.error })) {
+        if (!this.createDialog({ ...options, variant: 'error' })) {
             console.warn('A dialog is already open.');
         }
     }
@@ -117,7 +118,7 @@ class AwcDialogService {
         const {
             title = '',
             text = '',
-            variant = DialogVariant.info,
+            variant = 'info',
             showCancelButton = false,
             confirmButtonText = 'OK',
             cancelButtonText = 'Cancel',
