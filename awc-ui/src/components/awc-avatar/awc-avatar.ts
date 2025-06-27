@@ -77,7 +77,7 @@ export default class AwcAvatar extends LitElement {
      */
     @property({ type: String, reflect: true }) icon: AwcAvatarIcon = 'none';
 
-    @state() private croppedTitle: string = '';
+    @state() croppedTitle: string = '';
     @state() sliced: boolean = false;
     @state() hovered: boolean = false;
 
@@ -132,7 +132,7 @@ export default class AwcAvatar extends LitElement {
     }
 
     private trimTitle(title: string): string {
-        return title.length > 0 ? title.charAt(0) : title;
+        return title ? title.charAt(0) : '';
     }
 
     private getBadgeSize(): AwcAvatarBadgeSize {
